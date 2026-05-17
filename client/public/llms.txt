@@ -1,0 +1,54 @@
+# Bain Squared
+
+> Bain Squared is a Singapore-based operator-led advisory firm working across three pillars: agentic AI automation, financial advisory and transformation, and intangibles valuation. We work with founders, CFOs, and investors who need execution, not slides.
+
+## About
+
+Bain Squared brings real operator judgment to AI deployment, financial transformation, and intangibles valuation. The person writing the strategy is the person sitting through your Monday operating review. We recommend less, do more, and price for outcomes rather than pages.
+
+- Founded in: Singapore
+- Address: 7 Temasek Boulevard, Suntec Tower One, Singapore 038987
+- Contact: hello@bainsquared.com
+- Areas served: Singapore, Southeast Asia (Malaysia, Indonesia, Thailand, Vietnam, Philippines)
+- Methodology: The Squared Method (Diagnose → Design → Deploy → Defend)
+
+## Services
+
+### Agentic AI Automation
+- AI strategy and operating model design
+- Workflow redesign for AI deployment
+- AI agents and automation systems in production
+- Time-to-deploy: 3 to 6 weeks from kickoff
+
+### Financial Advisory and Transformation
+- CFO-as-a-Service for companies without a full-time CFO
+- Finance operating model and organization design
+- FP&A, planning, and capital strategy
+- Cost optimization and operating leverage
+- Typical outcome: 40% average close-cycle reduction after rebuild
+
+### Intangibles Valuation
+- Brand, IP, goodwill, and data asset valuation
+- Employee stock option (ESOP) valuation
+- Startup valuation and due diligence support
+- Royalty relief and excess earnings models
+- Audit-committee and acquirer ready
+
+## Key facts
+
+- More than 90% of typical company value sits in intangible assets
+- Bain Squared specializes in valuing what traditional accounting overlooks
+- All work is operator-grade, not advisory-grade
+- We sit in the seat with the team until the change is operating
+- We do not write decks. We write decisions.
+
+## Content
+
+- /perspectives — Quarterly strategic essays from the team
+- /reports — Long-form research and frameworks
+- /inside-hq — Case studies, toolkits, and tactical breakdowns
+- /field-notes — Short observations from operators
+
+## Contact
+
+For new engagements, email hello@bainsquared.com. We respond within one working day. The first call is 30 minutes — no deck. If we are the right firm, we send a one-page engagement scope within five working days.

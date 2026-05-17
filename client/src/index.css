@@ -1,0 +1,553 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bain Squared — Design System
+ * Brand: Operator-led advisory (Singapore)
+ * Visual language: Thoughtworks-inspired (Inter + Bitter, zero border-radius,
+ * single accent color, restrained motion). Bain Squared brand colors substituted
+ * for Thoughtworks flamingo red.
+ */
+
+:root {
+  /* ===== BAIN SQUARED BRAND COLORS ===== */
+  --bs-canvas: 39 33% 97%;          /* #F7F5F2 - page background */
+  --bs-forest-deep: 161 49% 19%;    /* #174C3C - primary accent (replaces flamingo) */
+  --bs-forest-deep-hover: 161 49% 12%; /* #103A2D */
+  --bs-forest-deep-active: 161 30% 30%; /* lighter hover */
+  --bs-forest-soft: 153 19% 93%;    /* #E8F0EC - alternate pale section */
+  --bs-forest-accent: 162 24% 78%;  /* #BBD3CF - light card accent */
+  --bs-ink: 0 0% 10%;               /* #1A1A1A - body text, H2-H6 */
+  --bs-ink-muted: 0 0% 35%;         /* #5A5A5A - meta, captions */
+  --bs-surface: 0 0% 100%;          /* #FFFFFF - cards, forms */
+  --bs-hairline: 0 0% 90%;          /* #E5E5E5 - borders, dividers */
+
+  /* ===== SEMANTIC TOKENS (shadcn mapping) ===== */
+  --background: var(--bs-canvas);
+  --foreground: var(--bs-ink);
+  --border: var(--bs-hairline);
+  --card: var(--bs-surface);
+  --card-foreground: var(--bs-ink);
+  --card-border: var(--bs-hairline);
+  --popover: var(--bs-surface);
+  --popover-foreground: var(--bs-ink);
+  --popover-border: var(--bs-hairline);
+  --primary: var(--bs-forest-deep);
+  --primary-foreground: var(--bs-canvas);
+  --secondary: var(--bs-forest-soft);
+  --secondary-foreground: var(--bs-ink);
+  --muted: var(--bs-forest-soft);
+  --muted-foreground: var(--bs-ink-muted);
+  --accent: var(--bs-forest-accent);
+  --accent-foreground: var(--bs-ink);
+  --destructive: 0 84% 42%;
+  --destructive-foreground: 0 0% 98%;
+  --input: var(--bs-hairline);
+  --ring: var(--bs-forest-deep);
+
+  /* Fonts: Inter for body/UI, Bitter for editorial headlines (H1, H2) */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Bitter', 'Source Serif 4', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Zero border-radius is a brand rule (Thoughtworks-style discipline) */
+  --radius: 0px;
+
+  /* Elevate system */
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --elevate-1: rgba(23, 76, 60, 0.04);
+  --elevate-2: rgba(23, 76, 60, 0.08);
+  --opaque-button-border-intensity: -8;
+
+  /* Card border fallback */
+  --primary-border: hsl(var(--primary));
+  --secondary-border: hsl(var(--secondary));
+  --muted-border: hsl(var(--muted));
+  --accent-border: hsl(var(--accent));
+  --destructive-border: hsl(var(--destructive));
+
+  /* Sidebar (unused but template needs them) */
+  --sidebar: var(--bs-surface);
+  --sidebar-foreground: var(--bs-ink);
+  --sidebar-border: var(--bs-hairline);
+  --sidebar-primary: var(--bs-forest-deep);
+  --sidebar-primary-foreground: var(--bs-canvas);
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-accent: var(--bs-forest-soft);
+  --sidebar-accent-foreground: var(--bs-ink);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-ring: var(--bs-forest-deep);
+
+  /* Chart palette */
+  --chart-1: var(--bs-forest-deep);
+  --chart-2: 162 24% 50%;
+  --chart-3: 162 24% 78%;
+  --chart-4: 0 0% 35%;
+  --chart-5: 0 0% 60%;
+}
+
+/* No dark mode for v1 — brand is light-only */
+.dark {
+  /* Maintain light palette even if dark class is applied */
+  --background: var(--bs-canvas);
+  --foreground: var(--bs-ink);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Editorial display headings — Bitter serif (Thoughtworks-inspired) */
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: hsl(var(--bs-ink));
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: hsl(var(--bs-ink));
+  }
+
+  /* H3-H6 use Inter (UI heading scale) */
+  h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    line-height: 1.2;
+    color: hsl(var(--bs-ink));
+  }
+
+  p {
+    color: hsl(var(--bs-ink));
+  }
+
+  a {
+    color: hsl(var(--bs-forest-deep));
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+}
+
+/* =================================================================
+ * BAIN SQUARED COMPONENT CLASSES
+ * Custom utility classes that match the build guide's BS design system.
+ * ================================================================= */
+@layer components {
+  /* Container — Thoughtworks uses 1624px wide; we use 1440px max for tighter feel */
+  .bs-container {
+    @apply mx-auto w-full;
+    max-width: 1440px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .bs-container { padding-left: 3rem; padding-right: 3rem; }
+  }
+  @media (min-width: 1200px) {
+    .bs-container { padding-left: 3.75rem; padding-right: 3.75rem; }
+  }
+
+  /* Eyebrow kicker — replaces bracket motif from build guide */
+  .bs-eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: hsl(var(--bs-forest-deep));
+    display: inline-block;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 28px;
+  }
+  .bs-eyebrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    background: hsl(var(--bs-forest-deep));
+  }
+
+  /* Big stat number used in proof strips */
+  .bs-stat {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: hsl(var(--bs-forest-deep));
+  }
+  @media (max-width: 768px) {
+    .bs-stat { font-size: 64px; }
+  }
+
+  .bs-stat-caption {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: hsl(var(--bs-ink-muted));
+    margin-top: 12px;
+    max-width: 280px;
+  }
+
+  /* Numbered marker for method steps */
+  .bs-numeral {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: hsl(var(--bs-forest-deep));
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* Format pill for insight cards */
+  .bs-format-label {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: hsl(var(--bs-ink));
+    background: hsl(var(--bs-ink));
+    color: hsl(var(--bs-canvas));
+    padding: 4px 10px;
+    display: inline-block;
+  }
+
+  /* Quote treatment */
+  .bs-quote {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.4;
+    color: hsl(var(--bs-ink));
+    border-left: 3px solid hsl(var(--bs-forest-deep));
+    padding-left: 24px;
+    margin: 32px 0;
+  }
+
+  /* Section padding system */
+  .bs-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  @media (min-width: 768px) {
+    .bs-section { padding-top: 96px; padding-bottom: 96px; }
+  }
+  @media (min-width: 1024px) {
+    .bs-section { padding-top: 120px; padding-bottom: 120px; }
+  }
+
+  /* Section backgrounds */
+  .bs-bg-canvas { background-color: hsl(var(--bs-canvas)); }
+
+  /* Display font utility */
+  .font-display { font-family: var(--font-display); }
+
+  /* Ken Burns slow zoom for hero images */
+  @keyframes bs-kenburns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.12) translate(-2%, -1%); }
+  }
+  .bs-kenburns {
+    animation: bs-kenburns 22s ease-out forwards;
+    will-change: transform;
+  }
+
+  .bs-bg-surface { background-color: hsl(var(--bs-surface)); }
+  .bs-bg-forest-soft { background-color: hsl(var(--bs-forest-soft)); }
+  .bs-bg-forest-deep {
+    background-color: hsl(var(--bs-forest-deep));
+    color: hsl(var(--bs-canvas));
+  }
+  .bs-bg-forest-deep h1,
+  .bs-bg-forest-deep h2,
+  .bs-bg-forest-deep h3,
+  .bs-bg-forest-deep h4 { color: hsl(var(--bs-canvas)); }
+  .bs-bg-forest-deep p { color: hsl(var(--bs-forest-accent)); }
+
+  /* Primary button — Thoughtworks-style square fill */
+  .bs-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    padding: 16px 32px;
+    background-color: hsl(var(--bs-forest-deep));
+    color: hsl(var(--bs-canvas));
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+  .bs-btn:hover {
+    background-color: hsl(var(--bs-forest-deep-hover));
+    color: hsl(var(--bs-canvas));
+  }
+
+  /* Ghost button */
+  .bs-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    padding: 16px 32px;
+    background-color: transparent;
+    color: hsl(var(--bs-ink));
+    border: 1px solid hsl(var(--bs-ink));
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .bs-btn-ghost:hover {
+    background-color: hsl(var(--bs-ink));
+    color: hsl(var(--bs-canvas));
+  }
+
+  /* Inverse button for dark sections */
+  .bs-btn-inverse {
+    background-color: hsl(var(--bs-canvas));
+    color: hsl(var(--bs-forest-deep));
+  }
+  .bs-btn-inverse:hover {
+    background-color: hsl(var(--bs-forest-accent));
+    color: hsl(var(--bs-forest-deep));
+  }
+
+  /* CSS-only arrow chevron (Thoughtworks signature) */
+  .bs-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid currentColor;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  /* Card link with refined underline */
+  .bs-card-link {
+    color: hsl(var(--bs-forest-deep));
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  .bs-card-link:hover {
+    color: hsl(var(--bs-forest-deep-hover));
+  }
+
+  /* Hairline divider */
+  .bs-hairline {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: hsl(var(--bs-hairline));
+    border: 0;
+  }
+
+  /* Insight card — sliding hover (Thoughtworks signature pattern) */
+  .bs-insight-card {
+    position: relative;
+    overflow: hidden;
+    background: hsl(var(--bs-surface));
+    cursor: pointer;
+    border: 1px solid hsl(var(--bs-hairline));
+    transition: border-color 0.3s ease;
+  }
+  .bs-insight-card:hover {
+    border-color: hsl(var(--bs-forest-deep));
+  }
+  .bs-insight-card__content {
+    padding: 32px;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .bs-insight-card__cta {
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    bottom: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    padding-bottom: 32px;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.3s ease 0.1s;
+  }
+  .bs-insight-card:hover .bs-insight-card__content {
+    transform: translateY(-40px);
+  }
+  .bs-insight-card:hover .bs-insight-card__cta {
+    transform: translateY(-32px);
+    opacity: 1;
+  }
+
+  /* Pillar card */
+  .bs-pillar-card {
+    padding: 40px 32px;
+    background: hsl(var(--bs-canvas));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid hsl(var(--bs-hairline));
+  }
+  .bs-pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(23, 76, 60, 0.08);
+    border-color: hsl(var(--bs-forest-deep));
+  }
+
+  /* Display type scale (Bitter) */
+  .bs-h1-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.25rem, 5vw, 4rem); /* 36px - 64px */
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .bs-h1-hero {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 5rem); /* 40px - 80px */
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .bs-h2-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem); /* 28px - 40px */
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+  .bs-lead {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem); /* 18px - 22px */
+    line-height: 1.5;
+    color: hsl(var(--bs-ink));
+  }
+
+  /* Filter pill */
+  .bs-filter-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid hsl(var(--bs-hairline));
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(var(--bs-ink));
+    margin-right: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .bs-filter-pill:hover,
+  .bs-filter-pill.active {
+    background: hsl(var(--bs-forest-deep));
+    color: hsl(var(--bs-canvas));
+    border-color: hsl(var(--bs-forest-deep));
+  }
+}
+
+/* =================================================================
+ * MOTION
+ * ================================================================= */
+@keyframes bounceArrow {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(135deg); }
+  40% { transform: translateY(-10px) rotate(135deg); }
+  60% { transform: translateY(-5px) rotate(135deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.bs-bounce-arrow {
+  animation: bounceArrow 2s ease-in-out infinite;
+}
+
+.bs-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* =================================================================
+ * UTILITY OVERRIDES
+ * ================================================================= */
+
+/* Hide ugly search cancel button */
+input[type='search']::-webkit-search-cancel-button {
+  @apply hidden;
+}
+
+/* Focus visible — clean, accessible */
+*:focus-visible {
+  outline: 2px solid hsl(var(--bs-forest-deep));
+  outline-offset: 2px;
+}
+
+/* Elevate utilities preserved from template */
+@layer utilities {
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+  }
+  .hover-elevate:hover::after { background-color: var(--elevate-1); }
+  .active-elevate:active::after { background-color: var(--elevate-2); }
+}
+
+/* Article drop-cap (first letter of first body paragraph) */
+.bs-dropcap::first-letter {
+  font-family: var(--font-display, Bitter, Georgia, serif);
+  font-weight: 700;
+  float: left;
+  font-size: 4.8em;
+  line-height: 0.85;
+  padding: 0.08em 0.12em 0 0;
+  color: hsl(var(--bs-ink));
+}
