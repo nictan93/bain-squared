@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { VideoOverlayHero } from "@/components/VideoOverlayHero";
@@ -10,6 +11,7 @@ import { MethodOverlay } from "@/components/MethodOverlay";
 import { GrowthPartnerRecommender } from "@/components/GrowthPartnerRecommender";
 import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
+import { getCapability } from "@/lib/queries";
 
 type Stat = {
   value: string;
@@ -313,7 +315,13 @@ type Props = {
 
 export default function CapabilityAI({ params }: Props) {
   const slug = params.slug;
-  const config = AI_CONFIG[slug];
+  const [config, setConfig] = useState<AIConfig | null>(AI_CONFIG[slug] ?? null);
+
+  useEffect(() => {
+    getCapability(slug).then((data) => {
+      if (data) setConfig(data as AIConfig);
+    });
+  }, [slug]);
 
   if (!config) {
     return (

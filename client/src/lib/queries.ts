@@ -1,27 +1,27 @@
 import { sanityClient } from "./sanity";
 import type { Article } from "@/data/articles";
-import type { ReviewGroup, Review } from "@/data/reviews";
+import type { ReviewGroup } from "@/data/reviews";
 import type { FAQGroup } from "@/data/faq";
 import type { ArticleCard } from "@/components/ArticleCardGrid";
 import type { ClientStory } from "@/components/FeaturedClientStoryCarousel";
 
 // ---------------------------------------------------------------------------
-// Articles
+// Articles (unified insight schema)
 // ---------------------------------------------------------------------------
 
 export async function getArticle(slug: string): Promise<Article | null> {
   return sanityClient.fetch(
-    `*[_type == "article" && slug.current == $slug][0]{
+    `*[_type == "insight" && slug.current == $slug][0]{
       "slug": slug.current,
-      publication,
-      headline,
+      "publication": coalesce(publication, "Bain Squared"),
+      "headline": title,
       dek,
-      "date": coalesce(date, ""),
-      "type": contentType,
+      "date": coalesce(publishedAt, ""),
+      "type": coalesce(contentFormat, type, ""),
       "heroImage": coalesce(heroImageUrl, ""),
       authors[]{name, href},
       withAuthors[]{name, href},
-      body[]{
+      "blocks": body[]{
         type,
         text,
         dropcap,
@@ -36,13 +36,13 @@ export async function getArticle(slug: string): Promise<Article | null> {
 
 export async function getAllArticles(): Promise<Article[]> {
   return sanityClient.fetch(
-    `*[_type == "article"] | order(date desc) {
+    `*[_type == "insight" && type != "client-story"] | order(publishedAt desc) {
       "slug": slug.current,
-      publication,
-      headline,
+      "publication": coalesce(publication, "Bain Squared"),
+      "headline": title,
       dek,
-      "date": coalesce(date, ""),
-      "type": contentType,
+      "date": coalesce(publishedAt, ""),
+      "type": coalesce(contentFormat, type, ""),
       "heroImage": coalesce(heroImageUrl, ""),
       authors[]{name, href},
       withAuthors[]{name, href}
@@ -51,22 +51,22 @@ export async function getAllArticles(): Promise<Article[]> {
 }
 
 // ---------------------------------------------------------------------------
-// Insight cards (article stubs for listing pages)
+// Insight cards (listing pages)
 // ---------------------------------------------------------------------------
 
 export async function getInsightCards(topic?: string): Promise<ArticleCard[]> {
   const filter = topic
-    ? `*[_type == "insightCard" && topic == $topic]`
-    : `*[_type == "insightCard"]`;
+    ? `*[_type == "insight" && type != "client-story" && $topic in practiceTags]`
+    : `*[_type == "insight" && type != "client-story"]`;
   return sanityClient.fetch(
-    `${filter} | order(date desc) {
-      category,
-      title,
+    `${filter} | order(publishedAt desc) {
+      "category": coalesce(category, ""),
+      "title": title,
       dek,
-      "type": contentType,
-      date,
-      "image": coalesce(imageUrl, ""),
-      href
+      "type": coalesce(contentFormat, type, ""),
+      "date": coalesce(publishedAt, ""),
+      "image": coalesce(heroImageUrl, ""),
+      "href": "/insights/" + slug.current
     }`,
     topic ? { topic } : {}
   );
@@ -78,13 +78,60 @@ export async function getInsightCards(topic?: string): Promise<ArticleCard[]> {
 
 export async function getClientStories(): Promise<ClientStory[]> {
   return sanityClient.fetch(
-    `*[_type == "clientStory"] | order(_createdAt asc) {
-      headline,
+    `*[_type == "insight" && type == "client-story"] | order(order asc) {
+      "headline": title,
       stats[]{value, label},
       ctaHref,
-      "image": coalesce(imageUrl, ""),
-      imageAlt
+      "image": coalesce(heroImageUrl, ""),
+      "imageAlt": coalesce(imageAlt, "")
     }`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Capabilities
+// ---------------------------------------------------------------------------
+
+export async function getCapability(slug: string) {
+  return sanityClient.fetch(
+    `*[_type == "capability" && slug.current == $slug][0]{
+      "slug": slug.current,
+      practice,
+      eyebrow,
+      headline,
+      sub,
+      "heroImage": coalesce(heroImageUrl, ""),
+      "heroImageAlt": coalesce(heroImageAlt, ""),
+      introParagraphs,
+      introParagraph,
+      introBefore,
+      introAccent,
+      introAfter,
+      stats[]{value, body, color},
+      switcherEyebrow,
+      switcherHeading,
+      switcherItems[]{
+        label,
+        title,
+        body,
+        "image": coalesce(imageUrl, ""),
+        imageAlt,
+        caption
+      },
+      "methodImage": coalesce(methodImageUrl, ""),
+      "methodImageAlt": coalesce(methodImageAlt, ""),
+      methodHeadlineLines,
+      methodBody,
+      recommenderCards[]{title, body},
+      splitBlocks[]{eyebrow, title, body, tags},
+      whitepaperHeadline,
+      whitepaperBody,
+      "whitepaperImage": coalesce(whitepaperImageUrl, ""),
+      teamHeadline,
+      teamBody,
+      "teamCTA": coalesce(teamCta, "")
+    }`,
+    { slug }
   );
 }
 

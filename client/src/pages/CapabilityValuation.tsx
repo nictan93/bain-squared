@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { VideoOverlayHero } from "@/components/VideoOverlayHero";
@@ -6,6 +7,7 @@ import { IntangiblesSplit } from "@/components/IntangiblesSplit";
 import { MethodOverlay } from "@/components/MethodOverlay";
 import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
+import { getCapability } from "@/lib/queries";
 
 type ValuationConfig = {
   eyebrow: string;
@@ -158,7 +160,13 @@ type Props = {
 
 export default function CapabilityValuation({ params }: Props) {
   const slug = params.slug;
-  const config = VALUATION_CONFIG[slug];
+  const [config, setConfig] = useState<ValuationConfig | null>(VALUATION_CONFIG[slug] ?? null);
+
+  useEffect(() => {
+    getCapability(slug).then((data) => {
+      if (data) setConfig(data as ValuationConfig);
+    });
+  }, [slug]);
 
   if (!config) {
     return (

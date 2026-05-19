@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { VideoOverlayHero } from "@/components/VideoOverlayHero";
@@ -9,6 +10,7 @@ import {
 import { WhitepaperFeature } from "@/components/WhitepaperFeature";
 import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
+import { getCapability } from "@/lib/queries";
 
 type FinanceConfig = {
   eyebrow: string;
@@ -195,7 +197,13 @@ type Props = {
 
 export default function CapabilityFinance({ params }: Props) {
   const slug = params.slug;
-  const config = FINANCE_CONFIG[slug];
+  const [config, setConfig] = useState<FinanceConfig | null>(FINANCE_CONFIG[slug] ?? null);
+
+  useEffect(() => {
+    getCapability(slug).then((data) => {
+      if (data) setConfig(data as FinanceConfig);
+    });
+  }, [slug]);
 
   if (!config) {
     return (
