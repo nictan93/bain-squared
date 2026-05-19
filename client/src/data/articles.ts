@@ -24,8 +24,8 @@ export const ARTICLES: Record<string, Article> = {
     heroImage:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
     authors: [
-      { name: "Nicholas Tan", href: "#/who-we-work-with" },
-      { name: "Priya Raman", href: "#/who-we-work-with" },
+      { name: "Nicholas Tan", href: "/who-we-work-with" },
+      { name: "Priya Raman", href: "/who-we-work-with" },
     ],
     withAuthors: [{ name: "the Bain Squared AI team" }],
     blocks: [

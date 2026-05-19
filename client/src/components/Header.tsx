@@ -510,7 +510,7 @@ function slugify(s: string) {
 }
 
 /**
- * Convert an internal path like "/what-we-do" to its hash-router form "#/what-we-do".
+ * Convert an internal path like "/what-we-do" to its hash-router form "/what-we-do".
  * Leaves already-hashed, absolute (http), tel/mailto, or anchor links untouched.
  */
 function toHash(href: string): string {

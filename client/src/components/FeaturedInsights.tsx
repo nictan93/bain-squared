@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { ChevronRight } from "lucide-react";
+import { getFeaturedInsights } from "@/lib/queries";
 
 /**
  * "What we have been thinking about" — 2 featured insights side-by-side.
@@ -16,30 +18,38 @@ type Insight = {
   image: string;
 };
 
-const insights: Insight[] = [
+const FALLBACK_INSIGHTS: Insight[] = [
   {
     category: "AI",
     title: "The Operator's Playbook for Agentic AI",
     excerpt:
       "Most agent pilots stall in week six. Three patterns we see from teams that actually ship to production and hold the line on cost.",
-    href: "#/insights/operators-playbook-agentic-ai",
-    type: "Brief",
+    href: "/insights/operators-playbook-agentic-ai",
+    type: "Field Note",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    category: "Financial Transformation",
-    title: "Rewiring FP&A for the AI Era",
+    category: "Finance Transformation",
+    title: "Rebuilding the CFO Suite for an Agentic Decade",
     excerpt:
-      "The finance function rebuilds it owns will outlast every tool you license. A field guide for CFOs running real transformations, not theater.",
-    href: "#/insights/rewiring-fpa",
-    type: "Perspective",
+      "The next finance function is built on real-time data, agentic ops, and operators who can read both ledgers and code.",
+    href: "/insights/rebuilding-cfo-suite-agentic",
+    type: "Brief",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
 export function FeaturedInsights() {
+  const [insights, setInsights] = useState<Insight[]>(FALLBACK_INSIGHTS);
+
+  useEffect(() => {
+    getFeaturedInsights().then((data) => {
+      if (data.length >= 2) setInsights(data);
+    });
+  }, []);
+
   return (
     <section
       className="bs-bg-canvas py-20 md:py-28"

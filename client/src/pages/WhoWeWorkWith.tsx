@@ -19,8 +19,8 @@ export default function WhoWeWorkWith() {
           lead="Operators, founders, and boards who treat AI, finance, and intangibles as one connected build."
           body="We are selective. The work we do is operator-led, not slide-led, which means the teams we partner with have to be ready to rebuild the parts of the business that the next phase of growth depends on."
           ctas={[
-            { label: "Bring us your problem", href: "#/contact", variant: "primary" },
-            { label: "See what we do", href: "#/what-we-do", variant: "outline" },
+            { label: "Bring us your problem", href: "/contact", variant: "primary" },
+            { label: "See what we do", href: "/what-we-do", variant: "outline" },
           ]}
         />
 
@@ -60,7 +60,7 @@ export default function WhoWeWorkWith() {
           headline="Bold steps forward, taken with discipline."
           body="A regional SaaS operator came to us mid-raise with a story the numbers could not yet defend. We rebuilt the operating model, installed an agentic ops layer in the revenue stack, and rewrote the intangibles narrative for the data room. The round closed on the operator's terms."
           ctaLabel="Read the client story"
-          ctaHref="#/contact"
+          ctaHref="/contact"
           image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Operators in a working session reviewing a rebuilt operating model."
         />
@@ -78,7 +78,7 @@ export default function WhoWeWorkWith() {
           headline="The operator's playbook for agentic AI in the finance function."
           body="Most AI programs stall because the operating core was never ready. This paper lays out how we sequence agentic build-outs inside the CFO suite, the controls we install before automation goes live, and the intangibles we make visible to the board."
           ctaLabel="Download the paper"
-          ctaHref="#/contact"
+          ctaHref="/contact"
           image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Cover of the Bain Squared whitepaper on agentic AI in finance."
         />

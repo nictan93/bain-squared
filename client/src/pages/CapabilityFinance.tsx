@@ -254,7 +254,7 @@ export default function CapabilityFinance({ params }: Props) {
           headline={config.whitepaperHeadline}
           body={config.whitepaperBody}
           ctaLabel="Download the paper"
-          ctaHref="#/contact"
+          ctaHref="/contact"
           image={config.whitepaperImage}
           imageAlt="Operator working through the finance playbook in print."
         />
@@ -265,7 +265,7 @@ export default function CapabilityFinance({ params }: Props) {
           headline="Speak with a Bain Squared CFO."
           body="Bring the question your team has been arguing about. We will tell you on the first call whether a fractional partner or a full transformation is the right next move."
           ctaLabel="Speak with a Bain Squared CFO"
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

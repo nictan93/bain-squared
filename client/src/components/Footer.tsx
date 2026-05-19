@@ -2,23 +2,23 @@ import { Logo } from "./Logo";
 
 const footerLinks = {
   Firm: [
-    { label: "What we do", href: "#/what-we-do" },
-    { label: "Who we work with", href: "#/who-we-work-with" },
-    { label: "Careers", href: "#/careers" },
-    { label: "Reviews", href: "#/reviews" },
-    { label: "FAQ", href: "#/faq" },
-    { label: "Contact", href: "#/contact" },
+    { label: "What we do", href: "/what-we-do" },
+    { label: "Who we work with", href: "/who-we-work-with" },
+    { label: "Careers", href: "/careers" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
   Insights: [
-    { label: "Squared Reports", href: "#/insights/squared-reports" },
-    { label: "Looking Glass", href: "#/insights/looking-glass" },
-    { label: "Inside Bain Squared HQ", href: "#/insights/inside-hq" },
-    { label: "Field Notes", href: "#/insights/field-notes" },
+    { label: "Squared Reports", href: "/insights/squared-reports" },
+    { label: "Looking Glass", href: "/insights/looking-glass" },
+    { label: "Inside Bain Squared HQ", href: "/insights/inside-hq" },
+    { label: "Field Notes", href: "/insights/field-notes" },
   ],
   Services: [
-    { label: "Agentic AI Automation", href: "#/what-we-do/agentic-ai-automation" },
-    { label: "Financial Advisory", href: "#/what-we-do/fractional-cfo" },
-    { label: "Intangibles Valuation", href: "#/what-we-do/intangibles-valuation" },
+    { label: "Agentic AI Automation", href: "/what-we-do/agentic-ai-automation" },
+    { label: "Financial Advisory", href: "/what-we-do/fractional-cfo" },
+    { label: "Intangibles Valuation", href: "/what-we-do/intangibles-valuation" },
   ],
 };
 

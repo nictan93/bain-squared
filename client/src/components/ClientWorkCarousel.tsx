@@ -25,7 +25,7 @@ const stories: Story[] = [
       { value: "$300M", label: "saved over two years" },
       { value: "2.5x", label: "stock price increase over two years" },
     ],
-    href: "#/client-stories/epc-transformation",
+    href: "/client-stories/epc-transformation",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
   },
@@ -36,7 +36,7 @@ const stories: Story[] = [
       { value: "42%", label: "gross margin lift" },
       { value: "18mo", label: "cash runway extension" },
     ],
-    href: "#/client-stories/saas-operating-model",
+    href: "/client-stories/saas-operating-model",
     image:
       "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
   },
@@ -47,7 +47,7 @@ const stories: Story[] = [
       { value: "$48M", label: "valuation defended" },
       { value: "0", label: "audit adjustments" },
     ],
-    href: "#/client-stories/esop-defense",
+    href: "/client-stories/esop-defense",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
   },

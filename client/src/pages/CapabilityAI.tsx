@@ -370,7 +370,7 @@ export default function CapabilityAI({ params }: Props) {
           headlineLines={config.methodHeadlineLines}
           body={config.methodBody}
           linkLabel="Learn more"
-          linkHref="#/what-we-do"
+          linkHref="/what-we-do"
         />
 
         <GrowthPartnerRecommender cards={config.recommenderCards} />
@@ -381,7 +381,7 @@ export default function CapabilityAI({ params }: Props) {
           headline="Talk to our AI team."
           body="Bring the question your team has been arguing about. We will tell you on the first call whether agents, a managed pod, or an LLMO program is the right next move."
           ctaLabel="Talk to our AI team"
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

@@ -45,7 +45,7 @@ export default function Careers() {
           lead="We hire operators who have run the work, not just modeled it. The bar is high. The room is small. The work is real."
           body="If you have rebuilt a finance function, shipped agentic systems inside a real business, or made intangibles defendable in front of a board, we want to talk. Bain Squared is built for the operators clients can actually feel in the room."
           ctas={[
-            { label: "Search open roles", href: "#/careers-form", variant: "primary" },
+            { label: "Search open roles", href: "/careers-form", variant: "primary" },
           ]}
         />
 
@@ -85,7 +85,7 @@ export default function Careers() {
           headline="Your work, your craft, your career."
           body="We invest in the operator behind the consultant. Named partner sponsors, quarterly craft reviews, transparent comp bands, and the kind of project staffing that lets you actually finish what you start. Career growth here is documented, not implied."
           ctaLabel="Learn more about life here"
-          ctaHref="#/careers-form"
+          ctaHref="/careers-form"
           image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Two consultants in a working session, focused on the work."
         />

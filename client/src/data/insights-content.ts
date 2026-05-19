@@ -3,7 +3,7 @@
  *
  * One central source of placeholder articles so every Insights-family page
  * (overview, featured topics, publications, all-insights lists) shares a
- * consistent voice and look. All hrefs point to "#/contact" since article
+ * consistent voice and look. All hrefs point to "/contact" since article
  * detail pages are not built yet.
  */
 
@@ -18,7 +18,7 @@ import type {
 import type { PublicationTile } from "@/components/PublicationGrid";
 import type { AltFeatureItem } from "@/components/AltFeatureRows";
 
-const PLACEHOLDER_HREF = "#/contact";
+const PLACEHOLDER_HREF = "/contact";
 
 /** Stable Unsplash images (free, no auth). */
 const IMG = {
@@ -133,21 +133,21 @@ export const explorePublicationsTabs = [
     label: "Perspectives",
     body: "Perspectives is our quarterly essay series. Short, opinionated reads from the partners on what we are seeing inside the operator's seat. One topic, one argument, no filler.",
     ctaLabel: "Explore the latest issue",
-    ctaHref: "#/insights/perspectives",
+    ctaHref: "/insights/perspectives",
     image: IMG.perspectives,
   },
   {
     label: "Squared Reports",
     body: "Squared Reports are our long-form research. Twice a year we publish a single deep study with the data, the framework, and the operator playbook behind it. Built to be used, not skimmed.",
     ctaLabel: "Read the latest report",
-    ctaHref: "#/insights/squared-reports",
+    ctaHref: "/insights/squared-reports",
     image: IMG.squared_reports,
   },
   {
     label: "Looking Glass",
     body: "Looking Glass is the signal feed we run internally, now made public. Monthly notes on what is breaking, what is working, and what the operators we talk to are quietly worried about.",
     ctaLabel: "See this month's signals",
-    ctaHref: "#/insights/looking-glass",
+    ctaHref: "/insights/looking-glass",
     image: IMG.looking_glass,
   },
 ];

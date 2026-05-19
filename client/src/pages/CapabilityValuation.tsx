@@ -227,7 +227,7 @@ export default function CapabilityValuation({ params }: Props) {
           headlineLines={config.methodHeadlineLines}
           body={config.methodBody}
           linkLabel="Learn more"
-          linkHref="#/what-we-do"
+          linkHref="/what-we-do"
         />
 
         <SquaredMethod />
@@ -236,7 +236,7 @@ export default function CapabilityValuation({ params }: Props) {
           headline={config.teamHeadline}
           body={config.teamBody}
           ctaLabel={config.teamCTA}
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

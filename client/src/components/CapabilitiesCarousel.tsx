@@ -18,43 +18,43 @@ type Capability = {
 const capabilities: Capability[] = [
   {
     title: "Agentic AI Automation",
-    href: "#/what-we-do/agentic-ai-automation",
+    href: "/what-we-do/agentic-ai-automation",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "LLM Optimization (LLMO)",
-    href: "#/what-we-do/llm-optimization",
+    href: "/what-we-do/llm-optimization",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Financial Transformation",
-    href: "#/what-we-do/financial-transformation",
+    href: "/what-we-do/financial-transformation",
     image:
       "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Intangibles Assets Valuation",
-    href: "#/what-we-do/intangibles-valuation",
+    href: "/what-we-do/intangibles-valuation",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "ESOP Valuation",
-    href: "#/what-we-do/esop-valuation",
+    href: "/what-we-do/esop-valuation",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Fractional CFO",
-    href: "#/what-we-do/fractional-cfo",
+    href: "/what-we-do/fractional-cfo",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Managed Services",
-    href: "#/what-we-do/managed-services",
+    href: "/what-we-do/managed-services",
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
   },

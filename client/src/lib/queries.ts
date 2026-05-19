@@ -136,6 +136,50 @@ export async function getCapability(slug: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Featured insights (home page)
+// ---------------------------------------------------------------------------
+
+export async function getFeaturedInsights(): Promise<{ category: string; title: string; excerpt: string; type: string; image: string; href: string }[]> {
+  return sanityClient.fetch(
+    `*[_type == "insight" && featured == true && type != "client-story"] | order(publishedAt desc)[0...2] {
+      "category": coalesce(category, ""),
+      "title": title,
+      "excerpt": coalesce(dek, ""),
+      "type": coalesce(contentFormat, type, ""),
+      "image": coalesce(heroImageUrl, ""),
+      "href": "/insights/" + slug.current
+    }`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Insights by type (AllInsightsList pages)
+// ---------------------------------------------------------------------------
+
+const TYPE_SLUG_MAP: Record<string, string> = {
+  "field-notes": "field-note",
+  "client-stories": "client-story",
+  "inside-hq": "inside-hq",
+  "squared-reports": "squared-report",
+  "looking-glass": "whitepaper",
+};
+
+export async function getInsightsByType(typeSlug: string): Promise<{ category: string; title: string; dek: string; date: string; image: string; href: string }[]> {
+  const sanityType = TYPE_SLUG_MAP[typeSlug] ?? typeSlug;
+  return sanityClient.fetch(
+    `*[_type == "insight" && type == $type] | order(publishedAt desc) {
+      "category": coalesce(category, ""),
+      "title": title,
+      "dek": coalesce(dek, ""),
+      "date": coalesce(publishedAt, ""),
+      "image": coalesce(heroImageUrl, ""),
+      "href": "/insights/" + slug.current
+    }`,
+    { type: sanityType }
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Open roles (CareersForm role switcher)
 // ---------------------------------------------------------------------------
 

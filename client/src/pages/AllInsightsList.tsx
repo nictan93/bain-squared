@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InsightsHero } from "@/components/InsightsHero";
 import { FeaturedArticleLayout } from "@/components/FeaturedArticleLayout";
 import { MiniArticleGrid } from "@/components/MiniArticleGrid";
 import { ClosingExtraordinaryCTA } from "@/components/ClosingExtraordinaryCTA";
+import type { FeaturedArticle } from "@/components/FeaturedArticleLayout";
 import type { MiniArticle } from "@/components/MiniArticleGrid";
 import {
   fieldNotesFeatured,
   fieldNotesSecondary,
   moreArticlesMini,
 } from "@/data/insights-content";
+import { getInsightsByType } from "@/lib/queries";
 
 type ListConfig = {
   title: string;
@@ -36,18 +38,6 @@ const LIST_CONFIG: Record<string, ListConfig> = {
   },
 };
 
-/**
- * Build extra mini articles for the "Load more" reveal so list pages
- * have a believable second page of content.
- */
-function buildExtraArticles(slug: string): MiniArticle[] {
-  const base = moreArticlesMini;
-  return base.map((a, i) => ({
-    ...a,
-    title: `${a.title} — Part ${i + 2}`,
-  }));
-}
-
 type Props = {
   params: { slug: string };
 };
@@ -56,6 +46,34 @@ export default function AllInsightsList({ params }: Props) {
   const slug = params.slug;
   const config = LIST_CONFIG[slug];
   const [showMore, setShowMore] = useState(false);
+  const [lead, setLead] = useState<FeaturedArticle>(fieldNotesFeatured);
+  const [secondary, setSecondary] = useState<[FeaturedArticle, FeaturedArticle]>([fieldNotesSecondary[0], fieldNotesSecondary[1]] as [FeaturedArticle, FeaturedArticle]);
+  const [mini, setMini] = useState<MiniArticle[]>(moreArticlesMini);
+
+  useEffect(() => {
+    if (!config) return;
+    getInsightsByType(slug).then((data) => {
+      if (data.length < 3) return;
+      const toFeatured = (d: typeof data[0]): FeaturedArticle => ({
+        category: d.category,
+        title: d.title,
+        date: d.date,
+        dek: d.dek,
+        image: d.image,
+        href: d.href,
+      });
+      const toMini = (d: typeof data[0]): MiniArticle => ({
+        category: d.category,
+        title: d.title,
+        dek: d.dek,
+        image: d.image,
+        href: d.href,
+      });
+      setLead(toFeatured(data[0]));
+      setSecondary([toFeatured(data[1]), toFeatured(data[2])]);
+      setMini(data.slice(3).map(toMini));
+    });
+  }, [slug, config]);
 
   if (!config) {
     return (
@@ -76,10 +94,6 @@ export default function AllInsightsList({ params }: Props) {
     );
   }
 
-  const articles = showMore
-    ? [...moreArticlesMini, ...buildExtraArticles(slug)]
-    : moreArticlesMini;
-
   return (
     <div className="min-h-screen bs-bg-canvas">
       <Header />
@@ -93,11 +107,11 @@ export default function AllInsightsList({ params }: Props) {
         />
 
         <FeaturedArticleLayout
-          lead={fieldNotesFeatured}
-          secondary={fieldNotesSecondary}
+          lead={lead}
+          secondary={secondary}
         />
 
-        <MiniArticleGrid heading="More from the desk" articles={articles} />
+        <MiniArticleGrid heading="More from the desk" articles={showMore ? mini : mini.slice(0, 6)} />
 
         {!showMore && (
           <section className="bs-bg-canvas pb-20 md:pb-28">

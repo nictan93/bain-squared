@@ -30,7 +30,7 @@ const pillars: Pillar[] = [
       tag: "Agentic AI Automation",
       title: "Where agent pilots actually start paying off",
       source: "Squared Perspective",
-      href: "#/insights/agentic-ai-pilots-pay-off",
+      href: "/insights/agentic-ai-pilots-pay-off",
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
     },
@@ -43,7 +43,7 @@ const pillars: Pillar[] = [
       tag: "Financial Transformation",
       title: "Rewiring FP&A for the AI era",
       source: "Squared Report",
-      href: "#/insights/rewiring-fpa",
+      href: "/insights/rewiring-fpa",
       image:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
     },
@@ -56,7 +56,7 @@ const pillars: Pillar[] = [
       tag: "Intangibles Valuation",
       title: "The 90% of value most balance sheets miss",
       source: "Squared Report",
-      href: "#/insights/intangibles-90-percent",
+      href: "/insights/intangibles-90-percent",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
     },

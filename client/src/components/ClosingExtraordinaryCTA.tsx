@@ -21,7 +21,7 @@ export function ClosingExtraordinaryCTA({
   headline = "Together, let's be extraordinary.",
   body = "Most advisory work rewards slide-counting. Ours rewards judgment. If you want to build the playbook for AI, finance transformation, and intangibles valuation alongside operators who have actually run the function, this is the team. Bain Squared is hiring real operators, not consultants.",
   ctaLabel = "Explore careers with us",
-  ctaHref = "#/careers",
+  ctaHref = "/careers",
   image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=80",
   imageAlt = "Operators working together at a shared table.",
 }: Props) {
