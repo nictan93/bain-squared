@@ -24,6 +24,14 @@ export default defineConfig({
               S.documentTypeList("capability").title("Capability pages")
             ),
             S.divider(),
+            S.listItem().title("Open roles").schemaType("openRole").child(
+              S.documentTypeList("openRole").title("Open roles")
+            ),
+            S.divider(),
+            S.listItem().title("Pages (SEO)").schemaType("page").child(
+              S.documentTypeList("page").title("Pages (SEO)")
+            ),
+            S.divider(),
             S.listItem().title("Review groups").schemaType("reviewGroup").child(
               S.documentTypeList("reviewGroup").title("Review groups")
             ),

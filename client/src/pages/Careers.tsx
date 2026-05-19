@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { PageHero } from "@/components/PageHero";
 import { ImageStripCarousel } from "@/components/ImageStripCarousel";
@@ -6,8 +7,34 @@ import { YouMatter } from "@/components/YouMatter";
 import { InsideHQArticles } from "@/components/InsideHQArticles";
 import { CTAStrip } from "@/components/CTAStrip";
 import { Footer } from "@/components/Footer";
+import { getInsideHQInsights } from "@/lib/queries";
+
+type HQArticle = { eyebrow?: string; title: string; href: string; image: string };
+
+const FALLBACK_HQ: [HQArticle, HQArticle] = [
+  {
+    eyebrow: "Field notes",
+    title: "What a real operator-led interview looks like at Bain Squared.",
+    href: "/careers-form",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    eyebrow: "Craft",
+    title: "How our consultants ship agentic systems clients actually keep running.",
+    href: "/careers-form",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+  },
+];
 
 export default function Careers() {
+  const [hqArticles, setHqArticles] = useState<[HQArticle, HQArticle]>(FALLBACK_HQ);
+
+  useEffect(() => {
+    getInsideHQInsights().then((data) => {
+      if (data.length >= 2) setHqArticles([data[0], data[1]]);
+    });
+  }, []);
+
   return (
     <div className="bs-bg-canvas" data-testid="page-careers">
       <Header />
@@ -65,24 +92,9 @@ export default function Careers() {
 
         <InsideHQArticles
           heading="Inside Bain Squared HQ"
-          articles={[
-            {
-              eyebrow: "Field notes",
-              title: "What a real operator-led interview looks like at Bain Squared.",
-              href: "#/careers-form",
-              image:
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
-            },
-            {
-              eyebrow: "Craft",
-              title: "How our consultants ship agentic systems clients actually keep running.",
-              href: "#/careers-form",
-              image:
-                "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
-            },
-          ]}
+          articles={hqArticles}
           seeAllLabel="See all insights"
-          seeAllHref="#/contact"
+          seeAllHref="/contact"
         />
 
         <CTAStrip

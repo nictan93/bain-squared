@@ -136,6 +136,35 @@ export async function getCapability(slug: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Open roles (CareersForm role switcher)
+// ---------------------------------------------------------------------------
+
+export async function getOpenRoles(): Promise<{ label: string; description: string; image: string }[]> {
+  return sanityClient.fetch(
+    `*[_type == "openRole"] | order(order asc) {
+      label,
+      description,
+      "image": coalesce(imageUrl, "")
+    }`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Inside HQ insights (Careers page editorial section)
+// ---------------------------------------------------------------------------
+
+export async function getInsideHQInsights(): Promise<{ eyebrow: string; title: string; href: string; image: string }[]> {
+  return sanityClient.fetch(
+    `*[_type == "insight" && type == "inside-hq"] | order(order asc, publishedAt desc)[0...2] {
+      "eyebrow": coalesce(category, "Inside HQ"),
+      "title": title,
+      "href": "/insights/" + slug.current,
+      "image": coalesce(heroImageUrl, "")
+    }`
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Reviews
 // ---------------------------------------------------------------------------
 
