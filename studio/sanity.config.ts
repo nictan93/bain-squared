@@ -62,8 +62,8 @@ export default defineConfig({
               S.documentTypeList("capability").title("Capability pages")
             ),
             S.divider(),
-            S.listItem().title("Career form roles").schemaType("openRole").child(
-              S.documentTypeList("openRole").title("Career form roles")
+            S.listItem().title("Featured topics").schemaType("featuredTopic").child(
+              S.documentTypeList("featuredTopic").title("Featured topics")
             ),
             S.divider(),
             S.listItem().title("Review groups").schemaType("reviewGroup").child(

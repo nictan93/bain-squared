@@ -1,6 +1,7 @@
 import { insight } from "./insight";
 import { capability } from "./capability";
 import { openRole } from "./openRole";
+import { featuredTopic } from "./featuredTopic";
 import { page } from "./page";
 import { reviewGroup } from "./reviewGroup";
 import { faqGroup } from "./faqGroup";
@@ -16,13 +17,14 @@ import { contactPage } from "./contactPage";
 
 // article, insightCard, clientStory are superseded by the unified insight schema.
 // Their documents were migrated and deleted via script/migrate-insights-unified.ts.
-// openRole (career form roles) remains as a collection of individual role documents.
+// openRole is kept in the schema registry for existing documents but is no longer
+// shown in the Studio sidebar — roles are now managed inline in careersFormPage.
 
 export const schemaTypes = [
   // Content collections
   insight,
   capability,
-  openRole,
+  featuredTopic,
   reviewGroup,
   faqGroup,
 
@@ -37,4 +39,7 @@ export const schemaTypes = [
 
   // SEO metadata (studio-only until head management is wired)
   page,
+
+  // Kept for existing data; not shown in Studio sidebar.
+  openRole,
 ];

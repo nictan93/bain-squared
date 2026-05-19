@@ -1,14 +1,27 @@
 import { defineType, defineField, defineArrayMember } from "sanity";
 
-const imageStripCard = defineArrayMember({
+const statItem = defineArrayMember({
   type: "object",
-  name: "imageStripCard",
+  name: "statItem",
   fields: [
-    defineField({ name: "image", type: "url", title: "Image URL" }),
-    defineField({ name: "eyebrow", type: "string", title: "Eyebrow label" }),
-    defineField({ name: "title", type: "string", title: "Card title" }),
+    defineField({ name: "value", type: "string", title: "Value", description: 'e.g. "$300M"' }),
+    defineField({ name: "label", type: "string", title: "Label", description: 'e.g. "saved over two years"' }),
   ],
-  preview: { select: { title: "title", subtitle: "eyebrow" } },
+  preview: { select: { title: "value", subtitle: "label" } },
+});
+
+const clientWorkStory = defineArrayMember({
+  type: "object",
+  name: "clientWorkStory",
+  title: "Client story",
+  fields: [
+    defineField({ name: "eyebrow", type: "string", title: "Eyebrow" }),
+    defineField({ name: "title", type: "string", title: "Headline" }),
+    defineField({ name: "stats", type: "array", title: "Stats", of: [statItem] }),
+    defineField({ name: "href", type: "string", title: "Link" }),
+    defineField({ name: "image", type: "url", title: "Image URL" }),
+  ],
+  preview: { select: { title: "title" } },
 });
 
 export const homePage = defineType({
@@ -58,12 +71,13 @@ export const homePage = defineType({
       ],
     }),
 
-    // ── Client work image strip cards ─────────────────────────────────
+    // ── Client work carousel stories ─────────────────────────────────
     defineField({
-      name: "clientWorkCards",
+      name: "clientWorkStories",
       type: "array",
-      title: "Client work image strip cards",
-      of: [imageStripCard],
+      title: "Client work carousel stories",
+      description: "The rotating success-story carousel on the home page.",
+      of: [clientWorkStory],
     }),
 
     // ── Careers band ─────────────────────────────────────────────────
