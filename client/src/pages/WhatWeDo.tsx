@@ -24,7 +24,7 @@ export default function WhatWeDo() {
         <CTAStrip
           text="Explore what we do."
           buttonLabel="Speak with us"
-          href="#/contact"
+          href="/contact"
         />
       </main>
       <Footer />

@@ -205,7 +205,7 @@ export default function CapabilityFinance({ params }: Props) {
           <h1 className="font-display text-4xl">Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
-            <a href="#/what-we-do" className="underline">
+            <a href="/what-we-do" className="underline">
               What we do
             </a>
             .

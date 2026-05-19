@@ -46,7 +46,7 @@ export function PerspectiveFeature() {
             valuation when the auditor or board pushes back.
           </p>
           <a
-            href="#/insights/the-squared-method"
+            href="/insights/the-squared-method"
             className="mt-10 inline-flex items-center gap-2 text-[16px] font-bold text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors group"
             data-testid="link-perspective-learn-more"
           >

@@ -51,7 +51,7 @@ export function CareersBand() {
             operators, not consultants.
           </p>
           <a
-            href="#/careers"
+            href="/careers"
             className="mt-10 inline-flex items-center gap-2 text-[16px] font-bold text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors group"
             data-testid="link-explore-careers"
           >

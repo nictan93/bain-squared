@@ -40,7 +40,7 @@ export function CalloutAI() {
           </p>
 
           <a
-            href="#/what-we-do"
+            href="/what-we-do"
             className="mt-10 inline-flex items-center gap-2 text-[16px] font-bold text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors group"
             data-testid="link-explore-capabilities"
           >

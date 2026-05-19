@@ -81,7 +81,7 @@ export function Footer() {
               Quarterly. Plus the occasional Field Note. One email a month at most.
             </p>
             <a
-              href="#/insights"
+              href="/insights"
               className="text-[14px] font-semibold text-[hsl(var(--bs-forest-deep))] inline-flex items-center gap-2 hover:underline"
               data-testid="link-subscribe"
             >
@@ -98,14 +98,14 @@ export function Footer() {
           </p>
           <div className="flex gap-6 text-[12px] text-[hsl(var(--bs-ink-muted))]">
             <a
-              href="#/privacy"
+              href="/privacy"
               className="hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
               data-testid="link-privacy"
             >
               Privacy Policy
             </a>
             <a
-              href="#/terms"
+              href="/terms"
               className="hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
               data-testid="link-terms"
             >

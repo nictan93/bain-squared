@@ -65,7 +65,7 @@ export default function AllInsightsList({ params }: Props) {
           <h1 className="font-display text-4xl">Section not found</h1>
           <p className="mt-4">
             We could not find that section. Head back to{" "}
-            <a href="#/insights" className="underline">
+            <a href="/insights" className="underline">
               Insights
             </a>
             .

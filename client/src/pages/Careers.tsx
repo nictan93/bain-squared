@@ -88,7 +88,7 @@ export default function Careers() {
         <CTAStrip
           text="Do your best work, on your terms."
           buttonLabel="Join our team"
-          href="#/careers-form"
+          href="/careers-form"
         />
       </main>
       <Footer />

@@ -86,7 +86,7 @@ export default function WhoWeWorkWith() {
         <CTAStrip
           text="Bring us your equivalent problem."
           buttonLabel="Reach out"
-          href="#/contact"
+          href="/contact"
         />
       </main>
       <Footer />

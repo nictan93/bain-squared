@@ -127,7 +127,7 @@ export function FeaturedInsights() {
         {/* See all insights */}
         <div className="mt-16 flex justify-center">
           <a
-            href="#/insights"
+            href="/insights"
             className="inline-flex items-center gap-2 px-10 py-4 text-[13px] font-bold tracking-[0.1em] uppercase border transition-colors"
             style={{
               borderColor: "hsl(var(--bs-forest-deep))",

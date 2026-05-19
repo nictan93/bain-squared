@@ -83,7 +83,7 @@ export default function Publication({ params }: Props) {
           <h1 className="font-display text-4xl">Publication not found</h1>
           <p className="mt-4">
             We could not find that publication. Head back to{" "}
-            <a href="#/insights" className="underline">
+            <a href="/insights" className="underline">
               Insights
             </a>
             .

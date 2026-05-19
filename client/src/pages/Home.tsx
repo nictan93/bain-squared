@@ -24,7 +24,7 @@ export default function Home() {
         <CTAStrip
           text="Bring us your hardest growth question."
           buttonLabel="Get in touch"
-          href="#/contact"
+          href="/contact"
         />
       </main>
       <Footer />
