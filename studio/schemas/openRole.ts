@@ -2,7 +2,7 @@ import { defineType, defineField } from "sanity";
 
 export const openRole = defineType({
   name: "openRole",
-  title: "Open role",
+  title: "Career form role",
   type: "document",
   fields: [
     defineField({
