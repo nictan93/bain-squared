@@ -22,6 +22,7 @@ import Article from "@/pages/Article";
 import LegalPage from "@/pages/LegalPage";
 import Reviews from "@/pages/Reviews";
 import FAQ from "@/pages/FAQ";
+import Newsletter from "@/pages/Newsletter";
 import { PRIVACY_BLOCKS, TERMS_BLOCKS } from "@/data/legal";
 
 function AppRouter() {
@@ -35,6 +36,7 @@ function AppRouter() {
       <Route path="/contact" component={Contact} />
       <Route path="/reviews" component={Reviews} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/newsletter" component={Newsletter} />
 
       {/* Legal */}
       <Route path="/privacy">

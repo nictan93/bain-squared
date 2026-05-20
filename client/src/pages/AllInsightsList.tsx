@@ -87,7 +87,7 @@ export default function AllInsightsList({ params }: Props) {
         <InsightsHero
           title={config.title}
           ctaLabel="Sign up for our newsletter"
-          ctaHref="#subscribe"
+          ctaHref="#/newsletter"
           headline={config.headline}
           body={config.body}
         />

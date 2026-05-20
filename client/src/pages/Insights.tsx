@@ -20,7 +20,7 @@ export default function Insights() {
         <InsightsHero
           title="Insights"
           ctaLabel="Sign up for our newsletter"
-          ctaHref="#subscribe"
+          ctaHref="#/newsletter"
           headline="The operator-led view on what is changing in business."
           body="Briefs, field notes, and long-form research from the partners who sit inside the operator's seat. One topic, one argument, no filler. Built to be used in the next decision you make, not skimmed."
         />

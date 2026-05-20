@@ -10,6 +10,7 @@ const footerLinks = {
     { label: "Contact", href: "#/contact" },
   ],
   Insights: [
+    { label: "Newsletter", href: "#/newsletter" },
     { label: "Squared Reports", href: "#/insights/squared-reports" },
     { label: "Looking Glass", href: "#/insights/looking-glass" },
     { label: "Inside Bain Squared HQ", href: "#/insights/inside-hq" },
