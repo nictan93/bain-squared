@@ -40,9 +40,9 @@ export function PageHero({
       data-testid="page-hero"
     >
       <div className="bs-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* LEFT: title + CTAs */}
-          <div>
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* LEFT (desktop): title + CTAs; on mobile, title alone — CTAs moved to order-last */}
+          <div className="order-1 w-full">
             <h1
               className="font-display"
               style={{
@@ -65,7 +65,7 @@ export function PageHero({
             </h1>
 
             {ctas && ctas.length > 0 && (
-              <div className="mt-12 md:mt-16 flex flex-wrap gap-4">
+              <div className="hidden lg:flex mt-12 md:mt-16 flex-wrap gap-4">
                 {ctas.map((cta) => {
                   const isPrimary = (cta.variant ?? "primary") === "primary";
                   return (
@@ -117,8 +117,8 @@ export function PageHero({
             )}
           </div>
 
-          {/* RIGHT: body copy */}
-          <div className="lg:pt-4">
+          {/* RIGHT (desktop) / MIDDLE (mobile): body copy */}
+          <div className="order-2 w-full lg:pt-4">
             <p
               className="text-[18px] md:text-[20px] leading-[1.45] font-bold"
               style={{ color: "hsl(var(--bs-ink))" }}
@@ -134,6 +134,40 @@ export function PageHero({
               </p>
             )}
           </div>
+
+          {/* MOBILE ONLY: CTAs after body */}
+          {ctas && ctas.length > 0 && (
+            <div className="order-3 w-full flex lg:hidden flex-wrap gap-4">
+              {ctas.map((cta) => {
+                const isPrimary = (cta.variant ?? "primary") === "primary";
+                return (
+                  <a
+                    key={`m-${cta.label}`}
+                    href={cta.href}
+                    className="inline-flex items-center justify-center px-8 py-4 text-[15px] font-bold transition-colors whitespace-nowrap border"
+                    style={
+                      isPrimary
+                        ? {
+                            backgroundColor: "hsl(var(--bs-forest-deep))",
+                            color: "white",
+                            borderColor: "hsl(var(--bs-forest-deep))",
+                          }
+                        : {
+                            backgroundColor: "transparent",
+                            color: "hsl(var(--bs-ink))",
+                            borderColor: "hsl(var(--bs-ink))",
+                          }
+                    }
+                    data-testid={`hero-cta-mobile-${cta.label
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                  >
+                    {cta.label}
+                  </a>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>

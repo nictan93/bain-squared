@@ -31,8 +31,8 @@ function useCardsVisible() {
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
-      if (w < 640) setN(1.15);
-      else if (w < 1024) setN(2);
+      if (w < 640) setN(4);
+      else if (w < 1024) setN(4);
       else if (w < 1280) setN(3);
       else setN(4);
     };
@@ -94,14 +94,14 @@ export function ImageStripCarousel({ cards, intervalMs = 5000 }: Props) {
                 <>
                   {/* Bottom gradient for text legibility */}
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
+                  <div className="absolute inset-x-0 bottom-0 p-2 sm:p-6 md:p-8 text-white">
                     {card.eyebrow && (
-                      <div className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] opacity-90 mb-2">
+                      <div className="hidden sm:block text-[12px] md:text-[13px] uppercase tracking-[0.08em] opacity-90 mb-2">
                         {card.eyebrow}
                       </div>
                     )}
                     {card.title && (
-                      <div className="text-[20px] md:text-[24px] font-bold leading-[1.2]">
+                      <div className="text-[11px] sm:text-[20px] md:text-[24px] font-bold leading-[1.2]">
                         {card.title}
                       </div>
                     )}

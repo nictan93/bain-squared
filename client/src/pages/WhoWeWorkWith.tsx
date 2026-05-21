@@ -19,8 +19,8 @@ export default function WhoWeWorkWith() {
           lead="Operators, founders, and boards who treat AI, finance, and intangibles as one connected build."
           body="We are selective. The work we do is operator-led, not slide-led, which means the teams we partner with have to be ready to rebuild the parts of the business that the next phase of growth depends on."
           ctas={[
-            { label: "Bring us your problem", href: "#/contact", variant: "primary" },
-            { label: "See what we do", href: "#/what-we-do", variant: "outline" },
+            { label: "Speak to us", href: "#/contact", variant: "primary" },
+            { label: "What we do", href: "#/what-we-do", variant: "outline" },
           ]}
         />
 
