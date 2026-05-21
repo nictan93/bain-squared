@@ -113,7 +113,7 @@ export default function FAQ() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-8">
                 <p
-                  className="text-[12px] font-semibold uppercase tracking-[0.18em] mb-6"
+                  className="text-[12px] font-semibold uppercase tracking-[0.08em] mb-6"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   Frequently asked
@@ -160,7 +160,7 @@ export default function FAQ() {
                 <a
                   key={g.id}
                   href={`#${g.id}`}
-                  className="text-[13px] font-semibold uppercase tracking-[0.12em] hover:underline"
+                  className="text-[13px] font-semibold uppercase tracking-[0.08em] hover:underline"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                   data-testid={`faq-jump-${g.id}`}
                 >
@@ -186,7 +186,7 @@ export default function FAQ() {
                 <div className="lg:col-span-4">
                   <div className="lg:sticky lg:top-32">
                     <p
-                      className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-4"
+                      className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
                       style={{ color: "hsl(var(--bs-forest-deep))" }}
                     >
                       0{gi + 1} / FAQ
@@ -271,7 +271,7 @@ export default function FAQ() {
               <div className="lg:col-span-4 lg:text-right">
                 <a
                   href="#/contact"
-                  className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold uppercase tracking-[0.1em]"
+                  className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold uppercase tracking-[0.08em]"
                   style={{
                     background: "#FFFFFF",
                     color: "hsl(var(--bs-forest-deep))",

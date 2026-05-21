@@ -111,7 +111,7 @@ export default function Newsletter() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-7">
                 <p
-                  className="text-[12px] font-semibold uppercase tracking-[0.18em] mb-6"
+                  className="text-[12px] font-semibold uppercase tracking-[0.08em] mb-6"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   The Bain Squared Brief
@@ -154,7 +154,7 @@ export default function Newsletter() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 <div className="lg:col-span-4">
                   <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em]"
+                    className="text-[11px] font-semibold uppercase tracking-[0.08em]"
                     style={{ color: "hsl(var(--bs-forest-deep))" }}
                   >
                     Subscribe
@@ -215,7 +215,7 @@ export default function Newsletter() {
                       />
                       <button
                         type="submit"
-                        className="px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.1em] whitespace-nowrap transition-colors"
+                        className="px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.08em] whitespace-nowrap transition-colors"
                         style={{
                           background: "hsl(var(--bs-forest-deep))",
                           color: "#FFFFFF",
@@ -271,7 +271,7 @@ export default function Newsletter() {
               <div className="lg:col-span-4">
                 <div className="lg:sticky lg:top-32">
                   <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-4"
+                    className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
                     style={{ color: "hsl(var(--bs-forest-deep))" }}
                   >
                     01 / What you'll get
@@ -341,7 +341,7 @@ export default function Newsletter() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-12 md:mb-16">
               <div className="lg:col-span-5">
                 <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-4"
+                  className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   02 / Recent issues
@@ -382,7 +382,7 @@ export default function Newsletter() {
                 >
                   <div className="lg:col-span-3">
                     <div
-                      className="text-[12px] font-semibold uppercase tracking-[0.14em]"
+                      className="text-[12px] font-semibold uppercase tracking-[0.08em]"
                       style={{ color: "hsl(var(--bs-forest-deep))" }}
                     >
                       {issue.date}
@@ -429,7 +429,7 @@ export default function Newsletter() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
               <div className="lg:col-span-4">
                 <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-4"
+                  className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   03 / Before you subscribe
@@ -521,7 +521,7 @@ export default function Newsletter() {
                     if (el)
                       el.scrollIntoView({ behavior: "smooth", block: "start" });
                   }}
-                  className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold uppercase tracking-[0.1em]"
+                  className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold uppercase tracking-[0.08em]"
                   style={{
                     background: "#FFFFFF",
                     color: "hsl(var(--bs-forest-deep))",

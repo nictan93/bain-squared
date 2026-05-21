@@ -57,7 +57,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       <dl className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-5">
         <div>
           <dt
-            className="text-[11px] font-semibold uppercase tracking-[0.14em]"
+            className="text-[11px] font-semibold uppercase tracking-[0.08em]"
             style={{ color: "hsl(var(--bs-forest-deep))" }}
           >
             Service used
@@ -71,7 +71,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
         </div>
         <div>
           <dt
-            className="text-[11px] font-semibold uppercase tracking-[0.14em]"
+            className="text-[11px] font-semibold uppercase tracking-[0.08em]"
             style={{ color: "hsl(var(--bs-forest-deep))" }}
           >
             Problem solved
@@ -85,7 +85,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
         </div>
         <div>
           <dt
-            className="text-[11px] font-semibold uppercase tracking-[0.14em]"
+            className="text-[11px] font-semibold uppercase tracking-[0.08em]"
             style={{ color: "hsl(var(--bs-forest-deep))" }}
           >
             Outcome
@@ -122,7 +122,7 @@ export default function Reviews() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-8">
                 <p
-                  className="text-[12px] font-semibold uppercase tracking-[0.18em] mb-6"
+                  className="text-[12px] font-semibold uppercase tracking-[0.08em] mb-6"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   Client Feedback
@@ -176,7 +176,7 @@ export default function Reviews() {
                 <div className="lg:col-span-4">
                   <div className="lg:sticky lg:top-32">
                     <p
-                      className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-4"
+                      className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
                       style={{ color: "hsl(var(--bs-forest-deep))" }}
                     >
                       0{gi + 1} / Reviews
@@ -235,7 +235,7 @@ export default function Reviews() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
               <div className="lg:col-span-5">
                 <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-5"
+                  className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-5"
                   style={{ color: "hsl(var(--bs-forest-accent))" }}
                 >
                   Why clients work with Bain Squared

@@ -61,7 +61,7 @@ export function Hero() {
         aria-label="Scroll to next section"
         data-testid="button-scroll-cue"
       >
-        <span className="text-[11px] font-semibold tracking-[0.14em] uppercase">
+        <span className="text-[11px] font-semibold tracking-[0.08em] uppercase">
           Scroll
         </span>
         <span

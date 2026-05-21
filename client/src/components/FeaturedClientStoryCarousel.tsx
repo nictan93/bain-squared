@@ -53,7 +53,7 @@ export function FeaturedClientStoryCarousel({
           {/* LEFT: text */}
           <div className="lg:col-span-6">
             <div
-              className="text-[12px] md:text-[13px] tracking-[0.12em] uppercase mb-5"
+              className="text-[12px] md:text-[13px] tracking-[0.08em] uppercase mb-5"
               style={{ color: "hsl(var(--bs-ink-muted))" }}
             >
               {eyebrow}

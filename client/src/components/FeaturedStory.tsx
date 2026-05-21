@@ -28,7 +28,7 @@ export function FeaturedStory() {
               They translated something we always knew into a number we could finally
               defend.
             </blockquote>
-            <p className="text-[13px] uppercase tracking-[0.14em] text-[hsl(var(--bs-ink-muted))] mb-10">
+            <p className="text-[13px] uppercase tracking-[0.08em] text-[hsl(var(--bs-ink-muted))] mb-10">
               Founder, skincare brand
             </p>
 
@@ -58,7 +58,7 @@ export function FeaturedStory() {
                 aria-hidden="true"
               />
               <div className="relative z-10">
-                <span className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[hsl(var(--bs-forest-accent))] mb-4 block">
+                <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-[hsl(var(--bs-forest-accent))] mb-4 block">
                   Engagement
                 </span>
                 <p className="font-display text-[28px] md:text-[36px] leading-[1.15] text-[hsl(var(--bs-canvas))] font-bold mb-4">
@@ -71,7 +71,7 @@ export function FeaturedStory() {
 
               {/* Corner accent */}
               <div
-                className="absolute top-8 right-8 text-[hsl(var(--bs-forest-accent))] font-display text-[14px] tracking-[0.14em] uppercase"
+                className="absolute top-8 right-8 text-[hsl(var(--bs-forest-accent))] font-display text-[14px] tracking-[0.08em] uppercase"
                 aria-hidden="true"
               >
                 01 / Valuation

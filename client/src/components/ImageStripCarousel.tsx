@@ -96,7 +96,7 @@ export function ImageStripCarousel({ cards, intervalMs = 5000 }: Props) {
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
                     {card.eyebrow && (
-                      <div className="text-[12px] md:text-[13px] uppercase tracking-[0.1em] opacity-90 mb-2">
+                      <div className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] opacity-90 mb-2">
                         {card.eyebrow}
                       </div>
                     )}

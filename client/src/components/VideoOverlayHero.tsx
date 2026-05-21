@@ -65,7 +65,7 @@ export function VideoOverlayHero({
       <div className="relative z-10 h-full bs-container flex items-center">
         <div className="max-w-[640px]">
           <div
-            className="text-[14px] uppercase tracking-[0.16em] font-medium mb-6"
+            className="text-[14px] uppercase tracking-[0.08em] font-medium mb-6"
             style={{ color: "hsl(var(--bs-forest-deep))" }}
           >
             {eyebrow}

@@ -85,7 +85,7 @@ export function ClientWorkCarousel() {
           {/* Left: copy */}
           <div className="lg:col-span-5 lg:pt-8">
             <p
-              className="text-[12px] md:text-[13px] tracking-[0.12em] uppercase mb-5 pb-3 border-b"
+              className="text-[12px] md:text-[13px] tracking-[0.08em] uppercase mb-5 pb-3 border-b"
               style={{
                 color: "hsl(var(--bs-ink-muted))",
                 borderColor: "hsl(var(--bs-hairline))",

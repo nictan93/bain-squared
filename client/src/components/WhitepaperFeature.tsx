@@ -47,7 +47,7 @@ export function WhitepaperFeature({
           {/* RIGHT: text + button */}
           <div className="lg:col-span-6">
             <div
-              className="text-[12px] md:text-[13px] uppercase tracking-[0.14em] font-bold mb-5"
+              className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-bold mb-5"
               style={{ color: "hsl(var(--bs-forest-deep))" }}
             >
               {eyebrow}

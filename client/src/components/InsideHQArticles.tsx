@@ -86,7 +86,7 @@ export function InsideHQArticles({
               </div>
               {a.eyebrow && (
                 <div
-                  className="mt-6 text-[12px] md:text-[13px] uppercase tracking-[0.14em] font-bold"
+                  className="mt-6 text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-bold"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                 >
                   {a.eyebrow}

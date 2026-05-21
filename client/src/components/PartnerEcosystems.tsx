@@ -41,7 +41,7 @@ export function PartnerEcosystems({
         <div className="mx-auto text-center" style={{ maxWidth: "1000px" }}>
           {eyebrow && (
             <div
-              className="text-[12px] md:text-[13px] uppercase tracking-[0.14em] font-bold mb-6"
+              className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-bold mb-6"
               style={{ color: "hsl(var(--bs-forest-deep))" }}
             >
               {eyebrow}
