@@ -41,7 +41,7 @@ export function NewsletterSubscribe({
     >
       <div className="bs-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 text-center lg:text-left">
             <h2
               className="font-display"
               style={{

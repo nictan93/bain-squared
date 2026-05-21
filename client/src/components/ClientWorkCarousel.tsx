@@ -84,6 +84,7 @@ export function ClientWorkCarousel() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left: copy */}
           <div className="order-2 lg:order-1 lg:col-span-5 lg:pt-8">
+            {/* (mobile image is injected between title and impact below) */}
             <p
               className="text-[12px] md:text-[13px] tracking-[0.08em] uppercase mb-5 pb-3 border-b"
               style={{
@@ -112,6 +113,25 @@ export function ClientWorkCarousel() {
             >
               {story.title}
             </h4>
+
+            {/* Mobile-only image: sits between title and impact */}
+            <div className="mt-6 lg:hidden">
+              <div
+                className="relative overflow-hidden"
+                style={{ aspectRatio: "4 / 3" }}
+              >
+                {stories.map((s, i) => (
+                  <div
+                    key={s.title}
+                    className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
+                    style={{
+                      backgroundImage: `url('${s.image}')`,
+                      opacity: i === index ? 1 : 0,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
 
             <p className="mt-8 text-[14px] font-bold text-[hsl(var(--bs-ink))]">
               The impact
@@ -179,8 +199,8 @@ export function ClientWorkCarousel() {
             </div>
           </div>
 
-          {/* Right: image */}
-          <div className="order-1 lg:order-2 lg:col-span-7">
+          {/* Right: image (desktop only — mobile uses inline image inside left col) */}
+          <div className="hidden lg:block order-1 lg:order-2 lg:col-span-7">
             <div
               className="relative overflow-hidden"
               style={{ aspectRatio: "4 / 3" }}

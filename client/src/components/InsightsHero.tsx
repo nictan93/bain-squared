@@ -26,9 +26,9 @@ export function InsightsHero({
       data-testid="insights-hero"
     >
       <div className="bs-container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* LEFT: title + CTA */}
-          <div className="lg:col-span-7">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* LEFT: title + CTA (CTA hidden on mobile, rendered below body) */}
+          <div className="order-1 w-full lg:col-span-7">
             <h1
               className="font-display"
               style={{
@@ -43,7 +43,7 @@ export function InsightsHero({
             </h1>
             <a
               href={ctaHref}
-              className="inline-flex items-center justify-center mt-10 px-8 py-4 text-[15px] font-bold transition-colors border whitespace-nowrap"
+              className="hidden lg:inline-flex items-center justify-center mt-10 px-8 py-4 text-[15px] font-bold transition-colors border whitespace-nowrap"
               style={{
                 backgroundColor: "hsl(var(--bs-forest-deep))",
                 color: "white",
@@ -68,7 +68,7 @@ export function InsightsHero({
           </div>
 
           {/* RIGHT: headline + body */}
-          <div className="lg:col-span-5">
+          <div className="order-2 w-full lg:col-span-5">
             <h2
               className="font-display"
               style={{
@@ -88,6 +88,20 @@ export function InsightsHero({
               {body}
             </p>
           </div>
+
+          {/* MOBILE ONLY: CTA after body */}
+          <a
+            href={ctaHref}
+            className="order-3 inline-flex lg:hidden items-center justify-center px-8 py-4 text-[15px] font-bold transition-colors border whitespace-nowrap"
+            style={{
+              backgroundColor: "hsl(var(--bs-forest-deep))",
+              color: "white",
+              borderColor: "hsl(var(--bs-forest-deep))",
+            }}
+            data-testid="link-insights-cta-mobile"
+          >
+            {ctaLabel}
+          </a>
         </div>
       </div>
     </section>
