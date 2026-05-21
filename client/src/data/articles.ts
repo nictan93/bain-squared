@@ -124,4 +124,133 @@ export const ARTICLES: Record<string, Article> = {
       },
     ],
   },
+
+  "epc-leader-transforms": {
+    slug: "epc-leader-transforms",
+    publication: "Bain Squared Client Stories",
+    headline: "An EPC leader transforms itself amid intense volatility",
+    dek: "Commodity swings, FX shocks, and a backlog that no longer matched the operating model. We rebuilt the finance function around live data, and the operator held the line on cash and price for two full years.",
+    date: "April 30, 2026",
+    type: "Client Story",
+    heroImage:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80",
+    authors: [{ name: "Nicholas Tan", href: "#/who-we-work-with" }],
+    blocks: [
+      {
+        type: "p",
+        dropcap: true,
+        text: "**A regional EPC leader** came to us with a problem the boardroom already knew about. Margin had been drifting for six quarters. Commodity exposure was no longer hedged in a way the CFO could explain. The operating model still belonged to a smaller, simpler company. The brief was direct: hold cash, hold price, and do it without freezing the business.",
+      },
+      { type: "h2", text: "What we did" },
+      {
+        type: "list",
+        items: [
+          "**Rebuilt the cost stack** from contract level upward, so every line item traced back to a hedgeable exposure.",
+          "**Stood up a live margin desk** that the COO and CFO read together every Monday — same numbers, same screen, no reconciliation calls.",
+          "**Renegotiated the top fifteen supplier contracts** against a model the operator could defend in any commercial review.",
+          "**Trained the project controllers** to run the desk themselves inside ninety days. We left before the second annual planning cycle.",
+        ],
+      },
+      { type: "h2", text: "The impact" },
+      {
+        type: "p",
+        text: "Across two years of operating the new model, the business retained **$300M of cash** that would otherwise have leaked through margin and working capital. The share price tracked the operating story: **2.5x** across the same window. The CFO closed the engagement with a finance function that no longer needed us in the room.",
+      },
+      {
+        type: "quote",
+        text: "They did not sell us a transformation. They sold us an operating habit, and they left when the habit stuck.",
+        attribution: "CFO, regional EPC operator",
+      },
+      {
+        type: "p",
+        text: "If your finance function still cannot answer margin questions in the same room as the operator, [we should talk](#/contact).",
+      },
+    ],
+  },
+
+  "saas-operating-model-90-days": {
+    slug: "saas-operating-model-90-days",
+    publication: "Bain Squared Client Stories",
+    headline: "A Series B SaaS founder rebuilds the operating model in 90 days",
+    dek: "Revenue had tripled. The operating model had not moved. We sat with the founder for one quarter and rebuilt the way the company plans, prices, and pays itself.",
+    date: "March 18, 2026",
+    type: "Client Story",
+    heroImage:
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=2400&q=80",
+    authors: [{ name: "Priya Raman", href: "#/who-we-work-with" }],
+    blocks: [
+      {
+        type: "p",
+        dropcap: true,
+        text: "**A Series B SaaS founder** had outrun her operating model. ARR had tripled in eighteen months. Headcount had doubled. Cash burn had not improved. Pricing was three years old and nobody on the commercial team could explain it without an apology. The board wanted a path to default-alive inside two quarters.",
+      },
+      { type: "h2", text: "What we did" },
+      {
+        type: "list",
+        items: [
+          "**Rewrote the pricing page** against a model that tied each tier to the value the customer measured themselves.",
+          "**Rebuilt the planning stack** so the founder could see ARR, gross margin, and cash on one screen, refreshed daily.",
+          "**Cut twelve products to four**, killed two integrations, and gave the engineering org back roughly a third of its capacity.",
+          "**Stood up a weekly operating cadence** — one hour, one document, one decision — that survived our departure.",
+        ],
+      },
+      { type: "h2", text: "The impact" },
+      {
+        type: "p",
+        text: "Gross margin lifted **42%** inside the same quarter the new pricing went live. Cash runway extended by **18 months** with no headcount reduction. The founder closed her next round on the operating story, not the deck.",
+      },
+      {
+        type: "quote",
+        text: "They did not run a process. They sat with me, made the calls, and left a company that knew how to run itself.",
+        attribution: "Founder & CEO, Series B SaaS operator",
+      },
+      {
+        type: "p",
+        text: "If you have outrun your operating model, [we should talk](#/contact).",
+      },
+    ],
+  },
+
+  "family-owned-esop-defense": {
+    slug: "family-owned-esop-defense",
+    publication: "Bain Squared Client Stories",
+    headline: "A family-owned group defends an ESOP valuation under audit",
+    dek: "A third-generation family business needed an ESOP valuation that would survive both an external audit and the family's own scrutiny. We delivered a defendable number and walked it through every stakeholder until it stuck.",
+    date: "February 12, 2026",
+    type: "Client Story",
+    heroImage:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80",
+    authors: [{ name: "Nicholas Tan", href: "#/who-we-work-with" }],
+    blocks: [
+      {
+        type: "p",
+        dropcap: true,
+        text: "**A third-generation family-owned operator** was rolling out an ESOP. The board had drafted a number. The auditor had questions. The family had more. The brief was simple and the bar was high: a valuation that survived audit, board, and family in the same week.",
+      },
+      { type: "h2", text: "What we did" },
+      {
+        type: "list",
+        items: [
+          "**Rebuilt the valuation model** from the underlying contracts, not the prior memo. Every number traceable to a source the auditor could click into.",
+          "**Stress-tested the intangibles**, including brand, customer concentration, and the founder's own residual operating role.",
+          "**Walked the family through the model** in person, in their language, with the disagreements named openly rather than papered over.",
+          "**Coordinated directly with the audit team** so the questions were resolved before the formal review, not during it.",
+        ],
+      },
+      { type: "h2", text: "The impact" },
+      {
+        type: "p",
+        text: "The ESOP closed at a **$48M defended valuation** with **zero audit adjustments**. The family signed in the same room. The auditor closed without an extension. The operator now uses the same model for annual reviews.",
+      },
+      {
+        type: "quote",
+        text: "They did the work the auditor was going to ask for, before the auditor asked. That is a rare habit.",
+        attribution: "Chair, family-owned operating group",
+      },
+      {
+        type: "p",
+        text: "If you have an ESOP valuation that needs to survive scrutiny, [we should talk](#/contact).",
+      },
+    ],
+  },
 };

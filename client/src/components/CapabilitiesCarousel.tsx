@@ -69,7 +69,7 @@ function useCardsVisible() {
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
-      if (w < 640) setN(1.15);
+      if (w < 640) setN(2.15);
       else if (w < 1024) setN(2);
       else if (w < 1280) setN(3);
       else setN(4);
@@ -176,21 +176,21 @@ export function CapabilitiesCarousel({ heading, alignLeft, tightHeading }: Props
                 }}
               />
               {/* In-image title block, no white box. Title bottom-left, hairline above CTA */}
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
+              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 md:p-7">
                 <h3
-                  className="font-display text-white text-[19px] md:text-[22px] leading-[1.15] line-clamp-2"
+                  className="font-display text-white text-[15px] sm:text-[19px] md:text-[22px] leading-[1.15] line-clamp-2"
                   style={{ fontWeight: 700, letterSpacing: "-0.005em" }}
                 >
                   {cap.title}
                 </h3>
                 <div
-                  className="mt-4 pt-4 border-t"
+                  className="mt-3 pt-3 sm:mt-4 sm:pt-4 border-t"
                   style={{ borderColor: "rgba(255,255,255,0.28)" }}
                 >
-                  <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white">
+                  <span className="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-semibold text-white">
                     Learn more
                     <ChevronRight
-                      size={15}
+                      size={14}
                       strokeWidth={2.5}
                       className="text-white transition-transform group-hover:translate-x-1"
                     />

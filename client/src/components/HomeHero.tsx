@@ -20,8 +20,7 @@ export function HomeHero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden"
-      style={{ height: "100vh", minHeight: "640px" }}
+      className="relative w-full overflow-hidden h-[72vh] min-h-[480px] md:h-screen md:min-h-[640px]"
       data-testid="home-hero"
     >
       {/* Background image with Ken Burns slow zoom */}

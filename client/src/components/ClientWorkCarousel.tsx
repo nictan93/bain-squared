@@ -25,7 +25,7 @@ const stories: Story[] = [
       { value: "$300M", label: "saved over two years" },
       { value: "2.5x", label: "stock price increase over two years" },
     ],
-    href: "#/client-stories/epc-transformation",
+    href: "#/insights/epc-leader-transforms",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
   },
@@ -36,7 +36,7 @@ const stories: Story[] = [
       { value: "42%", label: "gross margin lift" },
       { value: "18mo", label: "cash runway extension" },
     ],
-    href: "#/client-stories/saas-operating-model",
+    href: "#/insights/saas-operating-model-90-days",
     image:
       "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
   },
@@ -47,7 +47,7 @@ const stories: Story[] = [
       { value: "$48M", label: "valuation defended" },
       { value: "0", label: "audit adjustments" },
     ],
-    href: "#/client-stories/esop-defense",
+    href: "#/insights/family-owned-esop-defense",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
   },
@@ -83,7 +83,7 @@ export function ClientWorkCarousel() {
       <div className="bs-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left: copy */}
-          <div className="lg:col-span-5 lg:pt-8">
+          <div className="order-2 lg:order-1 lg:col-span-5 lg:pt-8">
             <p
               className="text-[12px] md:text-[13px] tracking-[0.08em] uppercase mb-5 pb-3 border-b"
               style={{
@@ -180,7 +180,7 @@ export function ClientWorkCarousel() {
           </div>
 
           {/* Right: image */}
-          <div className="lg:col-span-7">
+          <div className="order-1 lg:order-2 lg:col-span-7">
             <div
               className="relative overflow-hidden"
               style={{ aspectRatio: "4 / 3" }}

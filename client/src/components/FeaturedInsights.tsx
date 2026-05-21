@@ -96,11 +96,22 @@ export function FeaturedInsights() {
                   style={{ backgroundImage: `url('${ins.image}')` }}
                 />
               </div>
-              <div
-                className="mt-5 text-[13px] font-semibold tracking-[0.06em] uppercase"
-                style={{ color: "hsl(var(--bs-forest-deep))" }}
-              >
-                {ins.category}
+              <div className="mt-5 flex items-center gap-3 flex-wrap">
+                <span
+                  className="text-[13px] font-semibold tracking-[0.08em] uppercase"
+                  style={{ color: "hsl(var(--bs-forest-deep))" }}
+                >
+                  {ins.category}
+                </span>
+                <span
+                  className="inline-flex items-center px-2.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase"
+                  style={{
+                    backgroundColor: "#E6EFEC",
+                    color: "hsl(var(--bs-forest-deep))",
+                  }}
+                >
+                  {ins.type}
+                </span>
               </div>
               <h3
                 className="mt-3 text-[24px] md:text-[28px] font-bold leading-[1.2] group-hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
@@ -114,12 +125,6 @@ export function FeaturedInsights() {
               >
                 {ins.excerpt}
               </p>
-              <div
-                className="mt-6 text-[14px]"
-                style={{ color: "hsl(var(--bs-ink-muted))" }}
-              >
-                {ins.type}
-              </div>
             </a>
           ))}
         </div>

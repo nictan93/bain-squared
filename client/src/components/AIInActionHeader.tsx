@@ -31,7 +31,7 @@ export function AIInActionHeader() {
             than having their stack run rings around them.
           </p>
           <a
-            href="#/client-work"
+            href="#/insights/client-stories"
             className="mt-8 inline-flex items-center gap-2 text-[16px] font-bold text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors group"
             data-testid="link-view-client-work"
           >
