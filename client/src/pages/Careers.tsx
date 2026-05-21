@@ -27,25 +27,21 @@ export default function Careers() {
             {
               image:
                 "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Culture",
               title: "Operator-led, always.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Culture",
               title: "Build, then advise.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Culture",
               title: "Deep work, protected.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Culture",
               title: "Small room, high bar.",
             },
           ]}

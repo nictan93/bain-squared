@@ -29,25 +29,21 @@ export default function WhoWeWorkWith() {
             {
               image:
                 "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Industry",
               title: "Technology",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Industry",
               title: "SaaS",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Industry",
               title: "Professional Services",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
-              eyebrow: "Industry",
               title: "Healthcare",
             },
           ]}

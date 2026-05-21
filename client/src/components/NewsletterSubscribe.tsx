@@ -54,12 +54,6 @@ export function NewsletterSubscribe({
             >
               {heading}
             </h2>
-            <p
-              className="mt-5 text-[16px] md:text-[17px] leading-[1.6]"
-              style={{ color: "rgba(255,255,255,0.85)" }}
-            >
-              {body}
-            </p>
           </div>
 
           <div className="lg:col-span-6">

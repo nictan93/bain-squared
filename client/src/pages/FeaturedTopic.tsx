@@ -115,7 +115,6 @@ export default function FeaturedTopic({ params }: Props) {
       <Header />
       <main>
         <TopicVideoHero
-          eyebrow={config.eyebrow}
           title={config.title}
           titleAccent={config.titleAccent}
           lede={config.lede}
