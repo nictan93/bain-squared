@@ -70,8 +70,25 @@ export function ImageStripCarousel({ cards, intervalMs = 5000 }: Props) {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="relative overflow-hidden">
+        {/* Mobile: vertical stack, full-width landscape cards */}
+        <div className="flex flex-col sm:hidden">
+          {cards.map((card, i) => (
+            <div
+              key={`m-${i}`}
+              className="relative w-full aspect-[16/10]"
+              data-testid={`image-strip-card-mobile-${i}`}
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${card.image}')` }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Tablet/desktop: horizontal carousel */}
         <div
-          className="flex transition-transform duration-700 ease-out"
+          className="hidden sm:flex transition-transform duration-700 ease-out"
           style={{
             transform: `translateX(calc(-${index} * (100% / ${cardsVisible})))`,
           }}
@@ -79,7 +96,7 @@ export function ImageStripCarousel({ cards, intervalMs = 5000 }: Props) {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="flex-shrink-0 relative aspect-[1/2] sm:aspect-[3/4]"
+              className="flex-shrink-0 relative aspect-[3/4]"
               style={{
                 width: `calc(100% / ${cardsVisible})`,
               }}
@@ -91,9 +108,9 @@ export function ImageStripCarousel({ cards, intervalMs = 5000 }: Props) {
               />
               {(card.title || card.eyebrow) && (
                 <>
-                  {/* Bottom gradient for text legibility (desktop/tablet only) */}
-                  <div className="hidden sm:block absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
-                  <div className="hidden sm:block absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
+                  {/* Bottom gradient for text legibility */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
                     {card.eyebrow && (
                       <div className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] opacity-90 mb-2">
                         {card.eyebrow}

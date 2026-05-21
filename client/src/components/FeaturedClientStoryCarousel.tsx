@@ -89,6 +89,22 @@ export function FeaturedClientStoryCarousel({
                 {s.headline}
               </h3>
 
+              {/* Mobile-only image: sits between headline and impact */}
+              <div className="mt-6 lg:hidden">
+                <div
+                  className="w-full overflow-hidden"
+                  style={{ aspectRatio: "4 / 3" }}
+                >
+                  <div
+                    key={`story-img-mobile-${active}`}
+                    role="img"
+                    aria-label={s.imageAlt || ""}
+                    className="w-full h-full bg-cover bg-center"
+                    style={{ backgroundImage: `url('${s.image}')` }}
+                  />
+                </div>
+              </div>
+
               <div className="mt-10">
                 <div
                   className="text-[14px] font-bold mb-5"
@@ -177,8 +193,8 @@ export function FeaturedClientStoryCarousel({
             </div>
           </div>
 
-          {/* RIGHT: image */}
-          <div className="lg:col-span-6">
+          {/* RIGHT: image (desktop only — mobile uses inline image above) */}
+          <div className="hidden lg:block lg:col-span-6">
             <div
               className="w-full overflow-hidden"
               style={{ aspectRatio: "4 / 3" }}
