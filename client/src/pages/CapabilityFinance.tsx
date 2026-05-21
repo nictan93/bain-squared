@@ -7,7 +7,6 @@ import {
   type SwitcherItem,
 } from "@/components/BusinessAreaSwitcher";
 import { WhitepaperFeature } from "@/components/WhitepaperFeature";
-import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
 
 type FinanceConfig = {
@@ -250,8 +249,6 @@ export default function CapabilityFinance({ params }: Props) {
           image={config.whitepaperImage}
           imageAlt="Operator working through the finance playbook in print."
         />
-
-        <SquaredMethod />
 
         <TeamCTA
           headline="Speak with a Bain Squared CFO."

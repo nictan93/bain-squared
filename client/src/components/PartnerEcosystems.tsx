@@ -1,7 +1,10 @@
 /**
  * PartnerEcosystems — centered headline band with an accent word.
  * Matches Thoughtworks reference image 5.
+ * Includes an auto-scrolling partner logo marquee below the body.
  */
+
+import { PartnerLogoMarquee } from "@/components/PartnerLogoMarquee";
 
 type Props = {
   /** Optional small eyebrow above the headline */
@@ -96,6 +99,11 @@ export function PartnerEcosystems({
               </a>
             </div>
           )}
+        </div>
+
+        {/* Auto-scrolling partner logo strip */}
+        <div className="mt-14 md:mt-20">
+          <PartnerLogoMarquee />
         </div>
       </div>
     </section>

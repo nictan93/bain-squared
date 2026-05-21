@@ -271,15 +271,12 @@ export function Header() {
          * ============================================================ */}
         {NAV.filter((n) => n.panel).map((item) => {
           const isOpen = openPanel === item.label;
+          if (!isOpen) return null;
           return (
             <div
               key={`panel-${item.label}`}
               onMouseLeave={() => setOpenPanel(null)}
-              className={`absolute left-0 right-0 transition-[opacity,transform] duration-200 ease-out ${
-                isOpen
-                  ? "opacity-100 translate-y-0 pointer-events-auto"
-                  : "opacity-0 -translate-y-1 pointer-events-none"
-              }`}
+              className={`absolute left-0 right-0 transition-[opacity,transform] duration-200 ease-out opacity-100 translate-y-0 pointer-events-auto`}
               style={{
                 top: "100%",
                 backgroundColor: "hsl(var(--bs-canvas))",

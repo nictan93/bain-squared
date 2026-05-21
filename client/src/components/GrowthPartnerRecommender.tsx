@@ -22,7 +22,7 @@ type Props = {
  * remove. Reset and Read more are deliberately stripped.
  */
 export function GrowthPartnerRecommender({
-  eyebrow = "Your match",
+  eyebrow = "",
   subheading = "Recommended for you",
   cards,
 }: Props) {

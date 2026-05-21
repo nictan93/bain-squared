@@ -4,7 +4,6 @@ import { VideoOverlayHero } from "@/components/VideoOverlayHero";
 import { IntroStatsRow } from "@/components/IntroStatsRow";
 import { IntangiblesSplit } from "@/components/IntangiblesSplit";
 import { MethodOverlay } from "@/components/MethodOverlay";
-import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
 
 type ValuationConfig = {
@@ -221,8 +220,6 @@ export default function CapabilityValuation({ params }: Props) {
           linkLabel="Learn more"
           linkHref="#/what-we-do"
         />
-
-        <SquaredMethod />
 
         <TeamCTA
           headline={config.teamHeadline}

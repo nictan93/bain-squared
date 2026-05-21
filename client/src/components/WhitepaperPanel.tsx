@@ -25,8 +25,7 @@ export function WhitepaperPanel({
 }: Props) {
   return (
     <section
-      className="py-20 md:py-28"
-      style={{ backgroundColor: "hsl(var(--bs-forest-soft))" }}
+      className="bs-bg-canvas py-20 md:py-28"
       data-testid="whitepaper-panel"
     >
       <div className="bs-container">

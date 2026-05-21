@@ -8,7 +8,6 @@ import {
 } from "@/components/BusinessAreaSwitcher";
 import { MethodOverlay } from "@/components/MethodOverlay";
 import { GrowthPartnerRecommender } from "@/components/GrowthPartnerRecommender";
-import { SquaredMethod } from "@/components/SquaredMethod";
 import { TeamCTA } from "@/components/TeamCTA";
 
 type Stat = {
@@ -366,8 +365,6 @@ export default function CapabilityAI({ params }: Props) {
         />
 
         <GrowthPartnerRecommender cards={config.recommenderCards} />
-
-        <SquaredMethod />
 
         <TeamCTA
           headline="Talk to our AI team."
