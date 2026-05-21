@@ -3,6 +3,10 @@ import { Footer } from "@/components/Footer";
 import { VideoOverlayHero } from "@/components/VideoOverlayHero";
 import { IntroStatsRow } from "@/components/IntroStatsRow";
 import { IntangiblesSplit } from "@/components/IntangiblesSplit";
+import { EngagementModes } from "@/components/EngagementModes";
+import { ValueDriverGrid } from "@/components/ValueDriverGrid";
+import { ESOPServices } from "@/components/ESOPServices";
+import { ESOPAuditReadiness } from "@/components/ESOPAuditReadiness";
 import { MethodOverlay } from "@/components/MethodOverlay";
 import { TeamCTA } from "@/components/TeamCTA";
 
@@ -210,7 +214,23 @@ export default function CapabilityValuation({ params }: Props) {
 
         <IntroStatsRow paragraphs={config.introParagraphs} stats={stats} />
 
-        <IntangiblesSplit blocks={config.splitBlocks} />
+        {slug === "intangibles-valuation" && (
+          <>
+            <EngagementModes />
+            <ValueDriverGrid />
+          </>
+        )}
+
+        {slug === "esop-valuation" && (
+          <>
+            <ESOPServices />
+            <ESOPAuditReadiness />
+          </>
+        )}
+
+        {slug !== "intangibles-valuation" && slug !== "esop-valuation" && (
+          <IntangiblesSplit blocks={config.splitBlocks} />
+        )}
 
         <MethodOverlay
           image={config.methodImage}
