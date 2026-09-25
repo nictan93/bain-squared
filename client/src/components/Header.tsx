@@ -108,7 +108,7 @@ export function Header() {
   const [hidden, setHidden] = useState(false);
   const [openPanel, setOpenPanel] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>("What we do");
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const lastY = useRef(0);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -119,26 +119,31 @@ export function Header() {
       const y = window.scrollY;
       setScrolled(y > 80);
       // Don't hide while a panel is open
-      if (!openPanel) {
+      if (!openPanel && !mobileOpen) {
         setHidden(y > lastY.current && y > 200);
       }
       lastY.current = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [openPanel]);
+  }, [openPanel, mobileOpen]);
 
   /* Close panel on Escape */
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
+        if (openPanel) {
+          headerRef.current?.querySelector<HTMLButtonElement>(`[data-testid="button-nav-${slugify(openPanel)}"]`)?.focus();
+        } else if (mobileOpen) {
+          headerRef.current?.querySelector<HTMLButtonElement>('[data-testid="button-mobile-toggle"]')?.focus();
+        }
         setOpenPanel(null);
         setMobileOpen(false);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [openPanel, mobileOpen]);
 
   /* Close panel on outside click. Use click (not mousedown) so the button
      toggle handler fires first; otherwise the panel opens and closes on the
@@ -167,10 +172,19 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+  const closeOnLink = (event: React.MouseEvent) => {
+    if (event.target instanceof Element && event.target.closest("a")) {
+      setOpenPanel(null);
+      setMobileOpen(false);
+      setMobileExpanded(null);
+    }
+  };
+
   return (
     <>
     <header
       ref={headerRef}
+      onClick={closeOnLink}
       className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-200 ease-out ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
@@ -187,13 +201,13 @@ export function Header() {
             scrolled ? "h-[54px]" : "h-[58px]"
           }`}
         >
-          <Logo size={28} />
+          <Logo size={44} />
 
           <div className="flex items-center gap-2">
             {/* Mobile menu toggle */}
             <button
               type="button"
-              onClick={() => setMobileOpen((v) => !v)}
+              onClick={() => { setMobileOpen((v) => !v); setMobileExpanded(null); setHidden(false); }}
               className="lg:hidden inline-flex items-center gap-2 px-2 py-2 -mr-2 text-[15px] font-semibold text-[hsl(var(--bs-ink))]"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
@@ -233,8 +247,8 @@ export function Header() {
                   {item.panel ? (
                     <button
                       type="button"
-                      onClick={() => setOpenPanel(item.label)}
-                      onMouseEnter={() => setOpenPanel(item.label)}
+                      onClick={() => setOpenPanel((current) => current === item.label ? null : item.label)}
+                      aria-controls={`nav-panel-${slugify(item.label)}`}
                       aria-expanded={isOpen}
                       aria-haspopup="true"
                       className="relative inline-flex items-center pt-0 pb-5 text-[15px] font-semibold tracking-[0.005em] text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
@@ -271,10 +285,11 @@ export function Header() {
          * ============================================================ */}
         {NAV.filter((n) => n.panel).map((item) => {
           const isOpen = openPanel === item.label;
+          if (!isOpen) return null;
           return (
             <div
               key={`panel-${item.label}`}
-              onMouseLeave={() => setOpenPanel(null)}
+              id={`nav-panel-${slugify(item.label)}`}
               className={`absolute left-0 right-0 transition-[opacity,transform] duration-200 ease-out ${
                 isOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -372,8 +387,9 @@ export function Header() {
       {mobileOpen && (
         <div
           className="lg:hidden fixed left-0 right-0 bottom-0 z-40 overflow-y-auto"
-          style={{ backgroundColor: "hsl(var(--bs-canvas))", top: scrolled ? "64px" : "80px" }}
+          style={{ backgroundColor: "hsl(var(--bs-canvas))", top: scrolled ? "54px" : "58px" }}
           data-testid="overlay-mobile-menu"
+          onClick={closeOnLink}
         >
           <nav className="bs-container py-2" aria-label="Mobile primary">
             <ul>

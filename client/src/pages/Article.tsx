@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArticleHero } from "@/components/ArticleHero";
@@ -14,11 +13,6 @@ type Props = {
 
 export default function Article({ params }: Props) {
   const article = ARTICLES[params.slug];
-
-  // Scroll to top on slug change
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-  }, [params.slug]);
 
   if (!article) {
     return <NotFound />;

@@ -29,11 +29,11 @@ const insights: Insight[] = [
   },
   {
     category: "Financial Transformation",
-    title: "Rewiring FP&A for the AI Era",
+    title: "Explore financial transformation",
     excerpt:
-      "The finance function rebuilds it owns will outlast every tool you license. A field guide for CFOs running real transformations, not theater.",
-    href: "#/insights/rewiring-fpa",
-    type: "Perspective",
+      "See how we improve reporting, forecasting and the systems behind the finance function.",
+    href: "#/what-we-do/financial-transformation",
+    type: "Service overview",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
   },

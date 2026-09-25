@@ -1,4 +1,5 @@
-import { Switch, Route, Router } from "wouter";
+import { useEffect, useLayoutEffect } from "react";
+import { Switch, Route, Router, Redirect, useLocation } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -26,8 +27,34 @@ import Newsletter from "@/pages/Newsletter";
 import { PRIVACY_BLOCKS, TERMS_BLOCKS } from "@/data/legal";
 
 function AppRouter() {
+  const [location] = useLocation();
+
+  useLayoutEffect(() => {
+    // A new page starts above the fold even when global CSS enables smooth scrolling.
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location]);
+
+  useEffect(() => {
+    const previous = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    const onSamePageLink = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const anchor = event.target instanceof Element ? event.target.closest("a") : null;
+      const href = anchor?.getAttribute("href");
+      if (href?.startsWith("#/") && href === window.location.hash && anchor?.target !== "_blank") {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
+    };
+    document.addEventListener("click", onSamePageLink);
+    return () => {
+      window.history.scrollRestoration = previous;
+      document.removeEventListener("click", onSamePageLink);
+    };
+  }, []);
+
   return (
-    <Switch>
+    // Reset page-local tabs and menus when moving between routes using the same template.
+    <Switch key={location}>
       <Route path="/" component={Home} />
       <Route path="/what-we-do" component={WhatWeDo} />
       <Route path="/who-we-work-with" component={WhoWeWorkWith} />
@@ -76,6 +103,20 @@ function AppRouter() {
       </Route>
       <Route path="/insights/inside-hq">
         {() => <AllInsightsList params={{ slug: "inside-hq" }} />}
+      </Route>
+
+      {/* Retain old card URLs while routing to available, accurately labelled content. */}
+      <Route path="/insights/agentic-ai-pilots-pay-off">
+        <Redirect to="/insights/operators-playbook-agentic-ai" />
+      </Route>
+      <Route path="/insights/rewiring-fpa">
+        <Redirect to="/what-we-do/financial-transformation" />
+      </Route>
+      <Route path="/insights/intangibles-90-percent">
+        <Redirect to="/what-we-do/intangibles-valuation" />
+      </Route>
+      <Route path="/insights/the-squared-method">
+        <Redirect to="/what-we-do" />
       </Route>
 
       {/* Article detail — catch-all under /insights/*, must come last */}

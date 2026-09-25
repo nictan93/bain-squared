@@ -1,73 +1,28 @@
 interface LogoProps {
   className?: string;
   showWordmark?: boolean;
-  /** Visual height of the lockup in px. Drives mark + type proportions. */
+  /** Height of the supplied brand artwork, preserving its aspect ratio. */
   size?: number;
 }
 
-/**
- * Bain Squared logo lockup.
- * Two overlapping squares: front mark in Forest Deep, back mark in Forest Accent
- * (offset up-and-right). Wordmark in Inter, weight 800, tight tracking.
- * Vector reproduction of the supplied brand file.
- */
-export function Logo({ className = "", showWordmark = true, size = 36 }: LogoProps) {
-  // Mark proportions taken from the supplied logo file:
-  // front square is dominant, back square offset by ~50% of its width up-and-right.
-  const markSize = size;
-  const offset = markSize * 0.32;
-  const totalW = markSize + offset;
-  const totalH = markSize + offset;
-
+/** Supplied Marketing logo set, exported 9 September 2026. */
+export function Logo({ className = "", showWordmark = true, size = 44 }: LogoProps) {
   return (
     <a
-      href="/"
-      className={`inline-flex items-center gap-3 group ${className}`}
-      aria-label="Bain Squared — home"
+      href="#/"
+      className={`inline-flex items-center shrink-0 ${className}`}
+      aria-label="Bain Squared home"
       data-testid="link-logo"
     >
-      <svg
-        width={totalW}
-        height={totalH}
-        viewBox={`0 0 ${totalW} ${totalH}`}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        {/* Back square — Forest Accent, offset up and right */}
-        <rect
-          x={offset}
-          y={0}
-          width={markSize}
-          height={markSize}
-          fill="#BBD3CF"
-        />
-        {/* Front square — Forest Deep */}
-        <rect
-          x={0}
-          y={offset}
-          width={markSize}
-          height={markSize}
-          fill="#174C3C"
-        />
-      </svg>
-
-      {showWordmark && (
-        <span
-          className="font-sans whitespace-nowrap"
-          style={{
-            fontWeight: 800,
-            fontSize: `${Math.round(size * 0.78)}px`,
-            letterSpacing: "-0.02em",
-            lineHeight: 1,
-            color: "#1A1A1A",
-            fontFamily: "var(--font-sans)",
-          }}
-        >
-          Bain Squared
-        </span>
-      )}
+      <img
+        src={showWordmark ? "/brand/bain-squared-lockup.png" : "/brand/bain-squared-mark.png"}
+        alt="Bain Squared"
+        width={showWordmark ? 1557 : 1228}
+        height={showWordmark ? 380 : 1133}
+        style={{ height: size, width: "auto" }}
+        className="block max-w-full object-contain"
+        decoding="async"
+      />
     </a>
   );
 }

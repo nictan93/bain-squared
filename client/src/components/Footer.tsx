@@ -82,7 +82,7 @@ export function Footer() {
               Quarterly. Plus the occasional Field Note. One email a month at most.
             </p>
             <a
-              href="#/insights"
+              href="#/newsletter"
               className="text-[14px] font-semibold text-[hsl(var(--bs-forest-deep))] inline-flex items-center gap-2 hover:underline"
               data-testid="link-subscribe"
             >

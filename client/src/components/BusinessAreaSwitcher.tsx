@@ -46,7 +46,8 @@ export function BusinessAreaSwitcher({
   layout = "vertical",
 }: Props) {
   const [active, setActive] = useState(0);
-  const current = items[active];
+  const current = items[active] ?? items[0];
+  if (!current) return null;
 
   if (layout === "horizontal") {
     return (

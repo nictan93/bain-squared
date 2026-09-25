@@ -28,9 +28,9 @@ const pillars: Pillar[] = [
       "We rebuild operating cores so the work AI is supposed to accelerate actually has somewhere to land. Real systems, real data, real decisions.",
     card: {
       tag: "Agentic AI Automation",
-      title: "Where agent pilots actually start paying off",
-      source: "Squared Perspective",
-      href: "#/insights/agentic-ai-pilots-pay-off",
+      title: "The operator's playbook for agentic AI",
+      source: "Field Notes",
+      href: "#/insights/operators-playbook-agentic-ai",
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
     },
@@ -41,9 +41,9 @@ const pillars: Pillar[] = [
       "We rewire FP&A and reporting so the numbers move with the business, not the calendar. Operator-grade finance for the AI era.",
     card: {
       tag: "Financial Transformation",
-      title: "Rewiring FP&A for the AI era",
-      source: "Squared Report",
-      href: "#/insights/rewiring-fpa",
+      title: "Rebuilding the finance function",
+      source: "Service overview",
+      href: "#/what-we-do/financial-transformation",
       image:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
     },
@@ -54,9 +54,9 @@ const pillars: Pillar[] = [
       "We value what balance sheets miss. Brand, IP, ESOPs, and the intangible engines that drive real enterprise worth.",
     card: {
       tag: "Intangibles Valuation",
-      title: "The 90% of value most balance sheets miss",
-      source: "Squared Report",
-      href: "#/insights/intangibles-90-percent",
+      title: "Independent intangible asset valuation",
+      source: "Service overview",
+      href: "#/what-we-do/intangibles-valuation",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
     },

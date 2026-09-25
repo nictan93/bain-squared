@@ -25,3 +25,5 @@ screenshots-insights/
 
 # Vercel
 .vercel/
+.vercel
+.env*

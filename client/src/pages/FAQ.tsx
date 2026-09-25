@@ -157,15 +157,16 @@ export default function FAQ() {
               aria-label="FAQ sections"
             >
               {FAQ_GROUPS.map((g) => (
-                <a
+                <button
                   key={g.id}
-                  href={`#${g.id}`}
+                  type="button"
+                  onClick={() => document.getElementById(g.id)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" })}
                   className="text-[13px] font-semibold uppercase tracking-[0.08em] hover:underline"
                   style={{ color: "hsl(var(--bs-forest-deep))" }}
                   data-testid={`faq-jump-${g.id}`}
                 >
                   {g.title}
-                </a>
+                </button>
               ))}
             </nav>
           </div>
@@ -178,7 +179,7 @@ export default function FAQ() {
             id={group.id}
             className="pb-16 md:pb-24"
             data-testid={`faq-group-${group.id}`}
-            style={{ paddingTop: gi === 0 ? "32px" : "64px" }}
+            style={{ paddingTop: gi === 0 ? "32px" : "64px", scrollMarginTop: "112px" }}
           >
             <div className="bs-container">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
