@@ -29,40 +29,40 @@ const PUB_CONFIG: Record<string, PublicationConfig> = {
   perspectives: {
     eyebrow: "Publication",
     title: "Perspectives",
-    titleAccent: "Short essays from the operator's seat.",
-    lede: "One topic, one argument, no filler. Published quarterly by the partners.",
+    titleAccent: "A point of view on the decisions ahead.",
+    lede: "Essays on technology, finance and enterprise value, with a clear argument and evidence you can examine.",
     image:
       "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Perspectives is our quarterly essay series. Each issue is a single argument from a partner, written for an operator who has to make a real call this week. We do not run survey decks. We run point of view, with the evidence visible.",
-    introBefore: "An",
-    introAccent: "operator's",
-    introAfter: " argument, in print.",
+      "Perspectives examines a business question and takes a position on it. Each essay connects the evidence to a decision, explains the tradeoffs and sets out where the argument applies.",
+    introBefore: "A clearer view of",
+    introAccent: "the decision",
+    introAfter: ".",
   },
   "squared-reports": {
     eyebrow: "Publication",
     title: "Squared Reports",
-    titleAccent: "Long-form research, built to be used.",
-    lede: "Twice a year, one deep study with the data, the framework, and the operator playbook behind it.",
+    titleAccent: "Deeper analysis for consequential decisions.",
+    lede: "Research, analytical frameworks and practical tools for business leaders.",
     image:
       "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Squared Reports are our flagship research. Each report is the work of a partner team over months, with primary interviews, original data, and a working playbook on the other side. Built to land inside a planning cycle, not on a shelf.",
-    introBefore: "Research that",
-    introAccent: "compounds",
+      "Squared Reports examines complex questions through structured analysis. Each report brings together evidence, assumptions and a practical framework that readers can use in planning and review.",
+    introBefore: "Evidence for",
+    introAccent: "the decision ahead",
     introAfter: ".",
   },
   "looking-glass": {
     eyebrow: "Publication",
     title: "Looking Glass",
-    titleAccent: "The signal feed we run internally, now in the open.",
-    lede: "Monthly notes on what is breaking, what is working, and what the operators we talk to are quietly worried about.",
+    titleAccent: "Emerging changes and what they mean in practice.",
+    lede: "A considered view of developments in technology, business models and the economics of growth.",
     image:
       "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Looking Glass started as the internal note our partners passed around each month. We made it public because the questions we were hearing inside the firm were the same ones our operators were asking in the field. One short note, every month, on what we are watching.",
-    introBefore: "The signal,",
-    introAccent: "early",
+      "Looking Glass examines changes that could affect how businesses operate and create value. Each analysis separates what is observable today from what remains uncertain, and identifies what leaders should watch next.",
+    introBefore: "Understand what",
+    introAccent: "comes next",
     introAfter: ".",
   },
 };

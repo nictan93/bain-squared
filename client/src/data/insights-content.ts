@@ -131,22 +131,22 @@ export const insightsHeroStrip = [
 export const explorePublicationsTabs = [
   {
     label: "Perspectives",
-    body: "Perspectives is our quarterly essay series. Short, opinionated reads from the partners on what we are seeing inside the operator's seat. One topic, one argument, no filler.",
-    ctaLabel: "Explore the latest issue",
+    body: "Perspectives takes a position on a business question and connects the evidence to a decision. Explore essays across technology, finance and enterprise value.",
+    ctaLabel: "Explore Perspectives",
     ctaHref: "#/insights/perspectives",
     image: IMG.perspectives,
   },
   {
     label: "Squared Reports",
-    body: "Squared Reports are our long-form research. Twice a year we publish a single deep study with the data, the framework, and the operator playbook behind it. Built to be used, not skimmed.",
-    ctaLabel: "Read the latest report",
+    body: "Squared Reports brings together structured analysis, evidence and practical frameworks for complex business decisions.",
+    ctaLabel: "Explore Squared Reports",
     ctaHref: "#/insights/squared-reports",
     image: IMG.squared_reports,
   },
   {
     label: "Looking Glass",
-    body: "Looking Glass is the signal feed we run internally, now made public. Monthly notes on what is breaking, what is working, and what the operators we talk to are quietly worried about.",
-    ctaLabel: "See this month's signals",
+    body: "Looking Glass examines emerging changes in technology and business models, what they could mean and what leaders should watch next.",
+    ctaLabel: "Explore Looking Glass",
     ctaHref: "#/insights/looking-glass",
     image: IMG.looking_glass,
   },

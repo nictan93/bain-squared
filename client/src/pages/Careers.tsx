@@ -15,8 +15,8 @@ export default function Careers() {
         <PageHero
           title="Together let's be"
           accentSuffix="extraordinary"
-          lead="We hire operators who have run the work, not just modeled it. The bar is high. The room is small. The work is real."
-          body="If you have rebuilt a finance function, shipped agentic systems inside a real business, or made intangibles defendable in front of a board, we want to talk. Bain Squared is built for the operators clients can actually feel in the room."
+          lead="Bring your experience to work that changes how businesses operate."
+          body="We bring together people across technology, finance and valuation to solve complex business problems. You will work alongside clients, contribute your judgment and help turn decisions into working systems."
           ctas={[
             { label: "Search open roles", href: "#/careers-form", variant: "primary" },
           ]}
@@ -27,22 +27,22 @@ export default function Careers() {
             {
               image:
                 "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
-              title: "Operator-led, always.",
+              title: "Experience put into practice.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-              title: "Build, then advise.",
+              title: "See your work through.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80",
-              title: "Deep work, protected.",
+              title: "Make room for better thinking.",
             },
             {
               image:
                 "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-              title: "Small room, high bar.",
+              title: "Different perspectives, shared purpose.",
             },
           ]}
         />
@@ -51,7 +51,7 @@ export default function Careers() {
 
         <YouMatter
           headline="Your work, your craft, your career."
-          body="We invest in the operator behind the consultant. Named partner sponsors, quarterly craft reviews, transparent comp bands, and the kind of project staffing that lets you actually finish what you start. Career growth here is documented, not implied."
+          body="Develop your expertise through work that connects analysis with implementation. We value thoughtful questions, clear communication and the willingness to learn from colleagues and clients across disciplines."
           ctaLabel="Explore roles and apply"
           ctaHref="#/careers-form"
           image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"

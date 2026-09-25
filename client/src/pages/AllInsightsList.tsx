@@ -21,18 +21,18 @@ type ListConfig = {
 const LIST_CONFIG: Record<string, ListConfig> = {
   "field-notes": {
     title: "Field Notes",
-    headline: "Short reads from inside the operator's seat.",
-    body: "Working notes from the partners, written between the meetings. What we are seeing, what is changing, and what we are testing right now with the operators in our portfolio.",
+    headline: "Practical methods for the work in front of you.",
+    body: "Field Notes turns a focused operating question into an approach you can use. Explore workflows, checklists and working examples across AI, finance and valuation.",
   },
   "client-stories": {
     title: "Client Stories",
-    headline: "The work, told straight, with the numbers attached.",
-    body: "How operators we work with closed rounds on their own terms, steadied margins through volatility, and made intangibles defendable to the board. Names changed on request, results not.",
+    headline: "The decisions, the work and the outcome.",
+    body: "Explore the context behind an engagement, the choices made during delivery and the evidence used to assess the result.",
   },
   "inside-hq": {
     title: "Inside Bain Squared HQ",
-    headline: "The shop floor at 7 Temasek Boulevard.",
-    body: "Notes from inside the firm. How we hire, how we run engagements, what we believe about the operator's craft, and what we are arguing about in the partners' room this week.",
+    headline: "How we approach the work.",
+    body: "A closer look at our methods, working practices and the people who contribute to them.",
   },
 };
 

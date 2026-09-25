@@ -564,3 +564,5 @@ input[type='search']::-webkit-search-cancel-button {
     background: rgba(247,245,242,0.92);
   }
 }
+
+.bs-method-note > summary::-webkit-details-marker { display: none; }

@@ -39,7 +39,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
     heroImageAlt:
       "Operator reviewing a financial model in front of a quiet office window.",
     introParagraph:
-      "We sit alongside founders and operating teams on budgeting, forecasting, board reporting, investor communication, cash flow management, and the strategic financial decisions that decide the next twelve months. Hands on the model, not just hands on the slide.",
+      "Growing businesses need financial leadership before every role can be filled internally. We work alongside founders and finance teams on planning, cash flow, reporting and the financial decisions behind the next stage of growth.",
     introBefore: "A finance partner who",
     introAccent: "runs the work",
     introAfter: ".",
@@ -48,8 +48,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
     switcherItems: [
       {
         label: "Budgeting",
-        title: "A budget the operating team will actually use.",
-        body: "We build the budget from the floor up with the operators who own the numbers, install the cadence to maintain it, and tie it back to the metrics the board cares about. The plan survives first contact because the people on the floor helped write it.",
+        title: "Build a budget around operating priorities.",
+        body: "Develop budgets with the people responsible for delivery. Connect spending and revenue assumptions to business priorities, then establish a regular process for review.",
         image:
           "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator team reviewing a budget on a whiteboard.",
@@ -57,8 +57,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Forecasting",
-        title: "Rolling forecasts that flex with the business.",
-        body: "Replace the annual plan with a 13-week cash forecast and a rolling 18-month P&L view that updates as new signal comes in. We instrument the inputs so finance is not the bottleneck on every revision.",
+        title: "Keep forecasts current as conditions change.",
+        body: "Maintain cash and operating forecasts as new information arrives. We help define the inputs, responsibilities and scenarios your team needs to update the outlook.",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Forecast dashboard on a high-resolution monitor.",
@@ -66,8 +66,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Board reporting",
-        title: "Board packs that answer the question before it is asked.",
-        body: "A clean monthly pack with the three or four metrics that decide the next decision, a forward-looking commentary section, and a working appendix the board can pressure-test. Built so the meeting moves to the strategic conversation, not the data clean-up.",
+        title: "Bring the decisions into focus.",
+        body: "Organize financial results, operating measures and forward-looking commentary around the questions the board needs to resolve. Keep the supporting detail available for review.",
         image:
           "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Board members reviewing a printed financial pack.",
@@ -75,8 +75,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Investor communication",
-        title: "Updates that compound investor confidence.",
-        body: "Monthly investor notes, KPI dashboards, and the data-room hygiene that turns the next round from a scramble into a process. Tone calibrated for the audience: operator-honest, finance-tight.",
+        title: "Keep investors informed with consistent reporting.",
+        body: "Prepare financial updates, performance measures and supporting records around a consistent reporting process. Make changes in the business and its assumptions easy to follow.",
         image:
           "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Founder drafting an investor update on a laptop.",
@@ -84,8 +84,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Cash flow management",
-        title: "A 13-week cash view you can stake the company on.",
-        body: "Direct-method cash forecast updated weekly, with the working scenarios for the upside and the failure modes for the downside. We install the discipline so the founder stops carrying the cash position in their head.",
+        title: "Make cash requirements visible early.",
+        body: "Build a view of receipts, payments and funding needs, with scenarios for timing changes. Give the team a repeatable way to understand its cash position.",
         image:
           "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator reviewing a printed cash schedule.",
@@ -93,8 +93,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Strategic decisions",
-        title: "Financial judgment in the room when the call gets made.",
-        body: "Pricing changes, hiring plans, M&A look-throughs, financing trade-offs. A partner who has run the work argues the both sides with you, then writes the memo that goes to the board.",
+        title: "Test the financial implications of the decision.",
+        body: "Evaluate pricing, hiring, investment and financing choices against the financial plan. Set out the assumptions, alternatives and consequences so leadership can make an informed call.",
         image:
           "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Founders in conversation around a kitchen table.",
@@ -118,7 +118,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
     heroImageAlt:
       "Finance team reviewing a multi-screen dashboard in a modern office.",
     introParagraph:
-      "We rebuild finance functions around budgeting, forecasting, board reporting, investor communication, cash flow management, and the strategic financial decisions that decide the next twelve months. Real change, with the working papers, the close cadence, and the controls all updated in lock-step.",
+      "Finance needs reliable information, clear responsibilities and a repeatable way to support decisions. We improve the reporting, planning and control processes together, working with the team that will run them.",
     introBefore: "Build a finance function",
     introAccent: "you can rely on",
     introAfter: ".",
@@ -127,8 +127,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
     switcherItems: [
       {
         label: "Budgeting",
-        title: "A planning cycle that operates at the speed of the business.",
-        body: "Replace the annual budget theatre with a continuous planning model. Driver-based, owned by the operating team, with the system of record finance actually trusts. We re-platform the inputs and the controls in the same engagement.",
+        title: "Connect planning with the people who run the business.",
+        body: "Connect budgets, operating drivers and ownership in one planning process. We improve the source data, model and review responsibilities together.",
         image:
           "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Finance team planning on a digital whiteboard.",
@@ -136,8 +136,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Forecasting",
-        title: "A forecast finance and operations can both stake on.",
-        body: "A single shared forecast across cash, P&L, and unit economics. We unify the source data, install the cadence, and instrument the variance so the next conversation is about the why, not the what.",
+        title: "Build a shared view of expected performance.",
+        body: "Bring cash, profit and operating measures into a consistent forecasting process. Make differences between expected and actual performance visible and explainable.",
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Forecast variance dashboard on multiple monitors.",
@@ -145,8 +145,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Board reporting",
-        title: "Reporting that answers the strategic question.",
-        body: "Re-platform the close, automate the pack, and free the finance team to write the commentary that decides the next decision. The board moves from chasing numbers to interrogating strategy.",
+        title: "Make reporting useful for the next decision.",
+        body: "Improve the close, reporting workflow and management commentary. Give finance more capacity to explain performance and support decisions.",
         image:
           "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Modern boardroom mid-discussion.",
@@ -154,8 +154,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Investor communication",
-        title: "An investor surface that closes the next round on its own terms.",
-        body: "Data room, dashboards, monthly notes, and the cadence between them. We build the surface so each investor conversation starts thirty minutes ahead of where it would have started before.",
+        title: "Prepare consistent information for investors.",
+        body: "Establish a reliable process for financial updates, dashboards and supporting documentation. Keep the information consistent across investor conversations.",
         image:
           "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Investor reviewing materials on a tablet.",
@@ -163,8 +163,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Cash flow management",
-        title: "Cash discipline installed into the operating model.",
-        body: "Direct-method cash, working-capital levers wired to the operating cadence, and the controls to keep the gains. We do not leave a binder, we leave a function that knows where its cash is on any given Wednesday.",
+        title: "Connect working capital with everyday operations.",
+        body: "Connect receivables, payables and inventory decisions with cash forecasting. Establish responsibilities and controls that help the team sustain the changes.",
         image:
           "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator inspecting a printed cash position summary.",
@@ -172,8 +172,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
       },
       {
         label: "Strategic decisions",
-        title: "An operating model that earns its seat at the table.",
-        body: "Finance moves from after-the-fact reporting to up-front decision support. Pricing, M&A, capital allocation, organisational design. The function becomes a place strategy is argued, not just measured.",
+        title: "Bring finance into decisions earlier.",
+        body: "Build financial analysis into pricing, investment and resource-allocation decisions. Clarify when finance should be involved and what information leadership needs.",
         image:
           "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Leadership team in a planning session.",

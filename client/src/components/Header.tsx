@@ -79,17 +79,17 @@ const NAV: NavItem[] = [
         {
           heading: "Publications",
           items: [
-            { label: "Perspectives", href: "/insights/perspectives", description: "Quarterly essays from the team on what we are seeing in the seat." },
-            { label: "Squared Reports", href: "/insights/squared-reports", description: "Long-form research and original frameworks, published twice a year." },
-            { label: "Looking Glass", href: "/insights/looking-glass", description: "The signals we track inside Bain Squared, made public." },
+            { label: "Perspectives", href: "/insights/perspectives", description: "Essays on business decisions, with evidence and a clear point of view." },
+            { label: "Squared Reports", href: "/insights/squared-reports", description: "Research, analytical frameworks and practical tools." },
+            { label: "Looking Glass", href: "/insights/looking-glass", description: "Emerging developments and their business implications." },
           ],
         },
         {
           heading: "All Insights",
           items: [
-            { label: "Field Notes", href: "/insights/field-notes", description: "Short, opinionated posts from operators mid-engagement." },
+            { label: "Field Notes", href: "/insights/field-notes", description: "Practical methods, checklists and working examples." },
             { label: "Client Stories", href: "/insights/client-stories", description: "How the work actually played out, with the numbers behind it." },
-            { label: "Inside Bain Squared HQ", href: "/insights/inside-hq", description: "Case studies, toolkits, and the way we run our own firm." },
+            { label: "Inside Bain Squared HQ", href: "/insights/inside-hq", description: "Our methods, working practices and people." },
           ],
         },
       ],
@@ -419,19 +419,19 @@ export function Header() {
                           }}
                           data-testid={`button-mobile-${slugify(item.label)}`}
                         >
-                          <span className="text-[19px] font-bold text-[hsl(var(--bs-ink))]">
+                          <span className="text-[19px] font-medium text-[hsl(var(--bs-ink))]">
                             {item.label}
                           </span>
                           {expanded ? (
                             <ChevronUp
                               size={22}
-                              strokeWidth={2.5}
+                              strokeWidth={1.75}
                               className="text-[hsl(var(--bs-forest-deep))]"
                             />
                           ) : (
                             <ChevronDown
                               size={22}
-                              strokeWidth={2.5}
+                              strokeWidth={1.75}
                               className="text-[hsl(var(--bs-ink))]"
                             />
                           )}
@@ -441,7 +441,7 @@ export function Header() {
                             {/* Go to overview */}
                             <a
                               href={toHash(item.panel.overviewHref)}
-                              className="inline-flex items-center gap-2 text-[15px] font-bold text-[hsl(var(--bs-ink))] mb-6 pl-1"
+                              className="inline-flex items-center gap-2 text-[15px] font-medium text-[hsl(var(--bs-ink))] mb-6 pl-1"
                               data-testid={`link-mobile-overview-${slugify(item.label)}`}
                             >
                               <span
@@ -452,7 +452,7 @@ export function Header() {
                               </span>
                               <ChevronRight
                                 size={16}
-                                strokeWidth={2.5}
+                                strokeWidth={1.75}
                                 className="text-[hsl(var(--bs-forest-deep))]"
                               />
                             </a>
@@ -460,7 +460,7 @@ export function Header() {
                               <div key={ci} className="mb-6 last:mb-0">
                                 {col.heading && (
                                   <div
-                                    className="text-[16px] font-bold mb-3 pl-1"
+                                    className="text-[14px] font-normal mb-3 pl-1"
                                     style={{ color: "hsl(var(--bs-ink-muted))" }}
                                   >
                                     {col.heading}
@@ -478,12 +478,12 @@ export function Header() {
                                         className="flex items-center justify-between py-4 pl-1"
                                         data-testid={`link-mobile-sub-${slugify(sub.label)}`}
                                       >
-                                        <span className="text-[16px] font-bold text-[hsl(var(--bs-ink))]">
+                                        <span className="text-[16px] font-normal text-[hsl(var(--bs-ink))]">
                                           {sub.label}
                                         </span>
                                         <ChevronRight
                                           size={20}
-                                          strokeWidth={2.5}
+                                          strokeWidth={1.75}
                                           className="text-[hsl(var(--bs-forest-deep))] shrink-0"
                                         />
                                       </a>
@@ -498,13 +498,13 @@ export function Header() {
                     ) : (
                       <a
                         href={toHash(item.href)}
-                        className="flex items-center justify-between py-5 text-[19px] font-bold text-[hsl(var(--bs-ink))]"
+                        className="flex items-center justify-between py-5 text-[19px] font-medium text-[hsl(var(--bs-ink))]"
                         data-testid={`link-mobile-${slugify(item.label)}`}
                       >
                         <span>{item.label}</span>
                         <ChevronRight
                           size={20}
-                          strokeWidth={2.5}
+                          strokeWidth={1.75}
                           className="text-[hsl(var(--bs-forest-deep))]"
                         />
                       </a>

@@ -44,11 +44,9 @@ export function CareersBand() {
             className="mt-6 text-[16px] leading-[1.6]"
             style={{ color: "hsl(var(--bs-ink))" }}
           >
-            Most advisory work rewards slide-counting. Ours rewards judgment.
-            If you want to build the playbook for AI, finance transformation,
-            and intangibles valuation alongside operators who have actually
-            run the function, this is the team. Bain Squared is hiring real
-            operators, not consultants.
+            Bring your experience in technology, finance or valuation to work
+            that helps businesses move forward. Work alongside clients and
+            colleagues who care about how an idea is put into practice.
           </p>
           <a
             href="#/careers"

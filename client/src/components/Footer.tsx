@@ -83,7 +83,7 @@ export function Footer() {
               Perspectives
             </h4>
             <p className="text-[14px] text-[hsl(var(--bs-ink-muted))] mb-4 leading-[1.5]">
-              Quarterly. Plus the occasional Field Note. One email a month at most.
+              A monthly selection of ideas and practical reading across AI, finance and enterprise value.
             </p>
             <a
               href="#/newsletter"

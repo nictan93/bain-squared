@@ -22,8 +22,8 @@ export default function Insights() {
           title="Insights"
           ctaLabel="Sign up for our newsletter"
           ctaHref="#/newsletter"
-          headline="The operator-led view on what is changing in business."
-          body="Briefs, field notes, and long-form research from the partners who sit inside the operator's seat. One topic, one argument, no filler. Built to be used in the next decision you make, not skimmed."
+          headline="Ideas for the decisions that shape your business."
+          body="Explore perspectives, practical methods and deeper analysis across AI, finance and enterprise value."
         />
 
         <div className="pb-20 md:pb-28">

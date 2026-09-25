@@ -43,8 +43,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt: "Agentic AI infrastructure visualised over a city skyline.",
     introParagraphs: [
-      "Modernising core systems while scaling AI can stall pilots, drive complexity, and burn ROI. Most agent programs die in the gap between the demo and the operating reality.",
-      "We change that. With the Squared Method, we connect modern architecture with production-ready agents that power intelligent workflows, copilots, and revenue motions. Together, they form an operating layer where data, services, and models are reused, helping your teams move past experimentation and deliver lasting AI impact.",
+      "AI becomes useful when it fits a specific workflow and the people responsible for it. Start with the work to be improved, the information it depends on and the decisions a system can safely take.",
+      "We design and implement supervised AI workflows within your existing systems. The engagement includes integration, testing, human review and ongoing operation, with measures agreed around the business need.",
     ],
     stats: [
       {
@@ -67,8 +67,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
     switcherItems: [
       {
         label: "Sales",
-        title: "Agents that compound pipeline.",
-        body: "Triage inbound, qualify with operator-grade scoring, draft outreach in the rep's voice, and book meetings without a human in the loop. Hand-off to a closer happens with the full context the agent has gathered, not a one-line note.",
+        title: "Support the work between enquiry and meeting.",
+        body: "Connect enquiry intake, qualification, follow-up and meeting preparation. Define what the agent can do, when a person should review it and what context passes to your sales team.",
         image:
           "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Sales operators reviewing a pipeline dashboard.",
@@ -77,8 +77,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Customer Service",
-        title: "Resolve the ticket, save the relationship.",
-        body: "A supervised agent fleet that triages, drafts, and resolves the majority of tickets, escalates the right cases, and writes the postmortem the team will actually read. Built to lower handle time without lowering NPS.",
+        title: "Resolve routine enquiries with clear escalation.",
+        body: "Use approved information to triage and respond to routine enquiries. Route exceptions to the right people and review the quality of responses against your service standards.",
         image:
           "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Customer service operators on a real-time queue.",
@@ -86,8 +86,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Operations",
-        title: "Take the manual work off the floor.",
-        body: "Order-to-cash, invoice reconciliation, vendor onboarding, exception routing. We map the bottleneck, deploy the agent, and install the controls before the next audit cycle so the savings are defensible.",
+        title: "Connect the handoffs in everyday operations.",
+        body: "Improve workflows such as order processing, invoice reconciliation and vendor onboarding. Build in exception handling, ownership and checks before putting automation into use.",
         image:
           "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operations team running a live workflow.",
@@ -95,8 +95,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Marketing",
-        title: "From campaign briefs to compounding content.",
-        body: "Brief intake, creative production, landing pages, A/B variants, and reporting handled by a co-ordinated agent team. Brand-safe by design with editor approval at the points that matter.",
+        title: "Keep content production connected to review.",
+        body: "Connect briefing, drafting, design and reporting within your existing marketing workflow. Keep editorial approval and brand requirements explicit at each handoff.",
         image:
           "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Marketing team reviewing campaign creative.",
@@ -137,8 +137,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
     heroImageAlt:
       "Operator team running a managed service desk in real time.",
     introParagraphs: [
-      "Hiring full-time for every operating motion is slow, expensive, and the wrong instinct for work that compounds quickly. Most growth teams already know what needs shipping. They just do not have the bench.",
-      "We run the bench for you. A managed pod of operators, engineers, and designers, plugged into your stack with weekly outcomes you can audit. Priced on results we are accountable to, not hours we bill.",
+      "A growing workload does not always justify building every capability in-house. Managed services provide operating capacity around a defined process, with responsibilities and service expectations agreed at the outset.",
+      "Our teams work within your tools and processes, manage the day-to-day delivery and review performance with you. The scope can develop as the work changes or your internal team takes on more responsibility.",
     ],
     stats: [
       {
@@ -157,12 +157,12 @@ const AI_CONFIG: Record<string, AIConfig> = {
         color: "teal",
       },
     ],
-    switcherHeading: "Pick the outcome you want us accountable to.",
+    switcherHeading: "Choose the work you need us to run.",
     switcherItems: [
       {
         label: "Sales leads delivered",
-        title: "Pipeline you can forecast against.",
-        body: "Inbound triage, outbound sequencing, enrichment, and SDR-grade follow-up handled by a dedicated pod. Your reps inherit briefed meetings with a context note attached, not a calendar invite and a vague hope.",
+        title: "Support a consistent sales follow-up process.",
+        body: "A dedicated team manages enquiry handling, qualification and follow-up against agreed criteria. Your sales team receives the relevant background and a clear next action.",
         image:
           "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Sales pod working through a pipeline review.",
@@ -170,8 +170,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Callbacks handled on time",
-        title: "Coverage your customers can feel.",
-        body: "A trained customer pod takes the queue across business hours and beyond. Full case history, escalation paths, and a tight handover loop with your in-house team so nothing falls through.",
+        title: "Provide customer support with clear handovers.",
+        body: "Agree the coverage, service expectations and escalation routes your customers need. Maintain case history and clear handovers with your internal team.",
         image:
           "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Customer success pod monitoring a live queue.",
@@ -179,8 +179,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Backend operations efficient",
-        title: "The unsexy work, done right.",
-        body: "Order ops, invoice reconciliation, vendor onboarding, returns, and the long tail of finance ops. We map the workflow, take it on, and shrink the cost curve with automation as soon as the volume justifies it.",
+        title: "Keep recurring operations moving.",
+        body: "Take on defined workflows across orders, reconciliation, vendor administration and finance operations. Improve the process and introduce automation where it is useful.",
         image:
           "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operations pod reviewing a backend workflow.",
@@ -188,8 +188,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Design mockups done",
-        title: "A creative pod that ships.",
-        body: "Brand-safe mockups, landing pages, and campaign creative produced inside your design system. Briefed daily, reviewed weekly, shipped at the cadence the market actually moves.",
+        title: "Add capacity to your design and marketing team.",
+        body: "Produce design and campaign assets within your brand system. Agree the brief, review process and delivery schedule so your team can manage the work confidently.",
         image:
           "https://images.unsplash.com/photo-1561070791-2526d30994b8?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Designer mocking up a landing page.",
@@ -216,7 +216,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         body: "Hours lost to tasks the team should not be doing. The pod takes the work, runs it to SLA, and automates the long tail so the cost curve bends.",
       },
       {
-        title: "Headcount heavy",
+        title: "Limited capacity",
         body: "Plans that depend on hiring you cannot make happen fast enough. The pod gives you the capacity in weeks, with a clean off-ramp when in-house is ready.",
       },
     ],
@@ -254,8 +254,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
     switcherItems: [
       {
         label: "Rank and get recommended",
-        title: "Win the recommendation, not just the click.",
-        body: "Map the answer-engine queries that matter for your category, build the retrievable content that earns the citation, and instrument the lift. Get named by ChatGPT, Claude, Perplexity, and Gemini for the questions your buyers are already asking.",
+        title: "Make your business easier to understand and cite.",
+        body: "Identify the questions buyers ask and improve the information that answers them. Track mentions, citations and enquiries over time without treating visibility in any particular AI answer as guaranteed.",
         image:
           "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Marketer reviewing answer-engine rankings.",
@@ -263,8 +263,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Grow organic traffic",
-        title: "An SEO foundation that still works in the AI era.",
-        body: "Technical SEO, schema, content architecture, and the editorial cadence that compounds. Built so the same pages that rank for humans also earn the retrieval pass from the answer engines.",
+        title: "Strengthen the search foundations.",
+        body: "Improve technical search accessibility, page structure and useful content. Keep service information clear, consistent and easy for people and search systems to find.",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Analytics dashboard showing organic traffic growth.",
@@ -272,8 +272,8 @@ const AI_CONFIG: Record<string, AIConfig> = {
       },
       {
         label: "Website optimization",
-        title: "Pages that load fast and convert fast.",
-        body: "Core Web Vitals, conversion architecture, structured data, and the editorial workflow to keep the gains. We work inside your stack so the gains do not regress the next time marketing ships a campaign.",
+        title: "Help visitors find the information they need.",
+        body: "Improve page performance, content structure and the steps from interest to enquiry. Make the site straightforward to maintain as your services and campaigns change.",
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Engineer reviewing site performance metrics.",
