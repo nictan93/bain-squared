@@ -32,12 +32,11 @@ export function InsightsHero({
             <h1
               className="font-display"
               style={{
-                fontSize: "clamp(36px, 4.6vw, 60px)",
+                fontSize: "var(--bs-type-page)",
                 fontWeight: 700,
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {title}
             </h1>
@@ -72,12 +71,11 @@ export function InsightsHero({
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(20px, 1.8vw, 26px)",
+                fontSize: "var(--bs-type-feature)",
                 fontWeight: 700,
-                lineHeight: 1.3,
+                lineHeight: 1.2,
                 letterSpacing: "-0.005em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {headline}
             </h2>

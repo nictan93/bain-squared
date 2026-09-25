@@ -46,12 +46,11 @@ export function PageHero({
             <h1
               className="font-display"
               style={{
-                fontSize: "clamp(28px, 3.6vw, 46px)",
+                fontSize: "var(--bs-type-page)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.1,
                 letterSpacing: "-0.015em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {title}
               {accentSuffix && (

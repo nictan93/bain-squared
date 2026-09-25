@@ -11,12 +11,11 @@ export function AIInActionHeader() {
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 4vw, 48px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
               Our work

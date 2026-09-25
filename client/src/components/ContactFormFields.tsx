@@ -9,10 +9,13 @@ import { useState, FormEvent, ChangeEvent } from "react";
  */
 
 const SERVICES = [
-  "Agentic AI",
-  "Financial Advisory",
+  "Agentic AI Automation",
+  "Managed Services",
+  "LLM Optimization",
+  "Fractional CFO",
+  "Financial Transformation",
   "Intangible Asset Valuation",
-  "The Squared Method (all three)",
+  "ESOP Valuation",
   "Not sure yet",
 ];
 
@@ -91,19 +94,17 @@ export function ContactFormFields() {
         <h3
           className="font-display mb-4"
           style={{
-            fontSize: "26px",
+            fontSize: "var(--bs-type-ui)",
             fontWeight: 700,
-            color: "hsl(var(--bs-ink))",
-          }}
+            color: "hsl(var(--bs-ink))", lineHeight: 1.2, fontFamily: "Inter, sans-serif"}}
         >
-          Your mail client just opened.
+          Send the draft to complete your request.
         </h3>
         <p
           className="text-[16px] leading-[1.6]"
           style={{ color: "hsl(var(--bs-ink))" }}
         >
-          Hit send on the draft and a partner will get back to you within two
-          business days.
+          Send the draft from your email app. If it did not open, email hello@bainsquared.com directly with your enquiry.
         </p>
         <button
           type="button"
@@ -289,7 +290,7 @@ export function ContactFormFields() {
         }}
         data-testid="button-submit-contact"
       >
-        Send message
+        Prepare email
       </button>
     </form>
   );

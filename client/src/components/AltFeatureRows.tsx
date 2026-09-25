@@ -54,12 +54,11 @@ export function AltFeatureRows({ items }: Props) {
                 <h3
                   className="font-display"
                   style={{
-                    fontSize: "clamp(28px, 3vw, 40px)",
+                    fontSize: "var(--bs-type-card)",
                     fontWeight: 700,
-                    lineHeight: 1.15,
+                    lineHeight: 1.2,
                     letterSpacing: "-0.015em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   {item.title}
                 </h3>

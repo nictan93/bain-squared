@@ -97,18 +97,17 @@ export function ClientWorkCarousel() {
             <h3
               className="font-display"
               style={{
-                fontSize: "clamp(32px, 4vw, 56px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.05,
+                lineHeight: 1.2,
                 letterSpacing: "-0.02em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               Bold steps forward.
             </h3>
             <h4
               className="mt-6 text-[24px] md:text-[30px] font-bold leading-[1.2] min-h-[100px]"
-              style={{ color: "hsl(var(--bs-ink))" }}
+              style={{ color: "hsl(var(--bs-ink))" , fontSize: "var(--bs-type-card)", lineHeight: 1.2, fontFamily: "Bitter, Georgia, serif"}}
               key={story.title}
             >
               {story.title}

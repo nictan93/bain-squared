@@ -34,7 +34,7 @@ export function ThreePillars() {
       <div className="bs-container">
         <div className="max-w-[880px] mx-auto text-center mb-16 md:mb-20">
           <span className="bs-eyebrow">What we do</span>
-          <h2 className="bs-h1-display mb-6" data-testid="text-pillars-headline">
+          <h2 className="bs-h1-display mb-6" data-testid="text-pillars-headline" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>
             Three pillars.
             <br />
             One operating partner.
@@ -58,7 +58,7 @@ export function ThreePillars() {
               data-testid={`card-pillar-${i + 1}`}
             >
               <span className="bs-numeral">{p.num}</span>
-              <h3 className="text-[24px] md:text-[26px] font-bold leading-[1.2] mb-4 text-[hsl(var(--bs-ink))]">
+              <h3 className="text-[24px] md:text-[26px] font-bold leading-[1.2] mb-4 text-[hsl(var(--bs-ink))]" style={{ fontSize: "var(--bs-type-card)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>
                 {p.title}
               </h3>
               <p className="text-[16px] leading-[1.6] text-[hsl(var(--bs-ink-muted))] mb-6 flex-grow">

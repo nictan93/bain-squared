@@ -26,12 +26,11 @@ export function ExploreCTAStrip({ headline, ctaLabel, ctaHref }: Props) {
           <h3
             className="font-display"
             style={{
-              fontSize: "clamp(24px, 2.6vw, 34px)",
+              fontSize: "var(--bs-type-card)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               color: "hsl(var(--bs-canvas))",
-              letterSpacing: "-0.01em",
-            }}
+              letterSpacing: "-0.01em", fontFamily: "Bitter, Georgia, serif"}}
           >
             {headline}
           </h3>

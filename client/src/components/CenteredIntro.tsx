@@ -29,18 +29,17 @@ export function CenteredIntro({ paragraph, before, accent, after }: Props) {
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(32px, 4.4vw, 60px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.1,
+              lineHeight: 1.2,
               letterSpacing: "-0.02em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             {before}{" "}
             <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
               {accent}
             </span>
-            {after ? ` ${after}` : ""}
+            {after ? (/^[.,:;!?]/.test(after) ? after : ` ${after}`) : ""}
           </h2>
         </div>
       </div>

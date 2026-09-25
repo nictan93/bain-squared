@@ -30,12 +30,11 @@ export function ArticleCardGrid({ heading, articles }: Props) {
           <h2
             className="font-display mb-12 md:mb-16"
             style={{
-              fontSize: "clamp(28px, 3.4vw, 44px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             {heading}
           </h2>
@@ -72,12 +71,11 @@ export function ArticleCardGrid({ heading, articles }: Props) {
               <h3
                 className="mt-3 font-display"
                 style={{
-                  fontSize: "20px",
+                  fontSize: "var(--bs-type-card)",
                   fontWeight: 700,
-                  lineHeight: 1.25,
+                  lineHeight: 1.2,
                   letterSpacing: "-0.005em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
               >
                 <a
                   href={a.href || "#"}

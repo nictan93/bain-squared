@@ -83,12 +83,11 @@ export function RoleSwitcher({ roles }: Props) {
             <h2
               className="font-display mb-6"
               style={{
-                fontSize: "clamp(26px, 3vw, 38px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: "-0.015em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {r.label}
             </h2>

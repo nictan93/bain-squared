@@ -10,7 +10,7 @@ export function Hero() {
             Operator-led advisory
           </span>
 
-          <h1 className="bs-h1-hero mb-8" data-testid="text-hero-headline">
+          <h1 className="bs-h1-hero mb-8" data-testid="text-hero-headline" style={{ fontSize: "var(--bs-type-display)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>
             Growth,
             <br />
             <span style={{ color: "hsl(var(--bs-forest-deep))" }}>squared.</span>

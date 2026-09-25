@@ -65,13 +65,13 @@ export default function WhoWeWorkWith() {
           before="We build alongside the"
           accent="partners and platforms"
           after="our clients already trust."
-          body="Bain Squared connects operator-grade advisory with the engineering, data, and capital partners that turn a plan into a running system. We bring the partners in early, on the client's terms, not ours."
+          body="We work with your internal teams, technology providers and professional advisers. Responsibilities and handovers are agreed around the work, so the result fits the systems and relationships your business already uses."
         />
 
         <WhitepaperFeature
           eyebrow="Whitepaper"
           headline="The operator's playbook for agentic AI in the finance function."
-          body="Most AI programs stall because the operating core was never ready. This paper lays out how we sequence agentic build-outs inside the CFO suite, the controls we install before automation goes live, and the intangibles we make visible to the board."
+          body="A practical guide to selecting finance workflows for AI, preparing the information they need and defining review before deployment."
           ctaLabel="Download the paper"
           ctaHref="#/contact"
           image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
@@ -79,7 +79,7 @@ export default function WhoWeWorkWith() {
         />
 
         <CTAStrip
-          text="Bring us your equivalent problem."
+          text="Discuss the next step for your business."
           buttonLabel="Reach out"
           href="#/contact"
         />

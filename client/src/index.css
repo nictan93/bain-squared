@@ -566,3 +566,16 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .bs-method-note > summary::-webkit-details-marker { display: none; }
+
+/* Shared heading sizes. Layout, colour and serif/sans roles stay component-specific. */
+:root {
+ --bs-type-display: clamp(40px, 6vw, 80px);
+ --bs-type-page: clamp(40px, 4.5vw, 64px);
+ --bs-type-article: clamp(36px, 4vw, 56px);
+ --bs-type-section: clamp(32px, 3.3vw, 44px);
+ --bs-type-feature: clamp(26px, 2.5vw, 32px);
+ --bs-type-card: clamp(22px, 2vw, 26px);
+ --bs-type-prose: clamp(26px, 2.5vw, 32px);
+ --bs-type-ui: clamp(18px, 1.6vw, 20px);
+ --bs-type-label: 13px;
+}

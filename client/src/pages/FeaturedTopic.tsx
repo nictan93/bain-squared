@@ -27,58 +27,58 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
   ai: {
     eyebrow: "Featured topic",
     title: "Agentic AI",
-    titleAccent: "Built to act, not just chat.",
-    lede: "What operators actually need to know about agents, governance, and the new shape of work.",
+    titleAccent: "Putting AI into operation.",
+    lede: "Practical analysis of AI workflows, oversight and the decisions behind deployment.",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Agentic AI is moving from demo to operating system. The operators we work with are past the pilot phase and into the harder questions: which decisions should an agent own, how do you supervise a fleet of them, and what does the org chart look like when software starts doing the coordinating. The pieces below are what we are seeing inside the room.",
+      "Putting AI into operation requires decisions about access, responsibility and review. Explore how to choose suitable work, prepare reliable information and assess a system once people depend on it.",
     introBefore: "From experiment to",
     introAccent: "operating layer",
     introAfter: ".",
-    gridHeading: "What we have been thinking about",
+    gridHeading: "Explore the topic",
   },
   "financial-transformation": {
     eyebrow: "Featured topic",
     title: "Financial Transformation",
-    titleAccent: "The CFO suite, rebuilt for an agentic decade.",
-    lede: "Operator notes on closing faster, forecasting better, and rebuilding the finance function around real signal.",
+    titleAccent: "Finance built around better decisions.",
+    lede: "Practical reading on reporting, forecasting, controls and finance leadership.",
     image:
       "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Finance is the function under the most pressure to change and the least permission to break. The operators we work with are compressing the close, replacing the annual plan with rolling forecasts, and installing the controls they will wish they had at the next raise. Real change, with the working papers attached.",
+      "A useful finance function connects reliable information with the people making decisions. Explore ways to improve the close, maintain forecasts and clarify the responsibilities behind reporting and control.",
     introBefore: "Finance, rebuilt for the",
     introAccent: "operator",
     introAfter: ".",
-    gridHeading: "What we have been thinking about",
+    gridHeading: "Explore the topic",
   },
   "intangibles-valuation": {
     eyebrow: "Featured topic",
     title: "Intangible Asset Valuation",
-    titleAccent: "Putting a defensible number on what you cannot see.",
-    lede: "How to price brand, IP, data, and ESOPs in a way that holds up to the audit committee.",
+    titleAccent: "Understanding the value behind the business.",
+    lede: "Analysis of intangible assets and employee share options, with attention to purpose, assumptions and evidence.",
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Most of the value in a modern business sits in assets the balance sheet does not see. Brand equity, customer data, IP, ESOP pools. Operators ask the same question every time: what is it worth, and can we defend the number. The pieces below are how we get from feel to figure inside the data room.",
+      "Software, intellectual property, data and customer relationships can contribute to business value in different ways. Explore how to identify those assets and examine a valuation. Related reading on employee share options addresses a separate reporting and equity-planning question.",
     introBefore: "Make the intangible",
-    introAccent: "defendable",
+    introAccent: "defensible",
     introAfter: ".",
-    gridHeading: "What we have been thinking about",
+    gridHeading: "Explore the topic",
   },
   "growth-strategy": {
     eyebrow: "Featured topic",
     title: "Growth Strategy",
-    titleAccent: "Plans that compound, not plans that present well.",
-    lede: "Operator views on go-to-market, pricing, and the three questions behind every growth plan worth running.",
+    titleAccent: "Connecting growth plans with operating decisions.",
+    lede: "Perspectives on pricing, resource allocation and the capacity needed to support growth.",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80",
     introParagraph:
-      "Growth strategy is mostly written for the board and rarely written for the operator who has to run it on Monday. We work the other way around. Strip the deck, three questions decide whether the plan compounds or stalls. The pieces below are what we have been seeing inside that work.",
+      "Growth depends on choices about customers, pricing and how work gets delivered. Explore the financial and operating implications of those choices, including the assumptions that need to be tested before resources are committed.",
     introBefore: "Growth that",
     introAccent: "compounds",
     introAfter: ".",
-    gridHeading: "What we have been thinking about",
+    gridHeading: "Explore the topic",
   },
 };
 
@@ -96,7 +96,7 @@ export default function FeaturedTopic({ params }: Props) {
       <div className="min-h-screen bs-bg-canvas">
         <Header />
         <main className="bs-container py-32">
-          <h1 className="font-display text-4xl">Topic not found</h1>
+          <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Topic not found</h1>
           <p className="mt-4">
             We could not find that topic. Head back to{" "}
             <a href="#/insights" className="underline">
@@ -133,7 +133,7 @@ export default function FeaturedTopic({ params }: Props) {
         <FeaturedClientStoryCarousel stories={featuredClientStories} />
 
         <CTAStrip
-          text="We've been through growth, let us help."
+          text="Discuss the decision facing your business."
           buttonLabel="Talk to us"
           href="#/contact"
         />

@@ -23,9 +23,9 @@ type Pillar = {
 
 const pillars: Pillar[] = [
   {
-    tab: "Build efficiency using existing systems",
+    tab: "Put AI into everyday operations",
     description:
-      "We rebuild operating cores so the work AI is supposed to accelerate actually has somewhere to land. Real systems, real data, real decisions.",
+      "We connect AI to a defined workflow, the information it needs and the people responsible for the result. The work includes integration, review and ongoing operation.",
     card: {
       tag: "Agentic AI Automation",
       title: "The operator's playbook for agentic AI",
@@ -36,9 +36,9 @@ const pillars: Pillar[] = [
     },
   },
   {
-    tab: "Refine the financial story",
+    tab: "Strengthen financial decisions",
     description:
-      "We rewire FP&A and reporting so the numbers move with the business, not the calendar. Operator-grade finance for the AI era.",
+      "We improve financial planning, reporting and controls so leadership can understand performance and act on it. Fractional CFO support adds senior finance capacity where it is needed.",
     card: {
       tag: "Financial Transformation",
       title: "Rebuilding the finance function",
@@ -49,9 +49,9 @@ const pillars: Pillar[] = [
     },
   },
   {
-    tab: "Reimagine value",
+    tab: "Understand enterprise value",
     description:
-      "We value what balance sheets miss. Brand, IP, ESOPs, and the intangible engines that drive real enterprise worth.",
+      "We assess intangible assets and employee share options for a defined purpose. Each valuation explains the method, assumptions and evidence behind the conclusion.",
     card: {
       tag: "Intangible Asset Valuation",
       title: "Independent intangible asset valuation",
@@ -165,7 +165,7 @@ export function PillarSwitcher() {
                 </span>
                 <h3
                   className="mt-5 text-[22px] md:text-[26px] font-bold leading-[1.2]"
-                  style={{ color: "hsl(var(--bs-ink))" }}
+                  style={{ color: "hsl(var(--bs-ink))" , fontSize: "var(--bs-type-card)", lineHeight: 1.2, fontFamily: "Bitter, Georgia, serif"}}
                 >
                   {pillar.card.title}
                 </h3>

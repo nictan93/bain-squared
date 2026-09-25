@@ -53,13 +53,12 @@ function renderBlock(b: Block, key: number) {
           className="font-display"
           style={{
             color: "hsl(var(--bs-ink))",
-            fontSize: "clamp(26px, 3.2vw, 34px)",
+            fontSize: "var(--bs-type-prose)",
             fontWeight: 700,
-            lineHeight: 1.18,
+            lineHeight: 1.2,
             letterSpacing: "-0.005em",
             marginTop: "2.5em",
-            marginBottom: "0.6em",
-          }}
+            marginBottom: "0.6em", fontFamily: "Bitter, Georgia, serif"}}
         >
           {inline(b.text)}
         </h2>
@@ -71,11 +70,10 @@ function renderBlock(b: Block, key: number) {
           className="font-semibold"
           style={{
             color: "hsl(var(--bs-ink))",
-            fontSize: "20px",
-            lineHeight: 1.3,
+            fontSize: "var(--bs-type-ui)",
+            lineHeight: 1.2,
             marginTop: "2em",
-            marginBottom: "0.5em",
-          }}
+            marginBottom: "0.5em", fontFamily: "Inter, sans-serif"}}
         >
           {inline(b.text)}
         </h3>

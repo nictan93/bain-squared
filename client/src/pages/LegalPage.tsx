@@ -34,11 +34,10 @@ export default function LegalPage({ title, lastUpdated, blocks }: Props) {
                 className="font-display"
                 style={{
                   color: "hsl(var(--bs-ink))",
-                  fontSize: "clamp(36px, 5vw, 56px)",
+                  fontSize: "var(--bs-type-page)",
                   fontWeight: 700,
                   lineHeight: 1.1,
-                  letterSpacing: "-0.015em",
-                }}
+                  letterSpacing: "-0.015em", fontFamily: "Bitter, Georgia, serif"}}
               >
                 {title}
               </h1>

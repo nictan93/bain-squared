@@ -21,7 +21,7 @@ export const PRIVACY_BLOCKS: Block[] = [
   },
   {
     type: "p",
-    text: "By accessing our Sites or engaging us in any of the activities described above, you confirm that you have read and understand the terms of this Privacy Notice. If you do not agree with any part of it, please refrain from using our Sites and contact us for clarification before proceeding.",
+    text: "This notice explains our practices. It does not replace consent where consent is required. Contact us if you have questions about how we use your information.",
   },
   {
     type: "p",
@@ -72,7 +72,7 @@ export const PRIVACY_BLOCKS: Block[] = [
       "You participate in a client engagement, either as the client signatory or as a member of the client team.",
       "You apply for a role with us through our Careers pages or through a recruiter we work with.",
       "You interact with us on professional social media platforms such as LinkedIn.",
-      "You visit our Sites, including when you manage your cookie preferences.",
+      "You visit our Sites and your browser sends technical information needed to deliver the pages.",
     ],
   },
   {
@@ -133,7 +133,7 @@ export const PRIVACY_BLOCKS: Block[] = [
   },
   {
     type: "p",
-    text: "Where required by the PDPA, we will take reasonable steps to ensure that the recipient is bound by legally enforceable obligations to provide a standard of protection that is comparable to the protection under the PDPA. Where required by the GDPR or UK GDPR, we rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses or the UK International Data Transfer Addendum.",
+    text: "Transfers outside Singapore require protection comparable to that required under the PDPA, subject to applicable exceptions. Where other data protection laws apply, the relevant transfer requirements must also be met. Contact us for information about the arrangements applicable to your data.",
   },
 
   { type: "h2", text: "6. How long we keep your personal data" },
@@ -145,7 +145,7 @@ export const PRIVACY_BLOCKS: Block[] = [
   { type: "h2", text: "7. How we protect your personal data" },
   {
     type: "p",
-    text: "We maintain reasonable administrative, technical, and physical safeguards designed to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, and unauthorised access. These include access controls on our systems, encryption in transit and at rest where appropriate, vendor due diligence, and ongoing security training for our team. No method of transmission over the internet or method of electronic storage is fully secure, and we cannot guarantee absolute security.",
+    text: "We are responsible for making reasonable security arrangements to protect personal data in our possession or control. The arrangements should reflect the sensitivity of the information and how it is used. No method of transmission or electronic storage is fully secure. Please avoid sending sensitive client or financial information in an initial enquiry.",
   },
 
   { type: "h2", text: "8. Your rights" },
@@ -173,7 +173,7 @@ export const PRIVACY_BLOCKS: Block[] = [
   { type: "h2", text: "9. Cookies and similar technologies" },
   {
     type: "p",
-    text: "Our Sites use cookies and similar technologies to operate the Sites, remember your preferences, measure traffic, and understand how visitors use our content. You can manage your cookie preferences through your browser settings. Disabling certain cookies may affect the functionality of our Sites.",
+    text: "Your browser and the services used to deliver the Sites may store or receive technical information. You can manage cookies and local storage through your browser settings. Any optional analytics or marketing technologies will require an appropriate notice and, where required, consent before use.",
   },
 
   { type: "h2", text: "10. Children" },
@@ -225,7 +225,7 @@ export const TERMS_BLOCKS: Block[] = [
   { type: "h2", text: "3. Use of Site Content" },
   {
     type: "p",
-    text: "You may view, download, and print Site Content for your own personal, non-commercial reference, provided that you keep all copyright and other proprietary notices intact and do not modify the Site Content in any way.",
+    text: "You may view, download, print and share our publications unchanged for personal reference or internal business use. Keep the source attribution, links, copyright notices and any qualifications intact. Third-party material remains subject to its own licence terms.",
   },
   {
     type: "p",
@@ -235,7 +235,7 @@ export const TERMS_BLOCKS: Block[] = [
   { type: "h2", text: "4. User submissions" },
   {
     type: "p",
-    text: "Any information, comments, or material you send to us through the Site or by email, including any feedback or suggestions about our content or services, is non-confidential. You grant Bain Squared a perpetual, worldwide, royalty-free, irrevocable, non-exclusive licence to use, reproduce, modify, adapt, publish, translate, distribute, and display that material for any purpose, in any media. You represent that you own or otherwise control the rights to the material you submit and that the material does not infringe the rights of any third party.",
+    text: "Please share only information you are authorised to provide. We may use your submission to respond to your enquiry and carry out work you request, subject to our Privacy Policy and any agreement with you. Sending information does not grant us permission to publish your confidential material. Agree any confidentiality or handling requirements with us before sending sensitive information.",
   },
 
   { type: "h2", text: "5. Disclaimers" },

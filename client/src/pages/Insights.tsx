@@ -39,7 +39,7 @@ export default function Insights() {
 
         <WhitepaperPanel
           headline="Bain Squared's 2026 Operator Outlook"
-          body="Our flagship annual study. Twelve operator interviews, six data sets, and one practical thesis on where the next two years of value will be made and lost. Download the report and use it inside your next planning cycle."
+          body="A structured look at the choices facing growing businesses across AI, finance and enterprise value. Explore the questions, assumptions and practical tools behind the analysis."
           ctaLabel="Read the report"
           ctaHref="#/contact"
           image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"

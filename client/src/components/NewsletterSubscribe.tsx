@@ -14,7 +14,7 @@ type Props = {
 
 export function NewsletterSubscribe({
   heading = "Subscribe to our newsletter",
-  body = "One operator-led note in your inbox each month. No filler, no funnel.",
+  body = "A monthly selection of ideas and practical reading across AI, finance and enterprise value.",
   id = "subscribe",
 }: Props) {
   const [email, setEmail] = useState("");
@@ -45,12 +45,11 @@ export function NewsletterSubscribe({
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(28px, 3.4vw, 44px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: "-0.015em",
-                color: "white",
-              }}
+                color: "white", fontFamily: "Bitter, Georgia, serif"}}
             >
               {heading}
             </h2>
@@ -70,13 +69,13 @@ export function NewsletterSubscribe({
                   className="text-[16px] font-bold mb-1"
                   style={{ color: "white" }}
                 >
-                  Your mail client just opened.
+                  Send the email to complete your request.
                 </div>
                 <div
                   className="text-[14px] leading-[1.55]"
                   style={{ color: "rgba(255,255,255,0.85)" }}
                 >
-                  Hit send on the draft and we will add you to the list.
+                  If your email app did not open, write to hello@bainsquared.com with the address you would like to subscribe.
                 </div>
               </div>
             ) : (

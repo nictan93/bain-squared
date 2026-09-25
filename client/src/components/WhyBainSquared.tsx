@@ -72,12 +72,11 @@ export function WhyBainSquared() {
         <h2
           className="font-display mb-12 md:mb-16"
           style={{
-            fontSize: "clamp(32px, 4.2vw, 56px)",
+            fontSize: "var(--bs-type-section)",
             fontWeight: 700,
-            lineHeight: 1.1,
+            lineHeight: 1.2,
             letterSpacing: "-0.02em",
-            color: "hsl(var(--bs-ink))",
-          }}
+            color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
         >
           Why Bain Squared?
         </h2>

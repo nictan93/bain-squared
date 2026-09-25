@@ -24,15 +24,6 @@ function FAQRow({ item, index }: { item: FAQItem; index: number }) {
         }}
       >
         <span
-          className="text-[12px] font-semibold pt-1.5 flex-shrink-0"
-          style={{
-            color: "hsl(var(--bs-forest-deep))",
-            minWidth: "32px",
-          }}
-        >
-          {String(index + 1).padStart(2, "0")}
-        </span>
-        <span
           className="font-display flex-1 text-[18px] md:text-[22px]"
           style={{
             fontWeight: 600,
@@ -79,7 +70,7 @@ function FAQRow({ item, index }: { item: FAQItem; index: number }) {
         </span>
       </summary>
       <div
-        className="pb-7 md:pb-8 pl-[56px] pr-[44px] md:pr-[56px]"
+        className="pb-7 md:pb-8 pr-[44px] md:pr-[56px]"
         style={{ marginTop: "-8px" }}
       >
         <p
@@ -112,21 +103,14 @@ export default function FAQ() {
           <div className="bs-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-8">
-                <p
-                  className="text-[12px] font-semibold uppercase tracking-[0.08em] mb-6"
-                  style={{ color: "hsl(var(--bs-forest-deep))" }}
-                >
-                  Frequently asked
-                </p>
                 <h1
                   className="font-display"
                   style={{
-                    fontSize: "clamp(40px, 5.4vw, 72px)",
+                    fontSize: "var(--bs-type-page)",
                     fontWeight: 700,
-                    lineHeight: 1.05,
+                    lineHeight: 1.1,
                     letterSpacing: "-0.02em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   Questions, before you{" "}
                   <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
@@ -186,21 +170,14 @@ export default function FAQ() {
                 {/* Left rail */}
                 <div className="lg:col-span-4">
                   <div className="lg:sticky lg:top-32">
-                    <p
-                      className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
-                      style={{ color: "hsl(var(--bs-forest-deep))" }}
-                    >
-                      0{gi + 1} / FAQ
-                    </p>
                     <h2
                       className="font-display"
                       style={{
-                        fontSize: "clamp(28px, 2.6vw, 36px)",
+                        fontSize: "var(--bs-type-section)",
                         fontWeight: 700,
-                        lineHeight: 1.15,
+                        lineHeight: 1.2,
                         letterSpacing: "-0.015em",
-                        color: "hsl(var(--bs-ink))",
-                      }}
+                        color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                     >
                       {group.title}
                     </h2>
@@ -245,12 +222,11 @@ export default function FAQ() {
                 <h2
                   className="font-display"
                   style={{
-                    fontSize: "clamp(32px, 3.6vw, 52px)",
+                    fontSize: "var(--bs-type-section)",
                     fontWeight: 700,
-                    lineHeight: 1.08,
+                    lineHeight: 1.2,
                     letterSpacing: "-0.018em",
-                    color: "#FFFFFF",
-                  }}
+                    color: "#FFFFFF", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   Still have a question we haven't answered?
                 </h2>
@@ -266,7 +242,7 @@ export default function FAQ() {
                   >
                     hello@bainsquared.com
                   </a>{" "}
-                  or use the contact form. A partner reviews every enquiry.
+                  or prepare an email through the contact form.
                 </p>
               </div>
               <div className="lg:col-span-4 lg:text-right">
@@ -279,7 +255,7 @@ export default function FAQ() {
                   }}
                   data-testid="cta-contact"
                 >
-                  Contact a partner
+                  Contact us
                   <span className="bs-arrow" aria-hidden="true" />
                 </a>
               </div>

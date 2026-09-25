@@ -121,21 +121,14 @@ export default function Reviews() {
           <div className="bs-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-8">
-                <p
-                  className="text-[12px] font-semibold uppercase tracking-[0.08em] mb-6"
-                  style={{ color: "hsl(var(--bs-forest-deep))" }}
-                >
-                  Client Feedback
-                </p>
                 <h1
                   className="font-display"
                   style={{
-                    fontSize: "clamp(40px, 5.4vw, 72px)",
+                    fontSize: "var(--bs-type-page)",
                     fontWeight: 700,
-                    lineHeight: 1.05,
+                    lineHeight: 1.1,
                     letterSpacing: "-0.02em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   Bain Squared{" "}
                   <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
@@ -175,21 +168,14 @@ export default function Reviews() {
                 {/* Left rail — sticky title + intro */}
                 <div className="lg:col-span-4">
                   <div className="lg:sticky lg:top-32">
-                    <p
-                      className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-4"
-                      style={{ color: "hsl(var(--bs-forest-deep))" }}
-                    >
-                      0{gi + 1} / Reviews
-                    </p>
                     <h2
                       className="font-display"
                       style={{
-                        fontSize: "clamp(28px, 2.6vw, 36px)",
+                        fontSize: "var(--bs-type-section)",
                         fontWeight: 700,
-                        lineHeight: 1.15,
+                        lineHeight: 1.2,
                         letterSpacing: "-0.015em",
-                        color: "hsl(var(--bs-ink))",
-                      }}
+                        color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                     >
                       {group.title}
                     </h2>
@@ -234,31 +220,22 @@ export default function Reviews() {
           <div className="bs-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
               <div className="lg:col-span-5">
-                <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.08em] mb-5"
-                  style={{ color: "hsl(var(--bs-forest-accent))" }}
-                >
-                  Why clients work with Bain Squared
-                </p>
                 <h2
                   className="font-display"
                   style={{
-                    fontSize: "clamp(32px, 3.4vw, 48px)",
+                    fontSize: "var(--bs-type-section)",
                     fontWeight: 700,
-                    lineHeight: 1.1,
+                    lineHeight: 1.2,
                     letterSpacing: "-0.018em",
-                    color: "#FFFFFF",
-                  }}
+                    color: "#FFFFFF", fontFamily: "Bitter, Georgia, serif"}}
                 >
-                  Senior-level thinking, without traditional consulting overhead.
+                  Experience connected to delivery.
                 </h2>
                 <p
                   className="mt-6 text-[16px] leading-[1.65]"
                   style={{ color: "rgba(255,255,255,0.78)" }}
                 >
-                  Most engagements start because the in-house team is strong
-                  but short of senior bandwidth in one specific area. We come
-                  in, do that work, hand it back, and step out.
+                  An engagement can add specialist capacity to an existing team or address a defined operating problem. We agree the responsibilities, delivery scope and handover around that need.
                 </p>
               </div>
 
@@ -266,19 +243,12 @@ export default function Reviews() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
                   {WHY_CLIENTS_POINTS.map((p, i) => (
                     <li key={p.title}>
-                      <div
-                        className="text-[12px] font-semibold mb-3"
-                        style={{ color: "hsl(var(--bs-forest-accent))" }}
-                      >
-                        0{i + 1}
-                      </div>
                       <h3
                         className="font-display text-[20px] md:text-[22px]"
                         style={{
                           fontWeight: 700,
-                          lineHeight: 1.25,
-                          color: "#FFFFFF",
-                        }}
+                          lineHeight: 1.2,
+                          color: "#FFFFFF", fontSize: "var(--bs-type-card)", fontFamily: "Bitter, Georgia, serif"}}
                       >
                         {p.title}
                       </h3>
@@ -306,21 +276,19 @@ export default function Reviews() {
               <h2
                 className="font-display"
                 style={{
-                  fontSize: "clamp(32px, 3.6vw, 52px)",
+                  fontSize: "var(--bs-type-section)",
                   fontWeight: 700,
-                  lineHeight: 1.08,
+                  lineHeight: 1.2,
                   letterSpacing: "-0.018em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
               >
-                Have a project you'd want us in the seat for?
+                Discuss a project with our team.
               </h2>
               <p
                 className="mt-5 text-[17px] leading-[1.6] max-w-[640px]"
                 style={{ color: "hsl(var(--bs-ink-muted))" }}
               >
-                Tell us where the operating core needs the rebuild. A partner
-                will get back to you within two business days.
+                Tell us what needs to change and the decision you need to make. We will discuss the context and whether our team can help.
               </p>
               <a
                 href="#/contact"

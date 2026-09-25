@@ -24,23 +24,23 @@ export const FAQ_GROUPS: FAQGroup[] = [
     items: [
       {
         q: "What is Bain Squared?",
-        a: "Bain Squared is a Singapore-headquartered growth consultancy. We work with founders, CFOs, and boards across three areas: intangible asset and ESOP valuation, fractional CFO and financial transformation, and agentic AI automation. Every engagement is led by someone who has done the work inside an operating company, not someone managing it from a distance.",
+        a: "Bain Squared is a Singapore-based advisory and delivery firm. We help businesses put AI into operations, strengthen their finance function, and understand the value of intangible assets and employee equity. Our work combines analysis, implementation and support for the teams responsible for the result.",
       },
       {
         q: "Where are you based and which markets do you cover?",
-        a: "Our office is at 7 Temasek Boulevard, Suntec Tower One, Singapore 038987. The team is active across Singapore, Indonesia, Vietnam, Malaysia, and the Philippines. We take on work in other markets only when the engagement context fits.",
+        a: "We are based in Singapore. For work in other markets, we agree the delivery arrangements and any local specialist requirements during scoping.",
       },
       {
         q: "Are you a consulting firm or an advisory firm?",
-        a: "Neither label fits cleanly. We sit in the seat with our clients. We build the model, write the memo, ship the workflow, and hand it over. We are paid for outcomes that show up in the operating business, not for slides.",
+        a: "We provide both advice and implementation. An engagement can include assessing a problem, building a financial model or workflow, supporting its introduction, and documenting how your team will use it.",
       },
       {
         q: "How is the team structured?",
-        a: "Senior practitioners only. Every engagement is led by a partner-level operator with hands-on delivery. We don't pyramid work down to junior teams. If you hire us, the person you met in the first conversation is the person doing the work.",
+        a: "We agree the engagement lead, responsibilities and specialist support with you before work begins. The team is shaped around the scope and the expertise it requires.",
       },
       {
         q: "How do I get in touch?",
-        a: "Email hello@bainsquared.com for project enquiries or use the contact form on the site. We respond to qualified enquiries within two business days.",
+        a: "Email hello@bainsquared.com or use the contact page. Tell us about the business, the problem you want to solve and any timing requirements.",
       },
     ],
   },
@@ -52,23 +52,23 @@ export const FAQ_GROUPS: FAQGroup[] = [
     items: [
       {
         q: "Do you handle ESOP valuations for early-stage startups?",
-        a: "Yes. We work with companies from seed stage through pre-IPO. For early-stage clients, the deliverable is usually a defensible strike price for new option grants, supported by a memo that holds up under auditor and investor review.",
+        a: "Yes. The starting point is the purpose of the valuation, the grant terms and the available company information. We distinguish the value of the underlying equity from the fair value of the options, and agree the required outputs with you.",
       },
       {
         q: "What standards do your valuations follow?",
-        a: "We work to IVS (International Valuation Standards) and align with the relevant local accounting frameworks, including IFRS and SFRS(I). For ESOP grants, the methodology is consistent with what auditors in Singapore and the wider region expect.",
+        a: "The purpose of the valuation determines the applicable standards and reporting requirements. We agree these at the outset and discuss the proposed methods and assumptions with your finance team and, where relevant, your auditor.",
       },
       {
         q: "How long does an ESOP valuation typically take?",
-        a: "Two to four weeks from kickoff for a standard refresh. Faster turnarounds are possible when the underlying financials and cap table are clean. We will tell you if your timeline is unrealistic before you sign.",
+        a: "Timing depends on the grant structure, available financial information and review requirements. We confirm a schedule after reviewing the brief and data requirements.",
       },
       {
         q: "Can you support a purchase price allocation after an acquisition?",
-        a: "Yes. We handle PPA work across customer relationships, technology, brand, and goodwill. The output is built to sit inside an audit file and survive review without rework.",
+        a: "We can support the valuation of identifiable intangible assets, such as customer relationships, technology and brands, as part of a purchase price allocation. The accounting treatment and residual goodwill are considered with your finance team and auditor.",
       },
       {
         q: "Do you provide expert witness or litigation support?",
-        a: "Selectively. We take this work on when the underlying engagement matches our domain. We do not run pure forensic practices.",
+        a: "Dispute-related work requires a separate assessment of the subject matter, independence requirements and relevant expertise. Contact us with the brief so we can establish whether we are a suitable fit.",
       },
     ],
   },
@@ -80,23 +80,23 @@ export const FAQ_GROUPS: FAQGroup[] = [
     items: [
       {
         q: "When should I hire a fractional CFO versus a full-time hire?",
-        a: "Hire fractional when the finance function needs senior thinking right now but the company is not ready to support a full-time CFO. A common pattern is six to twelve months of fractional work that sets up the cadence and systems, followed by a permanent hire we help you scope and interview.",
+        a: "A fractional CFO can suit a business that needs senior finance support before the role warrants a full-time appointment, or during a transition. The right arrangement depends on the decisions, workload and continuity the business needs.",
       },
       {
         q: "What does a typical fractional CFO engagement cover?",
-        a: "Board and investor reporting, financial planning and analysis, cash and runway management, close-cycle redesign, fundraising support, and team build-out. The exact scope is set in the first two weeks based on what the business actually needs, not a templated checklist.",
+        a: "The scope can include planning and forecasting, cash management, board reporting, finance processes and fundraising preparation. We agree priorities, responsibilities and deliverables before the engagement starts.",
       },
       {
         q: "How many days a week does the fractional CFO commit?",
-        a: "Engagements run between one and three days a week depending on stage. We do not stretch the same partner across so many engagements that none of them get real attention.",
+        a: "The commitment is agreed around the workload, meeting schedule and decisions that need support. We also define how your team can reach us between scheduled working sessions.",
       },
       {
         q: "Do you help with fundraising?",
-        a: "Yes. We prepare the data room, the model, the narrative, and the diligence responses. We sit in investor sessions when it helps. We do not act as a placement agent.",
+        a: "We support fundraising preparation through financial models, management information, data-room preparation and responses to financial due diligence. We do not act as a placement agent or arrange investments.",
       },
       {
         q: "What's the handover plan at the end of the engagement?",
-        a: "Every engagement is designed to end. We document the operating cadence, train the in-house team, and step out cleanly. If you want to retain us on a lighter footprint after, we'll discuss it. We do not push for it.",
+        a: "We agree the handover or ongoing support arrangements as part of the scope. Handover can include documentation, training and a clear allocation of responsibilities to your internal team.",
       },
     ],
   },
@@ -108,23 +108,23 @@ export const FAQ_GROUPS: FAQGroup[] = [
     items: [
       {
         q: "What does 'agentic AI' mean in your work?",
-        a: "It means AI systems that take a defined action inside an operating workflow, not chatbots and not dashboards. The agent reads a system, makes a decision inside a documented envelope, takes an action, and writes back. Humans stay in the loop where it matters.",
+        a: "It means AI that can carry out defined tasks in a business workflow, such as reviewing information, preparing a response or updating a system. We specify its access, permitted actions and the decisions that require human approval.",
       },
       {
         q: "Where do you typically deploy agents first?",
-        a: "Finance ops (AR follow-up, expense triage, reconciliation), sales ops (lead qualification, CRM hygiene), and customer ops (status enquiries, claims triage). These are the places where the work is repetitive enough to automate and important enough to be worth doing well.",
+        a: "Potential starting points include reconciliation, expense review, lead qualification and customer-service triage. We assess the process, data quality, risk and expected benefit before selecting a workflow.",
       },
       {
         q: "How do you handle compliance and risk for regulated workflows?",
-        a: "We start by documenting what the agent will not do, then what it will. The control framework is written down and reviewed with the client's risk function before code ships. For regulated clients, we align with MAS expectations and the firm's internal model risk policy.",
+        a: "We agree permitted actions, access controls, review points and escalation with the people responsible for the workflow. Where sector-specific requirements apply, your risk, compliance and legal teams help establish the requirements for deployment.",
       },
       {
         q: "Do you build on a specific platform or stack?",
-        a: "We are platform-agnostic. The choice of LLM, orchestration layer, and integration pattern is driven by the workflow and the client's existing stack, not by a vendor relationship. We will tell you when an off-the-shelf tool beats a custom build.",
+        a: "We assess the workflow and your existing systems before recommending tools. The options can include configuring existing software, connecting services or building a custom component. Cost, security, maintainability and handover all inform the choice.",
       },
       {
         q: "What's the smallest engagement you'll take on?",
-        a: "A scoping sprint, usually two to three weeks. The output is a written assessment of which workflows are worth automating, in what order, and what the expected return looks like. Clients use this to make a build-or-don't-build call without committing to a full engagement.",
+        a: "A focused assessment can help you decide which workflow to address first. We agree its scope and duration, then assess feasibility, information requirements, risks and the next steps before you commit to implementation.",
       },
     ],
   },
@@ -136,23 +136,23 @@ export const FAQ_GROUPS: FAQGroup[] = [
     items: [
       {
         q: "How do you price your work?",
-        a: "Fixed fee for defined scope. Day rates for advisory and fractional CFO retainers. We send a written scope and fee letter before any work starts and we don't bill outside it without a documented change.",
+        a: "We propose a fee structure that fits the work, such as a fixed fee for a defined project or a retainer for ongoing support. The proposal sets out scope, deliverables, fees and how changes will be agreed.",
       },
       {
         q: "Do you sign NDAs?",
-        a: "Yes, as standard. We can work to your template or provide ours. For sensitive engagements, we structure access controls inside the team so only named individuals see named data.",
+        a: "We can agree a confidentiality arrangement before you share sensitive information. Let us know if you have an NDA or particular access requirements.",
       },
       {
         q: "Can you work with our existing advisors and auditors?",
-        a: "Routinely. Most of our valuation and CFO work runs alongside an external auditor, tax advisor, or legal counsel. We coordinate directly with them when the client asks us to.",
+        a: "Yes. We can coordinate with your finance team, auditor, tax adviser, legal counsel and technology providers. Their roles and review points should be clear in the engagement scope.",
       },
       {
         q: "What's the typical engagement length?",
-        a: "Valuation work runs two to six weeks. CFO engagements run six to twelve months. AI automation work runs four to twelve weeks for a first deployment. Anything shorter is a scoping sprint.",
+        a: "Duration depends on the scope, available information and review process. We set out milestones and dependencies in the proposal, including any support required after delivery.",
       },
       {
         q: "Do you publish client names?",
-        a: "Only when the client has explicitly approved it in writing. The reviews on our site are anonymized to company type and role unless we have that approval on file.",
+        a: "We seek permission before identifying a client in published work. Any case study also needs an agreed description of the engagement and a clear basis for its results.",
       },
     ],
   },

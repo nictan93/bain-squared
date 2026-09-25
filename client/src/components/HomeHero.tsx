@@ -53,11 +53,10 @@ export function HomeHero() {
           <h1
             className="font-display text-white"
             style={{
-              fontSize: "clamp(40px, 7vw, 96px)",
-              lineHeight: 1.05,
+              fontSize: "var(--bs-type-display)",
+              lineHeight: 1.1,
               fontWeight: 700,
-              letterSpacing: "-0.02em",
-            }}
+              letterSpacing: "-0.02em", fontFamily: "Bitter, Georgia, serif"}}
             data-testid="hero-headline"
           >
             <span className="block">Driving Growth</span>

@@ -58,12 +58,11 @@ export function YouMatter({
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(30px, 3.8vw, 52px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.1,
+                lineHeight: 1.2,
                 letterSpacing: "-0.02em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {headline}
             </h2>

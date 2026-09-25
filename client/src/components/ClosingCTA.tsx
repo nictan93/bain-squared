@@ -9,7 +9,7 @@ export function ClosingCTA() {
         <div className="max-w-[880px] mx-auto text-center">
           <h2
             className="bs-h1-display mb-6"
-            style={{ color: "hsl(var(--bs-canvas))" }}
+            style={{ color: "hsl(var(--bs-canvas))" , fontSize: "var(--bs-type-section)", lineHeight: 1.2, fontFamily: "Bitter, Georgia, serif"}}
             data-testid="text-cta-headline"
           >
             Bring us your hardest

@@ -38,7 +38,7 @@ export function InsightsGrid() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 md:mb-16">
           <div className="max-w-[600px]">
             <span className="bs-eyebrow">Insights</span>
-            <h2 className="bs-h1-display" data-testid="text-insights-headline">
+            <h2 className="bs-h1-display" data-testid="text-insights-headline" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>
               What we've been
               <br />
               thinking about.
@@ -80,7 +80,7 @@ export function InsightsGrid() {
                     {item.date}
                   </span>
                 </div>
-                <h3 className="text-[22px] md:text-[24px] font-bold leading-[1.2] mb-4 text-[hsl(var(--bs-ink))]">
+                <h3 className="text-[22px] md:text-[24px] font-bold leading-[1.2] mb-4 text-[hsl(var(--bs-ink))]" style={{ fontSize: "var(--bs-type-card)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>
                   {item.title}
                 </h3>
                 <p className="text-[15px] leading-[1.6] text-[hsl(var(--bs-ink-muted))]">

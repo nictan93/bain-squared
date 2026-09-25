@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 
 /**
- * "Leaders want AI to work by 'next Tuesday'." centered callout.
+ * AI implementation callout.
  * Mirrors Thoughtworks image 3 — black headline with accent-color span,
  * description below, single inline link.
  */
@@ -16,18 +16,17 @@ export function CalloutAI() {
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 4vw, 48px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
-            Leaders want{" "}
+            Put{" "}
             <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
               AI to work
             </span>{" "}
-            by &lsquo;next Tuesday&rsquo;.
+            in your business.
           </h2>
 
           <p

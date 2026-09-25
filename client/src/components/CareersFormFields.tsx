@@ -2,7 +2,7 @@ import { useState, FormEvent, ChangeEvent } from "react";
 
 /**
  * CareersFormFields — 9-field application form.
- * Submits via mailto:hr@bainsquared.com (no backend).
+ * Submits via mailto:hello@bainsquared.com (no backend).
  *
  * Fields: First*, Last*, Email*, Phone*, Location*, Desired Function*,
  *         LinkedIn*, Intro*, Resume (file name only — mailto can't attach), Terms*
@@ -76,7 +76,7 @@ export function CareersFormFields() {
       "",
       `Resume file (please attach manually): ${form.resumeName || "—"}`,
     ];
-    const href = `mailto:hr@bainsquared.com?subject=${encodeURIComponent(
+    const href = `mailto:hello@bainsquared.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
     window.location.href = href;
@@ -103,20 +103,17 @@ export function CareersFormFields() {
         <h3
           className="font-display mb-4"
           style={{
-            fontSize: "26px",
+            fontSize: "var(--bs-type-ui)",
             fontWeight: 700,
-            color: "hsl(var(--bs-ink))",
-          }}
+            color: "hsl(var(--bs-ink))", lineHeight: 1.2, fontFamily: "Inter, sans-serif"}}
         >
-          Your mail client just opened.
+          Send the draft to complete your request.
         </h3>
         <p
           className="text-[16px] leading-[1.6]"
           style={{ color: "hsl(var(--bs-ink))" }}
         >
-          Please attach your resume to the draft and hit send. We review every
-          application by a real human, and aim to close every loop within three
-          weeks.
+          Attach your resume to the email draft and send it to complete your expression of interest. If your email app did not open, email hello@bainsquared.com directly.
         </p>
         <button
           type="button"
@@ -344,7 +341,7 @@ export function CareersFormFields() {
         }}
         data-testid="button-submit-careers"
       >
-        Submit application
+        Prepare email
       </button>
     </form>
   );

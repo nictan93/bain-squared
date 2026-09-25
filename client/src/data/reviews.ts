@@ -26,8 +26,7 @@ export const REVIEW_GROUPS: ReviewGroup[] = [
   {
     id: "valuation",
     title: "Reviews for Intangible Asset & ESOP Valuation",
-    intro:
-      "Founders and CFOs typically engage us when an ESOP grant, an audit, or a tax position needs a valuation that holds up under questioning. Below is feedback from companies we've supported across Singapore, Indonesia, and Vietnam.",
+    intro: "Feedback on valuation work, including the assumptions, documentation and review process.",
     reviews: [
       {
         quote:
@@ -78,8 +77,7 @@ export const REVIEW_GROUPS: ReviewGroup[] = [
   {
     id: "cfo",
     title: "Reviews for Fractional CFO & Financial Transformation",
-    intro:
-      "We sit in the CFO seat for founders who need senior-level finance thinking without hiring it full time. Engagements typically run six to twelve months, with a clear handover plan to an in-house team at the end.",
+    intro: "Feedback on financial planning, reporting and the work of strengthening a finance function.",
     reviews: [
       {
         quote:
@@ -130,8 +128,7 @@ export const REVIEW_GROUPS: ReviewGroup[] = [
   {
     id: "ai",
     title: "Reviews for AI Automation & Workflow Design",
-    intro:
-      "We build agentic AI into the parts of the business where it actually moves a number, finance ops, sales ops, customer ops. The work below is in production today.",
+    intro: "Feedback on workflow design, implementation and the controls needed to operate AI.",
     reviews: [
       {
         quote:
@@ -182,24 +179,8 @@ export const REVIEW_GROUPS: ReviewGroup[] = [
 ];
 
 export const WHY_CLIENTS_POINTS: { title: string; body: string }[] = [
-  {
-    title: "Senior thinking, no consulting overhead",
-    body:
-      "Clients typically engage Bain Squared when they need partner-level judgement on valuation, finance, or AI without the layered teams and slide decks that come with traditional consulting. Every engagement is led by someone who has done the work, not managed it from a distance.",
-  },
-  {
-    title: "Operator pace, not advisory pace",
-    body:
-      "We move at the speed of the operating business, not the speed of a quarterly steering committee. First drafts inside weeks. Working artifacts, not deliverables. Calendar time is treated as a real cost.",
-  },
-  {
-    title: "Built to be handed over",
-    body:
-      "Every engagement has a defined end. We build models, workflows, and operating cadences that the in-house team owns once we step out. Recurring retainer work happens only when the client asks for it.",
-  },
-  {
-    title: "Singapore-anchored, regionally fluent",
-    body:
-      "Headquartered in Singapore with active work across Indonesia, Vietnam, Malaysia, and the Philippines. The team reads the regulatory and audit context the way operators in the region read it, not the way a global template reads it.",
-  },
+  { title: "A clear scope", body: "We agree the business problem, responsibilities and deliverables before the work begins. The scope makes the decisions and dependencies visible to everyone involved." },
+  { title: "Advice carried into delivery", body: "Our work can extend from assessment to the models, workflows and processes your team will use. We agree how progress will be reviewed and what a useful outcome looks like." },
+  { title: "A considered handover", body: "Documentation, training and ownership are part of the delivery plan. We agree whether the work needs a handover to your team or continued support." },
+  { title: "Connected expertise", body: "We bring finance, technology and valuation considerations into the same discussion, and coordinate with your existing advisers where the work requires it." },
 ];

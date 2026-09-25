@@ -13,12 +13,12 @@ export default function Careers() {
       <Header />
       <main>
         <PageHero
-          title="Together let's be"
-          accentSuffix="extraordinary"
-          lead="Bring your experience to work that changes how businesses operate."
+          title="Bring your experience"
+          accentSuffix="to the work."
+          lead="Work across technology, finance and valuation."
           body="We bring together people across technology, finance and valuation to solve complex business problems. You will work alongside clients, contribute your judgment and help turn decisions into working systems."
           ctas={[
-            { label: "Search open roles", href: "#/careers-form", variant: "primary" },
+            { label: "Register your interest", href: "#/careers-form", variant: "primary" },
           ]}
         />
 
@@ -50,9 +50,9 @@ export default function Careers() {
         <WhyBainSquared />
 
         <YouMatter
-          headline="Your work, your craft, your career."
-          body="Develop your expertise through work that connects analysis with implementation. We value thoughtful questions, clear communication and the willingness to learn from colleagues and clients across disciplines."
-          ctaLabel="Explore roles and apply"
+          headline="Develop your expertise through the work."
+          body="Work across analysis and implementation, with colleagues and clients who bring different expertise. We value thoughtful questions, clear communication and a willingness to learn through delivery."
+          ctaLabel="Register your interest"
           ctaHref="#/careers-form"
           image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Two consultants in a working session, focused on the work."
@@ -63,14 +63,14 @@ export default function Careers() {
           articles={[
             {
               eyebrow: "Field notes",
-              title: "What a real operator-led interview looks like at Bain Squared.",
+              title: "How we approach a working conversation.",
               href: "#/careers-form",
               image:
                 "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
             },
             {
               eyebrow: "Craft",
-              title: "How our consultants ship agentic systems clients actually keep running.",
+              title: "Preparing AI workflows for ongoing operation.",
               href: "#/careers-form",
               image:
                 "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
@@ -81,8 +81,8 @@ export default function Careers() {
         />
 
         <CTAStrip
-          text="Do your best work, on your terms."
-          buttonLabel="Join our team"
+          text="Tell us what you could bring to Bain Squared."
+          buttonLabel="Register your interest"
           href="#/careers-form"
         />
       </main>

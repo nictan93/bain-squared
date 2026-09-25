@@ -201,7 +201,7 @@ export function Header() {
             scrolled ? "h-[54px]" : "h-[58px]"
           }`}
         >
-          <Logo size={44} />
+          <Logo size={32} className={scrolled ? "lg:self-end lg:mb-[5px]" : "lg:self-end lg:mb-[7px]"} />
 
           <div className="flex items-center gap-2">
             {/* Mobile menu toggle */}
@@ -460,8 +460,8 @@ export function Header() {
                               <div key={ci} className="mb-6 last:mb-0">
                                 {col.heading && (
                                   <div
-                                    className="text-[14px] font-normal mb-3 pl-1"
-                                    style={{ color: "hsl(var(--bs-ink-muted))" }}
+                                    className="text-[14px] font-medium mb-3 pl-1"
+                                    style={{ color: "hsl(var(--bs-forest-deep))" }}
                                   >
                                     {col.heading}
                                   </div>

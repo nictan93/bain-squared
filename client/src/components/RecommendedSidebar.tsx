@@ -56,12 +56,11 @@ export function RecommendedSidebar({ featured, recommended }: Props) {
             <h2
               className="mt-3 font-display"
               style={{
-                fontSize: "clamp(26px, 3vw, 38px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: "-0.015em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               <a
                 href={featured.href || "#"}
@@ -109,11 +108,10 @@ export function RecommendedSidebar({ featured, recommended }: Props) {
               <h3
                 className="font-display"
                 style={{
-                  fontSize: "20px",
+                  fontSize: "var(--bs-type-card)",
                   fontWeight: 700,
                   letterSpacing: "-0.005em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", lineHeight: 1.2, fontFamily: "Bitter, Georgia, serif"}}
               >
                 Recommended
               </h3>

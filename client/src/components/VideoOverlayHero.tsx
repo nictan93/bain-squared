@@ -61,12 +61,11 @@ export function VideoOverlayHero({
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(40px, 5.4vw, 72px)",
-              lineHeight: 1.08,
+              fontSize: "var(--bs-type-page)",
+              lineHeight: 1.1,
               fontWeight: 700,
               letterSpacing: "-0.02em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             data-testid="video-hero-headline"
           >
             {headline}

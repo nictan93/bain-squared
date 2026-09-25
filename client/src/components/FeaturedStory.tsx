@@ -10,7 +10,7 @@ export function FeaturedStory() {
           {/* Text column */}
           <div className="order-2 lg:order-1">
             <span className="bs-eyebrow">Client story</span>
-            <h2 className="bs-h1-display mb-6" data-testid="text-story-headline">
+            <h2 className="bs-h1-display mb-6" data-testid="text-story-headline" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>
               A skincare brand quantified its most valuable asset: brand.
             </h2>
             <p className="bs-lead mb-6 text-[hsl(var(--bs-ink-muted))]">

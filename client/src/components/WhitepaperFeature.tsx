@@ -55,12 +55,11 @@ export function WhitepaperFeature({
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(28px, 3.4vw, 44px)",
+                fontSize: "var(--bs-type-feature)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: "-0.015em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               {headline}
             </h2>

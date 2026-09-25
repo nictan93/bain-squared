@@ -25,25 +25,22 @@ export function PerspectiveFeature() {
           <h3
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 3.5vw, 44px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.1,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             The Squared Method.{" "}
             <span style={{ display: "block" }}>
-              The operator&rsquo;s playbook for getting AI to work.
+              From a business question to working delivery.
             </span>
           </h3>
           <p
             className="mt-6 text-[16px] leading-[1.6]"
             style={{ color: "hsl(var(--bs-ink))" }}
           >
-            See how we diagnose the real bottleneck, design the system you
-            actually need, deploy it inside your stack, and defend the
-            valuation when the auditor or board pushes back.
+            Our method connects diagnosis, design, implementation and review. We agree the problem and the evidence needed to assess the work, then put the result into use with your team.
           </p>
           <a
             href="#/what-we-do"

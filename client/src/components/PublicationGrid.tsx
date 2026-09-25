@@ -72,12 +72,11 @@ export function PublicationGrid({ tiles }: Props) {
                   <h3
                     className="font-display transition-colors duration-300"
                     style={{
-                      fontSize: "clamp(22px, 2.2vw, 28px)",
+                      fontSize: "var(--bs-type-card)",
                       fontWeight: 700,
                       lineHeight: 1.2,
                       letterSpacing: "-0.01em",
-                      color: ink,
-                    }}
+                      color: ink, fontFamily: "Bitter, Georgia, serif"}}
                   >
                     {t.title}
                   </h3>

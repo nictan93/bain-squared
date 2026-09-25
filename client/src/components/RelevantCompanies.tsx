@@ -22,7 +22,7 @@ const segments: Segment[] = [
     image:
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
-      "Inside the operator's stack: AI workflows, FP&A discipline, intangible value made visible.",
+      "Connect operating priorities with financial planning.",
   },
   {
     tab: "Growing SMEs",
@@ -31,7 +31,7 @@ const segments: Segment[] = [
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
-      "Built for the next stage: tighter operations, cleaner numbers, sharper decisions.",
+      "Give teams reliable information and clear responsibilities.",
   },
   {
     tab: "Expanding Companies",
@@ -40,7 +40,7 @@ const segments: Segment[] = [
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
-      "From scale-up to enterprise: defendable numbers, real intangibles, board-grade clarity.",
+      "Prepare the information and operating capacity for expansion.",
   },
 ];
 
@@ -67,13 +67,12 @@ export function RelevantCompanies() {
         <h2
           className="mt-12 md:mt-16 mx-auto text-center font-display"
           style={{
-            fontSize: "clamp(28px, 3.5vw, 44px)",
+            fontSize: "var(--bs-type-section)",
             fontWeight: 700,
-            lineHeight: 1.15,
+            lineHeight: 1.2,
             letterSpacing: "-0.015em",
             color: "hsl(var(--bs-ink))",
-            maxWidth: "900px",
-          }}
+            maxWidth: "900px", fontFamily: "Bitter, Georgia, serif"}}
         >
           Built for businesses preparing for{" "}
           <span style={{ color: "hsl(var(--bs-forest-deep))" }}>

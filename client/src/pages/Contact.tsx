@@ -19,16 +19,15 @@ export default function Contact() {
                 <h1
                   className="font-display"
                   style={{
-                    fontSize: "clamp(40px, 5.4vw, 72px)",
+                    fontSize: "var(--bs-type-page)",
                     fontWeight: 700,
-                    lineHeight: 1.05,
+                    lineHeight: 1.1,
                     letterSpacing: "-0.02em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   Bring us your{" "}
                   <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
-                    problem.
+                    business challenge.
                   </span>
                 </h1>
               </div>
@@ -37,8 +36,7 @@ export default function Contact() {
                   className="text-[16px] md:text-[18px] leading-[1.55] font-bold"
                   style={{ color: "hsl(var(--bs-ink))" }}
                 >
-                  Tell us where the operating core needs the rebuild. A partner
-                  will get back to you within two business days.
+                  Tell us what needs to change, who is involved and any timing constraints. We will review your enquiry and discuss whether our team is the right fit.
                 </p>
               </div>
             </div>

@@ -18,8 +18,8 @@ type Props = {
 };
 
 export function ClosingExtraordinaryCTA({
-  headline = "Together, let's be extraordinary.",
-  body = "Most advisory work rewards slide-counting. Ours rewards judgment. If you want to build the playbook for AI, finance transformation, and intangibles valuation alongside operators who have actually run the function, this is the team. Bain Squared is hiring real operators, not consultants.",
+  headline = "Bring your experience to the work.",
+  body = "Work with clients on the systems and decisions that shape their businesses. Explore how you could contribute across technology, finance and valuation.",
   ctaLabel = "Explore careers with us",
   ctaHref = "#/careers",
   image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=80",
@@ -57,12 +57,11 @@ export function ClosingExtraordinaryCTA({
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 3.4vw, 44px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             {headline}
           </h2>

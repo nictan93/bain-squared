@@ -27,12 +27,11 @@ export function FormIntro({ paragraph, headline, accent }: Props) {
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(34px, 4.6vw, 60px)",
+              fontSize: "var(--bs-type-page)",
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             {headline}
             {accent && (

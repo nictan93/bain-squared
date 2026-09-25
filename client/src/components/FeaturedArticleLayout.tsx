@@ -54,12 +54,11 @@ export function FeaturedArticleLayout({ lead, secondary }: Props) {
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(28px, 3.4vw, 44px)",
+                fontSize: "var(--bs-type-feature)",
                 fontWeight: 700,
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: "-0.015em",
-                color: "hsl(var(--bs-ink))",
-              }}
+                color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
             >
               <a
                 href={lead.href || "#"}
@@ -121,12 +120,11 @@ export function FeaturedArticleLayout({ lead, secondary }: Props) {
                 <h3
                   className="font-display"
                   style={{
-                    fontSize: "20px",
+                    fontSize: "var(--bs-type-card)",
                     fontWeight: 700,
-                    lineHeight: 1.25,
+                    lineHeight: 1.2,
                     letterSpacing: "-0.005em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
                   <a
                     href={a.href || "#"}

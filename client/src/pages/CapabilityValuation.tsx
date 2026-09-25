@@ -43,20 +43,20 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
     eyebrow: "Intangible Asset Valuation",
     headline:
       "Intangible asset valuations you can explain and defend.",
-    sub: "We help founders preparing for exit, ESOP rounds, intangible-heavy companies, and PE sponsors who need defensible valuations.",
+    sub: "Understand the value of software, intellectual property, data and customer relationships for the decision you need to make.",
     heroImage:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
       "Abstract data visualisation representing intangible asset value.",
     introParagraphs: [
-      "The value you have built lives in intangibles, options, and operating leverage. We make that value defensible on paper and in the room.",
-      "We value data, software, IP, brand, customer relationships, and proprietary systems to help companies make hidden enterprise value visible and defensible. Independent, audit-ready, and tied back to the operating story the board has been telling all year.",
+      "An intangible asset valuation starts with a purpose. The question may concern a transaction, financial reporting or a business decision, and that purpose determines the scope and approach.",
+      "We assess the asset, its commercial use and the evidence available. The report explains the method and assumptions so your finance team, board and advisers can examine the conclusion.",
     ],
     splitBlocks: [
       {
         eyebrow: "Intangible assets",
         title:
-          "Show a defensible valuation when you fundraise.",
+          "Explain the value of your intangible assets.",
         body: "Understand the contribution of software, data, intellectual property and customer relationships to your business. We document the valuation approach, assumptions and supporting evidence for the decision at hand.",
         tags: [
           "Brand",
@@ -69,12 +69,12 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       },
       {
         eyebrow: "ESOP valuations",
-        title: "Be prepared for stock-option audit requirements.",
-        body: "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Built for the auditor, defensible to the board.",
+        title: "Prepare an ESOP valuation for review.",
+        body: "We value employee share options for the agreed reporting or equity-planning purpose. The analysis documents the grant terms, valuation inputs and supporting evidence for review.",
         tags: [
-          "409A",
-          "IFRS 2",
-          "ASC 718",
+          "Grant terms",
+          "Valuation assumptions",
+          "Financial reporting",
           "Audit support",
           "Equity planning",
         ],
@@ -89,42 +89,42 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "defensible intangibles.",
     ],
     methodBody:
-      "Diagnose where value is hiding. Design the valuation approach and document its assumptions. Deploy the working papers inside your stack. Defend the number when the board, the auditor, or the next round pushes back.",
+      "Confirm the valuation purpose and asset scope. Select the approach, document the assumptions and prepare the report and working papers for review.",
     teamHeadline: "Talk to our valuation team.",
     teamBody:
-      "Bring the question your team has been arguing about. We will tell you on the first call whether the right next move is a single valuation, a portfolio of intangibles, or the full audit-ready package.",
+      "Tell us what needs to be valued, why the valuation is needed and who will review it. We will discuss the scope, information requirements and timing.",
     teamCTA: "Talk to our valuation team",
   },
   "esop-valuation": {
     eyebrow: "ESOP Valuation",
     headline:
       "Independent ESOP valuations for reporting and equity decisions.",
-    sub: "Built for founders preparing for exit, ESOP rounds, intangible-heavy companies, and PE sponsors who need defensible valuations.",
+    sub: "Document the value of employee share options, with the purpose, assumptions and relevant reporting requirements made clear.",
     heroImage:
       "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
       "Financial documents fanned across a wooden boardroom table.",
     introParagraphs: [
-      "Stock-option grants are part of the operating system of a modern company. The valuation that sits behind them is where the audit and the board ask their hardest questions. We make sure the answer is ready before they ask.",
+      "Employee share options require clear grant terms and a valuation suited to their purpose. Changes in the business, the grant conditions or the reporting requirements can change the analysis.",
       "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Documented for review by your finance team, board and auditor.",
     ],
     splitBlocks: [
       {
         eyebrow: "ESOP valuations",
-        title: "Be prepared for stock-option audit requirements.",
-        body: "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Each report comes with the working papers the auditor will request before they request them.",
+        title: "Prepare an ESOP valuation for review.",
+        body: "We document the valuation approach, inputs and assumptions, and prepare supporting working papers. Questions from the finance team and auditor can then be addressed against a clear record.",
         tags: [
-          "409A",
-          "IFRS 2",
-          "ASC 718",
+          "Grant terms",
+          "Valuation assumptions",
+          "Financial reporting",
           "Audit support",
           "Equity planning",
         ],
       },
       {
         eyebrow: "Intangible assets",
-        title: "Show a defensible valuation when you fundraise.",
-        body: "We value data, software, IP, brand, customer relationships, and proprietary systems to help companies make hidden enterprise value visible and defensible. The number lands in the data room with the working papers behind it.",
+        title: "Explain the value of your intangible assets.",
+        body: "We assess identifiable intangible assets for a defined purpose. The report distinguishes the valuation conclusion from any separate accounting recognition or disclosure decision.",
         tags: [
           "Brand",
           "IP",
@@ -144,10 +144,10 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "audit-ready ESOP.",
     ],
     methodBody:
-      "Diagnose the equity story. Design the valuation approach and document its assumptions. Deploy the working papers and the comp expense. Defend the number when the board, the auditor, or the next round pushes back.",
+      "Confirm the grant terms and valuation purpose, select the method, prepare the analysis and support review of the assumptions and conclusion.",
     teamHeadline: "Talk to our valuation team.",
     teamBody:
-      "Bring the equity question your team has been arguing about. We will tell you on the first call whether the right next move is an ESOP valuation, a full intangibles report, or the audit-ready package.",
+      "Share the grant or reporting question, your timetable and the available information. We will discuss the valuation scope and the people who need to review it.",
     teamCTA: "Talk to our valuation team",
   },
 };
@@ -165,7 +165,7 @@ export default function CapabilityValuation({ params }: Props) {
       <div className="min-h-screen bs-bg-canvas">
         <Header />
         <main className="bs-container py-32">
-          <h1 className="font-display text-4xl">Capability not found</h1>
+          <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
             <a href="#/what-we-do" className="underline">

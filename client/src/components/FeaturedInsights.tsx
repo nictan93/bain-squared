@@ -21,9 +21,9 @@ const insights: Insight[] = [
     category: "AI",
     title: "The Operator's Playbook for Agentic AI",
     excerpt:
-      "Most agent pilots stall in week six. Three patterns we see from teams that actually ship to production and hold the line on cost.",
+      "A practical look at workflow ownership, reliable information and the cost of keeping AI in operation.",
     href: "#/insights/operators-playbook-agentic-ai",
-    type: "Brief",
+    type: "Field Notes",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80",
   },
@@ -50,12 +50,11 @@ export function FeaturedInsights() {
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 4vw, 48px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             What we have been thinking about
           </h2>
@@ -63,9 +62,8 @@ export function FeaturedInsights() {
             className="mt-6 mx-auto text-[17px] md:text-[18px] leading-[1.55]"
             style={{ color: "hsl(var(--bs-ink-muted))", maxWidth: "780px" }}
           >
-            Rooted in a culture of learning and sharing, we believe knowledge
-            should be accessible for all. We are committed to improving the
-            industry and are passionate about sharing our expertise.
+            Perspectives and practical methods to help you assess a business
+            decision, understand the tradeoffs and plan the work ahead.
           </p>
         </div>
 
@@ -115,7 +113,7 @@ export function FeaturedInsights() {
               </div>
               <h3
                 className="mt-3 text-[24px] md:text-[28px] font-bold leading-[1.2] group-hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
-                style={{ color: "hsl(var(--bs-ink))" }}
+                style={{ color: "hsl(var(--bs-ink))" , fontSize: "var(--bs-type-card)", lineHeight: 1.2, fontFamily: "Bitter, Georgia, serif"}}
               >
                 {ins.title}
               </h3>

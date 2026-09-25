@@ -61,13 +61,12 @@ export function FeaturedClientStoryCarousel({
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(36px, 4.4vw, 60px)",
+                fontSize: "var(--bs-type-section)",
                 fontWeight: 700,
-                lineHeight: 1.1,
+                lineHeight: 1.2,
                 letterSpacing: "-0.02em",
                 color: "hsl(var(--bs-ink))",
-                marginBottom: "2rem",
-              }}
+                marginBottom: "2rem", fontFamily: "Bitter, Georgia, serif"}}
             >
               {sectionHeadline}
             </h2>
@@ -79,12 +78,11 @@ export function FeaturedClientStoryCarousel({
                 key={`story-h-${active}`}
                 className="font-display"
                 style={{
-                  fontSize: "clamp(22px, 2.2vw, 30px)",
+                  fontSize: "var(--bs-type-card)",
                   fontWeight: 700,
                   lineHeight: 1.2,
                   letterSpacing: "-0.01em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
               >
                 {s.headline}
               </h3>

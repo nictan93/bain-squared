@@ -31,14 +31,13 @@ export function CareersBand() {
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 3.5vw, 44px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.1,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
-            Together, let&rsquo;s be extraordinary.
+            Bring your experience to the work.
           </h2>
           <p
             className="mt-6 text-[16px] leading-[1.6]"

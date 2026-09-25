@@ -31,12 +31,11 @@ export function OfficeLocationsSidebar({
       <h3
         className="font-display mb-8"
         style={{
-          fontSize: "clamp(22px, 1.8vw, 28px)",
+          fontSize: "var(--bs-type-ui)",
           fontWeight: 700,
           lineHeight: 1.2,
           letterSpacing: "-0.01em",
-          color: "hsl(var(--bs-ink))",
-        }}
+          color: "hsl(var(--bs-ink))", fontFamily: "Inter, sans-serif"}}
       >
         {heading}
       </h3>
@@ -45,7 +44,7 @@ export function OfficeLocationsSidebar({
         className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-bold mb-6"
         style={{ color: "hsl(var(--bs-forest-deep))" }}
       >
-        Our locations
+        Location
       </div>
 
       <ul className="space-y-6">

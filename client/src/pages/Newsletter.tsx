@@ -73,7 +73,7 @@ export default function Newsletter() {
         <section className="pt-32 md:pt-40 pb-16 md:pb-24" data-testid="newsletter-hero">
           <div className="bs-container">
             <div className="max-w-[840px]">
-              <h1 className="font-display text-[clamp(40px,5.4vw,72px)] font-bold leading-[1.08] tracking-[-0.02em]">
+              <h1 className="font-display text-[clamp(40px,5.4vw,72px)] font-bold leading-[1.08] tracking-[-0.02em]" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>
                 The Bain Squared<br />
                 <span className="text-[hsl(var(--bs-forest-deep))]">Brief</span>
               </h1>
@@ -109,11 +109,11 @@ export default function Newsletter() {
         <section className="pb-16 md:pb-24" data-testid="newsletter-what">
           <div className="bs-container">
             <div className="border-t border-[hsl(var(--bs-hairline))] pt-12 md:pt-16">
-              <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]">What to expect</h2>
+              <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>What to expect</h2>
               <ul className="mt-9 md:mt-12 grid md:grid-cols-3 gap-8 md:gap-12">
                 {BENEFITS.map((item) => (
                   <li key={item.title}>
-                    <h3 className="font-display text-[22px] md:text-[24px] font-bold leading-[1.25]">{item.title}</h3>
+                    <h3 className="font-display text-[22px] md:text-[24px] font-bold leading-[1.25]" style={{ fontSize: "var(--bs-type-card)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>{item.title}</h3>
                     <p className="mt-4 text-[16px] leading-[1.65] text-[hsl(var(--bs-ink-muted))]">{item.body}</p>
                   </li>
                 ))}
@@ -124,12 +124,12 @@ export default function Newsletter() {
 
         <section className="py-16 md:py-24 bg-white" data-testid="newsletter-recent">
           <div className="bs-container">
-            <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]">Inside the Brief</h2>
+            <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>Inside the Brief</h2>
             <p className="mt-5 max-w-[640px] text-[17px] leading-[1.6] text-[hsl(var(--bs-ink-muted))]">The questions we explore connect new possibilities with the everyday decisions of running a business.</p>
             <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-9 md:gap-12">
               {TOPICS.map((topic, i) => (
                 <article key={topic.title} className="border-t-2 border-[hsl(var(--bs-forest-deep))] pt-6" data-testid={`recent-issue-${i}`}>
-                  <h3 className="font-display text-[24px] font-bold leading-[1.25] md:min-h-[60px]">{topic.title}</h3>
+                  <h3 className="font-display text-[24px] font-bold leading-[1.25] md:min-h-[60px]" style={{ fontSize: "var(--bs-type-card)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>{topic.title}</h3>
                   <p className="mt-4 text-[16px] leading-[1.65] text-[hsl(var(--bs-ink-muted))]">{topic.body}</p>
                 </article>
               ))}
@@ -139,12 +139,12 @@ export default function Newsletter() {
 
         <section className="py-16 md:py-24" data-testid="newsletter-faq">
           <div className="bs-container grid lg:grid-cols-[4fr_7fr] gap-8 lg:gap-20">
-            <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]">About the Brief</h2>
+            <h2 className="font-display text-[30px] md:text-[40px] font-bold leading-[1.15] tracking-[-0.015em]" style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>About the Brief</h2>
             <div className="border-t border-[hsl(var(--bs-hairline))]">
               {QUESTIONS.map((item) => (
                 <details key={item.q} className="bs-method-note group border-b border-[hsl(var(--bs-hairline))]">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--bs-forest-deep))]">
-                    <h3 className="text-[18px] md:text-[20px] font-medium leading-[1.4]">{item.q}</h3>
+                    <h3 className="text-[18px] md:text-[20px] font-medium leading-[1.4]" style={{ fontSize: "var(--bs-type-ui)", lineHeight: 1.2 , fontFamily: "Inter, sans-serif"}}>{item.q}</h3>
                     <Plus size={20} strokeWidth={1.5} className="shrink-0 group-open:hidden" aria-hidden="true" />
                     <Minus size={20} strokeWidth={1.5} className="hidden shrink-0 group-open:block" aria-hidden="true" />
                   </summary>

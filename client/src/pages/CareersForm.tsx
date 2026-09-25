@@ -11,9 +11,9 @@ export default function CareersForm() {
       <Header />
       <main>
         <FormIntro
-          paragraph="Every applicant is reviewed by a real human, always. No filters, no auto-reject. Tell us about the work you have shipped, the operating problems you have solved, and the kind of room you do your best work in."
-          headline="Every application is read by a"
-          accent="real human."
+          paragraph="Tell us about your experience, the work you have delivered and the areas you would like to develop. This form registers your interest in future opportunities; it is not a list of confirmed vacancies."
+          headline="Tell us about your"
+          accent="experience."
         />
 
         <RoleSwitcher
@@ -21,35 +21,35 @@ export default function CareersForm() {
             {
               label: "Consultant",
               description:
-                "Own client workstreams end to end. You'll sit in the operator's seat during the rebuild, ship work that survives after handover, and learn craft from partners who have run the work themselves.",
+                "Contribute to client work from analysis through implementation. Bring a clear approach to solving problems and the ability to work with the people responsible for using the result.",
               image:
                 "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
             },
             {
               label: "Senior Consultant",
               description:
-                "Lead full engagements with partner oversight. You'll scope the work, run the diagnose phase, manage the team, and own the handover quality bar that clients keep referring us on.",
+                "Lead a defined area of delivery, coordinate contributors and help clients make informed decisions. Relevant experience includes scoping work, reviewing quality and preparing an effective handover.",
               image:
                 "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80",
             },
             {
               label: "Associate",
               description:
-                "The craft track. You'll build the models, ship the agentic prototypes, and produce the analysis the operator on the other side actually uses. We invest heavily in your tooling and depth.",
+                "Develop models, research or technical implementations that support a client decision. We are interested in careful analysis, curiosity and a willingness to learn through delivery.",
               image:
                 "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
             },
             {
               label: "Partner",
               description:
-                "Run a piece of the firm. Partners here carry client outcomes, hire the next generation of operators, and protect the craft bar that makes Bain Squared what it is. Equity track, operator background expected.",
+                "Bring experience in building a practice, leading client relationships and taking responsibility for delivery. The scope and terms of any partnership are discussed individually.",
               image:
                 "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80",
             },
             {
               label: "Other",
               description:
-                "Operations, finance, design, engineering, recruiting. If you would shape Bain Squared from inside the firm rather than on the client side, tell us where you'd add the most. The bar is the same.",
+                "Tell us how your experience could contribute to the firm. We welcome relevant backgrounds in operations, design, engineering, finance and other disciplines.",
               image:
                 "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
             },
@@ -67,14 +67,13 @@ export default function CareersForm() {
                 <h2
                   className="font-display mb-10"
                   style={{
-                    fontSize: "clamp(28px, 3vw, 40px)",
+                    fontSize: "var(--bs-type-section)",
                     fontWeight: 700,
-                    lineHeight: 1.15,
+                    lineHeight: 1.2,
                     letterSpacing: "-0.015em",
-                    color: "hsl(var(--bs-ink))",
-                  }}
+                    color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
                 >
-                  Apply now
+                  Register your interest
                 </h2>
                 <CareersFormFields />
               </div>

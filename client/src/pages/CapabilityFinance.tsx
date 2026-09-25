@@ -53,7 +53,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator team reviewing a budget on a whiteboard.",
-        caption: "Built bottom-up, defended top-down.",
+        caption: "Operating assumptions connected to the financial plan.",
       },
       {
         label: "Forecasting",
@@ -71,7 +71,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Board members reviewing a printed financial pack.",
-        caption: "The pack that retires the data-quality conversation.",
+        caption: "Decision-focused reporting with supporting evidence.",
       },
       {
         label: "Investor communication",
@@ -80,7 +80,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Founder drafting an investor update on a laptop.",
-        caption: "The investor sees the company you are actually building.",
+        caption: "Consistent updates on performance and changing assumptions.",
       },
       {
         label: "Cash flow management",
@@ -89,7 +89,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator reviewing a printed cash schedule.",
-        caption: "Cash, surfaced before it becomes a question.",
+        caption: "A repeatable view of receipts, payments and funding needs.",
       },
       {
         label: "Strategic decisions",
@@ -98,13 +98,13 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Founders in conversation around a kitchen table.",
-        caption: "Judgment, not just the model output.",
+        caption: "Financial analysis connected to the decision at hand.",
       },
     ],
     whitepaperHeadline:
       "The operator's playbook for agentic AI in the finance function.",
     whitepaperBody:
-      "Most AI programs stall because the operating core was never ready. This paper lays out how we sequence agentic build-outs inside the CFO suite, the controls we install before automation goes live, and the intangibles we make visible to the board.",
+      "A practical guide to selecting finance workflows for AI, preparing the information they need and defining review before deployment.",
     whitepaperImage:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
   },
@@ -132,7 +132,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Finance team planning on a digital whiteboard.",
-        caption: "Continuous planning, with the controls re-platformed at the same time.",
+        caption: "Planning responsibilities and controls designed together.",
       },
       {
         label: "Forecasting",
@@ -141,7 +141,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Forecast variance dashboard on multiple monitors.",
-        caption: "One forecast, owned across finance and ops.",
+        caption: "A shared forecast with clear input ownership.",
       },
       {
         label: "Board reporting",
@@ -150,7 +150,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Modern boardroom mid-discussion.",
-        caption: "The commentary, not the cleanup.",
+        caption: "Reporting that explains performance and the decisions ahead.",
       },
       {
         label: "Investor communication",
@@ -159,7 +159,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Investor reviewing materials on a tablet.",
-        caption: "Each investor conversation starts thirty minutes ahead.",
+        caption: "Consistent financial information for investor discussions.",
       },
       {
         label: "Cash flow management",
@@ -168,7 +168,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operator inspecting a printed cash position summary.",
-        caption: "Wired into the cadence the operating team already runs.",
+        caption: "Working-capital decisions connected to the operating review.",
       },
       {
         label: "Strategic decisions",
@@ -177,13 +177,13 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
         image:
           "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Leadership team in a planning session.",
-        caption: "Finance earns the strategic seat, then defends it.",
+        caption: "Finance involved early enough to inform the decision.",
       },
     ],
     whitepaperHeadline:
       "The operator's playbook for agentic AI in the finance function.",
     whitepaperBody:
-      "Most AI programs stall because the operating core was never ready. This paper lays out how we sequence agentic build-outs inside the CFO suite, the controls we install before automation goes live, and the intangibles we make visible to the board.",
+      "A practical guide to selecting finance workflows for AI, preparing the information they need and defining review before deployment.",
     whitepaperImage:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
   },
@@ -202,7 +202,7 @@ export default function CapabilityFinance({ params }: Props) {
       <div className="min-h-screen bs-bg-canvas">
         <Header />
         <main className="bs-container py-32">
-          <h1 className="font-display text-4xl">Capability not found</h1>
+          <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
             <a href="#/what-we-do" className="underline">
@@ -255,7 +255,7 @@ export default function CapabilityFinance({ params }: Props) {
 
         <TeamCTA
           headline="Speak with a Bain Squared CFO."
-          body="Bring the question your team has been arguing about. We will tell you on the first call whether a fractional partner or a full transformation is the right next move."
+          body="Tell us where finance needs to provide better information or leadership. We will discuss the current process and whether ongoing support or a defined project fits the need."
           ctaLabel="Speak with a Bain Squared CFO"
           ctaHref="#/contact"
         />

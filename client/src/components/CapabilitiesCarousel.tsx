@@ -80,7 +80,7 @@ export function CapabilitiesCarousel({ heading, alignLeft, tightHeading }: Props
   return (
     <section className="bs-bg-canvas py-20 md:py-28" data-testid="capabilities-carousel" aria-label="Our capabilities" aria-roledescription="carousel">
       <div className="bs-container">
-        {heading && <h2 className={`font-display text-[32px] md:text-[44px] leading-[1.15] font-bold ${alignLeft ? "" : "text-center"} ${tightHeading ? "mb-8" : "mb-12 md:mb-16"}`}>{heading}</h2>}
+        {heading && <h2 className={`font-display text-[32px] md:text-[44px] leading-[1.15] font-bold ${alignLeft ? "" : "text-center"} ${tightHeading ? "mb-8" : "mb-12 md:mb-16"}`} style={{ fontSize: "var(--bs-type-section)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>{heading}</h2>}
         <div className="overflow-hidden -mx-3.5">
           <div className="flex transition-transform duration-500 motion-reduce:transition-none" style={{ transform: `translateX(-${start * 100 / visible}%)` }}>
             {capabilities.map((cap, i) => {
@@ -89,7 +89,7 @@ export function CapabilitiesCarousel({ heading, alignLeft, tightHeading }: Props
                 <a key={cap.href} href={cap.href} tabIndex={inView ? 0 : -1} aria-hidden={!inView} className="flex-shrink-0 mx-3.5 flex flex-col group text-[hsl(var(--bs-ink))]" style={{ width: `calc(100% / ${visible} - 28px)` }} data-testid={`capability-card-${i}`}>
                   <img src={cap.image} alt="" className="w-full aspect-[8/5] object-cover" loading="lazy" />
                   <div className="flex flex-col flex-1 border-t-[3px] border-[hsl(var(--bs-forest-deep))] pt-6">
-                    <h3 className="font-display text-[26px] md:text-[28px] leading-[1.2] font-bold md:min-h-[68px] group-hover:underline">{cap.title}</h3>
+                    <h3 className="font-display text-[26px] md:text-[28px] leading-[1.2] font-bold md:min-h-[68px] group-hover:underline" style={{ fontSize: "var(--bs-type-card)", lineHeight: 1.2 , fontFamily: "Bitter, Georgia, serif"}}>{cap.title}</h3>
                     <p className="mt-4 text-[15px] leading-[1.6] flex-1">{cap.summary}</p>
                     <span className="inline-flex items-center gap-2 mt-6 text-[14px] font-semibold">Explore service <ChevronRight size={16} aria-hidden="true" /></span>
                   </div>

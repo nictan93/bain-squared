@@ -34,13 +34,12 @@ export function InsideHQArticles({
           <h2
             className="font-display"
             style={{
-              fontSize: "clamp(28px, 3.4vw, 44px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
               color: "hsl(var(--bs-ink))",
-              maxWidth: "720px",
-            }}
+              maxWidth: "720px", fontFamily: "Bitter, Georgia, serif"}}
           >
             {heading}
           </h2>
@@ -95,12 +94,11 @@ export function InsideHQArticles({
               <h3
                 className="mt-3 font-display"
                 style={{
-                  fontSize: "clamp(20px, 1.8vw, 26px)",
+                  fontSize: "var(--bs-type-card)",
                   fontWeight: 700,
-                  lineHeight: 1.25,
+                  lineHeight: 1.2,
                   letterSpacing: "-0.01em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
               >
                 {a.title}
               </h3>

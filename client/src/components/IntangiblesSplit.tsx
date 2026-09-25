@@ -46,12 +46,11 @@ export function IntangiblesSplit({ blocks }: Props) {
               <h3
                 className="font-display mb-5"
                 style={{
-                  fontSize: "clamp(24px, 2.4vw, 32px)",
+                  fontSize: "var(--bs-type-card)",
                   lineHeight: 1.2,
                   fontWeight: 700,
                   color: "hsl(var(--bs-ink))",
-                  letterSpacing: "-0.005em",
-                }}
+                  letterSpacing: "-0.005em", fontFamily: "Bitter, Georgia, serif"}}
               >
                 {b.title}
               </h3>

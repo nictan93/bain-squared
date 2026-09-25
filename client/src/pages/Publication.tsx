@@ -80,7 +80,7 @@ export default function Publication({ params }: Props) {
       <div className="min-h-screen bs-bg-canvas">
         <Header />
         <main className="bs-container py-32">
-          <h1 className="font-display text-4xl">Publication not found</h1>
+          <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Publication not found</h1>
           <p className="mt-4">
             We could not find that publication. Head back to{" "}
             <a href="#/insights" className="underline">

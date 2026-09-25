@@ -28,12 +28,11 @@ export function MiniArticleGrid({ heading, articles }: Props) {
           <h2
             className="font-display mb-10 md:mb-14"
             style={{
-              fontSize: "clamp(24px, 2.6vw, 34px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.015em",
-              color: "hsl(var(--bs-ink))",
-            }}
+              color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
           >
             {heading}
           </h2>
@@ -66,12 +65,11 @@ export function MiniArticleGrid({ heading, articles }: Props) {
               <h3
                 className="mt-2 font-display"
                 style={{
-                  fontSize: "18px",
+                  fontSize: "var(--bs-type-card)",
                   fontWeight: 700,
-                  lineHeight: 1.25,
+                  lineHeight: 1.2,
                   letterSpacing: "-0.005em",
-                  color: "hsl(var(--bs-ink))",
-                }}
+                  color: "hsl(var(--bs-ink))", fontFamily: "Bitter, Georgia, serif"}}
               >
                 <a
                   href={a.href || "#"}

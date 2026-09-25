@@ -21,11 +21,10 @@ export function CTAStrip({ text, buttonLabel, href }: Props) {
           <h2
             className="font-display text-white max-w-[820px]"
             style={{
-              fontSize: "clamp(24px, 3vw, 36px)",
+              fontSize: "var(--bs-type-section)",
               fontWeight: 700,
               lineHeight: 1.2,
-              letterSpacing: "-0.01em",
-            }}
+              letterSpacing: "-0.01em", fontFamily: "Bitter, Georgia, serif"}}
           >
             {text}
           </h2>

@@ -60,13 +60,12 @@ export function BusinessAreaSwitcher({
             <h2
               className="font-display mb-10"
               style={{
-                fontSize: "clamp(28px, 3.2vw, 42px)",
-                lineHeight: 1.15,
+                fontSize: "var(--bs-type-section)",
+                lineHeight: 1.2,
                 fontWeight: 700,
                 color: "hsl(var(--bs-ink))",
                 letterSpacing: "-0.01em",
-                maxWidth: "880px",
-              }}
+                maxWidth: "880px", fontFamily: "Bitter, Georgia, serif"}}
             >
               {heading}
             </h2>
@@ -118,12 +117,11 @@ export function BusinessAreaSwitcher({
               <h3
                 className="font-display mb-5"
                 style={{
-                  fontSize: "clamp(26px, 2.4vw, 34px)",
+                  fontSize: "var(--bs-type-card)",
                   lineHeight: 1.2,
                   fontWeight: 700,
                   color: "hsl(var(--bs-ink))",
-                  letterSpacing: "-0.005em",
-                }}
+                  letterSpacing: "-0.005em", fontFamily: "Bitter, Georgia, serif"}}
               >
                 {current.title}
               </h3>
@@ -162,13 +160,12 @@ export function BusinessAreaSwitcher({
           <h2
             className="font-display mb-12 md:mb-16"
             style={{
-              fontSize: "clamp(30px, 3.6vw, 48px)",
-              lineHeight: 1.15,
+              fontSize: "var(--bs-type-section)",
+              lineHeight: 1.2,
               fontWeight: 700,
               color: "hsl(var(--bs-ink))",
               letterSpacing: "-0.01em",
-              maxWidth: "880px",
-            }}
+              maxWidth: "880px", fontFamily: "Bitter, Georgia, serif"}}
           >
             {heading}
           </h2>
@@ -233,12 +230,11 @@ export function BusinessAreaSwitcher({
             <h3
               className="font-display mb-4"
               style={{
-                fontSize: "clamp(22px, 2vw, 28px)",
-                lineHeight: 1.25,
+                fontSize: "var(--bs-type-card)",
+                lineHeight: 1.2,
                 fontWeight: 700,
                 color: "hsl(var(--bs-ink))",
-                letterSpacing: "-0.005em",
-              }}
+                letterSpacing: "-0.005em", fontFamily: "Bitter, Georgia, serif"}}
             >
               {current.title}
             </h3>

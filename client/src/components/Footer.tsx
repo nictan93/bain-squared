@@ -58,7 +58,7 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title} className="md:col-span-2">
-              <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[hsl(var(--bs-ink))] mb-5">
+              <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[hsl(var(--bs-ink))] mb-5" style={{ fontSize: "var(--bs-type-label)", lineHeight: 1.4 , fontFamily: "Inter, sans-serif"}}>
                 {title}
               </h4>
               <ul className="space-y-3">
@@ -79,8 +79,8 @@ export function Footer() {
 
           {/* Subscribe column */}
           <div className="md:col-span-2">
-            <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[hsl(var(--bs-ink))] mb-5">
-              Perspectives
+            <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[hsl(var(--bs-ink))] mb-5" style={{ fontSize: "var(--bs-type-label)", lineHeight: 1.4 , fontFamily: "Inter, sans-serif"}}>
+              The Bain Squared Brief
             </h4>
             <p className="text-[14px] text-[hsl(var(--bs-ink-muted))] mb-4 leading-[1.5]">
               A monthly selection of ideas and practical reading across AI, finance and enterprise value.

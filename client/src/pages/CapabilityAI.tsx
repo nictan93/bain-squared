@@ -41,7 +41,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
     sub: "We design, deploy and operate supervised AI workflows across sales, marketing and operations.",
     heroImage:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
-    heroImageAlt: "Agentic AI infrastructure visualised over a city skyline.",
+    heroImageAlt: "Agentic AI infrastructure visualized over a city skyline.",
     introParagraphs: [
       "AI becomes useful when it fits a specific workflow and the people responsible for it. Start with the work to be improved, the information it depends on and the decisions a system can safely take.",
       "We design and implement supervised AI workflows within your existing systems. The engagement includes integration, testing, human review and ongoing operation, with measures agreed around the business need.",
@@ -73,7 +73,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
           "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Sales operators reviewing a pipeline dashboard.",
         caption:
-          "Pipeline tooling, rebuilt with agent retrieval and operator-grade scoring.",
+          "Qualification criteria and handovers agreed with your sales team.",
       },
       {
         label: "Customer Service",
@@ -82,7 +82,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Customer service operators on a real-time queue.",
-        caption: "Tier-1 and tier-2 coverage with a human in the loop where it matters.",
+        caption: "Routine responses supported by clear escalation routes.",
       },
       {
         label: "Operations",
@@ -91,7 +91,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operations team running a live workflow.",
-        caption: "Operating change inside your stack, not a parallel sandbox.",
+        caption: "Automation connected to the systems your team uses.",
       },
       {
         label: "Marketing",
@@ -100,7 +100,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Marketing team reviewing campaign creative.",
-        caption: "Brand-safe creative, shipped at the cadence the market actually moves.",
+        caption: "A content workflow with explicit editorial and brand review.",
       },
     ],
     methodImage:
@@ -112,7 +112,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "for getting AI to work.",
     ],
     methodBody:
-      "See how we diagnose the real bottleneck, design the system you actually need, deploy it inside your stack, and defend the result when the board or auditor pushes back.",
+      "Define the workflow and its owner, design the controls, implement the system and review its performance against the agreed measures.",
     recommenderCards: [
       {
         title: "Rigid processes",
@@ -166,7 +166,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Sales pod working through a pipeline review.",
-        caption: "Pipeline owned end to end and reported against a single weekly target.",
+        caption: "A defined follow-up process with agreed reporting.",
       },
       {
         label: "Callbacks handled on time",
@@ -175,7 +175,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Customer success pod monitoring a live queue.",
-        caption: "Live SLAs reported back to you each week, not buried in a portal.",
+        caption: "Service levels and exceptions reviewed with your team.",
       },
       {
         label: "Backend operations efficient",
@@ -184,7 +184,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Operations pod reviewing a backend workflow.",
-        caption: "Run the work, then automate it. In that order.",
+        caption: "Improve the process as the team delivers the work.",
       },
       {
         label: "Design mockups done",
@@ -193,7 +193,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1561070791-2526d30994b8?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Designer mocking up a landing page.",
-        caption: "Inside your design system, on your file structure, on your brand.",
+        caption: "Creative delivery within your brand and review process.",
       },
     ],
     methodImage:
@@ -205,19 +205,19 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "managed delivery that lands.",
     ],
     methodBody:
-      "Diagnose the real bottleneck. Design the operating change. Deploy the pod inside your stack. Defend the outcome with weekly numbers that survive board scrutiny.",
+      "Agree the work, service expectations and responsibilities. Set up delivery within your systems and review performance as demand changes.",
     recommenderCards: [
       {
         title: "Rigid processes",
-        body: "Org charts that look complete on paper but leave critical work uncovered. We slot a pod into the gaps and bring the operating cadence with us.",
+        body: "Work can fall between roles as a business grows. Define the process and responsibilities, then add the operating capacity needed to run it.",
       },
       {
         title: "Manual work",
-        body: "Hours lost to tasks the team should not be doing. The pod takes the work, runs it to SLA, and automates the long tail so the cost curve bends.",
+        body: "Recurring administration can limit the time available for customers and decisions. A dedicated team runs the agreed work and identifies useful improvements.",
       },
       {
         title: "Limited capacity",
-        body: "Plans that depend on hiring you cannot make happen fast enough. The pod gives you the capacity in weeks, with a clean off-ramp when in-house is ready.",
+        body: "A change in workload may require capacity before an internal team is ready. Agree the coverage and handover plan around the business need.",
       },
     ],
   },
@@ -230,7 +230,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
     heroImageAlt:
       "Abstract circuit pattern representing answer-engine retrieval.",
     introParagraphs: [
-      "Buyers discover businesses through search results, AI answers and recommendations. Buyers still need reliable information about what a company does and why it fits their needs.",
+      "People discover businesses through search results, AI answers and recommendations. They need reliable information about what a company does and why it fits their needs.",
       "We improve the material buyers and search systems use to understand your company, then track visibility and enquiries over time. The work combines technical search fundamentals, clear service information and evidence your team can maintain.",
     ],
     stats: [
@@ -268,7 +268,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Analytics dashboard showing organic traffic growth.",
-        caption: "Compound growth, measured against the metrics finance accepts.",
+        caption: "Discovery and enquiry measures reported with their limitations.",
       },
       {
         label: "Website optimization",
@@ -277,7 +277,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=80",
         imageAlt: "Engineer reviewing site performance metrics.",
-        caption: "Performance and conversion treated as one engineering surface.",
+        caption: "Page performance and enquiry journeys reviewed together.",
       },
     ],
     methodImage:
@@ -289,19 +289,19 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "for being found by AI.",
     ],
     methodBody:
-      "Diagnose what is breaking discovery today. Design the retrieval and content stack. Deploy across answer engines and classic search. Defend the lift with traffic the CFO recognises.",
+      "Review how buyers find and understand the business. Improve the content and technical foundations, then assess visibility and enquiries using consistent measures.",
     recommenderCards: [
       {
         title: "Rigid processes",
-        body: "A site map and content calendar that no longer reflects how buyers search. We rebuild the architecture around the queries you actually need to win.",
+        body: "Service information may be difficult to find or understand. Organize the site around buyer questions and the evidence that answers them.",
       },
       {
         title: "Manual work",
-        body: "Hours lost to keyword spreadsheets and ad-hoc audits. We replace it with an instrumented loop that surfaces the next move every week.",
+        body: "Repeated manual audits make it difficult to track change. Establish a repeatable review of visibility, content quality and technical issues.",
       },
       {
         title: "Disconnected data",
-        body: "Conversion and traffic data scattered across analytics, CRM, and the CMS. We unify the signal so the same dashboard answers marketing's question and finance's question.",
+        body: "Analytics and enquiry records may use different definitions. Connect the relevant information and state what the available data can establish.",
       },
     ],
   },
@@ -320,7 +320,7 @@ export default function CapabilityAI({ params }: Props) {
       <div className="min-h-screen bs-bg-canvas">
         <Header />
         <main className="bs-container py-32">
-          <h1 className="font-display text-4xl">Capability not found</h1>
+          <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
             <a href="#/what-we-do" className="underline">
@@ -370,9 +370,9 @@ export default function CapabilityAI({ params }: Props) {
         <SquaredMethod />
 
         <TeamCTA
-          headline="Talk to our AI team."
-          body="Bring the question your team has been arguing about. We will tell you on the first call whether agents, a managed pod, or an LLMO program is the right next move."
-          ctaLabel="Talk to our AI team"
+          headline={slug === "managed-services" ? "Discuss your operating needs." : slug === "llm-optimization" ? "Discuss your search visibility." : "Talk to our AI team."}
+          body="Tell us which workflow or business decision needs attention. We will discuss the constraint, the available information and a practical next step."
+          ctaLabel="Speak with us"
           ctaHref="#/contact"
         />
       </main>

@@ -52,11 +52,10 @@ export function ArticleHero({ publication, headline, date, type, image }: Props)
             className="font-display"
             style={{
               color: "#FFFFFF",
-              fontSize: "clamp(34px, 5.2vw, 60px)",
+              fontSize: "var(--bs-type-article)",
               fontWeight: 700,
-              lineHeight: 1.08,
-              letterSpacing: "-0.012em",
-            }}
+              lineHeight: 1.1,
+              letterSpacing: "-0.012em", fontFamily: "Bitter, Georgia, serif"}}
           >
             {headline}
           </h1>

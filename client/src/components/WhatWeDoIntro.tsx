@@ -23,13 +23,12 @@ export function WhatWeDoIntro() {
         <h1
           className="mt-16 md:mt-20 mx-auto text-center font-display"
           style={{
-            fontSize: "clamp(28px, 3.5vw, 44px)",
+            fontSize: "var(--bs-type-page)",
             fontWeight: 700,
-            lineHeight: 1.15,
+            lineHeight: 1.1,
             letterSpacing: "-0.015em",
             color: "hsl(var(--bs-ink))",
-            maxWidth: "900px",
-          }}
+            maxWidth: "900px", fontFamily: "Bitter, Georgia, serif"}}
         >
           The capabilities behind your next stage of{" "}
           <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
