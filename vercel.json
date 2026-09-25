@@ -17,6 +17,17 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bainsquared.com"
+        }
+      ],
+      "destination": "https://bainsquared.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/insights/agentic-ai-pilots-pay-off",
       "destination": "/insights/agentic-ai-launch-checklist",
       "permanent": true
@@ -34,6 +45,86 @@
     {
       "source": "/insights/the-squared-method",
       "destination": "/what-we-do",
+      "permanent": true
+    },
+    {
+      "source": "/ai-integration",
+      "destination": "/what-we-do/agentic-ai-automation",
+      "permanent": true
+    },
+    {
+      "source": "/financial-transformation",
+      "destination": "/what-we-do/financial-transformation",
+      "permanent": true
+    },
+    {
+      "source": "/intangibles-valuation",
+      "destination": "/what-we-do/intangibles-valuation",
+      "permanent": true
+    },
+    {
+      "source": "/explore-careers",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/perspectives",
+      "destination": "/insights/perspectives",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/valuation",
+      "destination": "/insights/topics/intangibles-valuation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/artificial-intelligence",
+      "destination": "/insights/topics/ai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/case-study",
+      "destination": "/insights/client-stories",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/project-operations",
+      "destination": "/insights/field-notes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/user-experience",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/financial-transformation",
+      "destination": "/insights/topics/financial-transformation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/squared-reports",
+      "destination": "/insights/squared-reports",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/emerging-tech",
+      "destination": "/insights/looking-glass",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/inside-bain-squared-hq",
+      "destination": "/insights/inside-hq",
       "permanent": true
     }
   ]

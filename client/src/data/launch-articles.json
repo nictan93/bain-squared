@@ -2,9 +2,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-f01",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -120,7 +120,7 @@
       },
       {
         "_key": "b22",
-        "text": "Monitor cost alongside completed work. Include model usage, integration costs, reviewer time and corrections. Time released is a capacity benefit until management actually changes staffing or uses the capacity for additional work. Calling every saved minute a cash saving can lead to a launch decision based on money the company will never receive.",
+        "text": "Use the [13-week cash forecast](/insights/13-week-cash-forecast-template) when the timing of implementation spending affects available cash. Monitor cost alongside completed work. Include model usage, integration costs, reviewer time and corrections. Time released is a capacity benefit until management actually changes staffing or uses the capacity for additional work. Calling every saved minute a cash saving can lead to a launch decision based on money the company will never receive.",
         "type": "p"
       },
       {
@@ -173,9 +173,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-f03",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -271,7 +271,7 @@
       },
       {
         "_key": "b18",
-        "text": "The meeting should produce specific actions. “Monitor collections” is difficult to follow up. “The account owner will confirm acceptance of the milestone invoice before the next payroll run” identifies the dependency and the person. Record the expected cash effect, due date and whether the action is confirmed or still under discussion.",
+        "text": "The [project scoping questions](/insights/project-scoping-questions) help define a wider intervention when the forecast exposes a recurring process problem. The meeting should produce specific actions. “Monitor collections” is difficult to follow up. “The account owner will confirm acceptance of the milestone invoice before the next payroll run” identifies the dependency and the person. Record the expected cash effect, due date and whether the action is confirmed or still under discussion.",
         "type": "p"
       },
       {
@@ -339,9 +339,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-f05",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -372,7 +372,7 @@
       },
       {
         "_key": "b5",
-        "text": "Write the purpose, intended users and relevant measurement date into the brief. A report for financial reporting may need a different analysis from one prepared to support a transaction or an employee tax calculation. Identify who will rely on the report, including the company's auditor where relevant, and the form of documentation they expect.",
+        "text": "The [project scoping questions](/insights/project-scoping-questions) provide a starting structure for the brief. Write the purpose, intended users and relevant measurement date into it. A report for financial reporting may need a different analysis from one prepared to support a transaction or an employee tax calculation. Identify who will rely on the report, including the company's auditor where relevant, and the form of documentation they expect.",
         "type": "p"
       },
       {
@@ -505,9 +505,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-f06",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -623,7 +623,7 @@
       },
       {
         "_key": "b22",
-        "text": "Use the register to prepare a focused brief for specialist work. The [ESOP valuation preparation guide](/insights/esop-valuation-preparation) applies a similar discipline to a different measurement question: identify the subject, purpose, documents and assumptions before commissioning an output. For intangible resources, the register makes those dependencies visible across the business.",
+        "text": "Use the register and the [project scoping questions](/insights/project-scoping-questions) to prepare a focused brief for specialist work. The [ESOP valuation preparation guide](/insights/esop-valuation-preparation) applies a similar discipline to a different measurement question: identify the subject, purpose, documents and assumptions before commissioning an output. For intangible resources, the register makes those dependencies visible across the business.",
         "type": "p"
       },
       {
@@ -991,9 +991,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-l02",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -1034,7 +1034,7 @@
       },
       {
         "_key": "b7",
-        "text": "Use articles to answer the questions that arise around that decision. An explanation of valuation preparation can show what a finance team needs to assemble. A cash forecasting guide can show how the firm reasons about an operating problem. These pieces should contain enough substance to help a reader before the reader becomes a prospect.",
+        "text": "Use articles to answer the questions that arise around that decision. The [ESOP valuation preparation guide](/insights/esop-valuation-preparation) shows what a finance team needs to assemble. A cash forecasting guide can show how the firm reasons about an operating problem. These pieces should contain enough substance to help a reader before the reader becomes a prospect.",
         "type": "p"
       },
       {
@@ -1153,9 +1153,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-p01",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -1236,7 +1236,7 @@
       },
       {
         "_key": "b15",
-        "text": "A workflow creates continuing work even when the routine task becomes faster. Someone checks exceptions, updates reference material, reviews new failure cases and decides whether changed conditions justify a revised rule. If the business case excludes those activities, management will compare a complete manual cost with an incomplete automated cost.",
+        "text": "The [AI readiness scorecard](/insights/ai-readiness-scorecard) includes a worked cost model for this review. A workflow creates continuing work even when the routine task becomes faster. Someone checks exceptions, updates reference material, reviews new failure cases and decides whether changed conditions justify a revised rule. If the business case excludes those activities, management will compare a complete manual cost with an incomplete automated cost.",
         "type": "p"
       },
       {
@@ -1320,9 +1320,9 @@
   {
     "_createdAt": "2026-09-25T20:46:37Z",
     "_id": "bs-launch-p02",
-    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_rev": "v67hm01TqqMn8v2f2vFwcQ",
     "_type": "insight",
-    "_updatedAt": "2026-09-25T20:46:37Z",
+    "_updatedAt": "2026-09-25T21:02:12Z",
     "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
     "authors": [
       {
@@ -1403,7 +1403,7 @@
       },
       {
         "_key": "b15",
-        "text": "A useful review connects revenue, contribution, receivables and cash by customer or project. Begin with the accounts whose changes explain the largest part of the movement. That is more informative than discussing every small balance while leaving one disputed milestone unresolved.",
+        "text": "The [project scoping questions](/insights/project-scoping-questions) help define who owns the review and what it should change. A useful review connects revenue, contribution, receivables and cash by customer or project. Begin with the accounts whose changes explain the largest part of the movement. That is more informative than discussing every small balance while leaving one disputed milestone unresolved.",
         "type": "p"
       },
       {
