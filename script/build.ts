@@ -33,7 +33,9 @@ const allowlist = [
 ];
 
 async function buildAll() {
-  await syncSanity();
+  const snapshot = process.argv.includes("--snapshot");
+  if (snapshot && process.env.VERCEL) throw new Error("Snapshot builds are for local migration verification only");
+  if (!snapshot) await syncSanity();
   await syncMedia();
   await rm("dist", { recursive: true, force: true });
 

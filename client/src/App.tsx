@@ -121,6 +121,8 @@ function AppRouter() {
         <Redirect to="/what-we-do" />
       </Route>
 
+      <Route path="/post/:slug" component={Article} />
+
       {/* Article detail — catch-all under /insights/*, must come last */}
       <Route path="/insights/:slug" component={Article} />
 

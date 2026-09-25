@@ -21,10 +21,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.bainsquared.com"
+          "value": "bainsquared.com"
         }
       ],
-      "destination": "https://bainsquared.com/:path*",
+      "destination": "https://www.bainsquared.com/:path*",
       "permanent": true
     },
     {

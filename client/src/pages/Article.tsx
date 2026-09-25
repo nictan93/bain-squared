@@ -1,3 +1,4 @@
+import { useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArticleHero } from "@/components/ArticleHero";
@@ -14,10 +15,11 @@ type Props = {
 };
 
 export default function Article({ params }: Props) {
+  const [path] = useLocation();
   const launch = launchArticles[params.slug];
   const article = launch || ARTICLES[params.slug];
 
-  if (!article) {
+  if (!article || (launch && launch.path !== path)) {
     return <NotFound />;
   }
 
@@ -40,7 +42,7 @@ export default function Article({ params }: Props) {
         {launch?.downloadUrl && <div className="bs-container py-8"><div className="max-w-[720px] mx-auto"><a className="underline font-medium" href={launch.downloadUrl} download>{launch.downloadLabel} (Excel)</a><p className="text-sm mt-2">Editable planning tools with illustrative assumptions. Adapt them to your business.</p></div></div>}
         <ArticleBody blocks={article.blocks} />
         {launch?.authorBio && <div className="bs-container pb-12"><p className="max-w-[720px] mx-auto text-sm text-[hsl(var(--bs-ink-muted))]">{launch.authorBio}</p></div>}
-        {launch && <MiniArticleGrid heading="Related reading" articles={launchCards.filter(a=>a.href!==`/insights/${params.slug}`).slice(0,3)} />}
+        {launch && <MiniArticleGrid heading="Related reading" articles={launchCards.filter(a=>a.href!==path).slice(0,3)} />}
 
         <TeamCTA
           headline="Bring us your hardest growth question."

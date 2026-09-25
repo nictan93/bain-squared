@@ -24,7 +24,7 @@ export type Block =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "quote"; text: string; attribution?: string }
-  | { type: "image"; src: string; caption?: string }
+  | { type: "image"; src: string; alt?: string; caption?: string }
   | { type: "list"; items: string[]; ordered?: boolean }
   | { type: "address"; lines: string[] };
 
@@ -107,11 +107,12 @@ function renderBlock(b: Block, key: number) {
     case "image":
       return (
         <figure key={key} style={{ margin: "2.5em 0" }}>
-          <div className="overflow-hidden" style={{ aspectRatio: "16 / 9" }}>
+          <div className="overflow-hidden">
             <img
               src={b.src}
-              alt={b.caption || ""}
-              className="w-full h-full object-cover"
+              alt={b.alt || b.caption || ""}
+              className="w-full h-auto"
+              loading="lazy"
             />
           </div>
           {b.caption && (
@@ -168,6 +169,20 @@ function renderBlock(b: Block, key: number) {
     }
     case "p":
     default: {
+      // Wix tables remain editable in the existing Sanity text field as Markdown.
+      // Render semantic tables without accepting raw HTML from the CMS.
+      const text = (b as { text: string }).text;
+      const lines = text?.trim().split("\n") || [];
+      if (lines.length >= 2 && /^\|[\s:|\-]+\|$/.test(lines[1])) {
+        const cells = (line: string) => line.trim().replace(/^\||\|$/g, "").split(/(?<!\\)\|/).map(s=>s.trim().replace(/\\\|/g,"|"));
+        const headings = cells(lines[0]);
+        return <div key={key} className="overflow-x-auto my-8" role="region" aria-label="Article table" tabIndex={0}>
+          <table className="w-full text-left text-base border-collapse">
+            <thead><tr>{headings.map((c,i)=><th key={i} scope="col" className="border-b-2 border-[hsl(var(--bs-forest-deep))] p-3 align-top font-semibold">{inline(c)}</th>)}</tr></thead>
+            <tbody>{lines.slice(2).map((row,i)=><tr key={i}>{cells(row).map((c,j)=><td key={j} className="border-b border-[hsl(var(--bs-hairline))] p-3 align-top">{inline(c)}</td>)}</tr>)}</tbody>
+          </table>
+        </div>;
+      }
       const isDrop = (b as { dropcap?: boolean }).dropcap;
       return (
         <p

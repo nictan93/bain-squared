@@ -16,7 +16,7 @@ export async function prerender() {
   await mkdir(file.substring(0,file.lastIndexOf("/")),{recursive:true});await writeFile(file,html);
  }
  const indexable=routes.filter(p=>metadata(p).index);
- await writeFile("dist/public/sitemap.xml",`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${indexable.map(p=>`<url><loc>${SITE}${p}</loc></url>`).join("")}</urlset>`);
+ await writeFile("dist/public/sitemap.xml",`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${indexable.map(p=>`<url><loc>${metadata(p).url}</loc></url>`).join("")}</urlset>`);
  await writeFile("dist/public/robots.txt",`User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
  await writeFile("dist/public/llms.txt",`# Bain Squared\n\nSingapore-based advisory and AI operations across finance, valuation and practical AI deployment.\n\n${indexable.map(p=>`- [${metadata(p).title}](${SITE}${p}): ${metadata(p).description}`).join("\n")}\n`);
  console.log(`Prerendered ${routes.length} pages with unique metadata and readable content.`);

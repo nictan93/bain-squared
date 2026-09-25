@@ -1,5 +1,5 @@
 import { ARTICLES } from "./articles";
-import { launchRecords } from "./launch";
+import { launchRecords, articlePath } from "./launch";
 export const SITE = "https://bain-squared.vercel.app";
 const pages: Record<string,[string,string]> = {
 "/": ["AI, finance and valuation advisory", "Bain Squared helps growing businesses put AI into operation, strengthen finance and assess enterprise value. Explore our services and practical insights."],
@@ -32,19 +32,19 @@ const services: Record<string,[string,string]> = {
 };
 for (const [slug,value] of Object.entries(services)) pages["/what-we-do/"+slug]=value;
 for (const [slug,title] of Object.entries({ai:"Agentic AI","financial-transformation":"Financial transformation","intangibles-valuation":"Intangible asset valuation","growth-strategy":"Growth strategy"})) pages["/insights/topics/"+slug]=[title+" insights",`Practical reading and analysis on ${title.toLowerCase()} from Bain Squared.`];
-export const routes = [...Object.keys(pages),...Object.keys(ARTICLES).map(slug=>"/insights/"+slug),...launchRecords.map(a=>"/insights/"+a.slug.current)];
+export const routes = [...Object.keys(pages),...Object.keys(ARTICLES).map(slug=>"/insights/"+slug),...launchRecords.map(articlePath)];
 export function metadata(path: string) {
- const article=launchRecords.find(a=>path==="/insights/"+a.slug.current);
+ const article=launchRecords.find(a=>path===articlePath(a));
  const legacy=ARTICLES[path.replace(/^\/insights\//,"")];
  const known=!!pages[path] || !!article;
  const title=article?.seo.title || (pages[path]?.[0] || legacy?.headline || "Page not found")+" | Bain Squared";
  const description=article?.seo.description || pages[path]?.[1] || legacy?.dek || "The page you requested could not be found. Explore Bain Squared's services and insights.";
  // Unfinished client evidence is retained for owner review, not submitted for discovery.
  const index=known && !["/reviews","/insights/client-stories","/careers-form"].includes(path);
- const url=SITE+path;
- const image=SITE+"/og-image.png";
+ const url=(article as any)?.legacyCanonical || SITE+path;
+ const image=(article as any)?.migrationSource === "wix" ? article!.heroImageUrl : SITE+"/og-image.png";
  const organization={"@type":"Organization","@id":SITE+"/#organization",name:"Bain Squared",url:SITE+"/",logo:SITE+"/brand/bain-squared-lockup.png",email:"hello@bainsquared.com"};
  const schema:any={"@context":"https://schema.org","@graph":[organization,{"@type":"WebSite","@id":SITE+"/#website",name:"Bain Squared",url:SITE+"/",publisher:{"@id":organization["@id"]}}]};
- if(article) schema["@graph"].push({"@type":"Article",headline:article.title,description,datePublished:(article as any).publishedAt,dateModified:(article as any)._updatedAt || (article as any).publishedAt,mainEntityOfPage:url,url,image:[image],author:{"@type":"Organization",name:"Bain Squared",url:SITE+"/who-we-work-with"},publisher:{"@id":organization["@id"]}});
+ if(article) schema["@graph"].push({"@type":"Article",headline:article.title,description,datePublished:(article as any).publishedAt,dateModified:(article as any).sourceUpdatedAt || (article as any)._updatedAt || (article as any).publishedAt,mainEntityOfPage:url,url,image:[image],author:article.authors.map(a=>({"@type":a.name==="Bain Squared"?"Organization":"Person",name:a.name})),publisher:{"@id":organization["@id"]}});
  return {title,description,url,image,index,schema,type:article?"article":"website"};
 }
