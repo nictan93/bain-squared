@@ -1,0 +1,1768 @@
+[
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-f01",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "An agentic AI launch checklist should establish whether a team can operate a workflow when the model gets something wrong. A demonstration proves that a sequence can succeed. A launch decision also needs evidence about incorrect records, unavailable systems, ambiguous instructions and the person responsible for recovery. For a Singapore business automating customer or finance work, those details determine what can safely move beyond a supervised trial.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "An agentic workflow is a software process in which a model selects or proposes actions using connected tools. The degree of discretion varies. Anthropic's [2024 distinction between workflows and agents](https://www.anthropic.com/engineering/building-effective-agents) separates predefined execution paths from systems where the model directs its own process. That distinction matters when choosing how much freedom a particular task requires.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "This guide provides a launch method for a bounded business workflow. The examples are illustrative and the acceptance criteria are recommendations to set locally. They are not evidence of a Bain Squared client deployment or a guarantee that a particular system is safe.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What should an agentic AI launch checklist establish?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "The first decision is the boundary of the work. Describe a trigger, the information available at that moment, the permitted action and the completion evidence. “Handle accounts receivable” gives a developer too much room to interpret. “Prepare a reminder for an overdue invoice, using the approved balance and contact record, for a person to review” describes an observable task.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Name what the workflow must leave alone. A reminder assistant may read an invoice without changing its amount, payment terms or collection status. If the customer disputes the balance, the workflow should hand the case to the responsible person. Expanding the scope to resolve disputes is a separate operating decision with different evidence and permissions.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Establish the current baseline before changing the process. Record handling time, queue age, rework and the kinds of cases that require judgment. A speed comparison is useful only if both versions complete the same task to the same standard. Removing difficult cases from the automated sample makes the apparent improvement unreliable.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "A process owner should approve this definition. The person connecting the software can explain its behavior, but the person accountable for collections must decide what an acceptable reminder means. Write both names into the launch record, together with the colleague who can cover an absence.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Make permissions narrower than the conversation",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "Tool permissions should reflect the task that has been approved. Reading a customer record, drafting a message and sending a message are distinct capabilities. Giving a model access to all three because the application supports them makes the permission boundary broader than the work requires.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Separate untrusted content from instructions that authorize action. An incoming email can contain a request to change a bank account or ignore an approval step. The system should treat that text as information to assess against an established process. A customer message cannot grant itself access to an internal payment tool.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "For each write action, record the target system, permitted fields, approval requirement and recovery route. Consider what happens when an action succeeds but its confirmation is lost. A blind retry can create a duplicate message or record. A unique request identifier and a check of the destination before retrying give the operator a way to resolve the uncertainty.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Tool design also affects reviewability. Anthropic's [2025 guidance on tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents) emphasizes clear tool definitions and evaluation. In this launch method, a reviewer should be able to identify the record changed and the reason for the change without reconstructing an entire conversation.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Test the cases that change the decision",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "Build a small test collection from representative work, with permission to use the underlying information. Include the routine cases, then add cases that would cause a business consequence if mishandled. For a reminder workflow, examples include a disputed invoice, a duplicate contact, a recently paid balance and a customer whose communication preference has changed.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Define the expected result before running the test. Some cases should produce a draft, others should stop, and others should request human review. Treating every refusal as a failure encourages the team to remove useful limits. Conversely, a workflow that escalates every case may be safe to demonstrate while producing little operating value.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Review the result at the level of the whole task. A grammatically correct message sent to the wrong recipient fails. A correct recommendation that a user cannot trace to its source is difficult to approve. The evaluation should distinguish factual accuracy, permission compliance, task completion and reviewer effort so that one score does not conceal a serious defect.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "NIST's [AI Risk Management Framework, published in 2023](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/), organizes risk work around Govern, Map, Measure and Manage. The checklist here translates that broad discipline into evidence for one launch decision; it does not certify conformity or replace a wider risk assessment.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Prepare the first operating shift",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "Launch with an explicit operating mode. In a shadow run, the system processes work without acting on the business record. In a supervised run, a person approves each proposed write. A limited autonomous run should specify which actions can proceed and which cases still require review. The team can then compare evidence before changing the mode.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Give the operator a usable stop control and a fallback procedure. Stopping the automation should preserve the queue, identify incomplete items and show the last confirmed action. A fallback that consists of “someone will handle it manually” leaves the hardest part undefined when the team is already under pressure.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Monitor cost alongside completed work. Include model usage, integration costs, reviewer time and corrections. Time released is a capacity benefit until management actually changes staffing or uses the capacity for additional work. Calling every saved minute a cash saving can lead to a launch decision based on money the company will never receive.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "The release record should state who approved it, what was tested, known limitations and the event that requires another review. A changed model, tool permission, data source or business rule may invalidate the earlier evidence. Keep the previous configuration available so that a controlled rollback is possible.",
+        "type": "p"
+      },
+      {
+        "_key": "b24",
+        "text": "The companion checklist turns these decisions into fields for an owner, evidence and status. Use it at the launch meeting, then retain it with the operating record. The useful outcome is an explicit decision to proceed, narrow the scope or continue testing, with a named person responsible for the next action.",
+        "type": "p"
+      },
+      {
+        "_key": "b25",
+        "text": "For the assessment before a trial, use the [AI readiness scorecard](/insights/ai-readiness-scorecard).",
+        "type": "p"
+      }
+    ],
+    "category": "Field Notes",
+    "contentFormat": "Field Note",
+    "dek": "A successful demonstration leaves important questions unanswered. Decide what an agent may change, who handles exceptions and how the team stops it before launch.",
+    "downloadLabel": "Download the companion worksheets",
+    "downloadUrl": "/downloads/launch-toolkit.xlsx",
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/f01.svg",
+    "launchId": "F01",
+    "practiceTags": [
+      "ai"
+    ],
+    "publication": "Field Notes",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "P01",
+      "R01"
+    ],
+    "seo": {
+      "title": "Agentic AI launch checklist for Singapore businesses | Bain Squared",
+      "description": "Use this agentic AI launch checklist to define permissions, test failures and assign ownership before a workflow handles customer records or business actions."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "agentic-ai-launch-checklist"
+    },
+    "summary": "Use this agentic AI launch checklist to define permissions, test failures and assign ownership before a workflow handles customer records or business actions.",
+    "title": "Agentic AI launch checklist for Singapore businesses",
+    "type": "field-note",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-f03",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "A 13-week cash forecast template helps a founder identify the week in which available cash becomes insufficient for planned payments. It is a short-term management model that projects receipts and payments by expected settlement date. Its value depends on the quality of those dates and the decisions management takes when a gap appears.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "The companion workbook separates editable assumptions from calculated balances. It includes a clearly labeled illustrative example and a delay scenario. It is designed for a Singapore business that needs a weekly cash discussion, with amounts expressed in Singapore dollars. It does not replace statutory reporting, a complete treasury model or advice about insolvency obligations.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "A cash forecast answers a different question from an income statement. The IFRS Foundation's [IAS 7 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/), explains the distinction between operating, investing and financing cash flows. Those categories provide a useful discipline for keeping recurring trading activity separate from asset purchases and funding.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What belongs in a 13-week cash forecast template?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Begin with accessible bank cash at the forecast start date. Reconcile the opening figure to the bank records and identify balances that cannot be used for ordinary payments. A deposit held as security should not quietly increase the amount management believes it can spend. Record facilities separately, including conditions that must be met before drawing them.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "List expected customer receipts using the best evidence available. An issued invoice, a promised payment date and a signed contract milestone provide different levels of confidence. A sales opportunity is less certain again. The base forecast should reflect a documented assumption about collection, and the uncertainty should be visible in a scenario or note.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Build the payment schedule from obligations and intended decisions. Include payroll, suppliers, rent, taxes, debt payments and committed purchases. A payment that management can postpone by agreement differs from a contractual obligation that is already due. The forecast should make that distinction visible before anyone assumes a timing change is available.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Maintain enough detail to investigate a variance. A single receipts total can conceal a large overdue account. A single supplier total can conceal a payment that protects an essential service. The summary sheet should stay readable, while its supporting schedule identifies the transactions responsible for material changes.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Follow settlement dates through the model",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "Revenue recognition does not tell the team when the customer will pay. The IFRS Foundation's [IFRS 15 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/), connects revenue to the transfer of promised goods or services. A forecast therefore needs an additional collection assumption even when the accounting treatment is settled.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Consider an illustrative business opening the week with SGD 120,000. It expects SGD 70,000 of receipts and SGD 95,000 of payments. Closing cash is SGD 95,000, calculated as opening cash plus receipts less payments. If SGD 30,000 of those receipts moves to the following week, closing cash falls to SGD 65,000. The revenue recorded for the period may be unchanged.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Suppose management has chosen an illustrative minimum cash level of SGD 80,000. The delayed receipt creates a SGD 15,000 shortfall against that management threshold. It does not automatically mean the business is insolvent or in breach of a covenant. Those questions require their own legal, contractual and financial analysis. The threshold is an internal decision aid.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Show the delayed receipt in its revised week as well as removing it from the original week. A scenario that deducts cash without moving the receipt forward models nonpayment, not delay. Both risks may matter, but combining them accidentally prevents management from seeing which assumption caused the funding need.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Assign the weekly update to named people",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "The finance owner should freeze each forecast version before the period begins. At the next review, compare actual receipts and payments with that version. Replacing the forecast with actuals before calculating the difference removes the evidence of how well the team predicted the week.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Sales or account owners should explain changes in customer collection dates. Operations should explain supplier and delivery commitments. Finance should reconcile the totals and identify whether a difference is timing, amount, omission or classification. Assigning all explanations to the person maintaining the spreadsheet leaves the source of uncertainty untouched.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Keep accounting and management models connected without making them identical. Singapore entities use the reporting requirements applicable to their circumstances, as described in [ACRA's guide to accounting standards, reviewed in 2026](https://www.acra.gov.sg/regulations/accounting-standards-financial-reporting-surveillance/accounting-standards/). A weekly cash tool should reconcile to the relevant records while retaining the timing detail needed for a management decision.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "The meeting should produce specific actions. “Monitor collections” is difficult to follow up. “The account owner will confirm acceptance of the milestone invoice before the next payroll run” identifies the dependency and the person. Record the expected cash effect, due date and whether the action is confirmed or still under discussion.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Use scenarios to decide earlier",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "A base case should represent the team's current best estimate. A downside case should change a named assumption, such as a major receipt arriving later or an essential purchase moving forward. Avoid adding a flat percentage to every line without explaining which event that percentage represents.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Compare the lowest projected cash point and the week it occurs. A comfortable closing balance at the end of the forecast can conceal an earlier shortage. The forecast should also show whether the business recovers through normal receipts or only through a funding assumption that has not been agreed.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Extend the forecast by one week at every update so the horizon remains useful. Retain prior versions and the reasons for material changes. Over time, repeated timing errors reveal a process problem, such as late invoicing or uncertain customer acceptance, that needs work outside the spreadsheet.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "Use the workbook as a starting structure, then adapt the categories to the actual business. Add tax, currency, restricted cash and borrowing schedules where those change the decision. A founder should be able to trace a projected shortfall to the few receipts, payments and assumptions that created it, then decide what can be changed before the money is needed.",
+        "type": "p"
+      },
+      {
+        "_key": "b24",
+        "text": "For the commercial decisions behind the forecast, read [cash conversion in growing businesses](/insights/cash-conversion-growing-businesses).",
+        "type": "p"
+      }
+    ],
+    "category": "Field Notes",
+    "contentFormat": "Field Note",
+    "dek": "A profitable month can still contain a week the business cannot fund. Build the forecast around when money clears, and keep a record of what changed.",
+    "downloadLabel": "Download the cash forecast",
+    "downloadUrl": "/downloads/cash-forecast.xlsx",
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/f03.svg",
+    "launchId": "F03",
+    "practiceTags": [
+      "financial-transformation"
+    ],
+    "publication": "Field Notes",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "P02",
+      "H01"
+    ],
+    "seo": {
+      "title": "13-week cash forecast template for Singapore founders | Bain Squared",
+      "description": "Use this 13-week cash forecast template to map receipts, payments and weekly cash gaps, with a worked example and a repeatable review process for your team."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "13-week-cash-forecast-template"
+    },
+    "summary": "Use this 13-week cash forecast template to map receipts, payments and weekly cash gaps, with a worked example and a repeatable review process for your team.",
+    "title": "13-week cash forecast template for Singapore founders",
+    "type": "field-note",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-f05",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "ESOP valuation preparation begins with a clear statement of the decision or reporting requirement the valuation must support. An employee share option, a company's ordinary shares and an employee's taxable gain are different measurement subjects. A finance team that gathers documents before resolving that distinction can commission a technically detailed report that answers the wrong question.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "An employee share option is a contractual right to acquire shares under specified conditions. The plan documents determine those conditions, including the exercise price, vesting requirements and expiry. The abbreviation ESOP is used differently across markets, so a Singapore brief should identify the actual instrument instead of relying on the label alone.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "This preparation guide concerns evidence and scoping. It does not calculate a valuation or determine a company's accounting, tax or legal treatment. The applicable jurisdiction, reporting framework and plan terms must be reviewed for the actual grant. The companion checklist helps a finance team assemble the material for that review.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What should ESOP valuation preparation settle first?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Write the purpose, intended users and relevant measurement date into the brief. A report for financial reporting may need a different analysis from one prepared to support a transaction or an employee tax calculation. Identify who will rely on the report, including the company's auditor where relevant, and the form of documentation they expect.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "The IFRS Foundation's [IFRS 2 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-2-share-based-payment/), describes financial reporting for share-based payment transactions. Its scope includes transactions settled through different arrangements. The finance team should therefore confirm the instrument's classification and applicable requirements before choosing a model or copying a previous calculation.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Singapore's tax questions need separate attention. [IRAS guidance on employee share options and share ownership, reviewed in 2026](https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/what-is-taxable-what-is-not/employment-income/gains-from-the-exercise-of-stock-options), explains that the tax treatment depends on the scheme and relevant events. An accounting expense and an employee's taxable gain should not be treated as interchangeable figures.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Use an issue log for matters that are unresolved. If the grant date is uncertain, identify the approval or acceptance evidence needed to establish it. If an instrument can be settled in cash, flag the relevant clause. A visible question is more useful than a confident assumption that later requires the entire analysis to be revised.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Assemble a consistent set of plan documents",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "Provide the governing plan, individual grant documents and all amendments. Board or shareholder approvals may establish part of the chronology, while employee acceptance records may establish another. The objective is to give the reviewer a coherent sequence rather than a folder containing several unexplained versions.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Create a grant register that connects each award to the relevant plan version. Useful fields include the number of instruments, exercise price, grant identifier, vesting schedule, contractual term and modifications. Use a controlled employee identifier where names are unnecessary for the valuation work, and restrict access to personal information.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Include the company's capitalization records and the rights attached to different share classes. A recent financing price may be useful evidence, but the rights purchased by an investor can differ from those attached to the shares underlying employee options. Any analysis that uses that price needs to explain the relationship between the instruments.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Reconcile the grant register to the source documents before sending it out. If the spreadsheet says one quantity and the signed award says another, the valuer should not have to guess which is authoritative. Mark missing documents explicitly and allocate responsibility for obtaining them.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Explain the business assumptions behind the inputs",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "A model input needs an evidence trail. For the underlying equity value, provide the relevant financial information, capitalization, transaction evidence and assumptions used in the company's current planning. Forecasts should carry their preparation date and identify whether management approved them or whether they are a working scenario.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "For assumptions connected with employee behavior or instrument terms, distinguish contractual limits from expected behavior. The contractual expiry date is a document fact. An expectation about exercise behavior requires reasoning and evidence appropriate to the measurement purpose. Using the same number for both because it is convenient conceals a judgment.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Ask the valuer to explain the suitability and limitations of the proposed method. A simple option model may be appropriate for one arrangement, while another contains conditions that require different treatment. The preparation team's role is to disclose the conditions clearly, including performance requirements, changes to terms and settlement choices.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "The accounting framework should be confirmed for the reporting entity. [ACRA's guide to accounting standards, reviewed in 2026](https://www.acra.gov.sg/regulations/accounting-standards-financial-reporting-surveillance/accounting-standards/), distinguishes the standards available in Singapore. A reference to an international standard is useful context, but it does not establish which framework applies to a particular company.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Make the review easier to complete",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "Agree the deliverables before work starts. The brief should say whether the engagement includes a valuation report, input memorandum, sensitivity analysis or support for questions from another reviewer. It should also identify what remains with management, the auditor, tax adviser or legal counsel.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Use a single assumptions log during the engagement. Each entry should show the input, source, date, owner and unresolved question. Where management changes a forecast or plan term, record the change and ask whether it affects the measurement date or conclusions. Sending revised files without a change note increases the chance that different reviewers use different information.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Plan time for questions about the evidence. A report can be delayed by one unclear grant condition even when the model itself is straightforward. Resolve the documents most likely to change the method or measurement before spending effort polishing the final presentation.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "The completed preparation pack should let a reviewer identify the instrument, purpose, dates, rights and judgments without relying on an oral explanation. That is the practical test. A well-organized pack does not predetermine the valuation result, but it makes the analysis easier to question, update and use for the purpose it was commissioned to serve.",
+        "type": "p"
+      },
+      {
+        "_key": "b24",
+        "text": "For a separate inventory of business resources, use the [intangible asset register](/insights/intangible-asset-register).",
+        "type": "p"
+      }
+    ],
+    "category": "Field Notes",
+    "contentFormat": "Field Note",
+    "dek": "A valuation request becomes easier to review when everyone agrees what is being measured and why. Assemble the plan, dates and rights before debating model inputs.",
+    "downloadLabel": "Download the companion worksheets",
+    "downloadUrl": "/downloads/launch-toolkit.xlsx",
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/f05.svg",
+    "launchId": "F05",
+    "practiceTags": [
+      "intangibles-valuation"
+    ],
+    "publication": "Field Notes",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F06",
+      "H01"
+    ],
+    "seo": {
+      "title": "ESOP valuation preparation for Singapore finance teams | Bain Squared",
+      "description": "ESOP valuation preparation starts with the right purpose, plan terms and evidence. Use this guide to assemble a clear brief for your valuer and finance team."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "esop-valuation-preparation"
+    },
+    "summary": "ESOP valuation preparation starts with the right purpose, plan terms and evidence. Use this guide to assemble a clear brief for your valuer and finance team.",
+    "title": "ESOP valuation preparation for Singapore finance teams",
+    "type": "field-note",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-f06",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "An intangible asset register should help a management team identify the resources it relies on, the rights it controls and the evidence supporting each entry. It is a working record for decisions about use, protection, investment and valuation. A list of names with an estimated value beside each one provides much less information than it appears to.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "An intangible resource is a nonphysical source of potential business benefit, such as technology, a brand, contractual rights or proprietary information. Whether a particular resource qualifies as a recognized accounting asset is a separate question. A management inventory can deliberately have a wider scope than the balance sheet.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "The companion register uses that wider scope. It records candidate resources and their evidence without automatically treating them as owned assets, legally protected rights or recognized accounting balances. For a Singapore finance team, that separation makes the record useful to management while leaving the accounting and legal judgments explicit.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What should an intangible asset register contain?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Start with the resource and the business activity it supports. “Customer data” is too broad to evaluate. A defined set of transaction records used to forecast replenishment is more specific, because the team can identify its contents, users and contribution to a decision. The register should describe the resource at the level where a management action is possible.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Record the relevant entity and rights. The company using software may own some code, license another component and rely on an external platform for hosting. Those arrangements create different dependencies. The register should identify the documents that establish ownership or permitted use, together with restrictions and expiry dates.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Identify the person responsible for maintaining the entry and the person responsible for the underlying resource. Finance may maintain the register while a product lead controls the technical documentation. Separating those responsibilities avoids assigning legal or operating judgments to the person who happens to manage the spreadsheet.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Singapore's [Intangibles Disclosure Framework, introduced in 2023](https://www.ipos.gov.sg/manage-ip/intangibles-disclosure-framework/), organizes disclosure around Strategy, Identification, Measurement and Management. The register proposed here is a practical preparation tool informed by those themes. Completing it does not by itself establish compliance with any reporting or valuation requirement.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Keep commercial value and accounting recognition separate",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "A resource can matter commercially without appearing as a separately recognized intangible asset. The IFRS Foundation's [IAS 38 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/), describes recognition criteria and distinctions affecting intangible assets. The register should therefore include separate fields for commercial use and accounting assessment.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Do not fill an unknown accounting treatment with an estimated value. Mark the assessment as unresolved and identify the information needed. A management estimate, a transaction price and a valuation prepared for a particular purpose may use different assumptions. Treating them as interchangeable can create a misleading impression of precision.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Record the measurement date and purpose whenever a value is included. A figure prepared for a past transaction may no longer describe the resource in its current use. A change in customer behavior, contractual rights or dependence on another asset can alter the analysis even if the resource's name has not changed.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Avoid adding values mechanically across entries. Technology, a brand and customer relationships may contribute to the same cash flow. Adding separate estimates without examining overlap can count the same benefit more than once. The register should point to the valuation work and assumptions, rather than imply that every row can be summed into enterprise value.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Document control and dependency before making claims",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "Trade secrets illustrate why a name alone is insufficient. WIPO's [trade secret guidance, reviewed in 2026](https://www.wipo.int/en/web/trade-secrets), identifies secrecy, commercial value arising from secrecy and reasonable protective steps as relevant conditions. A register entry should identify the information and protection evidence, with access restricted where appropriate.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "For software and data, record the dependencies required for continued use. These may include third-party licenses, customer permissions, platform access and the knowledge held by particular employees. A resource that cannot be reproduced or transferred without another party's consent may still be useful, but management should understand the limitation.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Consider an illustrative company that relies on an internal forecasting model. The model file, input data, licensed components and operating instructions are separate parts of the record. If only one employee understands the updates, the immediate management decision may concern documentation and continuity before any formal valuation is commissioned.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "Keep the register itself proportionate to the sensitivity of the information. It can point to a restricted contract or technical file without reproducing its contents in a broadly shared spreadsheet. A practical inventory should improve access to evidence for authorized reviewers while preserving the controls around that evidence.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Turn the register into a review process",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "Begin with the resources that would materially affect an important product, service or operating decision if access were lost. A complete taxonomy can follow. Starting with every possible item may produce an extensive list that no owner maintains.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "At each review, identify changes in rights, use, condition and evidence. An expired license, a new product application or a revised customer agreement may matter more than an annual rewording of the description. Record the review date and the action owner when an issue remains unresolved.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Use the register to prepare a focused brief for specialist work. The [ESOP valuation preparation guide](/insights/esop-valuation-preparation) applies a similar discipline to a different measurement question: identify the subject, purpose, documents and assumptions before commissioning an output. For intangible resources, the register makes those dependencies visible across the business.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "The useful first version gives management a credible answer to what the company uses, what it controls and what remains uncertain. Values can then be commissioned and interpreted for a defined purpose. Maintain the intangible asset register as the rights and operating conditions change, so it remains a decision record rather than an inventory that is forgotten after completion.",
+        "type": "p"
+      }
+    ],
+    "category": "Field Notes",
+    "contentFormat": "Field Note",
+    "dek": "A list of patents misses much of what makes a business useful. Record the rights, dependencies and evidence behind each resource before assigning it a value.",
+    "downloadLabel": "Download the companion worksheets",
+    "downloadUrl": "/downloads/launch-toolkit.xlsx",
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/f06.svg",
+    "launchId": "F06",
+    "practiceTags": [
+      "intangibles-valuation"
+    ],
+    "publication": "Field Notes",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F05",
+      "H01"
+    ],
+    "seo": {
+      "title": "Intangible asset register for Singapore finance teams | Bain Squared",
+      "description": "Create an intangible asset register that records ownership, use and supporting evidence. Separate commercial importance from accounting recognition and value."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "intangible-asset-register"
+    },
+    "summary": "Create an intangible asset register that records ownership, use and supporting evidence. Separate commercial importance from accounting recognition and value.",
+    "title": "Intangible asset register for Singapore finance teams",
+    "type": "field-note",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-h01",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "Project scoping questions should establish what needs to change, who is responsible and what evidence will show that the work has succeeded. A request for an AI tool, a reporting dashboard or a valuation may already contain part of the answer. The first conversation should test whether that proposed output addresses the decision the business actually needs to make.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "A scope is an agreed boundary around the work, including its purpose, inputs, deliverables, responsibilities and acceptance criteria. Bain Squared's published Squared Method begins with diagnosis before design and deployment. This practice note explains the questions behind that approach and provides a specimen scoping note a prospective client can use to prepare.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "The example is a planning aid, not an account of a completed engagement. It describes the intended approach to a first conversation without implying that every project follows an identical sequence. An urgent cash question, a recurring operating problem and a valuation for a defined reporting purpose require different levels of investigation.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "Which project scoping questions come first?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Begin with the event that made the work necessary. A board deadline, a growing exception queue and the departure of a finance employee create different constraints. The event explains why the business needs an answer now and what may happen if the work takes longer than expected.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Ask what decision is currently difficult to make. A founder who requests a dashboard may need to know which customer contracts consume cash. An operations manager requesting automation may need a reliable way to route cases that currently depend on one employee. Describe the decision in ordinary language before translating it into a system requirement.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Identify the person who owns that decision. This may differ from the person sponsoring the project or maintaining the existing spreadsheet. The decision owner should explain what information they trust, what remains uncertain and which actions they are permitted to take when the answer changes.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Clarify the boundaries early. A finance reporting project does not automatically include legal advice, tax structuring or a new enterprise system. An AI workflow does not automatically include authority to communicate externally. A written boundary gives both parties a way to recognize when the requested work has expanded.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Ask for evidence that changes the scope",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "Request a small, relevant sample before asking for an entire data room. An anonymized report, a process description or a list of recurring exceptions may be enough to identify the next question. The purpose is to test the problem definition, with access proportionate to what the conversation requires.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Privacy and confidentiality affect how those samples are shared. The [PDPC's guidance on key concepts in the PDPA, reviewed in 2026](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/advisory-guidelines/ag-on-key-concepts/advisory-guidelines-on-key-concepts-in-the-pdpa-17-may-2022.pdf), explains obligations concerning the purposes and handling of personal data. At the scoping stage, a practical response is to identify why information is needed and avoid requesting personal details that do not affect the assessment.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Look for conflicting definitions. If sales and finance report different revenue figures, the first deliverable may need to establish the meaning and source of each measure. Automating both reports without resolving that disagreement can make the inconsistency arrive faster without making the decision easier.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "For valuation work, identify the measurement purpose and applicable reporting context. The [IFRS Foundation's IAS 38 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/), illustrates why recognition and measurement questions need defined criteria. A broad request to value intellectual property should be narrowed to the subject, date and intended use of the analysis.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Define an output someone can accept",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "A deliverable should be described in terms a reviewer can verify. “Improve visibility” is an objective. A reporting pack with agreed definitions, source reconciliation, named owners and a review routine is an output that can be inspected. The scope should connect the two without promising a business result the project cannot control.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Write acceptance criteria before implementation. For a forecast, that might include a reconciled opening balance and a documented update procedure. For a workflow, it might include successful handling of named exception cases and a tested human handoff. The appropriate criteria depend on the consequences of an incorrect result.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "NIST's [2023 AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) gives AI projects a useful reference for identifying and managing risks. A scoping note should specify which risks the proposed work addresses and which decisions remain with the client. Broad references to responsible AI are insufficient if nobody can identify the approval route.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "Record assumptions as conditions. Access to a source system, availability of a subject-matter expert and agreement on a data definition can all affect delivery. If a dependency is uncertain, the scope should identify the decision that resolves it and what changes if it cannot be met.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "End the conversation with a useful next step",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "The specimen scoping note records the problem, decision owner, baseline, proposed output, exclusions, dependencies and acceptance evidence. It also identifies what remains unknown. A document that makes uncertainty visible gives the next discussion a clear purpose.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Sometimes the next step is a limited diagnostic. Sometimes enough evidence exists to define implementation. In other cases, the business first needs to resolve a policy, ownership or data-access question internally. The initial conversation should make that sequence explicit, including who will provide the missing information.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "The [cash forecast guide](/insights/13-week-cash-forecast-template) and [AI launch checklist](/insights/agentic-ai-launch-checklist) show how a broad objective becomes specific evidence and operating responsibility. They are useful preparation when the problem falls within those areas, and they can expose questions worth settling before a proposal is written.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "A first scoping conversation has done its job when the business can explain the proposed work and the decision it supports without relying on a product name. The next commitment can then be made against a defined boundary, with the evidence and responsibilities needed to assess whether the work has been delivered.",
+        "type": "p"
+      }
+    ],
+    "category": "Inside Bain Squared HQ",
+    "contentFormat": "Practice Note",
+    "dek": "A useful first conversation ends with a clearer problem and the evidence needed to act. The proposed solution should follow from that understanding.",
+    "downloadLabel": "Download the companion worksheets",
+    "downloadUrl": "/downloads/launch-toolkit.xlsx",
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/h01.svg",
+    "launchId": "H01",
+    "practiceTags": [
+      "ai",
+      "financial-transformation",
+      "intangibles-valuation"
+    ],
+    "publication": "Inside Bain Squared HQ",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F03",
+      "F01"
+    ],
+    "seo": {
+      "title": "Project scoping questions that make the work clearer | Bain Squared",
+      "description": "Use these project scoping questions to define the decision, evidence and delivery boundary before commissioning AI, finance or valuation work for your team."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "project-scoping-questions"
+    },
+    "summary": "Use these project scoping questions to define the decision, evidence and delivery boundary before commissioning AI, finance or valuation work for your team.",
+    "title": "Project scoping questions that make the work clearer",
+    "type": "inside-hq",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-l01",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "AI agents in business change the risk of a software error when they can alter a record, send a message or initiate another process. A wrong answer gives a person an opportunity to intervene before acting. A wrong action may already have affected a customer or another system by the time someone reviews it. That change in timing deserves a management decision.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "An action-capable AI system combines a model with tools that interact with software or information. Its autonomy depends on the permissions and execution process the builder provides. A product described as an agent may still require approval at each step, while an ordinary-looking assistant may have broad access through connected tools.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "The useful question for a board or operating leader is therefore specific. Which business actions are becoming technically possible, and which of them should this company delegate under its current controls? This Looking Glass analysis separates observed technical direction from operating scenarios. It offers no forecast of adoption rates or employment effects.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What authority should AI agents in business receive?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Authority should be defined at the action level. Reading a contract, drafting an amendment and sending the amendment to a counterparty require different permissions. A procurement leader may welcome help locating a renewal clause while retaining approval over every change to the commercial commitment.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Anthropic's [2024 analysis of agent architectures](https://www.anthropic.com/engineering/building-effective-agents) describes systems with different degrees of model-directed execution. A business should evaluate the actual execution path and tool access rather than infer behavior from the product label. The relevant evidence is what the software can do in the environment where it will run.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "A useful action register names the tool, the affected record, the maximum permitted change and the approval requirement. It should also identify whether the action can be reversed. Correcting an internal draft differs from recalling information already sent to a customer, and a permission review should reflect that difference.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Delegating a bounded action can still produce value. For example, a system might prepare a purchase request using approved supplier information while leaving final approval with a buyer. The additional work required for autonomous ordering should be justified by its incremental benefit and the evidence that the company can control it.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "The operating limit may be outside the model",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "A model can select the correct next action while the surrounding system supplies an outdated record. That failure is difficult to detect if the demonstration uses clean information that production does not consistently provide. The deployment assessment needs to examine how records are updated, who resolves conflicting sources and what happens when an integration is unavailable.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "An illustrative customer-service workflow shows the problem. A refund policy allows a particular remedy, but the payment system has already processed it. If the system cannot identify the earlier transaction, a correct reading of the policy can still produce a duplicate refund. A unique transaction reference and a destination check address a different failure from improving the model's answer.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Evaluation should therefore include the action and the resulting state. Anthropic's [2025 guidance on agent tools](https://www.anthropic.com/engineering/writing-tools-for-agents) describes evaluating tool use in context. For a business deployment, that means checking that the intended record changed correctly and that a retry cannot silently repeat a completed action.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "The people reviewing exceptions also impose a practical limit. If every unusual case reaches one senior employee, greater automated volume can increase the queue of difficult decisions. Before expanding the workflow, measure the reviewer capacity available and decide what the system should do when that capacity is exhausted.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Act now, test next and watch for evidence",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "Act now on decisions that remain useful across products. Name the process owner, define approved information sources and document which actions require approval. Those steps improve the manual process as well as an automated one, and they reduce the ambiguity that a future implementation would otherwise inherit.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Test next where the task has a clear completion condition and a manageable consequence of error. A controlled trial can compare a proposed action with the decision an experienced employee would make. Record disagreements and the evidence used to resolve them. A disagreement about policy should lead to a policy decision rather than an instruction to imitate whichever employee answered last.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Watch for evidence that changes the feasible scope. Relevant signals include lower exception-review effort, reliable recovery from interrupted actions and stable results after a configuration change. A vendor demonstration or a benchmark on an unrelated task is a reason to investigate, not proof that a customer-facing process is ready.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "NIST's [2024 Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework) extends its risk-management work to generative AI. The implication for this analysis is continuing review: a launch decision depends on the system, use and operating conditions assessed at that time.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Ask for a decision record before expanding autonomy",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "An expansion proposal should state the additional action, expected benefit and evidence supporting the change. It should explain how the operator detects an incorrect result and which consequences remain difficult to reverse. That gives management something more concrete to approve than a general request for a more autonomous product.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "The [agentic AI launch checklist](/insights/agentic-ai-launch-checklist) provides a practical structure for that evidence. The [ownership discussion](/insights/ai-workflow-ownership-after-launch) addresses the people who must maintain the decision after deployment. Neither replaces technical testing, but both prevent operating responsibility from disappearing between teams.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "A company may decide that supervised execution is the right long-term arrangement for a particular action. It may also permit automatic execution for a narrow category of cases with clear limits. These are operating designs to compare against cost, speed and consequences of error.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "AI agents in business will be useful where their authority matches the work and the company can verify the result. For the next deployment decision, ask the team to show the action register, exception route and last successful recovery test. Those artifacts reveal more about readiness than the label attached to the software.",
+        "type": "p"
+      }
+    ],
+    "category": "Looking Glass",
+    "contentFormat": "Analysis",
+    "dek": "The consequential change arrives when software can make a commitment on your behalf. Evaluate the authority you are delegating before evaluating the autonomy on offer.",
+    "downloadLabel": "Download the companion",
+    "downloadUrl": null,
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/l01.svg",
+    "launchId": "L01",
+    "practiceTags": [
+      "ai",
+      "growth-strategy"
+    ],
+    "publication": "Looking Glass",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F01",
+      "P01"
+    ],
+    "seo": {
+      "title": "AI agents in business change who can authorize action | Bain Squared",
+      "description": "AI agents in business need clear authority to act. Assess permissions, reversibility and supervision before expanding a system beyond answers and draft work."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ai-agents-business-authority"
+    },
+    "summary": "AI agents in business need clear authority to act. Assess permissions, reversibility and supervision before expanding a system beyond answers and draft work.",
+    "title": "AI agents in business change who can authorize action",
+    "type": "looking-glass",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-l02",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "AI search visibility depends first on whether a search system can find and interpret useful information about the business. A service firm needs clear pages explaining what it does, who it serves, how an engagement works and what evidence supports its claims. Repeating keywords cannot compensate for a site whose pages are inaccessible or whose service descriptions leave those questions unanswered.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "AI search visibility is the observable appearance of a business or its content in search experiences that generate or synthesize answers. It is broader than a ranking for one query and narrower than a promise that a model will recommend the firm. Results depend on the system, query, context and time of the observation.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "For a Singapore advisory business, the practical objective is to become a useful source for relevant questions and an understandable option when a prospective client investigates further. This analysis describes the work required and the evidence worth tracking. It does not forecast traffic or claim that any specific editorial change guarantees inclusion.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What improves AI search visibility at the page level?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Start with access. A page should have a stable address, readable text and links from other relevant pages. Google's [JavaScript SEO guidance, reviewed in 2026](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics), advises against using URL fragments to load different page content. A visually complete website can still make discovery difficult when its routing and delivery are inconsistent.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Then make the subject explicit. A service page should explain the work, inputs, outputs and situations in which the service fits. A reader considering an ESOP valuation needs a different answer from one looking for ongoing finance leadership. Combining both under a broad promise about growth gives the reader little evidence for a selection.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Use articles to answer the questions that arise around that decision. An explanation of valuation preparation can show what a finance team needs to assemble. A cash forecasting guide can show how the firm reasons about an operating problem. These pieces should contain enough substance to help a reader before the reader becomes a prospect.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "Keep company facts consistent across the site. The name, contact details, service terminology and authorship should agree between the homepage, article pages and structured metadata. A discrepancy forces the reader or retrieval system to decide which version is current.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "The customer journey may include fewer visible steps",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "A prospective client can encounter a summarized answer before visiting the source page. That creates a plausible discovery path in which the firm contributes to the buyer's understanding without receiving a visit at that moment. It does not establish how common that path is for a particular business.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Another buyer may use an assistant to identify questions, then search conventionally for a local provider. A third may already know the firm and use generated answers to compare it with alternatives. These scenarios call for useful service explanations and evidence, but they should not be combined into an invented attribution model.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Google's [guidance on AI features and websites, reviewed in 2026](https://developers.google.com/search/docs/appearance/ai-features), says the existing foundations of search optimization remain relevant and that special AI markup is unnecessary. The operating priority is accessible, useful content with a clear relationship between what the page says and how it is described.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Avoid presenting an appearance in a generated answer as a recommendation from the platform. A citation can indicate that the system used a page for a particular passage. It does not imply endorsement of the firm's services or verification of every claim elsewhere on the site.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Measure the signals that can actually be observed",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "Separate discovery, visits and enquiries. Search impressions, clicks, referral sessions and qualified enquiries answer different questions. Combining them into one visibility score can hide whether the content is being found, whether readers choose to visit and whether the resulting conversations fit the service.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Maintain a small set of relevant test questions and record the date, system and response context when reviewing generated answers. Include questions about the service category and the problem a buyer is trying to solve. Repeat observations over time, but treat them as a sample rather than a stable ranking table.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Microsoft's [Bing Webmaster Tools AI Performance documentation, reviewed in 2026](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c), describes reporting on citation activity in supported experiences. That can add evidence where the account has access. It does not measure every assistant or prove that a cited answer created a sale.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "Add a simple source question to an enquiry form or first conversation. A buyer's answer can reveal a route that analytics missed, including a colleague forwarding an article. Record it as reported attribution, with its limitations, and compare it with the technical data rather than treating either as complete.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Give the editorial programme a commercial purpose",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "Choose a small set of questions that match the work the firm can deliver. An article should make one decision clearer, such as whether a workflow is ready for deployment or what evidence a valuation requires. A large library of broadly related topics can consume editorial effort without helping a buyer understand the firm's fit.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Maintain the content after publication. A source link can change, a service scope can evolve and a model example can need correction. Record the review date and substantive changes. Updating a date without reviewing the argument does not improve the usefulness of the page.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Use internal links where they help the next decision. The [AI readiness scorecard](/insights/ai-readiness-scorecard) provides a deeper assessment after a reader understands the operating question. A relevant service page can then explain how an engagement addresses that work. The sequence should remain useful even if the reader never submits an enquiry.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "The first test of AI search visibility is whether a buyer can verify the firm from the pages available today. Make those pages accessible, specific and sourced, then measure the resulting discovery and conversations. The evidence will show which questions deserve the next article and which service explanations need to be clearer.",
+        "type": "p"
+      }
+    ],
+    "category": "Looking Glass",
+    "contentFormat": "Analysis",
+    "dek": "A buyer may arrive with a shortlist assembled elsewhere. Make the firm’s work, evidence and fit easy to verify when that buyer checks the recommendation.",
+    "downloadLabel": "Download the companion",
+    "downloadUrl": null,
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/l02.svg",
+    "launchId": "L02",
+    "practiceTags": [
+      "ai",
+      "growth-strategy"
+    ],
+    "publication": "Looking Glass",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "R01",
+      "L01"
+    ],
+    "seo": {
+      "title": "AI search visibility for Singapore service businesses | Bain Squared",
+      "description": "Build AI search visibility with clear service pages, crawlable articles and evidence readers can verify. Track discovery without promising rankings or leads."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ai-search-visibility-service-businesses"
+    },
+    "summary": "Build AI search visibility with clear service pages, crawlable articles and evidence readers can verify. Track discovery without promising rankings or leads.",
+    "title": "AI search visibility for Singapore service businesses",
+    "type": "looking-glass",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-p01",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "AI workflow ownership after launch belongs in the business operating model. A system that drafts a message or updates a record can continue running after the project team leaves, but someone must still decide whether its behavior is acceptable. Without that decision owner, the company has software in operation and an unresolved management responsibility.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "Workflow ownership is the authority to define an acceptable outcome, resolve exceptions and approve changes to how work is performed. Technical maintenance is part of that arrangement. It does not settle who may change a customer promise, accept an error or stop an activity that has become uneconomic.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "The argument is especially relevant to growing businesses where one person may cover several functions. A small team can combine roles. It still needs to distinguish the decisions attached to each role, because a single job title can conceal conflicting obligations when something goes wrong.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "Who should hold AI workflow ownership after launch?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Assign the business outcome to a process owner. In a collections workflow, that person decides which customer situations require a personal conversation, which reminders are appropriate and what counts as a resolved case. The developer should not infer those rules from historical emails that may contain inconsistent practice.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Assign technical operation to a system owner. This person is responsible for integrations, access, configuration, monitoring and recovery. A changed connection or model version may affect behavior even when the written business rule remains the same. The system owner needs a way to notify the process owner before such changes alter the work.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Assign review to someone who can challenge the result. Review may be performed by the process owner in a small firm, but the review activity should still be visible. Otherwise, the person under pressure to demonstrate a benefit is also silently deciding what evidence counts as success.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "NIST's [2023 AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) treats governance as a cross-cutting part of risk management. The operating implication proposed here is to record decision rights alongside the technical configuration, so a team can identify who has authority when the system needs intervention.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "A handover needs decisions as well as documentation",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "A technical handover can be complete while an operating handover remains unfinished. The team may receive installation instructions and access credentials without a policy for disputed invoices, incomplete customer records or conflicting requests. Those are business questions that surface through the software.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Consider an illustrative service team using AI to prepare renewal messages. The system retrieves a contract and suggests a renewal price. A customer has also agreed a concession with an account manager, but the concession has not reached the contract record. The failure begins with an information gap and becomes a commercial error if the message is sent without a check.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "The system owner can repair the retrieval path. The process owner must decide which record establishes an approved concession and who updates it. The reviewer must determine whether similar messages have already been affected. Calling the entire incident a model error would leave the underlying decision process unchanged.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Anthropic's [2024 engineering discussion of agents and workflows](https://www.anthropic.com/engineering/building-effective-agents) distinguishes different execution patterns. That technical choice should match the business's willingness to delegate discretion. A fixed approval path may be appropriate even when a model is capable of selecting its own next action.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Budget for the work that remains",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "A workflow creates continuing work even when the routine task becomes faster. Someone checks exceptions, updates reference material, reviews new failure cases and decides whether changed conditions justify a revised rule. If the business case excludes those activities, management will compare a complete manual cost with an incomplete automated cost.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Measure the burden on the people receiving escalations. A process that saves time for one team while increasing difficult reviews for another may still be worthwhile, but the tradeoff needs to be explicit. The affected manager should participate in the launch decision rather than discovering the new workload after deployment.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Tool design can reduce unnecessary review. Anthropic's [2025 guidance on effective agent tools](https://www.anthropic.com/engineering/writing-tools-for-agents) connects clear interfaces with evaluation. A reviewer benefits when the tool output identifies the proposed action, source record and relevant evidence in a form that can be checked without reconstructing the model's reasoning.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "Separate capacity released from money saved. An employee who spends less time preparing a report remains on the payroll. Management may use that capacity to improve service, handle additional work or reduce overtime. The financial benefit depends on the actual operating decision, and should be described accordingly.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Make ownership observable in ordinary work",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "A responsibility map should describe decisions rather than list everyone involved. Record who can approve a new data source, alter a threshold, authorize external communication and stop the workflow. For each decision, name the evidence required and the person who covers an absence. A long list of stakeholders can otherwise make accountability harder to locate.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Use a regular review to connect incidents with changes. A recurring exception may indicate poor data, an unclear policy or a task that should remain with a person. Repeatedly asking the model to try again does not resolve a disagreement about what the business wants it to do.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Allow the process owner to narrow the scope. A team should be able to retain the useful part of a workflow while removing an action that is difficult to control. Treating every reduction in autonomy as a failed project encourages unnecessary risk and obscures the practical value of supervised assistance.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "The first ownership review should end with a recorded decision about the next operating period. Continue the current scope, expand a tested action, repair a named dependency or pause a problematic path. AI workflow ownership after launch becomes real when a person can make that decision, explain the evidence and take responsibility for what happens next.",
+        "type": "p"
+      },
+      {
+        "_key": "b24",
+        "text": "Use the [agentic AI launch checklist](/insights/agentic-ai-launch-checklist) to record these responsibilities before release.",
+        "type": "p"
+      }
+    ],
+    "category": "Perspectives",
+    "contentFormat": "Perspective",
+    "dek": "When a workflow changes a customer record, accountability cannot end with the deployment team. Put the business decision, technical operation and review in named hands.",
+    "downloadLabel": "Download the companion",
+    "downloadUrl": null,
+    "featured": true,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/p01.svg",
+    "launchId": "P01",
+    "practiceTags": [
+      "ai",
+      "growth-strategy"
+    ],
+    "publication": "Perspectives",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F01",
+      "R01"
+    ],
+    "seo": {
+      "title": "AI workflow ownership after launch is a business role | Bain Squared",
+      "description": "AI workflow ownership after launch needs a process owner, a system owner and a reviewer. Define who can change the rules, stop the work and assess its value."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ai-workflow-ownership-after-launch"
+    },
+    "summary": "AI workflow ownership after launch needs a process owner, a system owner and a reviewer. Define who can change the rules, stop the work and assess its value.",
+    "title": "AI workflow ownership after launch is a business role",
+    "type": "perspective",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-p02",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "Cash conversion in growing businesses deserves attention before the bank balance becomes urgent. A company can sell more, report a profit and still need additional funding because it pays for delivery before collecting from customers. Management needs to distinguish that timing requirement from weak margins, uncollectible invoices or spending that revenue growth does not explain.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "Cash conversion is the process through which trading activity produces available cash after the business funds the costs and timing of delivery. It depends on commercial terms, invoicing, collection, inventory where relevant and supplier payments. The same reported revenue can therefore support different cash outcomes in two businesses.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "This article uses a simplified, fictional example to show the mechanism. The numbers are assumptions for discussion, not a market benchmark or Bain Squared client result. Actual analysis should account for taxes, financing, seasonality, foreign currency and the particular contracts involved.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What changes cash conversion in growing businesses?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Revenue and cash are measured at different points in the commercial process. The IFRS Foundation's [IFRS 15 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/), describes revenue recognition by reference to the transfer of promised goods or services. Collecting the related amount is a separate event that finance must track.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Assume a business makes all sales on credit and generates SGD 100,000 of monthly revenue at a steady rate. With collection taking approximately one month, a simplified steady-state receivables balance is SGD 100,000. If revenue rises to SGD 150,000 per month and collection takes approximately two months, the corresponding balance becomes SGD 300,000.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "The difference is SGD 200,000 of additional receivables. That calculation assumes even sales, no bad debts, no taxes and no other timing effects. It is not a complete funding forecast. It isolates the cash tied up in customer credit so management can investigate the effect of volume and collection time separately.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "At the new revenue level, collecting in one month instead of two would reduce the modeled receivables balance by SGD 150,000. Management should then ask whether the longer period reflects agreed terms, delayed invoicing, disputed delivery or late payment. Each cause requires a different response.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Separate timing from the quality of the sale",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "A contract may be profitable on paper while demanding more delivery effort than the quotation allowed. If staff spend additional hours resolving exceptions, the cash effect includes the cost of that work as well as the delay in collection. Looking only at the invoice due date would miss the change in economics.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Review contribution at the level where the commercial decision is made. A customer, product or project view can expose whether a large account requires unusual service, discounts or payment terms. A blended company margin may conceal the account that produces most of the growth and most of the funding pressure.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "Cash reporting provides another perspective. The IFRS Foundation's [IAS 7 overview, reviewed in 2026](https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/), distinguishes operating, investing and financing activities. A new borrowing can increase the bank balance while the trading operation continues to consume cash. The source of the increase matters when assessing whether growth is self-funding.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "Avoid treating every working-capital increase as a defect. A business may deliberately offer longer terms to enter an attractive account, or hold inventory to meet a confirmed delivery schedule. The issue is whether management understands the commitment, can fund it and expects an adequate commercial return under the stated assumptions.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Build a growth quality review around exceptions",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "A useful review connects revenue, contribution, receivables and cash by customer or project. Begin with the accounts whose changes explain the largest part of the movement. That is more informative than discussing every small balance while leaving one disputed milestone unresolved.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "For each material exception, record the commercial event and the action required. An invoice awaiting a purchase-order reference needs a different owner from one awaiting customer acceptance. A completed project with an unresolved variation may require a negotiation rather than a collection reminder. Finance should identify the dependency, while the relevant business owner resolves it.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Compare the assumptions used at the time of sale with what actually happened. If a proposal assumed a deposit and the signed contract removed it, the delivery plan may now require funding that the original margin review did not consider. Commercial approval should include that changed cash commitment.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "Singapore teams should keep management analysis reconciled with the reporting framework applicable to the entity. [ACRA's accounting standards guide, reviewed in 2026](https://www.acra.gov.sg/regulations/accounting-standards-financial-reporting-surveillance/accounting-standards/), identifies the available frameworks. A management diagnostic adds operational detail; it does not change recognition or disclosure requirements by itself.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Choose the response that addresses the cause",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "If collection timing is the main driver, investigate billing readiness, acceptance evidence, payment terms and the collection process. If delivery cost has changed, revisit pricing, scope control and the resources required to serve the customer. If planned growth creates a temporary funding requirement, management needs a forecast that shows its size, timing and repayment source.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Test the decision against a downside that could actually occur. In the illustrative receivables model, slower collection changes the cash requirement even when revenue remains strong. A separate scenario should examine a disputed balance that is not collected at all. Mixing delay and loss into one percentage hides the different actions management can take.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "The [13-week cash forecast template](/insights/13-week-cash-forecast-template) translates these timing assumptions into weekly balances. Use it alongside the growth review so a commercial explanation becomes a dated cash decision. A margin diagnosis and a liquidity forecast are most useful when the same assumptions connect them.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "Approve further growth with a clear account of what it requires. Name the delivery capacity, customer credit and funding assumptions that make the plan workable. Cash conversion in growing businesses improves when sales, operations and finance agree those commitments early enough to change them.",
+        "type": "p"
+      }
+    ],
+    "category": "Perspectives",
+    "contentFormat": "Perspective",
+    "dek": "Higher revenue can require more cash before it produces more cash. Separate the cost of growth from slow collection and an underlying margin problem.",
+    "downloadLabel": "Download the companion",
+    "downloadUrl": null,
+    "featured": false,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/p02.svg",
+    "launchId": "P02",
+    "practiceTags": [
+      "financial-transformation",
+      "growth-strategy"
+    ],
+    "publication": "Perspectives",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F03",
+      "H01"
+    ],
+    "seo": {
+      "title": "Cash conversion in growing businesses needs a review | Bain Squared",
+      "description": "Review cash conversion in growing businesses with a worked revenue and receivables example. Find the timing assumptions that change your need for funding."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "cash-conversion-growing-businesses"
+    },
+    "summary": "Review cash conversion in growing businesses with a worked revenue and receivables example. Find the timing assumptions that change your need for funding.",
+    "title": "Cash conversion in growing businesses needs a review",
+    "type": "perspective",
+    "updatedAt": "2026-09-26"
+  },
+  {
+    "_createdAt": "2026-09-25T20:46:37Z",
+    "_id": "bs-launch-r01",
+    "_rev": "FEAYqiLxg7DwRFaW55uWm8",
+    "_type": "insight",
+    "_updatedAt": "2026-09-25T20:46:37Z",
+    "authorBio": "Bain Squared is a Singapore-based advisory and AI operations firm working with growing businesses across finance, valuation and practical AI deployment.",
+    "authors": [
+      {
+        "_key": "bain-squared",
+        "name": "Bain Squared"
+      }
+    ],
+    "body": [
+      {
+        "_key": "b1",
+        "text": "An AI readiness scorecard should help management decide whether a particular workflow is ready for a controlled trial, needs prerequisite work or should remain with the existing process. A company-wide maturity score cannot answer that question on its own. The evidence needed for drafting an internal summary differs from the evidence needed for changing a customer record or releasing a payment.",
+        "type": "p"
+      },
+      {
+        "_key": "b2",
+        "text": "Readiness is the demonstrated ability to carry out a defined task within agreed limits, detect unacceptable results and recover when the process fails. This report assesses that ability across workflow definition, information quality, permissions, human review, economics and ongoing ownership. It is written for growing Singapore businesses that need a practical decision before committing implementation effort.",
+        "type": "p"
+      },
+      {
+        "_key": "b3",
+        "text": "The scorecard is a Bain Squared planning method developed from public technical and risk-management sources. It is not a validated predictive model, an industry benchmark, a certification or an original survey. The worked example is fictional. Scores organize evidence and expose gaps; they do not establish that a system is safe or that an investment will succeed.",
+        "type": "p"
+      },
+      {
+        "_key": "b4",
+        "text": "What should an AI readiness scorecard measure?",
+        "type": "h2"
+      },
+      {
+        "_key": "b5",
+        "text": "Assess the proposed workflow rather than the technology category. A useful unit of assessment has a trigger, defined inputs, an intended action and a completion condition. “Use AI in finance” is too broad. “Prepare an overdue-invoice reminder from approved records for a collector to review” is sufficiently specific to test.",
+        "type": "p"
+      },
+      {
+        "_key": "b6",
+        "text": "Record the existing process and its limitations. The baseline should include the work currently required, the exceptions people handle and the consequences of an error. If management cannot describe how the task is performed today, the first investment may need to improve the process definition rather than introduce a new execution method.",
+        "type": "p"
+      },
+      {
+        "_key": "b7",
+        "text": "Anthropic's [2024 distinction between workflows and agents](https://www.anthropic.com/engineering/building-effective-agents) provides a useful technical reference. Different patterns allocate different degrees of discretion to the model. The architecture selected should reflect the task's need for that discretion and the team's ability to evaluate the resulting behavior.",
+        "type": "p"
+      },
+      {
+        "_key": "b8",
+        "text": "The method uses six assessment areas because each can change the launch decision independently. A team can have reliable data and an unclear approval policy, or clear permissions and insufficient reviewer capacity. Averaging those conditions into one number would conceal the prerequisite that actually prevents deployment.",
+        "type": "p"
+      },
+      {
+        "_key": "b9",
+        "text": "Use evidence states rather than a maturity label",
+        "type": "h2"
+      },
+      {
+        "_key": "b10",
+        "text": "Score each area from zero to three. Zero means the relevant condition is unknown or absent. One means it is described but has not been demonstrated. Two means the team has tested it in a representative controlled setting. Three means the evidence remains current during a defined period of limited operation, with review and recovery arrangements in use. These are proposed evidence states, not external standards.",
+        "type": "p"
+      },
+      {
+        "_key": "b11",
+        "text": "Attach a dated artifact to each assessment. The artifact may be a process map, test result, permission configuration, operating-cost calculation or signed responsibility record. A score based only on confidence in the team is difficult to challenge and impossible to reproduce when another reviewer asks what changed.",
+        "type": "p"
+      },
+      {
+        "_key": "b12",
+        "text": "The scorecard should show the six results separately. A total can be recorded for administrative comparison, but it must not authorize launch. An unknown permission boundary is a stop condition even if every other area is strong. The operator should be able to locate that gap without interpreting an aggregate score.",
+        "type": "p"
+      },
+      {
+        "_key": "b13",
+        "text": "NIST's [2023 AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) supplies the broader governance reference. The scorecard adapts risk-oriented thinking into a local decision record; it does not claim that its numerical labels are NIST's or that a completed worksheet demonstrates compliance.",
+        "type": "p"
+      },
+      {
+        "_key": "b14",
+        "text": "Workflow definition and information quality",
+        "type": "h2"
+      },
+      {
+        "_key": "b15",
+        "text": "Workflow readiness asks whether the task is bounded and the completion condition can be observed. Record the trigger, permitted actions and situations that leave the normal path. Identify which decisions depend on judgment that the team has not yet expressed as an agreed policy. An unresolved business disagreement should remain visible rather than be embedded in a prompt.",
+        "type": "p"
+      },
+      {
+        "_key": "b16",
+        "text": "Information readiness asks whether the workflow can access the right records with sufficient freshness and context. Identify the authoritative source for each required field. If a contract system and a customer relationship system disagree, specify which one governs the proposed action and who resolves the inconsistency. The model should not be expected to establish corporate policy from conflicting documents.",
+        "type": "p"
+      },
+      {
+        "_key": "b17",
+        "text": "Test missing and outdated information deliberately. A controlled example should include an absent identifier, a duplicate record and a changed status where those conditions are relevant. The team should define whether the workflow stops, asks for clarification or uses a documented fallback. A confident completion based on guessed information should be treated as a distinct failure.",
+        "type": "p"
+      },
+      {
+        "_key": "b18",
+        "text": "The evidence for these areas includes a process map, source register and a representative test set. At the described stage, those documents may exist without successful tests. At the tested stage, the record should show what happened when the inputs were incomplete or contradictory, including cases the workflow correctly declined to handle.",
+        "type": "p"
+      },
+      {
+        "_key": "b19",
+        "text": "Permissions and human review",
+        "type": "h2"
+      },
+      {
+        "_key": "b20",
+        "text": "Permission readiness concerns what the system can read and change. List the tools available to the model and the rights each connection grants. A service account with broad access may be convenient for development while exceeding the approved operating scope. Assess the actual configured permissions rather than the intended limits described in a presentation.",
+        "type": "p"
+      },
+      {
+        "_key": "b21",
+        "text": "Separate drafting, approval and execution where the consequences justify it. A person should know what they are approving, which records support the action and whether the proposed change differs from the approved policy. An approval button provides little protection if the reviewer cannot see the relevant evidence or if the action can change after approval.",
+        "type": "p"
+      },
+      {
+        "_key": "b22",
+        "text": "Human-review readiness concerns capacity as well as authority. Record which cases reach a person, who receives them and what happens when the reviewer is unavailable. A workflow that sends every unusual case to a busy manager can create a growing queue while appearing successful on routine cases. Measure that queue and include it in the operating decision.",
+        "type": "p"
+      },
+      {
+        "_key": "b23",
+        "text": "Anthropic's [2025 guidance on effective agent tools](https://www.anthropic.com/engineering/writing-tools-for-agents) links tool design with evaluation. In this scorecard, useful evidence includes clear action descriptions, destination checks and a record of reviewer decisions. A person should be able to distinguish a completed action from an attempted one that may require investigation.",
+        "type": "p"
+      },
+      {
+        "_key": "b24",
+        "text": "Economics and continuing ownership",
+        "type": "h2"
+      },
+      {
+        "_key": "b25",
+        "text": "Economic readiness requires a comparison on a consistent basis. Include model charges, software, integration support, review, correction and ongoing maintenance. Compare the same task volume and completion standard. A system that handles only the easiest cases should not be credited with replacing the full cost of the existing process.",
+        "type": "p"
+      },
+      {
+        "_key": "b26",
+        "text": "Distinguish a capacity benefit from a cash benefit. Time released may allow employees to handle more work or improve service. It becomes a cash saving only when management changes an actual expenditure or avoids a cost it would otherwise incur. The business case should identify which outcome it assumes and who can make that operating decision.",
+        "type": "p"
+      },
+      {
+        "_key": "b27",
+        "text": "Ownership readiness requires a process owner and a system owner with defined decision rights. Record who can change business rules, approve new permissions, update reference information and pause the workflow. A vendor may perform technical operation while the client retains authority over customer commitments and commercial policy.",
+        "type": "p"
+      },
+      {
+        "_key": "b28",
+        "text": "NIST's [2024 Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework) is a further reference for evaluating risks around generative systems. The local scorecard should record review triggers such as a changed model, integration or use case. Previous evidence should be reconsidered when the conditions it tested no longer apply.",
+        "type": "p"
+      },
+      {
+        "_key": "b29",
+        "text": "A worked example of supervised invoice reminders",
+        "type": "h2"
+      },
+      {
+        "_key": "b30",
+        "text": "Consider a fictional service business preparing reminders for overdue invoices. The proposed system retrieves the invoice, checks recorded status, prepares a draft and places it in a collector's review queue. It cannot change the balance, alter payment details or send the message. Disputed invoices and conflicting customer records leave the normal path.",
+        "type": "p"
+      },
+      {
+        "_key": "b31",
+        "text": "Assume, solely for this example, that the team handles 1,000 cases per month at six minutes per case. The current handling effort is 100 hours, calculated as 1,000 multiplied by six and divided by 60. At an assumed loaded labor cost of SGD 40 per hour, the modeled capacity cost is SGD 4,000 per month. These figures are hypothetical inputs, not observed results.",
+        "type": "p"
+      },
+      {
+        "_key": "b32",
+        "text": "Suppose the supervised system reduces ordinary preparation and review to two minutes per case. That requires approximately 33.3 hours. Add eight minutes for each exception, an assumed SGD 300 of monthly software cost and 20 hours of monthly maintenance at the same assumed hourly cost. With a 10 percent exception rate, total effort becomes approximately 66.7 hours and modeled cost becomes approximately SGD 2,967.",
+        "type": "p"
+      },
+      {
+        "_key": "b33",
+        "text": "The difference from the manual capacity cost is approximately SGD 1,033 per month. It is not automatically a cash saving because the employees may remain employed on the same terms. If setup costs an assumed SGD 6,000, dividing that setup cost by the modeled benefit gives approximately 5.8 months. That simple payback applies only if the capacity benefit is realized and the assumptions hold; it excludes financing and other costs not modeled.",
+        "type": "p"
+      },
+      {
+        "_key": "b34",
+        "text": "Test the assumption that changes the result",
+        "type": "h2"
+      },
+      {
+        "_key": "b35",
+        "text": "In this example, the exception rate is the most important operating sensitivity once volume and review time are fixed. At zero exceptions, modeled monthly cost is approximately SGD 2,433. At 10 percent it is approximately SGD 2,967, and at 20 percent approximately SGD 3,500. These are calculations from the stated inputs, with no change in the definition of a completed case.",
+        "type": "p"
+      },
+      {
+        "_key": "b36",
+        "text": "At an exception rate of approximately 29.4 percent, the modeled monthly cost equals the manual capacity cost. At 40 percent, cost is approximately SGD 4,567. The companion worksheet exposes these assumptions so a team can replace them with its own observed values. The equality point is a feature of this example, not a general threshold for AI projects.",
+        "type": "p"
+      },
+      {
+        "_key": "b37",
+        "text": "Other uncertainties can change the result more abruptly. If the underlying records are wrong, better preparation speed may increase the number of drafts requiring correction. If the reviewer checks less carefully because the output looks polished, the measured handling time may improve while the consequence of an error rises. Neither effect is resolved by a lower model price.",
+        "type": "p"
+      },
+      {
+        "_key": "b38",
+        "text": "The initial decision should therefore be a controlled trial with a defined review period and spending limit. Measure completed work, reviewer effort, exceptions and incorrect proposed actions. Management should decide in advance which failures stop the trial, which lead to a narrower scope and which require additional evidence before any expansion.",
+        "type": "p"
+      },
+      {
+        "_key": "b39",
+        "text": "Hard stops and the launch decision",
+        "type": "h2"
+      },
+      {
+        "_key": "b40",
+        "text": "Do not permit external execution when the system's authority is unclear. Do not continue an action path when the team cannot establish whether a previous attempt succeeded. Do not expand the scope while a material failure lacks an owner. These are proposed operating stops that apply independently of the numerical assessment.",
+        "type": "p"
+      },
+      {
+        "_key": "b41",
+        "text": "Choose among prerequisite work, a supervised trial and limited operation. Prerequisite work is appropriate when a necessary data, policy or access question remains unresolved. A supervised trial is appropriate when the task is defined and the team can test behavior without granting broader authority. Limited operation requires evidence for the actual scope and a workable response when conditions change.",
+        "type": "p"
+      },
+      {
+        "_key": "b42",
+        "text": "Record the decision in a short memorandum. Include the approved task, operating mode, evidence reviewed, known limitations, budget, owner and next review condition. Explain why a broader alternative was deferred. That explanation makes the decision understandable to the person reviewing it later, after the enthusiasm of the initial demonstration has passed.",
+        "type": "p"
+      },
+      {
+        "_key": "b43",
+        "text": "The [agentic AI launch checklist](/insights/agentic-ai-launch-checklist) provides a companion record for permissions, failures and release approval. The [ownership article](/insights/ai-workflow-ownership-after-launch) explains the continuing management roles. Use those records with the scorecard so that the assessment leads to an operating decision rather than an isolated workshop output.",
+        "type": "p"
+      },
+      {
+        "_key": "b44",
+        "text": "What the scorecard cannot establish",
+        "type": "h2"
+      },
+      {
+        "_key": "b45",
+        "text": "The method cannot establish regulatory compliance, security assurance or suitability for every kind of data and decision. Sector-specific obligations and high-consequence uses require specialist assessment. A completed worksheet should identify those dependencies rather than imply that an internal score replaces them.",
+        "type": "p"
+      },
+      {
+        "_key": "b46",
+        "text": "The evidence states do not predict a future failure rate. A controlled test samples a defined set of conditions. New customers, changed records, model updates or different workloads can expose behavior the test did not include. The operating record needs a way to detect that change and reopen the relevant assessment.",
+        "type": "p"
+      },
+      {
+        "_key": "b47",
+        "text": "The economic example also omits factors that may dominate a real business case. These include the value of faster service, the cost of a serious error, contractual commitments and the opportunity cost of the team's attention. Add those factors where they are decision-relevant and support them with evidence instead of treating the simple calculation as a complete investment model.",
+        "type": "p"
+      },
+      {
+        "_key": "b48",
+        "text": "Use the AI readiness scorecard to make a smaller, better-supported commitment. Assess one workflow, attach the evidence and state the condition for the next decision. A team that can explain why it is ready for a bounded trial is in a better position to learn than one that has declared the whole company ready for AI without defining the work.",
+        "type": "p"
+      }
+    ],
+    "category": "Squared Reports",
+    "contentFormat": "Report",
+    "dek": "Assess one workflow before committing to a broader rollout. This report provides an evidence-based decision method, hard stops and an illustrative operating model.",
+    "downloadLabel": "Download the companion worksheets",
+    "downloadUrl": "/downloads/launch-toolkit.xlsx",
+    "featured": true,
+    "heroImageAlt": "",
+    "heroImageUrl": "/img/editorial/r01.svg",
+    "launchId": "R01",
+    "practiceTags": [
+      "ai"
+    ],
+    "publication": "Squared Reports",
+    "publishedAt": "2026-09-25T20:46:36.890876+00:00",
+    "relatedIds": [
+      "F01",
+      "P01"
+    ],
+    "seo": {
+      "title": "AI readiness scorecard for growing Singapore companies | Bain Squared",
+      "description": "Use this AI readiness scorecard to assess workflow, data, permissions, review capacity and operating costs before committing to an implementation project."
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ai-readiness-scorecard"
+    },
+    "summary": "Use this AI readiness scorecard to assess workflow, data, permissions, review capacity and operating costs before committing to an implementation project.",
+    "title": "AI readiness scorecard for growing Singapore companies",
+    "type": "squared-report",
+    "updatedAt": "2026-09-26"
+  }
+]

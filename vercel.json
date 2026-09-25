@@ -3,15 +3,38 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
   "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
+    }
+  ],
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/insights/agentic-ai-pilots-pay-off",
+      "destination": "/insights/agentic-ai-launch-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/insights/rewiring-fpa",
+      "destination": "/what-we-do/financial-transformation",
+      "permanent": true
+    },
+    {
+      "source": "/insights/intangibles-90-percent",
+      "destination": "/what-we-do/intangibles-valuation",
+      "permanent": true
+    },
+    {
+      "source": "/insights/the-squared-method",
+      "destination": "/what-we-do",
+      "permanent": true
     }
   ]
 }

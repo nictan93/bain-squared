@@ -2,24 +2,24 @@ import { Logo } from "./Logo";
 
 const footerLinks = {
   Firm: [
-    { label: "What we do", href: "#/what-we-do" },
-    { label: "Who we work with", href: "#/who-we-work-with" },
-    { label: "Careers", href: "#/careers" },
-    { label: "Reviews", href: "#/reviews" },
-    { label: "FAQ", href: "#/faq" },
-    { label: "Contact", href: "#/contact" },
+    { label: "What we do", href: "/what-we-do" },
+    { label: "Who we work with", href: "/who-we-work-with" },
+    { label: "Careers", href: "/careers" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
   Insights: [
-    { label: "Newsletter", href: "#/newsletter" },
-    { label: "Squared Reports", href: "#/insights/squared-reports" },
-    { label: "Looking Glass", href: "#/insights/looking-glass" },
-    { label: "Inside Bain Squared HQ", href: "#/insights/inside-hq" },
-    { label: "Field Notes", href: "#/insights/field-notes" },
+    { label: "Newsletter", href: "/newsletter" },
+    { label: "Squared Reports", href: "/insights/squared-reports" },
+    { label: "Looking Glass", href: "/insights/looking-glass" },
+    { label: "Inside Bain Squared HQ", href: "/insights/inside-hq" },
+    { label: "Field Notes", href: "/insights/field-notes" },
   ],
   Services: [
-    { label: "Agentic AI Automation", href: "#/what-we-do/agentic-ai-automation" },
-    { label: "Fractional CFO", href: "#/what-we-do/fractional-cfo" },
-    { label: "Intangible Asset Valuation", href: "#/what-we-do/intangibles-valuation" },
+    { label: "Agentic AI Automation", href: "/what-we-do/agentic-ai-automation" },
+    { label: "Fractional CFO", href: "/what-we-do/fractional-cfo" },
+    { label: "Intangible Asset Valuation", href: "/what-we-do/intangibles-valuation" },
   ],
 };
 
@@ -81,7 +81,7 @@ export function Footer() {
               A monthly selection of ideas and practical reading across AI, finance and enterprise value.
             </p>
             <a
-              href="#/newsletter"
+              href="/newsletter"
               className="text-[14px] font-semibold text-[hsl(var(--bs-forest-deep))] inline-flex items-center gap-2 hover:underline"
               data-testid="link-subscribe"
             >
@@ -98,14 +98,14 @@ export function Footer() {
           </p>
           <div className="flex gap-6 text-[12px] text-[hsl(var(--bs-ink-muted))]">
             <a
-              href="#/privacy"
+              href="/privacy"
               className="hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
               data-testid="link-privacy"
             >
               Privacy Policy
             </a>
             <a
-              href="#/terms"
+              href="/terms"
               className="hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
               data-testid="link-terms"
             >

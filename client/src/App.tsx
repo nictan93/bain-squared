@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect } from "react";
 import { Switch, Route, Router, Redirect, useLocation } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -26,10 +25,12 @@ import FAQ from "@/pages/FAQ";
 import Newsletter from "@/pages/Newsletter";
 import { PRIVACY_BLOCKS, TERMS_BLOCKS } from "@/data/legal";
 
+import { PageMetadata } from "@/components/PageMetadata";
+
 function AppRouter() {
   const [location] = useLocation();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // A new page starts above the fold even when global CSS enables smooth scrolling.
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
@@ -41,7 +42,7 @@ function AppRouter() {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const anchor = event.target instanceof Element ? event.target.closest("a") : null;
       const href = anchor?.getAttribute("href");
-      if (href?.startsWith("#/") && href === window.location.hash && anchor?.target !== "_blank") {
+      if (href?.startsWith("/") && href === window.location.pathname && anchor?.target !== "_blank") {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
       }
     };
@@ -162,13 +163,14 @@ function AppRouter() {
   );
 }
 
-function App() {
+function App({ ssrPath }: { ssrPath?: string }) {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router hook={useHashLocation}>
+        <Router ssrPath={ssrPath}>
           <AppRouter />
+          <PageMetadata />
         </Router>
       </TooltipProvider>
     </QueryClientProvider>

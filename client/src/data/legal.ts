@@ -25,7 +25,7 @@ export const PRIVACY_BLOCKS: Block[] = [
   },
   {
     type: "p",
-    text: "See our [Terms of Use](#/terms) for the other terms that apply to your use of our Sites.",
+    text: "See our [Terms of Use](/terms) for the other terms that apply to your use of our Sites.",
   },
 
   { type: "h2", text: "Contents" },
@@ -203,7 +203,7 @@ export const TERMS_BLOCKS: Block[] = [
   },
   {
     type: "p",
-    text: "For an explanation of how we collect, use, and store personal data, please read our [Privacy Policy](#/privacy).",
+    text: "For an explanation of how we collect, use, and store personal data, please read our [Privacy Policy](/privacy).",
   },
 
   { type: "h2", text: "1. Copyrights" },

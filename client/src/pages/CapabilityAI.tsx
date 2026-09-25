@@ -323,7 +323,7 @@ export default function CapabilityAI({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
-            <a href="#/what-we-do" className="underline">
+            <a href="/what-we-do" className="underline">
               What we do
             </a>
             .
@@ -362,7 +362,7 @@ export default function CapabilityAI({ params }: Props) {
           headlineLines={config.methodHeadlineLines}
           body={config.methodBody}
           linkLabel="Learn more"
-          linkHref="#/what-we-do"
+          linkHref="/what-we-do"
         />
 
         <GrowthPartnerRecommender cards={config.recommenderCards} />
@@ -373,7 +373,7 @@ export default function CapabilityAI({ params }: Props) {
           headline={slug === "managed-services" ? "Discuss your operating needs." : slug === "llm-optimization" ? "Discuss your search visibility." : "Talk to our AI team."}
           body="Tell us which workflow or business decision needs attention. We will discuss the constraint, the available information and a practical next step."
           ctaLabel="Speak with us"
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

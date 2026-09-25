@@ -1,3 +1,5 @@
+import { syncMedia } from "./sync-media";
+import { syncSanity } from "./sync-sanity";
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
 import { rm, readFile } from "node:fs/promises";
@@ -31,11 +33,16 @@ const allowlist = [
 ];
 
 async function buildAll() {
+  await syncSanity();
+  await syncMedia();
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
   await viteBuild();
 
+  await esbuild({entryPoints:["script/prerender.tsx"],platform:"node",bundle:true,packages:"external",format:"esm",outfile:"dist/prerender.mjs",jsx:"automatic",alias:{"@":process.cwd()+"/client/src"}});
+  const { prerender } = await import(process.cwd()+"/dist/prerender.mjs");
+  await prerender();
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
   const allDeps = [

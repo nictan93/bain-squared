@@ -3,7 +3,7 @@
  *
  * One central source of placeholder articles so every Insights-family page
  * (overview, featured topics, publications, all-insights lists) shares a
- * consistent voice and look. All hrefs point to "#/contact" since article
+ * consistent voice and look. All hrefs point to "/contact" since article
  * detail pages are not built yet.
  */
 
@@ -18,7 +18,7 @@ import type {
 import type { PublicationTile } from "@/components/PublicationGrid";
 import type { AltFeatureItem } from "@/components/AltFeatureRows";
 
-const PLACEHOLDER_HREF = "#/contact";
+const PLACEHOLDER_HREF = "/contact";
 
 /** Stable Unsplash images (free, no auth). */
 const IMG = {
@@ -133,21 +133,21 @@ export const explorePublicationsTabs = [
     label: "Perspectives",
     body: "Perspectives takes a position on a business question and connects the evidence to a decision. Explore essays across technology, finance and enterprise value.",
     ctaLabel: "Explore Perspectives",
-    ctaHref: "#/insights/perspectives",
+    ctaHref: "/insights/perspectives",
     image: IMG.perspectives,
   },
   {
     label: "Squared Reports",
     body: "Squared Reports brings together structured analysis, evidence and practical frameworks for complex business decisions.",
     ctaLabel: "Explore Squared Reports",
-    ctaHref: "#/insights/squared-reports",
+    ctaHref: "/insights/squared-reports",
     image: IMG.squared_reports,
   },
   {
     label: "Looking Glass",
     body: "Looking Glass examines emerging changes in technology and business models, what they could mean and what leaders should watch next.",
     ctaLabel: "Explore Looking Glass",
-    ctaHref: "#/insights/looking-glass",
+    ctaHref: "/insights/looking-glass",
     image: IMG.looking_glass,
   },
 ];

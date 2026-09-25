@@ -87,8 +87,6 @@ function FAQRow({ item, index }: { item: FAQItem; index: number }) {
 export default function FAQ() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    document.title =
-      "Frequently Asked Questions | Bain Squared — Valuation, CFO Advisory & AI Automation";
   }, []);
 
   return (
@@ -247,7 +245,7 @@ export default function FAQ() {
               </div>
               <div className="lg:col-span-4 lg:text-right">
                 <a
-                  href="#/contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold uppercase tracking-[0.08em]"
                   style={{
                     background: "#FFFFFF",

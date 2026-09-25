@@ -24,8 +24,8 @@ export const ARTICLES: Record<string, Article> = {
     heroImage:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
     authors: [
-      { name: "Nicholas Tan", href: "#/who-we-work-with" },
-      { name: "Priya Raman", href: "#/who-we-work-with" },
+      { name: "Nicholas Tan", href: "/who-we-work-with" },
+      { name: "Priya Raman", href: "/who-we-work-with" },
     ],
     withAuthors: [{ name: "the Bain Squared AI team" }],
     blocks: [
@@ -120,7 +120,7 @@ export const ARTICLES: Record<string, Article> = {
 
       {
         type: "p",
-        text: "If you want a second opinion on where your program is stalling, we will tell you on the first call. That is what we do. [Talk to our AI team](#/contact).",
+        text: "If you want a second opinion on where your program is stalling, we will tell you on the first call. That is what we do. [Talk to our AI team](/contact).",
       },
     ],
   },
@@ -134,7 +134,7 @@ export const ARTICLES: Record<string, Article> = {
     type: "Client Story",
     heroImage:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80",
-    authors: [{ name: "Nicholas Tan", href: "#/who-we-work-with" }],
+    authors: [{ name: "Nicholas Tan", href: "/who-we-work-with" }],
     blocks: [
       {
         type: "p",
@@ -163,7 +163,7 @@ export const ARTICLES: Record<string, Article> = {
       },
       {
         type: "p",
-        text: "If your finance function still cannot answer margin questions in the same room as the operator, [we should talk](#/contact).",
+        text: "If your finance function still cannot answer margin questions in the same room as the operator, [we should talk](/contact).",
       },
     ],
   },
@@ -177,7 +177,7 @@ export const ARTICLES: Record<string, Article> = {
     type: "Client Story",
     heroImage:
       "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=2400&q=80",
-    authors: [{ name: "Priya Raman", href: "#/who-we-work-with" }],
+    authors: [{ name: "Priya Raman", href: "/who-we-work-with" }],
     blocks: [
       {
         type: "p",
@@ -206,7 +206,7 @@ export const ARTICLES: Record<string, Article> = {
       },
       {
         type: "p",
-        text: "If you have outrun your operating model, [we should talk](#/contact).",
+        text: "If you have outrun your operating model, [we should talk](/contact).",
       },
     ],
   },
@@ -220,7 +220,7 @@ export const ARTICLES: Record<string, Article> = {
     type: "Client Story",
     heroImage:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80",
-    authors: [{ name: "Nicholas Tan", href: "#/who-we-work-with" }],
+    authors: [{ name: "Nicholas Tan", href: "/who-we-work-with" }],
     blocks: [
       {
         type: "p",
@@ -249,7 +249,7 @@ export const ARTICLES: Record<string, Article> = {
       },
       {
         type: "p",
-        text: "If you have an ESOP valuation that needs to survive scrutiny, [we should talk](#/contact).",
+        text: "If you have an ESOP valuation that needs to survive scrutiny, [we should talk](/contact).",
       },
     ],
   },

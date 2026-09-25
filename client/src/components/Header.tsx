@@ -267,7 +267,7 @@ export function Header() {
                     </button>
                   ) : (
                     <a
-                      href={toHash(item.href)}
+                      href={toSiteLink(item.href)}
                       className="inline-flex items-center pt-0 pb-5 text-[15px] font-semibold tracking-[0.005em] text-[hsl(var(--bs-ink))] hover:text-[hsl(var(--bs-forest-deep))] transition-colors"
                       data-testid={`link-nav-${slugify(item.label)}`}
                     >
@@ -306,7 +306,7 @@ export function Header() {
               <div className="bs-container py-10">
                 {/* Go to overview */}
                 <a
-                  href={toHash(item.panel!.overviewHref)}
+                  href={toSiteLink(item.panel!.overviewHref)}
                   className="inline-flex items-center gap-2 text-[15px] font-bold text-[hsl(var(--bs-ink))] mb-10 group/overview"
                   data-testid={`link-overview-${slugify(item.label)}`}
                 >
@@ -338,7 +338,7 @@ export function Header() {
                         {col.items.map((sub) => (
                           <li key={sub.label}>
                             <a
-                              href={toHash(sub.href)}
+                              href={toSiteLink(sub.href)}
                               className="group/link block"
                               data-testid={`link-mega-${slugify(sub.label)}`}
                             >
@@ -440,7 +440,7 @@ export function Header() {
                           <div className="pb-6 pt-1">
                             {/* Go to overview */}
                             <a
-                              href={toHash(item.panel.overviewHref)}
+                              href={toSiteLink(item.panel.overviewHref)}
                               className="inline-flex items-center gap-2 text-[15px] font-medium text-[hsl(var(--bs-ink))] mb-6 pl-1"
                               data-testid={`link-mobile-overview-${slugify(item.label)}`}
                             >
@@ -474,7 +474,7 @@ export function Header() {
                                       style={{ borderColor: "hsl(var(--bs-hairline))" }}
                                     >
                                       <a
-                                        href={toHash(sub.href)}
+                                        href={toSiteLink(sub.href)}
                                         className="flex items-center justify-between py-4 pl-1"
                                         data-testid={`link-mobile-sub-${slugify(sub.label)}`}
                                       >
@@ -497,7 +497,7 @@ export function Header() {
                       </>
                     ) : (
                       <a
-                        href={toHash(item.href)}
+                        href={toSiteLink(item.href)}
                         className="flex items-center justify-between py-5 text-[19px] font-medium text-[hsl(var(--bs-ink))]"
                         data-testid={`link-mobile-${slugify(item.label)}`}
                       >
@@ -525,11 +525,8 @@ function slugify(s: string) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-/**
- * Convert an internal path like "/what-we-do" to its hash-router form "#/what-we-do".
- * Leaves already-hashed, absolute (http), tel/mailto, or anchor links untouched.
- */
-function toHash(href: string): string {
+/** Preserve real page paths, external URLs and section anchors. */
+function toSiteLink(href: string): string {
   if (!href) return href;
   if (
     href.startsWith("#") ||
@@ -540,6 +537,6 @@ function toHash(href: string): string {
   ) {
     return href;
   }
-  if (href.startsWith("/")) return `#${href}`;
+  if (href.startsWith("/")) return href;
   return href;
 }

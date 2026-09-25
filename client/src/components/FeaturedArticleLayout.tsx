@@ -15,7 +15,7 @@ export type FeaturedArticle = {
 
 type Props = {
   lead: FeaturedArticle;
-  secondary: [FeaturedArticle, FeaturedArticle];
+  secondary: FeaturedArticle[];
 };
 
 export function FeaturedArticleLayout({ lead, secondary }: Props) {

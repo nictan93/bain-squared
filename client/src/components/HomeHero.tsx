@@ -1,3 +1,4 @@
+import media from "@/data/homepage-media.json";
 import { useEffect, useState } from "react";
 
 /**
@@ -7,6 +8,8 @@ import { useEffect, useState } from "react";
  */
 export function HomeHero() {
   const [scrolled, setScrolled] = useState(0);
+  const [playMotion, setPlayMotion] = useState(false);
+  useEffect(() => {const query=window.matchMedia("(prefers-reduced-motion: reduce)");const update=()=>setPlayMotion(!query.matches);update();query.addEventListener("change",update);return ()=>query.removeEventListener("change",update);}, []);
 
   useEffect(() => {
     const handler = () => setScrolled(Math.min(window.scrollY, 600));
@@ -29,11 +32,12 @@ export function HomeHero() {
           className="absolute inset-0 bs-kenburns"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80')",
+              `url('${media.image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
+        {media.video && playMotion && <video className="absolute inset-0 h-full w-full object-cover" src={media.video} poster={media.image} autoPlay muted loop playsInline aria-hidden="true" />}
         {/* Dark gradient overlay for legibility */}
         <div
           className="absolute inset-0"
@@ -44,6 +48,7 @@ export function HomeHero() {
         />
       </div>
 
+      {media.video && <button type="button" onClick={()=>setPlayMotion(!playMotion)} className="absolute bottom-6 right-6 z-20 px-3 py-2 text-sm bg-white text-black">{playMotion ? "Pause video" : "Play video"}</button>}
       {/* Headline */}
       <div
         className="relative z-10 h-full bs-container flex items-center"

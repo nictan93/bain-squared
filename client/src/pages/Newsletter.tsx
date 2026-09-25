@@ -20,11 +20,6 @@ export default function Newsletter() {
   const [submitted, setSubmitted] = useState(false);
   const emailRef = useRef<HTMLInputElement>(null);
   const signupRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "The Bain Squared Brief | Bain Squared";
-    return () => { document.title = previousTitle; };
-  }, []);
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const body = `Please add this address to the Bain Squared newsletter:\n\n${email}`;
@@ -68,7 +63,7 @@ export default function Newsletter() {
                       </div>
                     </form>
                   )}
-                  <p id="newsletter-request-note" className="mt-4 text-[13px] text-[hsl(var(--bs-ink-muted))]">Opens an email request. Read our <a href="#/privacy" className="underline underline-offset-2">privacy policy</a>.</p>
+                  <p id="newsletter-request-note" className="mt-4 text-[13px] text-[hsl(var(--bs-ink-muted))]">Opens an email request. Read our <a href="/privacy" className="underline underline-offset-2">privacy policy</a>.</p>
                 </div>
               </div>
             </div>

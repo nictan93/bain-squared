@@ -105,8 +105,6 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 export default function Reviews() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    document.title =
-      "Bain Squared Reviews | Client Feedback on Valuation, CFO Advisory & AI Automation";
   }, []);
 
   return (
@@ -282,7 +280,7 @@ export default function Reviews() {
                 Tell us what needs to change and the decision you need to make. We will discuss the context and whether our team can help.
               </p>
               <a
-                href="#/contact"
+                href="/contact"
                 className="bs-btn bs-btn-inverse mt-8 inline-flex items-center gap-2"
                 data-testid="cta-contact"
               >

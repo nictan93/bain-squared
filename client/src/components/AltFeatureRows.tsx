@@ -16,7 +16,7 @@ export type AltFeatureItem = {
 };
 
 type Props = {
-  items: [AltFeatureItem, AltFeatureItem];
+  items: AltFeatureItem[];
 };
 
 export function AltFeatureRows({ items }: Props) {

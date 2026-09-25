@@ -9,7 +9,7 @@ type Props = {
   body: string;
   /** Link label inside the white card (e.g. "Learn more"). */
   linkLabel: string;
-  /** Link target. Should be a #/route hash href. */
+  /** Link target. Should be a /route hash href. */
   linkHref: string;
 };
 

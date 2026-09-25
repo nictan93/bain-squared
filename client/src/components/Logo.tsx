@@ -9,7 +9,7 @@ interface LogoProps {
 export function Logo({ className = "", showWordmark = true, size = 44 }: LogoProps) {
   return (
     <a
-      href="#/"
+      href="/"
       className={`inline-flex items-center shrink-0 ${className}`}
       aria-label="Bain Squared home"
       data-testid="link-logo"

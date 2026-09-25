@@ -168,7 +168,7 @@ export default function CapabilityValuation({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
-            <a href="#/what-we-do" className="underline">
+            <a href="/what-we-do" className="underline">
               What we do
             </a>
             .
@@ -219,7 +219,7 @@ export default function CapabilityValuation({ params }: Props) {
           headlineLines={config.methodHeadlineLines}
           body={config.methodBody}
           linkLabel="Learn more"
-          linkHref="#/what-we-do"
+          linkHref="/what-we-do"
         />
 
         <SquaredMethod />
@@ -228,7 +228,7 @@ export default function CapabilityValuation({ params }: Props) {
           headline={config.teamHeadline}
           body={config.teamBody}
           ctaLabel={config.teamCTA}
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

@@ -13,6 +13,9 @@ import {
   publicationsRecommended,
 } from "@/data/insights-content";
 
+import { launchCards, launchFeatured, launchRecommended } from "@/data/launch";
+import { MiniArticleGrid } from "@/components/MiniArticleGrid";
+
 export default function Insights() {
   return (
     <div className="min-h-screen bs-bg-canvas">
@@ -21,7 +24,7 @@ export default function Insights() {
         <InsightsHero
           title="Insights"
           ctaLabel="Sign up for our newsletter"
-          ctaHref="#/newsletter"
+          ctaHref="/newsletter"
           headline="Ideas for the decisions that shape your business."
           body="Explore perspectives, practical methods and deeper analysis across AI, finance and enterprise value."
         />
@@ -31,19 +34,20 @@ export default function Insights() {
         </div>
 
         <RecommendedSidebar
-          featured={publicationsFeaturedHero}
-          recommended={publicationsRecommended}
+          featured={launchFeatured}
+          recommended={launchRecommended}
         />
 
         <ExplorePublications tabs={explorePublicationsTabs} />
+        <MiniArticleGrid heading="The latest from Bain Squared" articles={launchCards} />
 
         <WhitepaperPanel
-          headline="Bain Squared's 2026 Operator Outlook"
-          body="A structured look at the choices facing growing businesses across AI, finance and enterprise value. Explore the questions, assumptions and practical tools behind the analysis."
+          headline={launchFeatured.title}
+          body={launchFeatured.dek}
           ctaLabel="Read the report"
-          ctaHref="#/contact"
+          ctaHref={launchFeatured.href}
           image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
-          imageAlt="Operator reading the 2026 Outlook on a tablet."
+          imageAlt=""
         />
 
         <NewsletterSubscribe />

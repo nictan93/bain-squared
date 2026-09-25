@@ -3,7 +3,7 @@ type Props = {
   headline: string;
   /** CTA button label (white button, forest text). */
   ctaLabel: string;
-  /** CTA target, should be a #/route hash href or mailto. */
+  /** CTA target, should be a /route hash href or mailto. */
   ctaHref: string;
 };
 

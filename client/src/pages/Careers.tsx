@@ -18,7 +18,7 @@ export default function Careers() {
           lead="Work across technology, finance and valuation."
           body="We bring together people across technology, finance and valuation to solve complex business problems. You will work alongside clients, contribute your judgment and help turn decisions into working systems."
           ctas={[
-            { label: "Register your interest", href: "#/careers-form", variant: "primary" },
+            { label: "Register your interest", href: "/careers-form", variant: "primary" },
           ]}
         />
 
@@ -53,7 +53,7 @@ export default function Careers() {
           headline="Develop your expertise through the work."
           body="Work across analysis and implementation, with colleagues and clients who bring different expertise. We value thoughtful questions, clear communication and a willingness to learn through delivery."
           ctaLabel="Register your interest"
-          ctaHref="#/careers-form"
+          ctaHref="/careers-form"
           image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Two consultants in a working session, focused on the work."
         />
@@ -64,26 +64,26 @@ export default function Careers() {
             {
               eyebrow: "Field notes",
               title: "How we approach a working conversation.",
-              href: "#/careers-form",
+              href: "/careers-form",
               image:
                 "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
             },
             {
               eyebrow: "Craft",
               title: "Preparing AI workflows for ongoing operation.",
-              href: "#/careers-form",
+              href: "/careers-form",
               image:
                 "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
             },
           ]}
           seeAllLabel="See all insights"
-          seeAllHref="#/insights"
+          seeAllHref="/insights"
         />
 
         <CTAStrip
           text="Tell us what you could bring to Bain Squared."
           buttonLabel="Register your interest"
-          href="#/careers-form"
+          href="/careers-form"
         />
       </main>
       <Footer />

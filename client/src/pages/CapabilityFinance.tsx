@@ -205,7 +205,7 @@ export default function CapabilityFinance({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Capability not found</h1>
           <p className="mt-4">
             We could not find that capability. Head back to{" "}
-            <a href="#/what-we-do" className="underline">
+            <a href="/what-we-do" className="underline">
               What we do
             </a>
             .
@@ -246,7 +246,7 @@ export default function CapabilityFinance({ params }: Props) {
           headline={config.whitepaperHeadline}
           body={config.whitepaperBody}
           ctaLabel="Download the paper"
-          ctaHref="#/contact"
+          ctaHref="/contact"
           image={config.whitepaperImage}
           imageAlt="Operator working through the finance playbook in print."
         />
@@ -257,7 +257,7 @@ export default function CapabilityFinance({ params }: Props) {
           headline="Speak with a Bain Squared CFO."
           body="Tell us where finance needs to provide better information or leadership. We will discuss the current process and whether ongoing support or a defined project fits the need."
           ctaLabel="Speak with a Bain Squared CFO"
-          ctaHref="#/contact"
+          ctaHref="/contact"
         />
       </main>
       <Footer />

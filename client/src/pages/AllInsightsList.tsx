@@ -12,6 +12,8 @@ import {
   moreArticlesMini,
 } from "@/data/insights-content";
 
+import { byPublication, launchCards } from "@/data/launch";
+
 type ListConfig = {
   title: string;
   headline: string;
@@ -65,7 +67,7 @@ export default function AllInsightsList({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Section not found</h1>
           <p className="mt-4">
             We could not find that section. Head back to{" "}
-            <a href="#/insights" className="underline">
+            <a href="/insights" className="underline">
               Insights
             </a>
             .
@@ -76,6 +78,7 @@ export default function AllInsightsList({ params }: Props) {
     );
   }
 
+  const launch = byPublication(config.title);
   const articles = showMore
     ? [...moreArticlesMini, ...buildExtraArticles(slug)]
     : moreArticlesMini;
@@ -87,19 +90,19 @@ export default function AllInsightsList({ params }: Props) {
         <InsightsHero
           title={config.title}
           ctaLabel="Sign up for our newsletter"
-          ctaHref="#/newsletter"
+          ctaHref="/newsletter"
           headline={config.headline}
           body={config.body}
         />
 
         <FeaturedArticleLayout
-          lead={fieldNotesFeatured}
-          secondary={fieldNotesSecondary}
+          lead={launch[0] || fieldNotesFeatured}
+          secondary={launch.length ? launch.slice(1,3) : fieldNotesSecondary}
         />
 
-        <MiniArticleGrid heading="More from the desk" articles={articles} />
+        <MiniArticleGrid heading={launch.length ? "Continue reading" : "More from the desk"} articles={launch.length ? (launch.length>3 ? launch.slice(3) : launchCards.filter(a=>a.category!==config.title).slice(0,3)) : articles} />
 
-        {!showMore && (
+        {!launch.length && !showMore && (
           <section className="bs-bg-canvas pb-20 md:pb-28">
             <div className="bs-container flex justify-center">
               <button

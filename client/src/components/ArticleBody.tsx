@@ -231,7 +231,7 @@ function inline(input: string): React.ReactNode[] {
   apply(/\[([^\]]+)\]\(([^)]+)\)/g, (m, key) => (
     <a
       key={`a-${key}`}
-      href={m[2]}
+      href={/^(https?:\/\/|\/(?!\/)|#|mailto:)/i.test(m[2]) ? m[2] : undefined}
       className="underline underline-offset-[3px] hover:no-underline"
       style={{ color: "hsl(var(--bs-forest-deep))" }}
     >

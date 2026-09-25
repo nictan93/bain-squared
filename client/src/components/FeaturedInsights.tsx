@@ -16,28 +16,8 @@ type Insight = {
   image: string;
 };
 
-const insights: Insight[] = [
-  {
-    category: "AI",
-    title: "The Operator's Playbook for Agentic AI",
-    excerpt:
-      "A practical look at workflow ownership, reliable information and the cost of keeping AI in operation.",
-    href: "#/insights/operators-playbook-agentic-ai",
-    type: "Field Notes",
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    category: "Financial Transformation",
-    title: "Explore financial transformation",
-    excerpt:
-      "See how we improve reporting, forecasting and the systems behind the finance function.",
-    href: "#/what-we-do/financial-transformation",
-    type: "Service overview",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
-  },
-];
+import { launchCards } from "@/data/launch";
+const insights: Insight[] = ["R01","F03"].map(id=> {const a=launchCards.find(a=>a.id===id) || launchCards[0];return {...a,excerpt:a.dek};});
 
 export function FeaturedInsights() {
   return (
@@ -130,7 +110,7 @@ export function FeaturedInsights() {
         {/* See all insights */}
         <div className="mt-16 flex justify-center">
           <a
-            href="#/insights"
+            href="/insights"
             className="inline-flex items-center gap-2 px-10 py-4 text-[13px] font-bold tracking-[0.08em] uppercase border transition-colors"
             style={{
               borderColor: "hsl(var(--bs-forest-deep))",

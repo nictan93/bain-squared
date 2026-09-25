@@ -13,6 +13,8 @@ import {
   publicationsRecommended,
 } from "@/data/insights-content";
 
+import { byPublication, launchCards, launchFeatured, launchRecommended } from "@/data/launch";
+
 type PublicationConfig = {
   eyebrow: string;
   title: string;
@@ -74,6 +76,7 @@ type Props = {
 export default function Publication({ params }: Props) {
   const slug = params.slug;
   const config = PUB_CONFIG[slug];
+  const articles = byPublication(config?.title || "");
 
   if (!config) {
     return (
@@ -83,7 +86,7 @@ export default function Publication({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Publication not found</h1>
           <p className="mt-4">
             We could not find that publication. Head back to{" "}
-            <a href="#/insights" className="underline">
+            <a href="/insights" className="underline">
               Insights
             </a>
             .
@@ -112,13 +115,13 @@ export default function Publication({ params }: Props) {
           after={config.introAfter}
         />
 
-        <AltFeatureRows items={altFeaturePairs} />
+        <AltFeatureRows items={articles.map(a=>({...a,ctaLabel:"Read "+a.type.toLowerCase(),ctaHref:a.href}))} />
 
-        <PublicationGrid tiles={perspectiveTiles} />
+        <PublicationGrid tiles={launchCards.filter(a=>a.category!==config.title).slice(0,3)} />
 
         <RecommendedSidebar
-          featured={publicationsFeaturedHero}
-          recommended={publicationsRecommended}
+          featured={launchFeatured}
+          recommended={launchRecommended}
         />
 
         <NewsletterSubscribe />

@@ -30,7 +30,7 @@ const pillars: Pillar[] = [
       tag: "Agentic AI Automation",
       title: "The operator's playbook for agentic AI",
       source: "Field Notes",
-      href: "#/insights/operators-playbook-agentic-ai",
+      href: "/insights/operators-playbook-agentic-ai",
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
     },
@@ -43,7 +43,7 @@ const pillars: Pillar[] = [
       tag: "Financial Transformation",
       title: "Rebuilding the finance function",
       source: "Service overview",
-      href: "#/what-we-do/financial-transformation",
+      href: "/what-we-do/financial-transformation",
       image:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
     },
@@ -56,7 +56,7 @@ const pillars: Pillar[] = [
       tag: "Intangible Asset Valuation",
       title: "Independent intangible asset valuation",
       source: "Service overview",
-      href: "#/what-we-do/intangibles-valuation",
+      href: "/what-we-do/intangibles-valuation",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
     },

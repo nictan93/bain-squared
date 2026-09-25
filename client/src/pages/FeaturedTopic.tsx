@@ -10,6 +10,8 @@ import {
   featuredClientStories,
 } from "@/data/insights-content";
 
+import { launchCards } from "@/data/launch";
+
 type TopicConfig = {
   eyebrow: string;
   title: string;
@@ -89,7 +91,7 @@ type Props = {
 export default function FeaturedTopic({ params }: Props) {
   const slug = params.slug;
   const config = TOPIC_CONFIG[slug];
-  const articles = articlesByTopic[slug];
+  const articles = launchCards.filter(a=>a.tags.includes(slug));
 
   if (!config || !articles) {
     return (
@@ -99,7 +101,7 @@ export default function FeaturedTopic({ params }: Props) {
           <h1 className="font-display text-4xl" style={{ fontSize: "var(--bs-type-page)", lineHeight: 1.1 , fontFamily: "Bitter, Georgia, serif"}}>Topic not found</h1>
           <p className="mt-4">
             We could not find that topic. Head back to{" "}
-            <a href="#/insights" className="underline">
+            <a href="/insights" className="underline">
               Insights
             </a>
             .
@@ -135,7 +137,7 @@ export default function FeaturedTopic({ params }: Props) {
         <CTAStrip
           text="Discuss the decision facing your business."
           buttonLabel="Talk to us"
-          href="#/contact"
+          href="/contact"
         />
       </main>
       <Footer />
