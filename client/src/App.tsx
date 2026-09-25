@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useLayoutEffect } from "react";
 import { Switch, Route, Router, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
@@ -172,6 +173,7 @@ function App({ ssrPath }: { ssrPath?: string }) {
           <AppRouter />
           <PageMetadata />
         </Router>
+        <Analytics />
       </TooltipProvider>
     </QueryClientProvider>
   );
