@@ -551,3 +551,16 @@ input[type='search']::-webkit-search-cancel-button {
   padding: 0.08em 0.12em 0 0;
   color: hsl(var(--bs-ink));
 }
+
+/* Keep service and topic copy readable when the image fills a narrow screen. */
+.bs-service-hero-wash {
+  background: linear-gradient(to right, #F7F5F2 0%, #F7F5F2 26%, rgba(247,245,242,0.92) 42%, rgba(247,245,242,0.55) 58%, rgba(247,245,242,0) 74%);
+}
+.bs-topic-hero-wash {
+  background: linear-gradient(90deg, rgba(247,245,242,0.94) 0%, rgba(247,245,242,0.78) 38%, rgba(247,245,242,0.10) 70%, rgba(247,245,242,0) 100%);
+}
+@media (max-width: 767px) {
+  .bs-service-hero-wash, .bs-topic-hero-wash {
+    background: rgba(247,245,242,0.92);
+  }
+}

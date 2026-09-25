@@ -54,7 +54,7 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
   },
   "intangibles-valuation": {
     eyebrow: "Featured topic",
-    title: "Intangibles Valuation",
+    title: "Intangible Asset Valuation",
     titleAccent: "Putting a defensible number on what you cannot see.",
     lede: "How to price brand, IP, data, and ESOPs in a way that holds up to the audit committee.",
     image:

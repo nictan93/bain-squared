@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 
 /**
- * "AI that works in action" centered text block — mirrors Thoughtworks image 5.
+ * "Our work in action" centered text block — mirrors Thoughtworks image 5.
  */
 export function AIInActionHeader() {
   return (
@@ -19,7 +19,7 @@ export function AIInActionHeader() {
             }}
           >
             <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
-              AI that works
+              Our work
             </span>{" "}
             in action
           </h2>
@@ -27,8 +27,8 @@ export function AIInActionHeader() {
             className="mt-6 mx-auto text-[17px] md:text-[18px] leading-[1.55]"
             style={{ color: "hsl(var(--bs-ink-muted))", maxWidth: "780px" }}
           >
-            Our clients get to focus on improving commercial results, rather
-            than having their stack run rings around them.
+            Explore engagements across operating models, financial transformation
+            and valuation.
           </p>
           <a
             href="#/insights/client-stories"

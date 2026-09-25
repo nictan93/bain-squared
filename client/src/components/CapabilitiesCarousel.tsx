@@ -35,7 +35,7 @@ const capabilities: Capability[] = [
       "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Intangibles Assets Valuation",
+    title: "Intangible Asset Valuation",
     href: "#/what-we-do/intangibles-valuation",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",

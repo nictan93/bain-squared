@@ -56,14 +56,6 @@ export function BusinessAreaSwitcher({
         data-testid="business-area-switcher"
       >
         <div className="bs-container">
-          {eyebrow && (
-            <div
-              className="text-[13px] uppercase tracking-[0.08em] font-medium mb-4"
-              style={{ color: "hsl(var(--bs-forest-deep))" }}
-            >
-              {eyebrow}
-            </div>
-          )}
           {heading && (
             <h2
               className="font-display mb-10"
@@ -166,14 +158,6 @@ export function BusinessAreaSwitcher({
       data-testid="business-area-switcher"
     >
       <div className="bs-container">
-        {eyebrow && (
-          <div
-            className="text-[13px] uppercase tracking-[0.08em] font-medium mb-4"
-            style={{ color: "hsl(var(--bs-forest-deep))" }}
-          >
-            {eyebrow}
-          </div>
-        )}
         {heading && (
           <h2
             className="font-display mb-12 md:mb-16"

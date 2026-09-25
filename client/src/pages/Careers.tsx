@@ -50,10 +50,9 @@ export default function Careers() {
         <WhyBainSquared />
 
         <YouMatter
-          eyebrow="You matter"
           headline="Your work, your craft, your career."
           body="We invest in the operator behind the consultant. Named partner sponsors, quarterly craft reviews, transparent comp bands, and the kind of project staffing that lets you actually finish what you start. Career growth here is documented, not implied."
-          ctaLabel="Learn more about life here"
+          ctaLabel="Explore roles and apply"
           ctaHref="#/careers-form"
           image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
           imageAlt="Two consultants in a working session, focused on the work."
@@ -78,7 +77,7 @@ export default function Careers() {
             },
           ]}
           seeAllLabel="See all insights"
-          seeAllHref="#/contact"
+          seeAllHref="#/insights"
         />
 
         <CTAStrip

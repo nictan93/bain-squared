@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
  * - Intro descriptive paragraph above the switcher (per v2 spec).
  * - Left rail: 3 tab labels stacked, active one has Forest Deep underline + bold + chevron
  * - Right: short pillar description + dedicated post tile mapped to that pillar's
- *   capability (Agentic AI, Financial Transformation, Intangibles Valuation).
+ *   capability (Agentic AI, Financial Transformation, Intangible Asset Valuation).
  */
 
 type Pillar = {
@@ -53,7 +53,7 @@ const pillars: Pillar[] = [
     description:
       "We value what balance sheets miss. Brand, IP, ESOPs, and the intangible engines that drive real enterprise worth.",
     card: {
-      tag: "Intangibles Valuation",
+      tag: "Intangible Asset Valuation",
       title: "Independent intangible asset valuation",
       source: "Service overview",
       href: "#/what-we-do/intangibles-valuation",

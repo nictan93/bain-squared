@@ -17,7 +17,7 @@ const pillars = [
   },
   {
     num: "03.",
-    title: "Intangibles Valuation",
+    title: "Intangible Asset Valuation",
     body: "Today, more than 90% of company value is intangible. Brand, IP, goodwill, ESOPs, data. We value what others overlook, in numbers that hold up in boardrooms and audits.",
     cta: "See valuation services",
     href: "#what-we-do",

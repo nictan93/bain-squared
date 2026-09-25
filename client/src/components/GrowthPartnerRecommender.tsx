@@ -1,29 +1,20 @@
 type Card = {
-  /** Card heading, e.g. "Static boxes" */
+  /** The business problem this card addresses. */
   title: string;
   /** Body copy on the card. */
   body: string;
 };
 
 type Props = {
-  /** Optional kicker eyebrow above the headline. */
-  eyebrow?: string;
-  /** Subheading printed under the headline ("Recommended for you" by default). */
+  /** Supporting line below the headline. */
   subheading?: string;
   /** 3 pain-point cards. */
   cards: Card[];
 };
 
-/**
- * GrowthPartnerRecommender — Image 5 in the v5 spec.
- *
- * Locked to a single state per spec ("You have selected Bain Squared as your
- * growth partner.") with three static cards that name the operator pains we
- * remove. Reset and Read more are deliberately stripped.
- */
+/** Three starting points for scoping an engagement. */
 export function GrowthPartnerRecommender({
-  eyebrow = "Your match",
-  subheading = "Recommended for you",
+  subheading = "Start with the work that is slowing your team down.",
   cards,
 }: Props) {
   return (
@@ -32,14 +23,6 @@ export function GrowthPartnerRecommender({
       data-testid="growth-partner-recommender"
     >
       <div className="bs-container">
-        {eyebrow && (
-          <div
-            className="text-[13px] uppercase tracking-[0.08em] font-medium mb-4"
-            style={{ color: "hsl(var(--bs-forest-deep))" }}
-          >
-            {eyebrow}
-          </div>
-        )}
         <h2
           className="font-display mb-16"
           style={{
@@ -51,9 +34,7 @@ export function GrowthPartnerRecommender({
             maxWidth: "1000px",
           }}
         >
-          You have selected{" "}
-          <span style={{ fontWeight: 800 }}>Bain Squared</span> as your{" "}
-          <span style={{ fontWeight: 800 }}>growth partner</span>.
+          Where should we start?
         </h2>
 
         <div className="mb-6">

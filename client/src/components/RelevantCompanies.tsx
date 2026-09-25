@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 /**
- * "Companies that are relevant to our focus" — Image 3-style switcher.
+ * "Companies that are relevant to their next stage" — Image 3-style switcher.
  * Centered description + bold headline above the tabbed switcher.
  * Tabs on the left, descriptive text + (non-clickable) image post on the right.
  */
@@ -18,7 +18,7 @@ const segments: Segment[] = [
   {
     tab: "Funded Startups",
     description:
-      "Series A through C teams under pressure to convert capital into durable revenue. We tighten the operating core, design the agentic stack, and rebuild the financial story before the next raise.",
+      "Funded teams need to turn capital into a business that can sustain its growth. We bring financial planning, operating discipline and practical automation to the work behind the next milestone.",
     image:
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
@@ -27,7 +27,7 @@ const segments: Segment[] = [
   {
     tab: "Growing SMEs",
     description:
-      "Founder-led businesses scaling past their first inflection. We install the systems, controls, and operator playbooks that let leadership step out of the weeds without losing the edge.",
+      "Growing businesses often outgrow the processes that got them started. We improve reporting, controls and everyday workflows so leaders can delegate with confidence.",
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
@@ -36,7 +36,7 @@ const segments: Segment[] = [
   {
     tab: "Expanding Companies",
     description:
-      "Mid-market and pre-IPO businesses entering new markets, acquiring assets, or restructuring for scale. We bring fractional CFO depth, intangibles valuation rigor, and the operator instincts boardrooms actually need.",
+      "Companies entering new markets, acquiring assets or preparing for an exit need reliable information and clear accountability. We support finance leadership, operational change and the valuations behind those decisions.",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
     imageCaption:
@@ -59,9 +59,9 @@ export function RelevantCompanies() {
           className="mx-auto text-center text-[17px] md:text-[19px] leading-[1.55]"
           style={{ color: "hsl(var(--bs-ink))", maxWidth: "880px" }}
         >
-          Operator-led advisory only works if the operator on the other side
-          is ready. We work with leadership teams who treat AI, finance, and
-          intangibles as one connected build, not three separate projects.
+          A growing business can need stronger financial visibility, more operating
+          capacity or a defensible valuation. We scope the engagement around
+          that need and the people responsible for acting on it.
         </p>
 
         <h2
@@ -75,9 +75,9 @@ export function RelevantCompanies() {
             maxWidth: "900px",
           }}
         >
-          Companies that are relevant to{" "}
+          Built for businesses preparing for{" "}
           <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
-            our focus
+            their next stage
           </span>
         </h2>
 

@@ -43,12 +43,6 @@ export function IntangiblesSplit({ blocks }: Props) {
               }}
               data-testid={`intangibles-block-${i}`}
             >
-              <div
-                className="text-[13px] uppercase tracking-[0.08em] font-medium mb-5"
-                style={{ color: "hsl(var(--bs-forest-deep))" }}
-              >
-                {b.eyebrow}
-              </div>
               <h3
                 className="font-display mb-5"
                 style={{

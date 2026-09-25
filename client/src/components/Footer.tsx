@@ -18,8 +18,8 @@ const footerLinks = {
   ],
   Services: [
     { label: "Agentic AI Automation", href: "#/what-we-do/agentic-ai-automation" },
-    { label: "Financial Advisory", href: "#/what-we-do/fractional-cfo" },
-    { label: "Intangibles Valuation", href: "#/what-we-do/intangibles-valuation" },
+    { label: "Fractional CFO", href: "#/what-we-do/fractional-cfo" },
+    { label: "Intangible Asset Valuation", href: "#/what-we-do/intangibles-valuation" },
   ],
 };
 
@@ -35,7 +35,11 @@ export function Footer() {
           <div className="md:col-span-4">
             <Logo />
             <p className="mt-6 text-[15px] leading-[1.6] text-[hsl(var(--bs-ink-muted))] max-w-[380px]">
-              Bain Squared is a growth consultancy based in Singapore. We work with founders, CFOs, and boards who are building real companies in real markets. Our work runs across three stages: deploying agentic AI where it actually moves the business, redesigning the finance function so it can hold the weight of growth, and valuing what's been built so it stands up to scrutiny. We sit in the seat with our clients. We don't pitch slides we can't deliver against.
+              Bain Squared is an advisory and operating firm based in Singapore.
+              We help growing businesses put AI into operation, strengthen their
+              finance functions and value intangible assets. Our teams work
+              alongside clients to implement the systems, models and processes
+              behind those decisions.
             </p>
             <div className="mt-6 text-[13px] text-[hsl(var(--bs-ink-muted))] space-y-1">
               <p>7 Temasek Boulevard</p>

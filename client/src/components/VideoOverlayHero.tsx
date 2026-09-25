@@ -52,24 +52,12 @@ export function VideoOverlayHero({
           />
         </div>
         {/* Left fade to canvas so text remains legible regardless of image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, #F7F5F2 0%, #F7F5F2 26%, rgba(247,245,242,0.92) 42%, rgba(247,245,242,0.55) 58%, rgba(247,245,242,0) 74%)",
-          }}
-        />
+        <div className="absolute inset-0 bs-service-hero-wash" />
       </div>
 
       {/* Foreground text */}
       <div className="relative z-10 h-full bs-container flex items-center">
         <div className="max-w-[640px]">
-          <div
-            className="text-[14px] uppercase tracking-[0.08em] font-medium mb-6"
-            style={{ color: "hsl(var(--bs-forest-deep))" }}
-          >
-            {eyebrow}
-          </div>
           <h1
             className="font-display"
             style={{

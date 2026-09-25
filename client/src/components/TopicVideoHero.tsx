@@ -56,13 +56,7 @@ export function TopicVideoHero({
           }}
         />
         {/* Light wash for legibility */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(247,245,242,0.94) 0%, rgba(247,245,242,0.78) 38%, rgba(247,245,242,0.10) 70%, rgba(247,245,242,0) 100%)",
-          }}
-        />
+        <div className="absolute inset-0 bs-topic-hero-wash" />
       </div>
 
       {/* Content */}
@@ -75,14 +69,6 @@ export function TopicVideoHero({
         }}
       >
         <div className="max-w-[760px]">
-          {eyebrow && (
-            <div
-              className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-bold mb-5"
-              style={{ color: "hsl(var(--bs-forest-deep))" }}
-            >
-              {eyebrow}
-            </div>
-          )}
           <h1
             className="font-display"
             style={{

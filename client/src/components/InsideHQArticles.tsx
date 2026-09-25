@@ -22,7 +22,7 @@ export function InsideHQArticles({
   heading,
   articles,
   seeAllLabel = "See all insights",
-  seeAllHref = "#/contact",
+  seeAllHref = "#/insights",
 }: Props) {
   return (
     <section

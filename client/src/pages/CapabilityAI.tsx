@@ -37,8 +37,8 @@ type AIConfig = {
 const AI_CONFIG: Record<string, AIConfig> = {
   "agentic-ai-automation": {
     eyebrow: "Agentic AI Automation",
-    headline: "Stop stalling, start scaling. Deliver real AI value.",
-    sub: "We design, ship, and defend agents that earn their seat at the operating table.",
+    headline: "Agentic AI built for the work your business runs.",
+    sub: "We design, deploy and operate supervised AI workflows across sales, marketing and operations.",
     heroImage:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt: "Agentic AI infrastructure visualised over a city skyline.",
@@ -115,23 +115,23 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "See how we diagnose the real bottleneck, design the system you actually need, deploy it inside your stack, and defend the result when the board or auditor pushes back.",
     recommenderCards: [
       {
-        title: "Static boxes",
-        body: "The decisioning is hard-coded in spreadsheets and tribal knowledge. We replace it with a small set of supervised agents that learn the rules and write them back.",
+        title: "Rigid processes",
+        body: "Decision rules are spread across spreadsheets and individual know-how. We document the rules and exceptions, then build supervised workflows around them.",
       },
       {
         title: "Manual work",
-        body: "Hours lost to copy-paste, reconciliations, and inbox triage. We map the highest-volume tasks, automate inside your stack, and instrument the outcome so it never silently regresses.",
+        body: "Copying data, reconciling records and sorting inboxes take time away from higher-value work. We automate suitable tasks in your existing systems, with checks and a named owner.",
       },
       {
-        title: "Messy data",
-        body: "Disconnected systems, duplicated records, no system of record. We stand up the retrieval layer and the schema agents need, then ship the first agent on top of it in weeks.",
+        title: "Disconnected data",
+        body: "When systems hold conflicting or incomplete records, automation becomes unreliable. We connect the information a workflow needs and establish how it will be maintained.",
       },
     ],
   },
   "managed-services": {
     eyebrow: "Managed Service",
-    headline: "Let us drive ROI with results, not retainers.",
-    sub: "Operator-led delivery for the work you do not want to staff in-house.",
+    headline: "Managed services with ownership of the outcome.",
+    sub: "A dedicated operating team, measured against the work you need delivered.",
     heroImage:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
@@ -208,7 +208,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "Diagnose the real bottleneck. Design the operating change. Deploy the pod inside your stack. Defend the outcome with weekly numbers that survive board scrutiny.",
     recommenderCards: [
       {
-        title: "Static boxes",
+        title: "Rigid processes",
         body: "Org charts that look complete on paper but leave critical work uncovered. We slot a pod into the gaps and bring the operating cadence with us.",
       },
       {
@@ -223,15 +223,15 @@ const AI_CONFIG: Record<string, AIConfig> = {
   },
   "llm-optimization": {
     eyebrow: "LLM Optimization (LLMO)",
-    headline: "Get seen in the age of AI. GEO and AEO on top of SEO.",
-    sub: "Rank in answer engines, win the recommendation, and grow organic the operator way.",
+    headline: "Help buyers find your business through AI search.",
+    sub: "LLM Optimization connects clear content, sound search fundamentals and ongoing visibility monitoring.",
     heroImage:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
       "Abstract circuit pattern representing answer-engine retrieval.",
     introParagraphs: [
-      "Search is no longer a list of blue links. Answer engines, copilots, and recommender models decide which brands get seen, named, and trusted. Most marketing teams are still optimising for the previous decade.",
-      "We help you win the new surface. Generative Engine Optimisation (GEO), Answer Engine Optimisation (AEO), and the SEO foundation underneath. Auditable, defensible, and tied back to traffic the CFO will recognise.",
+      "Buyers discover businesses through search results, AI answers and recommendations. Buyers still need reliable information about what a company does and why it fits their needs.",
+      "We improve the material buyers and search systems use to understand your company, then track visibility and enquiries over time. The work combines technical search fundamentals, clear service information and evidence your team can maintain.",
     ],
     stats: [
       {
@@ -292,7 +292,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
       "Diagnose what is breaking discovery today. Design the retrieval and content stack. Deploy across answer engines and classic search. Defend the lift with traffic the CFO recognises.",
     recommenderCards: [
       {
-        title: "Static boxes",
+        title: "Rigid processes",
         body: "A site map and content calendar that no longer reflects how buyers search. We rebuild the architecture around the queries you actually need to win.",
       },
       {
@@ -300,7 +300,7 @@ const AI_CONFIG: Record<string, AIConfig> = {
         body: "Hours lost to keyword spreadsheets and ad-hoc audits. We replace it with an instrumented loop that surfaces the next move every week.",
       },
       {
-        title: "Messy data",
+        title: "Disconnected data",
         body: "Conversion and traffic data scattered across analytics, CRM, and the CMS. We unify the signal so the same dashboard answers marketing's question and finance's question.",
       },
     ],

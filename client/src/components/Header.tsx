@@ -50,7 +50,7 @@ const NAV: NavItem[] = [
           heading: "",
           items: [
             { label: "ESOP Valuation", href: "/what-we-do/esop-valuation" },
-            { label: "Intangibles Assets Valuation", href: "/what-we-do/intangibles-valuation" },
+            { label: "Intangible Asset Valuation", href: "/what-we-do/intangibles-valuation" },
           ],
         },
       ],
@@ -72,7 +72,7 @@ const NAV: NavItem[] = [
           items: [
             { label: "AI", href: "/insights/topics/ai" },
             { label: "Financial Transformation", href: "/insights/topics/financial-transformation" },
-            { label: "Intangibles Valuation", href: "/insights/topics/intangibles-valuation" },
+            { label: "Intangible Asset Valuation", href: "/insights/topics/intangibles-valuation" },
             { label: "Growth Strategy", href: "/insights/topics/growth-strategy" },
           ],
         },

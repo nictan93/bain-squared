@@ -11,7 +11,7 @@ import { useState, FormEvent, ChangeEvent } from "react";
 const SERVICES = [
   "Agentic AI",
   "Financial Advisory",
-  "Intangibles Valuation",
+  "Intangible Asset Valuation",
   "The Squared Method (all three)",
   "Not sure yet",
 ];

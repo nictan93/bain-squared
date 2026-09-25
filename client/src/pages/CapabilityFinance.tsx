@@ -32,8 +32,8 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
   "fractional-cfo": {
     eyebrow: "Fractional CFO",
     headline:
-      "A CFO in the room when you need one. None of the overhead when you do not.",
-    sub: "Operator-grade finance leadership, plugged into your stack from week one.",
+      "Fractional CFO leadership for your next stage of growth.",
+    sub: "Senior finance leadership across planning, cash flow and board reporting.",
     heroImage:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
@@ -44,7 +44,7 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
     introAccent: "runs the work",
     introAfter: ".",
     switcherEyebrow: "How the engagement looks",
-    switcherHeading: "Pick the surface you want covered first.",
+    switcherHeading: "Choose where you need finance leadership.",
     switcherItems: [
       {
         label: "Budgeting",
@@ -111,16 +111,16 @@ const FINANCE_CONFIG: Record<string, FinanceConfig> = {
   "financial-transformation": {
     eyebrow: "Financial Transformation",
     headline:
-      "Rebuild the finance function for the decade you are about to operate in.",
-    sub: "Re-platform the close, the controls, and the operating model behind them.",
+      "Financial transformation that improves how decisions get made.",
+    sub: "Rebuild reporting, planning and controls around the way your business operates.",
     heroImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2400&q=80",
     heroImageAlt:
       "Finance team reviewing a multi-screen dashboard in a modern office.",
     introParagraph:
       "We rebuild finance functions around budgeting, forecasting, board reporting, investor communication, cash flow management, and the strategic financial decisions that decide the next twelve months. Real change, with the working papers, the close cadence, and the controls all updated in lock-step.",
-    introBefore: "Finance, rebuilt for the",
-    introAccent: "agentic decade",
+    introBefore: "Build a finance function",
+    introAccent: "you can rely on",
     introAfter: ".",
     switcherEyebrow: "What gets rebuilt",
     switcherHeading: "Choose the part of the function you want rebuilt first.",

@@ -14,11 +14,10 @@ export function WhatWeDoIntro() {
           className="mx-auto text-center text-[17px] md:text-[19px] leading-[1.55]"
           style={{ color: "hsl(var(--bs-ink))", maxWidth: "880px" }}
         >
-          Everyone agrees AI matters. Fewer leaders agree on where to start,
-          or who owns the risk when it breaks. CIOs worry about fragile cores.
-          Functional chiefs want AI to streamline their functions. CEOs and
-          product leaders want something new in market. Most AI programs fail
-          by picking only one of these.
+          Growth puts pressure on the systems, decisions and financial information
+          a business depends on. Bain Squared brings together AI operations,
+          finance leadership and valuation to address the constraint holding
+          the business back.
         </p>
 
         <h1
@@ -32,7 +31,7 @@ export function WhatWeDoIntro() {
             maxWidth: "900px",
           }}
         >
-          How Bain Squared helps every chief deliver{" "}
+          The capabilities behind your next stage of{" "}
           <span style={{ color: "hsl(var(--bs-forest-deep))" }}>
             growth
           </span>

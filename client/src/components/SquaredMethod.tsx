@@ -32,14 +32,11 @@ export function SquaredMethod() {
             className="mt-10 mx-auto text-[16px] md:text-[18px] leading-[1.6]"
             style={{ color: "hsl(var(--bs-ink))", maxWidth: "820px" }}
           >
-            Four phases, run in sequence:{" "}
-            <strong>Diagnose</strong> the real bottleneck and the risk owner.{" "}
-            <strong>Design</strong> the operating change, not a deck.{" "}
-            <strong>Deploy</strong> inside your stack alongside your team, not
-            in a parallel sandbox. <strong>Defend</strong> the result when
-            the board, the auditor, or the next AI cycle pushes back.
-            Designed to move from boardroom decision to operating reality in
-            weeks, not quarters.
+            <strong>Diagnose</strong> the constraint and agree who owns it.{" "}
+            <strong>Design</strong> the workflow, model or system around that need.{" "}
+            <strong>Deploy</strong> it alongside your team, with clear responsibilities
+            and checks. <strong>Defend</strong> the result with documented evidence,
+            ongoing review and a practical handover.
           </p>
 
           {/* Four-step chip row */}

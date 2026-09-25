@@ -34,9 +34,9 @@ export function CalloutAI() {
             className="mt-8 mx-auto text-[17px] md:text-[18px] leading-[1.55]"
             style={{ color: "hsl(var(--bs-ink-muted))", maxWidth: "720px" }}
           >
-            But there are three foundations you need in place first. This is
-            where Bain Squared comes in. Rebuild. Rewire. Reimagine. Operator
-            judgment for the AI era.
+            Working AI needs reliable data, clear ownership and a process worth
+            automating. We combine implementation with finance and valuation
+            expertise to help leadership teams put change into operation.
           </p>
 
           <a

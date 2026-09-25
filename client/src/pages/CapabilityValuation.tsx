@@ -42,7 +42,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
   "intangibles-valuation": {
     eyebrow: "Intangible Asset Valuation",
     headline:
-      "The value you have built lives in intangibles. We make it defensible.",
+      "Intangible asset valuations you can explain and defend.",
     sub: "We help founders preparing for exit, ESOP rounds, intangible-heavy companies, and PE sponsors who need defensible valuations.",
     heroImage:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80",
@@ -57,7 +57,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
         eyebrow: "Intangible assets",
         title:
           "Show a defensible valuation when you fundraise.",
-        body: "Increase the potential value of your company by adding tangible value to your intangible assets, while decreasing the risk of leakage. Here are some examples of undervalued assets we make visible on the balance sheet and in the data room.",
+        body: "Understand the contribution of software, data, intellectual property and customer relationships to your business. We document the valuation approach, assumptions and supporting evidence for the decision at hand.",
         tags: [
           "Brand",
           "IP",
@@ -89,7 +89,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "defensible intangibles.",
     ],
     methodBody:
-      "Diagnose where value is hiding. Design the valuation approach the auditor will accept. Deploy the working papers inside your stack. Defend the number when the board, the auditor, or the next round pushes back.",
+      "Diagnose where value is hiding. Design the valuation approach and document its assumptions. Deploy the working papers inside your stack. Defend the number when the board, the auditor, or the next round pushes back.",
     teamHeadline: "Talk to our valuation team.",
     teamBody:
       "Bring the question your team has been arguing about. We will tell you on the first call whether the right next move is a single valuation, a portfolio of intangibles, or the full audit-ready package.",
@@ -98,7 +98,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
   "esop-valuation": {
     eyebrow: "ESOP Valuation",
     headline:
-      "Independent ESOP valuations the auditor accepts and the board can defend.",
+      "Independent ESOP valuations for reporting and equity decisions.",
     sub: "Built for founders preparing for exit, ESOP rounds, intangible-heavy companies, and PE sponsors who need defensible valuations.",
     heroImage:
       "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=2400&q=80",
@@ -106,7 +106,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "Financial documents fanned across a wooden boardroom table.",
     introParagraphs: [
       "Stock-option grants are part of the operating system of a modern company. The valuation that sits behind them is where the audit and the board ask their hardest questions. We make sure the answer is ready before they ask.",
-      "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Built to the standard the auditor accepts and the operator can defend.",
+      "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Documented for review by your finance team, board and auditor.",
     ],
     splitBlocks: [
       {
@@ -144,7 +144,7 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "audit-ready ESOP.",
     ],
     methodBody:
-      "Diagnose the equity story. Design the valuation approach the auditor will accept. Deploy the working papers and the comp expense. Defend the number when the board, the auditor, or the next round pushes back.",
+      "Diagnose the equity story. Design the valuation approach and document its assumptions. Deploy the working papers and the comp expense. Defend the number when the board, the auditor, or the next round pushes back.",
     teamHeadline: "Talk to our valuation team.",
     teamBody:
       "Bring the equity question your team has been arguing about. We will tell you on the first call whether the right next move is an ESOP valuation, a full intangibles report, or the audit-ready package.",

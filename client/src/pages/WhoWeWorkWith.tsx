@@ -16,8 +16,8 @@ export default function WhoWeWorkWith() {
         <PageHero
           title="Who we"
           accentSuffix="work with"
-          lead="Operators, founders, and boards who treat AI, finance, and intangibles as one connected build."
-          body="We are selective. The work we do is operator-led, not slide-led, which means the teams we partner with have to be ready to rebuild the parts of the business that the next phase of growth depends on."
+          lead="Founders, CFOs and leadership teams preparing for the next stage of growth."
+          body="We work with growing businesses whose finance, operations or systems need to catch up. Engagements start with a specific decision or operating constraint, with clear ownership for the work that follows."
           ctas={[
             { label: "Speak to us", href: "#/contact", variant: "primary" },
             { label: "What we do", href: "#/what-we-do", variant: "outline" },
@@ -62,7 +62,6 @@ export default function WhoWeWorkWith() {
         />
 
         <PartnerEcosystems
-          eyebrow="Partner ecosystems"
           before="We build alongside the"
           accent="partners and platforms"
           after="our clients already trust."
