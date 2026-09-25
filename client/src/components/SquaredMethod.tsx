@@ -1,3 +1,4 @@
+import { OutcomeNote } from "./OutcomeNote";
 import { Plus, Minus } from "lucide-react";
 
 const stages = [
@@ -23,7 +24,7 @@ export function SquaredMethod() {
                 <Plus className="group-open:hidden shrink-0" size={22} aria-hidden="true" /><Minus className="hidden group-open:block shrink-0" size={22} aria-hidden="true" />
               </summary>
               <p className="mt-5 text-[17px] leading-[1.6]">{stage.body}</p>
-              <p className="mt-6 pl-5 border-l-[3px] border-[hsl(var(--bs-forest-deep))] text-[15px] leading-[1.6]">{stage.output}</p>
+              <OutcomeNote className="mt-6">{stage.output}</OutcomeNote>
             </details>
           ))}
         </div>

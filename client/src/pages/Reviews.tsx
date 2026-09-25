@@ -155,12 +155,10 @@ export default function Reviews() {
         {REVIEW_GROUPS.map((group, gi) => (
           <section
             key={group.id}
-            className="pb-16 md:pb-24"
+            className="py-16 md:py-24"
             data-testid={`reviews-group-${group.id}`}
             style={{
-              borderTop:
-                gi === 0 ? "1px solid hsl(var(--bs-hairline))" : undefined,
-              paddingTop: "64px",
+              background: gi % 2 === 0 ? "hsl(var(--bs-surface))" : "hsl(var(--bs-forest-soft))",
             }}
           >
             <div className="bs-container">
@@ -201,13 +199,6 @@ export default function Reviews() {
               </div>
             </div>
 
-            {gi < REVIEW_GROUPS.length - 1 && (
-              <div className="bs-container mt-16 md:mt-24">
-                <div
-                  style={{ borderTop: "1px solid hsl(var(--bs-hairline))" }}
-                />
-              </div>
-            )}
           </section>
         ))}
 

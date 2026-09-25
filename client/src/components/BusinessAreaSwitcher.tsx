@@ -1,3 +1,4 @@
+import { OutcomeNote } from "./OutcomeNote";
 import { useState } from "react";
 
 export type SwitcherItem = {
@@ -136,12 +137,7 @@ export function BusinessAreaSwitcher({
                 {current.body}
               </p>
               {current.caption && (
-                <p
-                  className="mt-6 text-[14px] italic"
-                  style={{ color: "hsl(var(--bs-ink-muted))" }}
-                >
-                  {current.caption}
-                </p>
+                <OutcomeNote key={current.title} className="mt-6 text-[hsl(var(--bs-ink-muted))]">{current.caption}</OutcomeNote>
               )}
             </div>
           </div>
@@ -260,12 +256,7 @@ export function BusinessAreaSwitcher({
               />
             </div>
             {current.caption && (
-              <p
-                className="mt-3 text-[14px] italic"
-                style={{ color: "hsl(var(--bs-ink-muted))" }}
-              >
-                {current.caption}
-              </p>
+              <OutcomeNote key={current.title} className="mt-6 text-[hsl(var(--bs-ink-muted))]">{current.caption}</OutcomeNote>
             )}
           </div>
         </div>

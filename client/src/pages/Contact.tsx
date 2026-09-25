@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { ContactFormFields } from "@/components/ContactFormFields";
-import { OfficeLocationsSidebar } from "@/components/OfficeLocationsSidebar";
 import { Footer } from "@/components/Footer";
 
 export default function Contact() {
@@ -43,7 +42,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Form + sidebar */}
+        {/* Form */}
         <section
           className="bs-bg-canvas pb-20 md:pb-28"
           data-testid="contact-form-section"
@@ -52,9 +51,6 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
               <div className="lg:col-span-8">
                 <ContactFormFields />
-              </div>
-              <div className="lg:col-span-4">
-                <OfficeLocationsSidebar />
               </div>
             </div>
           </div>

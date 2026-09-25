@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { FormIntro } from "@/components/FormIntro";
 import { RoleSwitcher } from "@/components/RoleSwitcher";
 import { CareersFormFields } from "@/components/CareersFormFields";
-import { OfficeLocationsSidebar } from "@/components/OfficeLocationsSidebar";
 import { Footer } from "@/components/Footer";
 
 export default function CareersForm() {
@@ -56,7 +55,7 @@ export default function CareersForm() {
           ]}
         />
 
-        {/* Form + sidebar */}
+        {/* Form */}
         <section
           className="bs-bg-canvas py-16 md:py-24"
           data-testid="careers-form-section"
@@ -76,9 +75,6 @@ export default function CareersForm() {
                   Register your interest
                 </h2>
                 <CareersFormFields />
-              </div>
-              <div className="lg:col-span-4">
-                <OfficeLocationsSidebar />
               </div>
             </div>
           </div>

@@ -579,3 +579,17 @@ input[type='search']::-webkit-search-cancel-button {
  --bs-type-ui: clamp(18px, 1.6vw, 20px);
  --bs-type-label: 13px;
 }
+
+/* Shared editorial styles for the restored newsletter layout. */
+.bs-page-heading { font-family: Bitter, Georgia, serif; font-size: var(--bs-type-page); font-weight: 700; line-height: 1.1; letter-spacing: -.02em; }
+.bs-section-heading { font-family: Bitter, Georgia, serif; font-size: var(--bs-type-section); font-weight: 700; line-height: 1.2; letter-spacing: -.015em; }
+.bs-card-heading { font-family: Bitter, Georgia, serif; font-size: var(--bs-type-card); font-weight: 700; line-height: 1.2; }
+
+/* Approved site accents; decorative movement ends after the first reveal. */
+.bs-outcome-sequence { display: inline-flex; align-items: center; gap: 3px; height: 24px; flex: 0 0 auto; }
+.bs-outcome-sequence i { display: block; width: 9px; height: 9px; background: #C97B7B; }
+.bs-outcome-sequence i:nth-child(2) { background: #D4A24B; animation-delay: .16s; }
+.bs-outcome-sequence i:nth-child(3) { background: #6FA59C; animation-delay: .32s; }
+.bs-outcome-sequence[data-visible="true"] i { animation-name: bs-outcome-bounce; animation-duration: 1.1s; animation-timing-function: cubic-bezier(.25,.8,.35,1); animation-iteration-count: 1; animation-fill-mode: both; }
+@keyframes bs-outcome-bounce { 0%,48%,86%,100% { transform: translateY(0); } 25% { transform: translateY(-9px); } 68% { transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .bs-outcome-sequence[data-visible="true"] i { animation: none; } }

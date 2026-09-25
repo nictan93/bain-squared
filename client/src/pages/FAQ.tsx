@@ -161,9 +161,9 @@ export default function FAQ() {
           <section
             key={group.id}
             id={group.id}
-            className="pb-16 md:pb-24"
+            className="py-16 md:py-24"
             data-testid={`faq-group-${group.id}`}
-            style={{ paddingTop: gi === 0 ? "32px" : "64px", scrollMarginTop: "112px" }}
+            style={{ background: gi % 2 === 0 ? "hsl(var(--bs-surface))" : "hsl(var(--bs-forest-soft))", scrollMarginTop: "112px" }}
           >
             <div className="bs-container">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">

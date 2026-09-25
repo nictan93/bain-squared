@@ -41,11 +41,6 @@ export function Footer() {
               alongside clients to implement the systems, models and processes
               behind those decisions.
             </p>
-            <div className="mt-6 text-[13px] text-[hsl(var(--bs-ink-muted))] space-y-1">
-              <p>7 Temasek Boulevard</p>
-              <p>Suntec Tower One</p>
-              <p>Singapore 038987</p>
-            </div>
             <a
               href="mailto:hello@bainsquared.com"
               className="mt-4 inline-block text-[14px] font-semibold text-[hsl(var(--bs-forest-deep))] hover:underline"
