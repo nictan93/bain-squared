@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TopicVideoHero } from "@/components/TopicVideoHero";
@@ -34,7 +35,7 @@ const PUB_CONFIG: Record<string, PublicationConfig> = {
     titleAccent: "A point of view on the decisions ahead.",
     lede: "Essays on technology, finance and enterprise value, with a clear argument and evidence you can examine.",
     image:
-      "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=2400&q=80",
+      siteImage("publication-01", "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Perspectives examines a business question and takes a position on it. Each essay connects the evidence to a decision, explains the tradeoffs and sets out where the argument applies.",
     introBefore: "A clearer view of",
@@ -47,7 +48,7 @@ const PUB_CONFIG: Record<string, PublicationConfig> = {
     titleAccent: "Deeper analysis for consequential decisions.",
     lede: "Research, analytical frameworks and practical tools for business leaders.",
     image:
-      "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80",
+      siteImage("publication-02", "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Squared Reports examines complex questions through structured analysis. Each report brings together evidence, assumptions and a practical framework that readers can use in planning and review.",
     introBefore: "Evidence for",
@@ -60,7 +61,7 @@ const PUB_CONFIG: Record<string, PublicationConfig> = {
     titleAccent: "Emerging changes and what they mean in practice.",
     lede: "A considered view of developments in technology, business models and the economics of growth.",
     image:
-      "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=2400&q=80",
+      siteImage("publication-03", "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Looking Glass examines changes that could affect how businesses operate and create value. Each analysis separates what is observable today from what remains uncertain, and identifies what leaders should watch next.",
     introBefore: "Understand what",

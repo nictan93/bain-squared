@@ -36,7 +36,7 @@ async function buildAll() {
   const snapshot = process.argv.includes("--snapshot");
   if (snapshot && process.env.VERCEL) throw new Error("Snapshot builds are for local migration verification only");
   if (!snapshot) await syncSanity();
-  await syncMedia();
+  await syncMedia(snapshot);
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");

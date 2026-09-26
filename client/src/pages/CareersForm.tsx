@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { FormIntro } from "@/components/FormIntro";
 import { RoleSwitcher } from "@/components/RoleSwitcher";
@@ -22,35 +23,35 @@ export default function CareersForm() {
               description:
                 "Contribute to client work from analysis through implementation. Bring a clear approach to solving problems and the ability to work with the people responsible for using the result.",
               image:
-                "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
+                siteImage("careers-form-01", "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80"),
             },
             {
               label: "Senior Consultant",
               description:
                 "Lead a defined area of delivery, coordinate contributors and help clients make informed decisions. Relevant experience includes scoping work, reviewing quality and preparing an effective handover.",
               image:
-                "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80",
+                siteImage("careers-form-02", "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80"),
             },
             {
               label: "Associate",
               description:
                 "Develop models, research or technical implementations that support a client decision. We are interested in careful analysis, curiosity and a willingness to learn through delivery.",
               image:
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+                siteImage("careers-form-03", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"),
             },
             {
               label: "Partner",
               description:
                 "Bring experience in building a practice, leading client relationships and taking responsibility for delivery. The scope and terms of any partnership are discussed individually.",
               image:
-                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80",
+                siteImage("careers-form-04", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80"),
             },
             {
               label: "Other",
               description:
                 "Tell us how your experience could contribute to the firm. We welcome relevant backgrounds in operations, design, engineering, finance and other disciplines.",
               image:
-                "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
+                siteImage("careers-form-05", "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"),
             },
           ]}
         />

@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InsightsHero } from "@/components/InsightsHero";
@@ -46,7 +47,7 @@ export default function Insights() {
           body={launchFeatured.dek}
           ctaLabel="Read the report"
           ctaHref={launchFeatured.href}
-          image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
+          image={siteImage("insights-01", "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80")}
           imageAlt=""
         />
 

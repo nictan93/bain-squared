@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TopicVideoHero } from "@/components/TopicVideoHero";
@@ -32,7 +33,7 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
     titleAccent: "Putting AI into operation.",
     lede: "Practical analysis of AI workflows, oversight and the decisions behind deployment.",
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80",
+      siteImage("featured-topic-01", "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Putting AI into operation requires decisions about access, responsibility and review. Explore how to choose suitable work, prepare reliable information and assess a system once people depend on it.",
     introBefore: "From experiment to",
@@ -46,7 +47,7 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
     titleAccent: "Finance built around better decisions.",
     lede: "Practical reading on reporting, forecasting, controls and finance leadership.",
     image:
-      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=2400&q=80",
+      siteImage("featured-topic-02", "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "A useful finance function connects reliable information with the people making decisions. Explore ways to improve the close, maintain forecasts and clarify the responsibilities behind reporting and control.",
     introBefore: "Finance, rebuilt for the",
@@ -60,7 +61,7 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
     titleAccent: "Understanding the value behind the business.",
     lede: "Analysis of intangible assets and employee share options, with attention to purpose, assumptions and evidence.",
     image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80",
+      siteImage("featured-topic-03", "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Software, intellectual property, data and customer relationships can contribute to business value in different ways. Explore how to identify those assets and examine a valuation. Related reading on employee share options addresses a separate reporting and equity-planning question.",
     introBefore: "Make the intangible",
@@ -74,7 +75,7 @@ const TOPIC_CONFIG: Record<string, TopicConfig> = {
     titleAccent: "Connecting growth plans with operating decisions.",
     lede: "Perspectives on pricing, resource allocation and the capacity needed to support growth.",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80",
+      siteImage("featured-topic-04", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80"),
     introParagraph:
       "Growth depends on choices about customers, pricing and how work gets delivered. Explore the financial and operating implications of those choices, including the assumptions that need to be tested before resources are committed.",
     introBefore: "Growth that",

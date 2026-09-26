@@ -1,3 +1,4 @@
+import { siteImage, siteAlt } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { PageHero } from "@/components/PageHero";
 import { ImageStripCarousel } from "@/components/ImageStripCarousel";
@@ -28,22 +29,22 @@ export default function WhoWeWorkWith() {
           cards={[
             {
               image:
-                "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+                siteImage("who-we-work-with-01", "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"),
               title: "Technology",
             },
             {
               image:
-                "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
+                siteImage("who-we-work-with-02", "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80"),
               title: "SaaS",
             },
             {
               image:
-                "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
+                siteImage("who-we-work-with-03", "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80"),
               title: "Professional Services",
             },
             {
               image:
-                "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+                siteImage("who-we-work-with-04", "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"),
               title: "Healthcare",
             },
           ]}
@@ -57,8 +58,8 @@ export default function WhoWeWorkWith() {
           body="A regional SaaS operator came to us mid-raise with a story the numbers could not yet defend. We rebuilt the operating model, installed an agentic ops layer in the revenue stack, and rewrote the intangibles narrative for the data room. The round closed on the operator's terms."
           ctaLabel="Read the client story"
           ctaHref="/contact"
-          image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80"
-          imageAlt="Operators in a working session reviewing a rebuilt operating model."
+          image={siteImage("who-we-work-with-05", "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80")}
+          imageAlt={siteAlt("who-we-work-with-05", "Operators in a working session reviewing a rebuilt operating model.")}
         />
 
         <PartnerEcosystems
@@ -74,8 +75,8 @@ export default function WhoWeWorkWith() {
           body="A practical guide to selecting finance workflows for AI, preparing the information they need and defining review before deployment."
           ctaLabel="Download the paper"
           ctaHref="/contact"
-          image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
-          imageAlt="Cover of the Bain Squared whitepaper on agentic AI in finance."
+          image={siteImage("who-we-work-with-06", "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80")}
+          imageAlt={siteAlt("who-we-work-with-06", "Cover of the Bain Squared whitepaper on agentic AI in finance.")}
         />
 
         <CTAStrip

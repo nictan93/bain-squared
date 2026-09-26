@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
@@ -32,7 +33,7 @@ const pillars: Pillar[] = [
       source: "Field Notes",
       href: "/insights/operators-playbook-agentic-ai",
       image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
+        siteImage("pillar-switcher-01", "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80"),
     },
   },
   {
@@ -45,7 +46,7 @@ const pillars: Pillar[] = [
       source: "Service overview",
       href: "/what-we-do/financial-transformation",
       image:
-        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
+        siteImage("pillar-switcher-02", "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80"),
     },
   },
   {
@@ -58,7 +59,7 @@ const pillars: Pillar[] = [
       source: "Service overview",
       href: "/what-we-do/intangibles-valuation",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+        siteImage("pillar-switcher-03", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"),
     },
   },
 ];

@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { useEffect, useRef, useState } from "react";
 import { ChevronRight } from "lucide-react";
 
@@ -27,7 +28,7 @@ const stories: Story[] = [
     ],
     href: "/insights/epc-leader-transforms",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
+      siteImage("client-work-carousel-01", "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"),
   },
   {
     eyebrow: "Featured client success story",
@@ -38,7 +39,7 @@ const stories: Story[] = [
     ],
     href: "/insights/saas-operating-model-90-days",
     image:
-      "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80",
+      siteImage("client-work-carousel-02", "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80"),
   },
   {
     eyebrow: "Featured client success story",
@@ -49,7 +50,7 @@ const stories: Story[] = [
     ],
     href: "/insights/family-owned-esop-defense",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      siteImage("client-work-carousel-03", "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"),
   },
 ];
 

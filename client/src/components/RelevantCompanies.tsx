@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
@@ -20,7 +21,7 @@ const segments: Segment[] = [
     description:
       "Funded teams need to turn capital into a business that can sustain its growth. We bring financial planning, operating discipline and practical automation to the work behind the next milestone.",
     image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
+      siteImage("relevant-companies-01", "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"),
     imageCaption:
       "Connect operating priorities with financial planning.",
   },
@@ -29,7 +30,7 @@ const segments: Segment[] = [
     description:
       "Growing businesses often outgrow the processes that got them started. We improve reporting, controls and everyday workflows so leaders can delegate with confidence.",
     image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
+      siteImage("relevant-companies-02", "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80"),
     imageCaption:
       "Give teams reliable information and clear responsibilities.",
   },
@@ -38,7 +39,7 @@ const segments: Segment[] = [
     description:
       "Companies entering new markets, acquiring assets or preparing for an exit need reliable information and clear accountability. We support finance leadership, operational change and the valuations behind those decisions.",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      siteImage("relevant-companies-03", "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"),
     imageCaption:
       "Prepare the information and operating capacity for expansion.",
   },

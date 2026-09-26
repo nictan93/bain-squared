@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { ChevronRight } from "lucide-react";
 
 /**
@@ -22,7 +23,7 @@ export function ClosingExtraordinaryCTA({
   body = "Work with clients on the systems and decisions that shape their businesses. Explore how you could contribute across technology, finance and valuation.",
   ctaLabel = "Explore careers with us",
   ctaHref = "/careers",
-  image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=80",
+  image = siteImage("closing-extraordinary-c-t-a-01", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=80"),
   imageAlt = "Operators working together at a shared table.",
 }: Props) {
   return (

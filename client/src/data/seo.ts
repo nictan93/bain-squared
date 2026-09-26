@@ -42,7 +42,8 @@ export function metadata(path: string) {
  // Unfinished client evidence is retained for owner review, not submitted for discovery.
  const index=known && !["/reviews","/insights/client-stories","/careers-form"].includes(path);
  const url=(article as any)?.legacyCanonical || SITE+path;
- const image=(article as any)?.migrationSource === "wix" ? article!.heroImageUrl : SITE+"/og-image.png";
+ const cover=article?.heroImageUrl;
+ const image=cover && !/\.svg(?:\?|$)/i.test(cover) ? (cover.startsWith("https://") ? cover : SITE+cover) : SITE+"/og-image.png";
  const organization={"@type":"Organization","@id":SITE+"/#organization",name:"Bain Squared",url:SITE+"/",logo:SITE+"/brand/bain-squared-lockup.png",email:"hello@bainsquared.com"};
  const schema:any={"@context":"https://schema.org","@graph":[organization,{"@type":"WebSite","@id":SITE+"/#website",name:"Bain Squared",url:SITE+"/",publisher:{"@id":organization["@id"]}}]};
  if(article) schema["@graph"].push({"@type":"Article",headline:article.title,description,datePublished:(article as any).publishedAt,dateModified:(article as any).sourceUpdatedAt || (article as any)._updatedAt || (article as any).publishedAt,mainEntityOfPage:url,url,image:[image],author:article.authors.map(a=>({"@type":a.name==="Bain Squared"?"Organization":"Person",name:a.name})),publisher:{"@id":organization["@id"]}});

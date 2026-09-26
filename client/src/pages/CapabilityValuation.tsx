@@ -1,3 +1,4 @@
+import { siteImage, siteAlt } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { VideoOverlayHero } from "@/components/VideoOverlayHero";
@@ -45,9 +46,9 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "Intangible asset valuations you can explain and defend.",
     sub: "Understand the value of software, intellectual property, data and customer relationships for the decision you need to make.",
     heroImage:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80",
+      siteImage("intangibles-valuation", "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80"),
     heroImageAlt:
-      "Abstract data visualisation representing intangible asset value.",
+      siteAlt("intangibles-valuation", "Abstract data visualisation representing intangible asset value."),
     introParagraphs: [
       "An intangible asset valuation starts with a purpose. The question may concern a transaction, financial reporting or a business decision, and that purpose determines the scope and approach.",
       "We assess the asset, its commercial use and the evidence available. The report explains the method and assumptions so your finance team, board and advisers can examine the conclusion.",
@@ -81,8 +82,8 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       },
     ],
     methodImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80",
-    methodImageAlt: "A quiet modern office interior.",
+      siteImage("intangibles-valuation-method", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80"),
+    methodImageAlt: siteAlt("intangibles-valuation-method", "A quiet modern office interior."),
     methodHeadlineLines: [
       "The Squared Method.",
       "The operator's playbook for",
@@ -101,9 +102,9 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       "Independent ESOP valuations for reporting and equity decisions.",
     sub: "Document the value of employee share options, with the purpose, assumptions and relevant reporting requirements made clear.",
     heroImage:
-      "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=2400&q=80",
+      siteImage("esop-valuation", "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=2400&q=80"),
     heroImageAlt:
-      "Financial documents fanned across a wooden boardroom table.",
+      siteAlt("esop-valuation", "Financial documents fanned across a wooden boardroom table."),
     introParagraphs: [
       "Employee share options require clear grant terms and a valuation suited to their purpose. Changes in the business, the grant conditions or the reporting requirements can change the analysis.",
       "We provide independent ESOP valuations for audit, financial reporting, and equity planning, helping companies quantify fair value and share-based compensation expenses. Documented for review by your finance team, board and auditor.",
@@ -136,8 +137,8 @@ const VALUATION_CONFIG: Record<string, ValuationConfig> = {
       },
     ],
     methodImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2400&q=80",
-    methodImageAlt: "Operator reviewing a financial model at a quiet desk.",
+      siteImage("esop-valuation-method", "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2400&q=80"),
+    methodImageAlt: siteAlt("esop-valuation-method", "Operator reviewing a financial model at a quiet desk."),
     methodHeadlineLines: [
       "The Squared Method.",
       "The operator's playbook for",

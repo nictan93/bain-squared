@@ -1,3 +1,4 @@
+import { siteImage } from "@/data/site-media";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
@@ -19,42 +20,42 @@ const tabs: Tab[] = [
     label: "About us",
     body: "Bain Squared brings technology, finance and valuation together to help growing businesses make and implement important decisions. Our work combines analysis with practical delivery alongside the client team.",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-01", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "Connecting specialist knowledge with practical delivery.",
   },
   {
     label: "Our application process",
     body: "Tell us about the work you have done and the problems you want to solve. We use the application conversation to understand your experience, how you approach a problem and where you could contribute.",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-02", "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "A conversation about your experience and approach.",
   },
   {
     label: "Consultant life",
     body: "Work can span discovery, analysis, design, implementation and handover. You will need to explain your thinking, collaborate across disciplines and understand how clients will use the result.",
     image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-03", "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "Working with clients from discovery through handover.",
   },
   {
     label: "Mid-career switch",
     body: "Experience in finance, product, technology or operations can bring a valuable perspective to advisory work. We welcome people who can connect specialist knowledge with the realities of running a business.",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-04", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "Bringing operating experience into advisory work.",
   },
   {
     label: "How we care for our people",
     body: "Clear expectations and open communication matter to how we work together. Use the application process to discuss responsibilities, working arrangements and what you need to do your best work.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-05", "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "Clear expectations and open communication.",
   },
   {
     label: "How we support your growth",
     body: "Build expertise by working through complex problems with colleagues and clients. We value feedback, shared learning and the ability to explain your work clearly to people from other disciplines.",
     image:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80",
+      siteImage("why-bain-squared-06", "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80"),
     imageCaption: "Learning through work across disciplines.",
   },
 ];
