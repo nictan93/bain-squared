@@ -17,9 +17,9 @@ const footerLinks = {
     { label: "Field Notes", href: "/insights/field-notes" },
   ],
   Services: [
-    { label: "Agentic AI Automation", href: "/what-we-do/agentic-ai-automation" },
+    { label: "Agentic AI Automation", href: "/ai-integration" },
     { label: "Fractional CFO", href: "/what-we-do/fractional-cfo" },
-    { label: "Intangible Asset Valuation", href: "/what-we-do/intangibles-valuation" },
+    { label: "Intangible Asset Valuation", href: "/intangibles-valuation" },
   ],
 };
 

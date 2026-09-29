@@ -30,7 +30,7 @@ const services: Record<string,[string,string]> = {
 "intangibles-valuation":["Intangible asset valuation","Define the purpose, evidence and assumptions behind the valuation of software, intellectual property and other intangible assets."],
 "esop-valuation":["ESOP valuation","Prepare a defensible employee share option valuation with clear plan terms, measurement purpose and supporting evidence."],
 };
-for (const [slug,value] of Object.entries(services)) pages["/what-we-do/"+slug]=value;
+for (const [slug,value] of Object.entries(services)) pages[({"agentic-ai-automation":"/ai-integration","financial-transformation":"/financial-transformation","intangibles-valuation":"/intangibles-valuation"} as Record<string,string>)[slug] || "/what-we-do/"+slug]=value;
 for (const [slug,title] of Object.entries({ai:"Agentic AI","financial-transformation":"Financial transformation","intangibles-valuation":"Intangible asset valuation","growth-strategy":"Growth strategy"})) pages["/insights/topics/"+slug]=[title+" insights",`Practical reading and analysis on ${title.toLowerCase()} from Bain Squared.`];
 export const routes = [...Object.keys(pages),...Object.keys(ARTICLES).map(slug=>"/insights/"+slug),...launchRecords.map(articlePath)];
 export function metadata(path: string) {

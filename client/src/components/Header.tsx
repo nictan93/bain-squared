@@ -34,7 +34,7 @@ const NAV: NavItem[] = [
         {
           heading: "Capabilities",
           items: [
-            { label: "Agentic AI Automation", href: "/what-we-do/agentic-ai-automation" },
+            { label: "Agentic AI Automation", href: "/ai-integration" },
             { label: "Managed Services", href: "/what-we-do/managed-services" },
             { label: "LLM Optimization (LLMO)", href: "/what-we-do/llm-optimization" },
           ],
@@ -43,14 +43,14 @@ const NAV: NavItem[] = [
           heading: "",
           items: [
             { label: "Fractional CFO", href: "/what-we-do/fractional-cfo" },
-            { label: "Financial Transformation", href: "/what-we-do/financial-transformation" },
+            { label: "Financial Transformation", href: "/financial-transformation" },
           ],
         },
         {
           heading: "",
           items: [
             { label: "ESOP Valuation", href: "/what-we-do/esop-valuation" },
-            { label: "Intangible Asset Valuation", href: "/what-we-do/intangibles-valuation" },
+            { label: "Intangible Asset Valuation", href: "/intangibles-valuation" },
           ],
         },
       ],

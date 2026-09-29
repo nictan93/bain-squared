@@ -34,32 +34,17 @@
     },
     {
       "source": "/insights/rewiring-fpa",
-      "destination": "/what-we-do/financial-transformation",
+      "destination": "/financial-transformation",
       "permanent": true
     },
     {
       "source": "/insights/intangibles-90-percent",
-      "destination": "/what-we-do/intangibles-valuation",
+      "destination": "/intangibles-valuation",
       "permanent": true
     },
     {
       "source": "/insights/the-squared-method",
       "destination": "/what-we-do",
-      "permanent": true
-    },
-    {
-      "source": "/ai-integration",
-      "destination": "/what-we-do/agentic-ai-automation",
-      "permanent": true
-    },
-    {
-      "source": "/financial-transformation",
-      "destination": "/what-we-do/financial-transformation",
-      "permanent": true
-    },
-    {
-      "source": "/intangibles-valuation",
-      "destination": "/what-we-do/intangibles-valuation",
       "permanent": true
     },
     {
@@ -125,6 +110,21 @@
     {
       "source": "/blog/categories/inside-bain-squared-hq",
       "destination": "/insights/inside-hq",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do/financial-transformation",
+      "destination": "/financial-transformation",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do/intangibles-valuation",
+      "destination": "/intangibles-valuation",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do/agentic-ai-automation",
+      "destination": "/ai-integration",
       "permanent": true
     }
   ]

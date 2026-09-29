@@ -8,7 +8,7 @@ const capabilities: Capability[] = [
   {
     title: "Agentic AI Automation",
     summary: "Supervised workflows across sales, marketing and operations.",
-    href: "/what-we-do/agentic-ai-automation",
+    href: "/ai-integration",
     image:
       siteImage("agentic-ai-automation", "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80"),
   },
@@ -22,14 +22,14 @@ const capabilities: Capability[] = [
   {
     title: "Financial Transformation",
     summary: "Reporting, planning and controls built around your business.",
-    href: "/what-we-do/financial-transformation",
+    href: "/financial-transformation",
     image:
       siteImage("financial-transformation", "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80"),
   },
   {
     title: "Intangible Asset Valuation",
     summary: "Understand and document the value of what you have built.",
-    href: "/what-we-do/intangibles-valuation",
+    href: "/intangibles-valuation",
     image:
       siteImage("intangibles-valuation", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"),
   },

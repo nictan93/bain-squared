@@ -44,7 +44,7 @@ const pillars: Pillar[] = [
       tag: "Financial Transformation",
       title: "Rebuilding the finance function",
       source: "Service overview",
-      href: "/what-we-do/financial-transformation",
+      href: "/financial-transformation",
       image:
         siteImage("pillar-switcher-02", "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80"),
     },
@@ -57,7 +57,7 @@ const pillars: Pillar[] = [
       tag: "Intangible Asset Valuation",
       title: "Independent intangible asset valuation",
       source: "Service overview",
-      href: "/what-we-do/intangibles-valuation",
+      href: "/intangibles-valuation",
       image:
         siteImage("pillar-switcher-03", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"),
     },

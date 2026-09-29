@@ -112,10 +112,10 @@ function AppRouter() {
         <Redirect to="/insights/operators-playbook-agentic-ai" />
       </Route>
       <Route path="/insights/rewiring-fpa">
-        <Redirect to="/what-we-do/financial-transformation" />
+        <Redirect to="/financial-transformation" />
       </Route>
       <Route path="/insights/intangibles-90-percent">
-        <Redirect to="/what-we-do/intangibles-valuation" />
+        <Redirect to="/intangibles-valuation" />
       </Route>
       <Route path="/insights/the-squared-method">
         <Redirect to="/what-we-do" />
@@ -126,8 +126,12 @@ function AppRouter() {
       {/* Article detail — catch-all under /insights/*, must come last */}
       <Route path="/insights/:slug" component={Article} />
 
+      <Route path="/what-we-do/financial-transformation"><Redirect to="/financial-transformation" /></Route>
+      <Route path="/what-we-do/intangibles-valuation"><Redirect to="/intangibles-valuation" /></Route>
+      <Route path="/what-we-do/agentic-ai-automation"><Redirect to="/ai-integration" /></Route>
+
       {/* Capabilities — AI */}
-      <Route path="/what-we-do/agentic-ai-automation">
+      <Route path="/ai-integration">
         {() => <CapabilityAI params={{ slug: "agentic-ai-automation" }} />}
       </Route>
       <Route path="/what-we-do/managed-services">
@@ -141,14 +145,14 @@ function AppRouter() {
       <Route path="/what-we-do/fractional-cfo">
         {() => <CapabilityFinance params={{ slug: "fractional-cfo" }} />}
       </Route>
-      <Route path="/what-we-do/financial-transformation">
+      <Route path="/financial-transformation">
         {() => (
           <CapabilityFinance params={{ slug: "financial-transformation" }} />
         )}
       </Route>
 
       {/* Capabilities — Valuation */}
-      <Route path="/what-we-do/intangibles-valuation">
+      <Route path="/intangibles-valuation">
         {() => (
           <CapabilityValuation
             params={{ slug: "intangibles-valuation" }}
