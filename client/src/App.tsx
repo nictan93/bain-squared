@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import WhatWeDo from "@/pages/WhatWeDo";
+import Sector from "@/pages/Sector";
 import WhoWeWorkWith from "@/pages/WhoWeWorkWith";
 import Careers from "@/pages/Careers";
 import CareersForm from "@/pages/CareersForm";
@@ -60,6 +61,7 @@ function AppRouter() {
       <Route path="/" component={Home} />
       <Route path="/what-we-do" component={WhatWeDo} />
       <Route path="/who-we-work-with" component={WhoWeWorkWith} />
+      <Route path="/news-2/:slug" component={Sector} />
       <Route path="/careers" component={Careers} />
       <Route path="/careers-form" component={CareersForm} />
       <Route path="/contact" component={Contact} />

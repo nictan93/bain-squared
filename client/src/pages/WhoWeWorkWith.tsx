@@ -1,3 +1,4 @@
+import { sectors } from "@/data/sectors";
 import { siteImage, siteAlt } from "@/data/site-media";
 import { Header } from "@/components/Header";
 import { PageHero } from "@/components/PageHero";
@@ -49,6 +50,11 @@ export default function WhoWeWorkWith() {
             },
           ]}
         />
+
+        <section className="bs-container py-16 md:py-24">
+          <h2 className="font-display mb-8" style={{fontSize:"var(--bs-type-section)"}}>Explore your business context</h2>
+          <div className="flex flex-wrap gap-x-10 gap-y-5 text-lg">{sectors.map(sector=><a key={sector.slug} href={"/news-2/"+sector.slug} className="underline underline-offset-4">{sector.title}</a>)}</div>
+        </section>
 
         <RelevantCompanies />
 

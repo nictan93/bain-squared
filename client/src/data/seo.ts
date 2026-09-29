@@ -1,3 +1,4 @@
+import { sectors } from "./sectors";
 import { ARTICLES } from "./articles";
 import { launchRecords, articlePath } from "./launch";
 export const SITE = "https://bain-squared.vercel.app";
@@ -21,6 +22,7 @@ const pages: Record<string,[string,string]> = {
 "/insights/inside-hq": ["Inside Bain Squared HQ", "Explore Bain Squared's approach to scoping, delivery and operating decisions, with practical notes on how we structure the work."],
 "/insights/client-stories": ["Client Stories", "The context, decisions and outcomes behind client engagements."],
 };
+for (const sector of sectors) pages["/news-2/"+sector.slug]=[sector.title+" businesses",sector.body];
 const services: Record<string,[string,string]> = {
 "agentic-ai-automation":["Agentic AI automation","Scope, build and operate bounded AI workflows with clear permissions, human review and measurable operating outcomes."],
 "managed-services":["AI managed services","Keep AI workflows useful after launch with monitoring, exception handling and controlled improvements."],
