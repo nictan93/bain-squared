@@ -22,7 +22,7 @@ export default function Newsletter() {
   useEffect(() => {
     const receive = (event: MessageEvent) => {
       if (event.origin !== window.location.origin || event.source !== frameRef.current?.contentWindow || event.data?.type !== "bs-newsletter-height") return;
-      if (typeof event.data.height === "number" && Number.isFinite(event.data.height)) setFrameHeight(Math.max(190, Math.min(1000, event.data.height + 8)));
+      if (typeof event.data.height === "number" && Number.isFinite(event.data.height)) setFrameHeight(Math.max(80, Math.min(1000, event.data.height + 8)));
     };
     window.addEventListener("message", receive);
     return () => window.removeEventListener("message", receive);
