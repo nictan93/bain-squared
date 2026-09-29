@@ -1,7 +1,7 @@
 import { sectors } from "./sectors";
 import { ARTICLES } from "./articles";
 import { launchRecords, articlePath } from "./launch";
-export const SITE = "https://bain-squared.vercel.app";
+export const SITE = "https://www.bainsquared.com";
 const pages: Record<string,[string,string]> = {
 "/": ["AI, finance and valuation advisory", "Bain Squared helps growing businesses put AI into operation, strengthen finance and assess enterprise value. Explore our services and practical insights."],
 "/what-we-do": ["What we do", "Explore Bain Squared's services in agentic AI, financial transformation and valuation, from defining the problem to implementation and ongoing operation."],
