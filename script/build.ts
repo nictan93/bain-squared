@@ -42,7 +42,7 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
-  await esbuild({entryPoints:["script/prerender.tsx"],platform:"node",bundle:true,packages:"external",format:"esm",outfile:"dist/prerender.mjs",jsx:"automatic",alias:{"@":process.cwd()+"/client/src"}});
+  await esbuild({entryPoints:["script/prerender.tsx"],platform:"node",bundle:true,packages:"external",format:"esm",outfile:"dist/prerender.mjs",jsx:"automatic",alias:{"@":process.cwd()+"/client/src"},define:{"import.meta.env.VITE_NATIVE_INTAKE":JSON.stringify(process.env.VITE_NATIVE_INTAKE || "false")}});
   const { prerender } = await import(process.cwd()+"/dist/prerender.mjs");
   await prerender();
   console.log("building server...");

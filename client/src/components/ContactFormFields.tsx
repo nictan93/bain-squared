@@ -1,8 +1,9 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { nativeIntakeEnabled, sendIntake } from "@/lib/intake";
+import { useState, useRef, FormEvent, ChangeEvent } from "react";
 
 /**
  * ContactFormFields — Contact form.
- * Submits via mailto:hello@bainsquared.com (no backend).
+ * Uses the verified website intake endpoint when enabled; otherwise email handoff.
  *
  * Fields: First*, Last*, Business Email*, Organization*, Job Title*,
  *         Service* dropdown, How can we help?*, Terms*
@@ -44,6 +45,10 @@ const initial: FormState = {
 export function ContactFormFields() {
   const [form, setForm] = useState<FormState>(initial);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [website, setWebsite] = useState("");
+  const requestId = useRef("");
 
   const set =
     <K extends keyof FormState>(key: K) =>
@@ -54,8 +59,19 @@ export function ContactFormFields() {
       setForm((f) => ({ ...f, [key]: value }) as FormState);
     };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (nativeIntakeEnabled) {
+      if (sending) return;
+      setSending(true); setError("");
+      if (!requestId.current) requestId.current = crypto.randomUUID();
+      try {
+        await sendIntake("enquiry", form, requestId.current, website);
+        setSubmitted(true);
+      } catch (err) { setError(err instanceof Error ? err.message : "Please try again or email hello@bainsquared.com."); }
+      finally { setSending(false); }
+      return;
+    }
     const subject = `Inbound — ${form.first} ${form.last} @ ${form.organization} (${form.service})`;
     const bodyLines = [
       `Name: ${form.first} ${form.last}`,
@@ -98,18 +114,19 @@ export function ContactFormFields() {
             fontWeight: 700,
             color: "hsl(var(--bs-ink))", lineHeight: 1.2, fontFamily: "Inter, sans-serif"}}
         >
-          Send the draft to complete your request.
+          {nativeIntakeEnabled ? "Thank you. We have received your enquiry." : "Send the draft to complete your request."}
         </h3>
         <p
           className="text-[16px] leading-[1.6]"
           style={{ color: "hsl(var(--bs-ink))" }}
         >
-          Send the draft from your email app. If it did not open, email hello@bainsquared.com directly with your enquiry.
+          {nativeIntakeEnabled ? "We will review your message and reply to the email address you provided." : "Send the draft from your email app. If it did not open, email hello@bainsquared.com directly with your enquiry."}
         </p>
         <button
           type="button"
           onClick={() => {
             setForm(initial);
+            requestId.current = "";
             setSubmitted(false);
           }}
           className="mt-8 inline-flex items-center gap-2 text-[15px] font-bold border-b-2 pb-1 transition-colors"
@@ -130,6 +147,8 @@ export function ContactFormFields() {
       className="space-y-6"
       data-testid="contact-form"
     >
+      {error && <p role="alert" className="text-red-700">{error}</p>}
+      {nativeIntakeEnabled && <div aria-hidden="true" style={{position:"absolute",left:"-10000px"}}><label>Leave this field empty<input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)} /></label></div>}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="c-first" className={labelClass} style={labelStyle}>
@@ -272,6 +291,8 @@ export function ContactFormFields() {
 
       <button
         type="submit"
+        disabled={sending}
+        aria-busy={sending}
         className="inline-flex items-center justify-center px-10 py-4 text-[15px] font-bold transition-colors whitespace-nowrap border"
         style={{
           backgroundColor: "hsl(var(--bs-forest-deep))",
@@ -290,7 +311,7 @@ export function ContactFormFields() {
         }}
         data-testid="button-submit-contact"
       >
-        Prepare email
+        {sending ? "Sending…" : nativeIntakeEnabled ? "Send enquiry" : "Prepare email"}
       </button>
     </form>
   );

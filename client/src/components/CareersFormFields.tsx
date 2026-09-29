@@ -1,8 +1,9 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { nativeIntakeEnabled, sendIntake } from "@/lib/intake";
+import { useState, useRef, FormEvent, ChangeEvent } from "react";
 
 /**
  * CareersFormFields — 9-field application form.
- * Submits via mailto:hello@bainsquared.com (no backend).
+ * Uses the verified website intake endpoint when enabled; otherwise email handoff.
  *
  * Fields: First*, Last*, Email*, Phone*, Location*, Desired Function*,
  *         LinkedIn*, Intro*, Resume (file name only — mailto can't attach), Terms*
@@ -45,6 +46,10 @@ const initial: FormState = {
 export function CareersFormFields() {
   const [form, setForm] = useState<FormState>(initial);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [website, setWebsite] = useState("");
+  const requestId = useRef("");
 
   const set =
     <K extends keyof FormState>(key: K) =>
@@ -60,8 +65,19 @@ export function CareersFormFields() {
     if (f) setForm((s) => ({ ...s, resumeName: f.name }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (nativeIntakeEnabled) {
+      if (sending) return;
+      setSending(true); setError("");
+      if (!requestId.current) requestId.current = crypto.randomUUID();
+      try {
+        await sendIntake("application", form, requestId.current, website);
+        setSubmitted(true);
+      } catch (err) { setError(err instanceof Error ? err.message : "Please try again or email hello@bainsquared.com."); }
+      finally { setSending(false); }
+      return;
+    }
     const subject = `Career application — ${form.first} ${form.last} (${form.function})`;
     const bodyLines = [
       `Name: ${form.first} ${form.last}`,
@@ -107,18 +123,19 @@ export function CareersFormFields() {
             fontWeight: 700,
             color: "hsl(var(--bs-ink))", lineHeight: 1.2, fontFamily: "Inter, sans-serif"}}
         >
-          Send the draft to complete your request.
+          {nativeIntakeEnabled ? "Thank you. We have received your application." : "Send the draft to complete your request."}
         </h3>
         <p
           className="text-[16px] leading-[1.6]"
           style={{ color: "hsl(var(--bs-ink))" }}
         >
-          Attach your resume to the email draft and send it to complete your expression of interest. If your email app did not open, email hello@bainsquared.com directly.
+          {nativeIntakeEnabled ? "We will review your experience. If you have not shared a CV link, you can attach your CV when replying to our acknowledgement." : "Attach your resume to the email draft and send it to complete your expression of interest. If your email app did not open, email hello@bainsquared.com directly."}
         </p>
         <button
           type="button"
           onClick={() => {
             setForm(initial);
+            requestId.current = "";
             setSubmitted(false);
           }}
           className="mt-8 inline-flex items-center gap-2 text-[15px] font-bold border-b-2 pb-1 transition-colors"
@@ -139,6 +156,8 @@ export function CareersFormFields() {
       className="space-y-6"
       data-testid="careers-form"
     >
+      {error && <p role="alert" className="text-red-700">{error}</p>}
+      {nativeIntakeEnabled && <div aria-hidden="true" style={{position:"absolute",left:"-10000px"}}><label>Leave this field empty<input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)} /></label></div>}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="first" className={labelClass} style={labelStyle}>
@@ -279,9 +298,12 @@ export function CareersFormFields() {
 
       <div>
         <label htmlFor="resume" className={labelClass} style={labelStyle}>
-          Resume / CV *
+          {nativeIntakeEnabled ? "CV link (optional)" : "Resume / CV *"}
         </label>
-        <input
+        {nativeIntakeEnabled ? <>
+          <input id="resume" type="url" value={form.resumeName} onChange={set("resumeName")} placeholder="https://... (optional)" className={inputClass} style={inputStyle} />
+          <p className="mt-2 text-[12px]">Share a link to your CV, or attach it when replying to our acknowledgement.</p>
+        </> : <>        <input
           id="resume"
           type="file"
           required
@@ -296,7 +318,7 @@ export function CareersFormFields() {
           style={{ color: "hsl(var(--bs-ink-muted))" }}
         >
           PDF or Word doc. You'll attach it to the draft email after submitting.
-        </p>
+        </p></>}
       </div>
 
       <label
@@ -323,6 +345,8 @@ export function CareersFormFields() {
 
       <button
         type="submit"
+        disabled={sending}
+        aria-busy={sending}
         className="inline-flex items-center justify-center px-10 py-4 text-[15px] font-bold transition-colors whitespace-nowrap border"
         style={{
           backgroundColor: "hsl(var(--bs-forest-deep))",
@@ -341,7 +365,7 @@ export function CareersFormFields() {
         }}
         data-testid="button-submit-careers"
       >
-        Prepare email
+        {sending ? "Sending…" : nativeIntakeEnabled ? "Submit application" : "Prepare email"}
       </button>
     </form>
   );

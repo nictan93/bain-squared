@@ -127,5 +127,10 @@
       "destination": "/ai-integration",
       "permanent": true
     }
-  ]
+  ],
+  "functions": {
+    "api/intake.ts": {
+      "maxDuration": 60
+    }
+  }
 }
