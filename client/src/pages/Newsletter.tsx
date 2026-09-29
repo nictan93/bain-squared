@@ -1,34 +1,35 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const BENEFITS = [
-  { title: "A focused monthly brief", body: "A considered selection of ideas across AI, finance and enterprise value, with enough context to understand why they matter to your business." },
+  { title: "A focused monthly newsletter", body: "A considered selection of ideas across AI, finance and enterprise value, with enough context to understand why they matter to your business." },
   { title: "A decision worth exploring", body: "Each issue examines a question facing founders, finance leaders or boards, with a clear point of view and the reasoning behind it." },
   { title: "Evidence you can examine", body: "Sources, assumptions and limitations make the argument easier to assess and discuss with your team." },
   { title: "Ideas you can put to work", body: "Practical methods and selected reading to take into your next planning session, board discussion or project review." },
 ];
 const QUESTIONS = [
-  { q: "Who is the Brief for?", a: "Founders, finance leaders and people responsible for improving how a business operates. We connect the business question with the practical work needed to address it." },
-  { q: "How often will I hear from you?", a: "The Brief is planned as a monthly publication, bringing together one main perspective and selected reading from Bain Squared." },
-  { q: "How do I subscribe?", a: "The form prepares an email request. Send that email to hello@bainsquared.com with the address you would like to subscribe." },
-  { q: "Can I unsubscribe?", a: "You can ask to be removed at any time by emailing hello@bainsquared.com. Our privacy policy explains how we handle your information." },
+  { q: "Who is the newsletter for?", a: "Founders, finance leaders and people responsible for improving how a business operates. We connect the business question with the practical work needed to address it." },
+  { q: "How often will I hear from you?", a: "The newsletter is planned as a monthly publication, bringing together one main perspective and selected reading from Bain Squared." },
+  { q: "How do I subscribe?", a: "Enter your email address in the form. You will be subscribed immediately and receive a welcome email. No confirmation click is needed." },
+  { q: "Can I unsubscribe?", a: "Use the unsubscribe link in any newsletter. You can also contact hello@bainsquared.com for help. Our privacy policy explains how we handle your information." },
 ];
 
 export default function Newsletter() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const emailRef = useRef<HTMLInputElement>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const [frameHeight, setFrameHeight] = useState(240);
   const signupRef = useRef<HTMLDivElement>(null);
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const body = `Please add this address to the Bain Squared newsletter:\n\n${email}`;
-    window.location.href = `mailto:hello@bainsquared.com?subject=${encodeURIComponent("Newsletter subscription")}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
-  };
+  useEffect(() => {
+    const receive = (event: MessageEvent) => {
+      if (event.origin !== window.location.origin || event.source !== frameRef.current?.contentWindow || event.data?.type !== "bs-newsletter-height") return;
+      if (typeof event.data.height === "number" && Number.isFinite(event.data.height)) setFrameHeight(Math.max(190, Math.min(1000, event.data.height + 8)));
+    };
+    window.addEventListener("message", receive);
+    return () => window.removeEventListener("message", receive);
+  }, []);
   const returnToSignup = () => {
     signupRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
-    emailRef.current?.focus({ preventScroll: true });
+    frameRef.current?.focus({ preventScroll: true });
   };
   return (
     <div className="bs-bg-canvas" data-testid="page-newsletter">
@@ -38,32 +39,19 @@ export default function Newsletter() {
           <div className="bs-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
               <div className="lg:col-span-7">
-                <h1 className="bs-page-heading">The Bain Squared<br /><span className="text-[hsl(var(--bs-forest-deep))]">Brief</span></h1>
+                <h1 className="bs-page-heading">The Bain Squared<br /><span className="text-[hsl(var(--bs-forest-deep))]">Newsletter</span></h1>
               </div>
               <p className="lg:col-span-5 text-[17px] leading-[1.6] text-[hsl(var(--bs-ink-muted))]">A monthly perspective on AI, finance and enterprise value. Ideas to help you make informed decisions and put them into practice.</p>
             </div>
             <div ref={signupRef} id="newsletter-signup" className="mt-12 md:mt-16 pt-10 border-t border-[hsl(var(--bs-hairline))] scroll-mt-32">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                 <div className="lg:col-span-4">
-                  <h2 className="font-display font-bold text-[26px] leading-[1.2]">Receive the Brief</h2>
-                  <p className="mt-3 text-[15px] leading-[1.6] text-[hsl(var(--bs-ink-muted))]">Add your email address to prepare a subscription request.</p>
+                  <h2 className="font-display font-bold text-[26px] leading-[1.2]">Receive the newsletter</h2>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-[hsl(var(--bs-ink-muted))]">Subscribe here to receive a welcome email and future issues.</p>
                 </div>
                 <div className="lg:col-span-8">
-                  {submitted ? (
-                    <div className="p-6 bg-white border border-[hsl(var(--bs-hairline))]" role="status" data-testid="newsletter-success">
-                      <p className="font-medium">Send the email to complete your request.</p>
-                      <p className="mt-2 text-[15px] leading-relaxed">If your email app did not open, write to <a className="underline" href="mailto:hello@bainsquared.com">hello@bainsquared.com</a> with the address you would like to subscribe.</p>
-                    </div>
-                  ) : (
-                    <form onSubmit={onSubmit} data-testid="newsletter-form">
-                      <label htmlFor="newsletter-email" className="block text-[14px] font-medium mb-2">Email address</label>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <input ref={emailRef} id="newsletter-email" name="email" type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@company.com" aria-describedby="newsletter-request-note" className="min-w-0 flex-1 px-5 py-4 bg-white border border-[hsl(var(--bs-hairline))] text-[16px]" data-testid="input-newsletter-email" />
-                        <button type="submit" className="px-7 py-4 bg-[hsl(var(--bs-forest-deep))] text-white text-[15px] font-medium hover:bg-[hsl(var(--bs-ink))]" data-testid="button-newsletter-subscribe">Subscribe by email</button>
-                      </div>
-                    </form>
-                  )}
-                  <p id="newsletter-request-note" className="mt-4 text-[13px] text-[hsl(var(--bs-ink-muted))]">Opens an email request. Read our <a href="/privacy" className="underline underline-offset-2">privacy policy</a>.</p>
+                  <iframe ref={frameRef} src="/newsletter-signup.html" title="Subscribe to the Bain Squared Newsletter" style={{width:"100%",height:frameHeight,border:0}} data-testid="newsletter-form" />
+                  <p id="newsletter-request-note" className="mt-4 text-[13px] text-[hsl(var(--bs-ink-muted))]">By subscribing, you agree to receive the Bain Squared Newsletter. Unsubscribe at any time. Read our <a href="/privacy" className="underline underline-offset-2">privacy policy</a>.</p>
                 </div>
               </div>
             </div>
